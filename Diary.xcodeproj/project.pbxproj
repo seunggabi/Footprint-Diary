@@ -14,6 +14,7 @@
 		BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB31D24181800E5F658 /* Main.storyboard */; };
 		BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB61D24181800E5F658 /* Assets.xcassets */; };
 		BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */; };
+		BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */; };
 		BFF7BDD21D2421BE00B691A9 /* CalenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF7BDD11D2421BE00B691A9 /* CalenderViewController.m */; };
 		BFF7BDD51D24228100B691A9 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF7BDD41D24228100B691A9 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		BF76DDB61D24181800E5F658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF76DDB91D24181800E5F658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF76DDBB1D24181800E5F658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BFF7BDD01D2421BE00B691A9 /* CalenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderViewController.h; sourceTree = "<group>"; };
 		BFF7BDD11D2421BE00B691A9 /* CalenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderViewController.m; sourceTree = "<group>"; };
 		BFF7BDD31D24228100B691A9 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
+				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
 				BF76DDA91D24181800E5F658 /* Diary */,
 				BF76DDA81D24181800E5F658 /* Products */,
 			);
