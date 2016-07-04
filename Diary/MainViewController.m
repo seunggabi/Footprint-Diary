@@ -14,28 +14,11 @@
 @end
 
 @implementation MainViewController
-
--(NSString *) filePath{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDir = [paths objectAtIndex:0];
-    return [documentsDir stringByAppendingPathComponent:@"database.sql"];
-}
-
--(void) openDB{
-    if(sqlite3_open([[self filePath] UTF8String], &db) != SQLITE_OK) {
-        sqlite3_close(db);
-        NSAssert(0, @"Database failed to open.");
-        NSLog(@"Database Error");
-    }
-    else {
-        [self.modelUser createTable:db];
-        NSLog(@"Database Open!");
-    }
-}
-
+@synthesize dbConnector;
 
 - (void)viewDidLoad {
-    [self openDB];
+    dbConnector = [DBConnector alloc];
+    [dbConnector openDB];
     [super viewDidLoad];
 }
 

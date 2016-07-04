@@ -6,14 +6,14 @@
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-@class sqlite;
+#import <sqlite3.h>
 #import "UserModel.h"
 
 @implementation UserModel
 
--(void) createTable :(sqlite *)dbObj{
+-(void) createTable :(sqlite3 *)dbObj{
     char *err;
-    db = (__bridge sqlite3 *)(dbObj);
+    db = dbObj;
     
     if(_createTableQuery == nil) {
         _createTableQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' ( name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, Password TEXT, question TEXT, answer TEXT"];

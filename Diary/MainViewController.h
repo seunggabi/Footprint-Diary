@@ -6,18 +6,14 @@
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import <sqlite3.h>
 #import <UIKit/UIKit.h>
 #import "UserModel.h"
+#import "DBConnector.h"
 
-@interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource> {
-    sqlite3 *db;
-}
+@interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) DBConnector* dbConnector;
 @property (strong, nonatomic) UserModel* modelUser;
-
--(NSString *) filePath;
--(void) openDB;
 
 @end
 
