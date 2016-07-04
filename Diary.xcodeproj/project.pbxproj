@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286EC5A51D2A7EE00002A8EB /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5A41D2A7EE00002A8EB /* UserModel.m */; };
+		286EC5A81D2A7EF20002A8EB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5A71D2A7EF20002A8EB /* MainViewController.m */; };
+		286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */; };
 		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
 		BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6648331D2A018400D922EC /* SettingTableViewController.xib */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		286EC5A31D2A7EE00002A8EB /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		286EC5A41D2A7EE00002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		286EC5A61D2A7EF20002A8EB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		286EC5A71D2A7EF20002A8EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		BF6648311D2A018400D922EC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		BF6648331D2A018400D922EC /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
@@ -40,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */,
 				BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +59,7 @@
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
+				286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */,
 				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
 				BF76DDA91D24181800E5F658 /* Diary */,
 				BF76DDA81D24181800E5F658 /* Products */,
@@ -67,6 +77,10 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				286EC5A61D2A7EF20002A8EB /* MainViewController.h */,
+				286EC5A71D2A7EF20002A8EB /* MainViewController.m */,
+				286EC5A31D2A7EE00002A8EB /* UserModel.h */,
+				286EC5A41D2A7EE00002A8EB /* UserModel.m */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
@@ -163,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */,
+				286EC5A81D2A7EF20002A8EB /* MainViewController.m in Sources */,
+				286EC5A51D2A7EE00002A8EB /* UserModel.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
