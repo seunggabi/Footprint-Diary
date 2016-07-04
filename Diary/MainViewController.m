@@ -25,7 +25,7 @@
     [modelUser setDB:[dbConnector getDB]];
     
     [modelUser dropUser];
-    [modelUser createTable];
+    [modelUser createUser];
     [modelUser setUser:[modelUser getSampleData]];
     
     NSDictionary *array = [modelUser getUser];

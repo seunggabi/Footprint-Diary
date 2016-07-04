@@ -15,13 +15,13 @@
     db = dbObj;
 }
 
--(void) createTable {
+-(void) createUser {
     char *err;
 
-    if(_createTableQuery == nil) {
-        _createTableQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, password TEXT, question TEXT, answer TEXT, skin_id INTEGER)"];
+    if(_createQuery == nil) {
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, password TEXT, question TEXT, answer TEXT, skin_id INTEGER, timer INTEGER)"];
     }
-    if(sqlite3_exec(db, [_createTableQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"Tabled failed to create.");
     }
@@ -41,7 +41,8 @@
             NSString *question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 6)];
             NSString *answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 7)];
             NSString *skin_id = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 8)];
-            _user = @{@"name":name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id};
+            NSString *timer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 9)];
+            _user = @{@"name":name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id, @"timer":timer};
         }
         sqlite3_finalize(stmt);
     }
@@ -53,7 +54,7 @@
     
     [self deleteUser];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %d, %d, %d, '%@', '%@', '%@', '%@')", user[@"name"], user[@"sex"], [user[@"age"] intValue], [user[@"height"] intValue], [user[@"weight"] intValue], user[@"password"], user[@"question"], user[@"answer"], user[@"skin_id"]];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %d, %d, %d, '%@', '%@', '%@', '%@', '%@')", user[@"name"], user[@"sex"], [user[@"age"] intValue], [user[@"height"] intValue], [user[@"weight"] intValue], user[@"password"], user[@"question"], user[@"answer"], user[@"skin_id"], user[@"timer"]];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"setUser Failed!");
@@ -99,7 +100,8 @@
     NSString *question = @"이 세상에서 제일 소중한 것은?";
     NSString *answer = @"나";
     NSString *skin_id = @"0";
-    return @{@"name":name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id};
+    NSString *timer = @"1";
+    return @{@"name":name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id, @"timer":timer};
 }
 
 @end

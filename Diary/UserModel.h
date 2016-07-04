@@ -14,10 +14,10 @@
 }
 
 @property (strong, nonatomic) NSDictionary *user;
-@property (strong, nonatomic) NSString *createTableQuery;
+@property (strong, nonatomic) NSString *createQuery;
 
 -(void) setDB:(sqlite3 *)dbObj;
--(void) createTable;
+-(void) createUser;
 -(NSDictionary *) getUser;
 -(void) setUser:(NSDictionary *)user;
 -(void) deleteUser;
