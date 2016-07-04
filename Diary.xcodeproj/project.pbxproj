@@ -23,13 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		286EC5A31D2A7EE00002A8EB /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		286EC5A41D2A7EE00002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		286EC5A31D2A7EE00002A8EB /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = Diary/UserModel.h; sourceTree = "<group>"; };
+		286EC5A41D2A7EE00002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = Diary/UserModel.m; sourceTree = "<group>"; };
 		286EC5A61D2A7EF20002A8EB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		286EC5A71D2A7EF20002A8EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		286EC5AB1D2A80910002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnector.h; sourceTree = "<group>"; };
-		286EC5AC1D2A80910002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
+		286EC5AB1D2A80910002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBConnector.h; path = Diary/DBConnector.h; sourceTree = "<group>"; };
+		286EC5AC1D2A80910002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBConnector.m; path = Diary/DBConnector.m; sourceTree = "<group>"; };
 		BF6648311D2A018400D922EC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		BF6648331D2A018400D922EC /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
@@ -59,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286EC5AE1D2AA4030002A8EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				286EC5AB1D2A80910002A8EB /* DBConnector.h */,
+				286EC5AC1D2A80910002A8EB /* DBConnector.m */,
+				286EC5A31D2A7EE00002A8EB /* UserModel.h */,
+				286EC5A41D2A7EE00002A8EB /* UserModel.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +94,6 @@
 			children = (
 				286EC5A61D2A7EF20002A8EB /* MainViewController.h */,
 				286EC5A71D2A7EF20002A8EB /* MainViewController.m */,
-				286EC5AB1D2A80910002A8EB /* DBConnector.h */,
-				286EC5AC1D2A80910002A8EB /* DBConnector.m */,
-				286EC5A31D2A7EE00002A8EB /* UserModel.h */,
-				286EC5A41D2A7EE00002A8EB /* UserModel.m */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
@@ -94,6 +102,7 @@
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
+				286EC5AE1D2AA4030002A8EB /* Model */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
 				BF6648311D2A018400D922EC /* SettingTableViewController.h */,
 				BF6648321D2A018400D922EC /* SettingTableViewController.m */,

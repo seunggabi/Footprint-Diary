@@ -9,15 +9,19 @@
 #import <sqlite3.h>
 #import <Foundation/Foundation.h>
 
-@interface UserModel : NSObject{
+@interface UserModel : NSObject {
     sqlite3 *db;
 }
 
-@property (strong, nonatomic) NSMutableArray *user;
+@property (strong, nonatomic) NSDictionary *user;
 @property (strong, nonatomic) NSString *createTableQuery;
 
--(void) createTable :(sqlite3 *)dbObj;
--(NSMutableArray*) getUser;
--(void) setUser;
+-(void) setDB:(sqlite3 *)dbObj;
+-(void) createTable;
+-(NSDictionary *) getUser;
+-(void) setUser:(NSDictionary *)user;
+-(void) deleteUser;
+-(void) dropUser;
+-(NSDictionary *) getSampleData;
 
 @end

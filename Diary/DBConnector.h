@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DBConnector : NSObject
-@property (assign, nonatomic) sqlite3 *db;
+@interface DBConnector : NSObject {
+    sqlite3 *db;
+}
 
 -(NSString *) filePath;
 -(void) openDB;
+-(sqlite3 *) getDB;
+-(void) deleteTable:(NSString *)tableName;
+-(void) dropTable:(NSString *)tableName;
 
 @end

@@ -15,10 +15,21 @@
 
 @implementation MainViewController
 @synthesize dbConnector;
+@synthesize modelUser;
 
 - (void)viewDidLoad {
     dbConnector = [DBConnector alloc];
+    modelUser = [UserModel alloc];
+    
     [dbConnector openDB];
+    [modelUser setDB:[dbConnector getDB]];
+    
+    [modelUser dropUser];
+    [modelUser createTable];
+    [modelUser setUser:[modelUser getSampleData]];
+    
+    NSDictionary *array = [modelUser getUser];
+    NSLog(@"%@",array);
     [super viewDidLoad];
 }
 
