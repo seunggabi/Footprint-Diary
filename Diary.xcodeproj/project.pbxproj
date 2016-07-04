@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
+		BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6648331D2A018400D922EC /* SettingTableViewController.xib */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF6648311D2A018400D922EC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		BF6648331D2A018400D922EC /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
+				BF6648311D2A018400D922EC /* SettingTableViewController.h */,
+				BF6648321D2A018400D922EC /* SettingTableViewController.m */,
+				BF6648331D2A018400D922EC /* SettingTableViewController.xib */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
 				BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
@@ -153,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
