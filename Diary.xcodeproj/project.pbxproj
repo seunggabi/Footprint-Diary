@@ -13,6 +13,8 @@
 		285346611D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
 		285346621D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465D1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */; };
 		285346631D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465E1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */; };
+		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
+		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */; };
 		286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C21D2C16F20002A8EB /* DBConnector.m */; };
 		286EC5D01D2C16F20002A8EB /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C41D2C16F20002A8EB /* Diary.m */; };
@@ -43,6 +45,10 @@
 		285346731D2C2CCF0001F378 /* SettingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = SOURCE_ROOT; };
 		285346741D2C2CCF0001F378 /* SettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = SOURCE_ROOT; };
 		285346751D2C2CCF0001F378 /* SettingTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = SOURCE_ROOT; };
+		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
+		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
+		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
+		2853467A1D2C2EC20001F378 /* StickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerModel.m; sourceTree = "<group>"; };
 		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		286EC5C11D2C16F20002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnector.h; sourceTree = "<group>"; };
 		286EC5C21D2C16F20002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
@@ -124,6 +130,10 @@
 				286EC5CC1D2C16F20002A8EB /* User.m */,
 				286EC5CD1D2C16F20002A8EB /* UserModel.h */,
 				286EC5CE1D2C16F20002A8EB /* UserModel.m */,
+				285346761D2C2D6E0001F378 /* Sticker.h */,
+				285346771D2C2D6E0001F378 /* Sticker.m */,
+				285346791D2C2EC20001F378 /* StickerModel.h */,
+				2853467A1D2C2EC20001F378 /* StickerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */,
+				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
@@ -262,6 +273,7 @@
 				285346361D2C22220001F378 /* MainViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
+				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
 			);

@@ -16,6 +16,6 @@
 @property (strong, nonatomic) NSNumber *weather;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *content;
-@property (strong, nonatomic) NSNumber *e_id;
+@property (strong, nonatomic) NSNumber *d_e_id;
 
 @end

@@ -26,7 +26,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Diary' (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_date TEXT, d_time INTEGER, weather INTEGER, title TEXT, content TEXT, e_id INTEGER)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Diary' (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_date TEXT, d_time INTEGER, weather INTEGER, title TEXT, content TEXT, d_e_id INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -52,7 +52,7 @@
             d.weather = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
             d.title = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
             d.content = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
-            d.e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 6)];
+            d.d_e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 6)];
             [list addObject:d];
         }
         sqlite3_finalize(stmt);
@@ -65,7 +65,7 @@
     
     //[self deleteDiary];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_data, d_time, weather, title, content, e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_data, d_time, weather, title, content, e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.d_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Diary Failed!");
@@ -109,7 +109,8 @@
     d.weather = @0;
     d.title = @"좋은날";
     d.content = @"아이유";
-    d.e_id = @0;
+    d.d_e_id = @0;
     return d;
 }
+
 @end

@@ -16,10 +16,10 @@
 @synthesize weather;
 @synthesize title;
 @synthesize content;
-@synthesize e_id;
+@synthesize d_e_id;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"d_id":d_id, @"d_date":d_date, @"d_time":d_time, @"weather":weather, @"title":title, @"content":content, @"e_id":e_id};
+    NSDictionary *obj = @{@"d_id":d_id, @"d_date":d_date, @"d_time":d_time, @"weather":weather, @"title":title, @"content":content, @"e_id":d_e_id};
     return obj;
 }
 
