@@ -17,16 +17,19 @@
 @synthesize modelUser;
 
 - (void)viewDidLoad {
+    // UserModel 연동
     modelUser = [[UserModel alloc] init];
-    
     [modelUser dropUser];
     [modelUser createUser];
     [modelUser insertUser:[modelUser getSampleData]];
 
+    // DBConnector UPDATE 사용
     [[DBConnector getInstance] updateTable:@"user" data:@{@"name":@"kim",@"age":@"19"} where:nil];
     [modelUser selectUser];
-    NSDictionary *array = [modelUser.user getObj];
-    NSLog(@"%@",array);
+    
+    // SELECT 확인
+    NSDictionary *user = [modelUser.user getObj];
+    NSLog(@"%@",user);
     
     [super viewDidLoad];
 }
