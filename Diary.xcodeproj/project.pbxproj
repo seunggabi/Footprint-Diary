@@ -15,6 +15,7 @@
 		285346631D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465E1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
+		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
 		286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */; };
 		286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C21D2C16F20002A8EB /* DBConnector.m */; };
 		286EC5D01D2C16F20002A8EB /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C41D2C16F20002A8EB /* Diary.m */; };
@@ -23,6 +24,7 @@
 		286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CA1D2C16F20002A8EB /* FootprintModel.m */; };
 		286EC5D41D2C16F20002A8EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CC1D2C16F20002A8EB /* User.m */; };
 		286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CE1D2C16F20002A8EB /* UserModel.m */; };
+		28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CBDB441D2C3C980053D0DE /* EmoticonModel.m */; };
 		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
@@ -49,6 +51,8 @@
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
 		2853467A1D2C2EC20001F378 /* StickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerModel.m; sourceTree = "<group>"; };
+		2853467C1D2C34160001F378 /* Emoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoticon.h; sourceTree = "<group>"; };
+		2853467D1D2C34160001F378 /* Emoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoticon.m; sourceTree = "<group>"; };
 		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		286EC5C11D2C16F20002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnector.h; sourceTree = "<group>"; };
 		286EC5C21D2C16F20002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		286EC5CC1D2C16F20002A8EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		286EC5CD1D2C16F20002A8EB /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		286EC5CE1D2C16F20002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		28CBDB431D2C3C980053D0DE /* EmoticonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonModel.h; sourceTree = "<group>"; };
+		28CBDB441D2C3C980053D0DE /* EmoticonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonModel.m; sourceTree = "<group>"; };
 		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -134,6 +140,10 @@
 				285346771D2C2D6E0001F378 /* Sticker.m */,
 				285346791D2C2EC20001F378 /* StickerModel.h */,
 				2853467A1D2C2EC20001F378 /* StickerModel.m */,
+				2853467C1D2C34160001F378 /* Emoticon.h */,
+				2853467D1D2C34160001F378 /* Emoticon.m */,
+				28CBDB431D2C3C980053D0DE /* EmoticonModel.h */,
+				28CBDB441D2C3C980053D0DE /* EmoticonModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,9 +277,11 @@
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
+				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
+				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				285346361D2C22220001F378 /* MainViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
