@@ -40,6 +40,9 @@
 		2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
 		2853465D1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg"; sourceTree = "<group>"; };
 		2853465E1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg"; sourceTree = "<group>"; };
+		285346731D2C2CCF0001F378 /* SettingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = SOURCE_ROOT; };
+		285346741D2C2CCF0001F378 /* SettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = SOURCE_ROOT; };
+		285346751D2C2CCF0001F378 /* SettingTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = SOURCE_ROOT; };
 		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		286EC5C11D2C16F20002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnector.h; sourceTree = "<group>"; };
 		286EC5C21D2C16F20002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
@@ -152,6 +155,9 @@
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDB31D24181800E5F658 /* Main.storyboard */,
+				285346731D2C2CCF0001F378 /* SettingTableViewController.h */,
+				285346741D2C2CCF0001F378 /* SettingTableViewController.m */,
+				285346751D2C2CCF0001F378 /* SettingTableViewController.xib */,
 				285346591D2C27090001F378 /* resource */,
 				285346331D2C22220001F378 /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
