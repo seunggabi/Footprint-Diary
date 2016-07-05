@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
-		BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6648331D2A018400D922EC /* SettingTableViewController.xib */; };
+		BF62D40F1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF62D40C1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */; };
+		BF62D4101D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF62D40D1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */; };
+		BF62D4111D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF62D40E1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
+		BF62D4141D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF62D4121D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */; };
+		BF62D4151D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF62D4131D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -16,12 +19,16 @@
 		BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB61D24181800E5F658 /* Assets.xcassets */; };
 		BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */; };
 		BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */; };
+		BFBDBBE51D2B413700E19822 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDBBE31D2B413700E19822 /* SettingTableViewController.m */; };
+		BFBDBBE61D2B413700E19822 /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF6648311D2A018400D922EC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
-		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		BF6648331D2A018400D922EC /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
+		BF62D40C1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg"; path = "../KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg"; sourceTree = "<group>"; };
+		BF62D40D1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg"; path = "../KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg"; sourceTree = "<group>"; };
+		BF62D40E1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; path = "../KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
+		BF62D4121D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; path = "../KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; sourceTree = "<group>"; };
+		BF62D4131D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; path = "../KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +40,9 @@
 		BF76DDB91D24181800E5F658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF76DDBB1D24181800E5F658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BFBDBBE21D2B413700E19822 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		BFBDBBE31D2B413700E19822 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,9 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				BFBDBBE31D2B413700E19822 /* SettingTableViewController.m */,
+				BFBDBBE21D2B413700E19822 /* SettingTableViewController.h */,
+				BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
@@ -75,10 +88,12 @@
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
+				BF62D4131D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
+				BF62D4121D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */,
+				BF62D40E1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */,
+				BF62D40D1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */,
+				BF62D40C1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
-				BF6648311D2A018400D922EC /* SettingTableViewController.h */,
-				BF6648321D2A018400D922EC /* SettingTableViewController.m */,
-				BF6648331D2A018400D922EC /* SettingTableViewController.xib */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -148,10 +163,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */,
+				BFBDBBE61D2B413700E19822 /* SettingTableViewController.xib in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
+				BF62D4151D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */,
+				BF62D4101D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */,
+				BF62D40F1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg in Resources */,
 				BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */,
+				BF62D4111D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
+				BF62D4141D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */,
+				BFBDBBE51D2B413700E19822 /* SettingTableViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
