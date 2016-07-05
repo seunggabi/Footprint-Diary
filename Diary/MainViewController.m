@@ -14,22 +14,20 @@
 @end
 
 @implementation MainViewController
-@synthesize dbConnector;
 @synthesize modelUser;
 
 - (void)viewDidLoad {
-    dbConnector = [DBConnector alloc];
-    modelUser = [UserModel alloc];
-    
-    [dbConnector openDB];
-    [modelUser setDB:[dbConnector getDB]];
+    modelUser = [[UserModel alloc] init];
     
     [modelUser dropUser];
     [modelUser createUser];
     [modelUser setUser:[modelUser getSampleData]];
     
+    [[DBConnector getInstance] updateTable:@"user" data:@{@"name":@"kim",@"age":@"19"} where:nil];
+    
     NSDictionary *array = [modelUser getUser];
     NSLog(@"%@",array);
+    
     [super viewDidLoad];
 }
 

@@ -12,7 +12,6 @@
 
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) DBConnector* dbConnector;
 @property (strong, nonatomic) UserModel* modelUser;
 
 @end

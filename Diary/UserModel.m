@@ -8,11 +8,16 @@
 
 #import <sqlite3.h>
 #import "UserModel.h"
+#import "DBConnector.h"
 
 @implementation UserModel
 
--(void) setDB:(sqlite3 *)dbObj {
-    db = dbObj;
+-(id) init {
+    self = [super init];
+    if(self) {
+        db = [[DBConnector getInstance] getDB];
+    }
+    return self;
 }
 
 -(void) createUser {

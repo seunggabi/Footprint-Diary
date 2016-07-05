@@ -13,10 +13,12 @@
     sqlite3 *db;
 }
 
++(DBConnector *) getInstance;
 -(NSString *) filePath;
 -(void) openDB;
 -(sqlite3 *) getDB;
 -(void) deleteTable:(NSString *)tableName;
 -(void) dropTable:(NSString *)tableName;
+-(void) updateTable:(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where;
 
 @end

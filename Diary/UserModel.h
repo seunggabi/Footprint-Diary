@@ -8,6 +8,7 @@
 
 #import <sqlite3.h>
 #import <Foundation/Foundation.h>
+#import "DBConnector.h"
 
 @interface UserModel : NSObject {
     sqlite3 *db;
@@ -16,7 +17,7 @@
 @property (strong, nonatomic) NSDictionary *user;
 @property (strong, nonatomic) NSString *createQuery;
 
--(void) setDB:(sqlite3 *)dbObj;
+-(id) init;
 -(void) createUser;
 -(NSDictionary *) getUser;
 -(void) setUser:(NSDictionary *)user;
