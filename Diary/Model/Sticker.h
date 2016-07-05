@@ -8,12 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum color {
+    BLACK,
+    WHITE,
+    RED,
+    GREEN,
+    BLUE,
+    YELLOW,
+    ORANGE,
+    PINK
+} COLOR;
+
 @interface Sticker : NSObject
 
 @property (strong, nonatomic) NSNumber *s_id;
 @property (strong, nonatomic) NSString *s_date;
 @property (strong, nonatomic) NSNumber *color;
 @property (strong, nonatomic) NSNumber *s_e_id;
+
+-(NSDictionary *) getObj;
 
 @end
  

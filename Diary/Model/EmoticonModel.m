@@ -99,7 +99,7 @@
 
 -(Emoticon *) getSampleData {
     Emoticon *e = [[Emoticon alloc] init];
-    e.e_name = @"2016-07-05";
+    e.e_name = @"sad";
     e.e_src = @"test.png";
     e.e_id = @0;
     return e;

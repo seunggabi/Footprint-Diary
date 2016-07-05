@@ -8,13 +8,6 @@
 
 #import "FootprintModel.h"
 
-typedef enum weather {
-    SUNNY=0,
-    CLOUDY,
-    RAINY,
-    SNOWY
-} WEATHER;
-
 @implementation FootprintModel
 
 @synthesize fp;

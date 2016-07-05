@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum weather {
+    SUNNY=0,
+    CLOUDY,
+    RAINY,
+    SNOWY
+} WEATHER;
+
 @interface Diary : NSObject
 
 @property (strong, nonatomic) NSNumber *d_id;

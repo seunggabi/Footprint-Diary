@@ -14,6 +14,6 @@
 @property (strong, nonatomic) NSString *e_name;
 @property (strong, nonatomic) NSString *e_src;
 
--(NSDictionary *) getObj:(Emoticon *)e;
+-(NSDictionary *) getObj;
 
 @end

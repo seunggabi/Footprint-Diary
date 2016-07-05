@@ -25,6 +25,8 @@
 		286EC5D41D2C16F20002A8EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CC1D2C16F20002A8EB /* User.m */; };
 		286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CE1D2C16F20002A8EB /* UserModel.m */; };
 		28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CBDB441D2C3C980053D0DE /* EmoticonModel.m */; };
+		28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1891D2C491100D8B9E3 /* Photo.m */; };
+		28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */; };
 		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
@@ -70,6 +72,10 @@
 		286EC5CE1D2C16F20002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		28CBDB431D2C3C980053D0DE /* EmoticonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonModel.h; sourceTree = "<group>"; };
 		28CBDB441D2C3C980053D0DE /* EmoticonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonModel.m; sourceTree = "<group>"; };
+		28E5E1881D2C491100D8B9E3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		28E5E1891D2C491100D8B9E3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		28E5E18B1D2C4A3500D8B9E3 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
+		28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +150,10 @@
 				2853467D1D2C34160001F378 /* Emoticon.m */,
 				28CBDB431D2C3C980053D0DE /* EmoticonModel.h */,
 				28CBDB441D2C3C980053D0DE /* EmoticonModel.m */,
+				28E5E1881D2C491100D8B9E3 /* Photo.h */,
+				28E5E1891D2C491100D8B9E3 /* Photo.m */,
+				28E5E18B1D2C4A3500D8B9E3 /* PhotoModel.h */,
+				28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,7 +290,9 @@
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
+				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
+				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				285346361D2C22220001F378 /* MainViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,

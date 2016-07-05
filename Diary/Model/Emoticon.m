@@ -14,7 +14,7 @@
 @synthesize e_name;
 @synthesize e_src;
 
--(NSDictionary *) getObj:(Emoticon *)e {
+-(NSDictionary *) getObj {
     return @{@"e_id":e_id, @"e_name":e_name, @"e_src":e_src};
 }
 

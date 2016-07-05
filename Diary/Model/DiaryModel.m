@@ -65,7 +65,7 @@
     
     //[self deleteDiary];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_data, d_time, weather, title, content, e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.d_e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_date, d_time, weather, title, content, d_e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.d_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Diary Failed!");
