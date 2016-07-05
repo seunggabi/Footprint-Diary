@@ -15,6 +15,7 @@
 
 @implementation MainViewController
 @synthesize modelUser;
+@synthesize modelFootPrint;
 
 - (void)viewDidLoad {
     // UserModel 연동
@@ -30,6 +31,20 @@
     // SELECT 확인
     NSDictionary *user = [modelUser.user getObj];
     NSLog(@"%@",user);
+    
+    // UserModel 연동
+    modelFootPrint = [[FootprintModel alloc] init];
+    [modelFootPrint dropFootprint];
+    [modelFootPrint createFootprint];
+    [modelFootPrint insertFootprint:[modelFootPrint getSampleData]];
+    
+    // DBConnector UPDATE 사용
+    [[DBConnector getInstance] updateTable:@"Footprint" data:@{@"address":@"zzz"} where:nil];
+    [modelFootPrint selectFootprint];
+    
+    // SELECT 확인
+    NSDictionary *fp = [modelFootPrint.fp getObj];
+    NSLog(@"%@",fp);
     
     [super viewDidLoad];
 }

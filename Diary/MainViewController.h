@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "UserModel.h"
+#import "FootprintModel.h"
 #import "DBConnector.h"
 
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UserModel* modelUser;
+@property (strong, nonatomic) UserModel *modelUser;
+@property (strong, nonatomic) FootprintModel *modelFootPrint;
 
 @end
 

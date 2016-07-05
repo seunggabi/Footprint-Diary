@@ -30,7 +30,7 @@
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Tabled failed to create.");
+        NSAssert(0,@"Tabled Failed to Create.");
     }
 }
 
@@ -63,10 +63,10 @@
     NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %@, %@, %@, '%@', '%@', '%@', '%@', '%@')", u.name, u.sex, u.age, u.height, u.weight, u.password, u.question, u.answer, u.skin_id, u.timer];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"setUser Failed!");
+        NSAssert(0,@"INSERT User Failed!");
     }
     else {
-        NSLog(@"setUser success!");
+        NSLog(@"INSERT User Success!");
     }
 }
 
@@ -76,10 +76,10 @@
     NSString *query = @"DELETE FROM user";
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"deleteUser Failed!");
+        NSAssert(0,@"DELETE User Failed!");
     }
     else {
-        NSLog(@"deleteUser success!");
+        NSLog(@"DELETE User Success!");
     }
 }
 
@@ -89,10 +89,10 @@
     NSString *query = @"DROP TABLE IF EXISTS 'user'";
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"dropUser Failed!");
+        NSAssert(0,@"Drop User Failed!");
     }
     else {
-        NSLog(@"dropUser success!");
+        NSLog(@"Drop User Success!");
     }
 }
 
@@ -110,4 +110,5 @@
     u.timer = @1;
     return u;
 }
+
 @end
