@@ -32,7 +32,7 @@
     NSDictionary *user = [modelUser.user getObj];
     NSLog(@"%@",user);
     
-    // UserModel 연동
+    // FootprintModel 연동
     modelFootPrint = [[FootprintModel alloc] init];
     [modelFootPrint dropFootprint];
     [modelFootPrint createFootprint];
