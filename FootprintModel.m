@@ -8,6 +8,13 @@
 
 #import "FootprintModel.h"
 
+typedef enum weather {
+    SUNNY=0,
+    CLOUDY,
+    RAINY,
+    SNOWY
+} WEATHER;
+
 @implementation FootprintModel
 
 @synthesize fp;
@@ -33,21 +40,28 @@
     }
 }
 
--(Footprint *) selectFootprint {
+-(NSMutableArray *) selectFootprint:(NSString *)where {
+    NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Footprint";
+    if(where != nil) {
+        selectQuery = [selectQuery stringByAppendingString:@" WHERE "];
+        selectQuery = [selectQuery stringByAppendingString:where];
+    }
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            fp.fp_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 0)];
-            fp.fp_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            fp.fp_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_text(stmt, 2)];
-            fp.GPS_X = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 3)];
-            fp.GPS_Y = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 4)];
-            fp.address = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            Footprint *f = [[Footprint alloc] init];
+            f.fp_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 0)];
+            f.fp_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            f.fp_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_text(stmt, 2)];
+            f.GPS_X = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 3)];
+            f.GPS_Y = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 4)];
+            f.address = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            [list addObject:f];
         }
         sqlite3_finalize(stmt);
     }
-    return fp;
+    return list;
 }
 
 -(void) insertFootprint:(Footprint *)f {

@@ -26,7 +26,7 @@
     char *err;
 
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, password TEXT, question TEXT, answer TEXT, skin_id INTEGER, timer INTEGER)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, password TEXT, question TEXT, answer TEXT, skin_id INTEGER, timer INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -39,7 +39,7 @@
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            user.name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
+            user.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
             user.sex = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
             user.age = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 2)];
             user.height = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 3)];
@@ -60,7 +60,7 @@
     
     [self deleteUser];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %@, %@, %@, '%@', '%@', '%@', '%@', '%@')", u.name, u.sex, u.age, u.height, u.weight, u.password, u.question, u.answer, u.skin_id, u.timer];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %@, %@, %@, '%@', '%@', '%@', '%@', '%@')", u.u_name, u.sex, u.age, u.height, u.weight, u.password, u.question, u.answer, u.skin_id, u.timer];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT User Failed!");
@@ -98,7 +98,7 @@
 
 -(User *) getSampleData {
     User *u = [[User alloc] init];
-    u.name = @"김승갑";
+    u.u_name = @"김승갑";
     u.sex = @"M";
     u.age = @25;
     u.height = @172;

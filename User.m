@@ -10,7 +10,7 @@
 
 @implementation User
 
-@synthesize name;
+@synthesize u_name;
 @synthesize sex;
 @synthesize age;
 @synthesize height;
@@ -22,7 +22,7 @@
 @synthesize timer;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"name":name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id, @"timer":timer};
+    NSDictionary *obj = @{@"u_name":u_name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id, @"timer":timer};
     return obj;
 }
 @end

@@ -14,6 +14,8 @@
 		286EC5B11D2BB6F80002A8EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5B01D2BB6F80002A8EB /* User.m */; };
 		286EC5B41D2BC3630002A8EB /* Footprint.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5B31D2BC3630002A8EB /* Footprint.m */; };
 		286EC5B71D2BC8510002A8EB /* FootprintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5B61D2BC8510002A8EB /* FootprintModel.m */; };
+		286EC5BA1D2BF0010002A8EB /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5B91D2BF0010002A8EB /* Diary.m */; };
+		286EC5BD1D2C03F30002A8EB /* DiaryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5BC1D2C03F30002A8EB /* DiaryModel.m */; };
 		BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6648321D2A018400D922EC /* SettingTableViewController.m */; };
 		BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6648331D2A018400D922EC /* SettingTableViewController.xib */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
@@ -39,6 +41,10 @@
 		286EC5B31D2BC3630002A8EB /* Footprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Footprint.m; sourceTree = "<group>"; };
 		286EC5B51D2BC8510002A8EB /* FootprintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintModel.h; sourceTree = "<group>"; };
 		286EC5B61D2BC8510002A8EB /* FootprintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintModel.m; sourceTree = "<group>"; };
+		286EC5B81D2BF0010002A8EB /* Diary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diary.h; sourceTree = "<group>"; };
+		286EC5B91D2BF0010002A8EB /* Diary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diary.m; sourceTree = "<group>"; };
+		286EC5BB1D2C03F30002A8EB /* DiaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryModel.h; sourceTree = "<group>"; };
+		286EC5BC1D2C03F30002A8EB /* DiaryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryModel.m; sourceTree = "<group>"; };
 		BF6648311D2A018400D922EC /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		BF6648321D2A018400D922EC /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		BF6648331D2A018400D922EC /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 				286EC5B61D2BC8510002A8EB /* FootprintModel.m */,
 				286EC5B21D2BC3630002A8EB /* Footprint.h */,
 				286EC5B31D2BC3630002A8EB /* Footprint.m */,
+				286EC5BB1D2C03F30002A8EB /* DiaryModel.h */,
+				286EC5BC1D2C03F30002A8EB /* DiaryModel.m */,
+				286EC5B81D2BF0010002A8EB /* Diary.h */,
+				286EC5B91D2BF0010002A8EB /* Diary.m */,
 			);
 			name = Model;
 			path = ..;
@@ -208,7 +218,9 @@
 				286EC5B11D2BB6F80002A8EB /* User.m in Sources */,
 				286EC5B71D2BC8510002A8EB /* FootprintModel.m in Sources */,
 				286EC5B41D2BC3630002A8EB /* Footprint.m in Sources */,
+				286EC5BA1D2BF0010002A8EB /* Diary.m in Sources */,
 				BF6648341D2A018400D922EC /* SettingTableViewController.m in Sources */,
+				286EC5BD1D2C03F30002A8EB /* DiaryModel.m in Sources */,
 				286EC5A81D2A7EF20002A8EB /* MainViewController.m in Sources */,
 				286EC5A51D2A7EE00002A8EB /* UserModel.m in Sources */,
 				286EC5AD1D2A80910002A8EB /* DBConnector.m in Sources */,

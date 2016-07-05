@@ -18,7 +18,7 @@
 @synthesize address;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"fp_id":fp_id, @"date":fp_date, @"time":fp_time, @"GPS_X":GPS_X, @"GPS_Y":GPS_Y, @"address":address};
+    NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"GPS_X":GPS_X, @"GPS_Y":GPS_Y, @"address":address};
     return obj;
 }
 

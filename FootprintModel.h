@@ -20,7 +20,7 @@
 
 -(id) init;
 -(void) createFootprint;
--(Footprint *) selectFootprint;
+-(NSMutableArray *) selectFootprint:(NSString *)where;
 -(void) insertFootprint:(Footprint *)u;
 -(void) deleteFootprint;
 -(void) dropFootprint;
