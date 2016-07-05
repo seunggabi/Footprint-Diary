@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		286EC5A81D2A7EF20002A8EB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5A71D2A7EF20002A8EB /* MainViewController.m */; };
+		285346361D2C22220001F378 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346351D2C22220001F378 /* MainViewController.m */; };
 		286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */; };
 		286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C21D2C16F20002A8EB /* DBConnector.m */; };
 		286EC5D01D2C16F20002A8EB /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5C41D2C16F20002A8EB /* Diary.m */; };
@@ -28,8 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		286EC5A61D2A7EF20002A8EB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		286EC5A71D2A7EF20002A8EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		285346341D2C22220001F378 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		285346351D2C22220001F378 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		286EC5C11D2C16F20002A8EB /* DBConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConnector.h; sourceTree = "<group>"; };
 		286EC5C21D2C16F20002A8EB /* DBConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConnector.m; sourceTree = "<group>"; };
@@ -74,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285346331D2C22220001F378 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				285346341D2C22220001F378 /* MainViewController.h */,
+				285346351D2C22220001F378 /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		286EC5C01D2C16F20002A8EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +125,6 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				286EC5A61D2A7EF20002A8EB /* MainViewController.h */,
-				286EC5A71D2A7EF20002A8EB /* MainViewController.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
@@ -126,6 +133,7 @@
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
+				285346331D2C22220001F378 /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
 				BF6648311D2A018400D922EC /* SettingTableViewController.h */,
@@ -220,8 +228,8 @@
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
-				286EC5A81D2A7EF20002A8EB /* MainViewController.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
+				285346361D2C22220001F378 /* MainViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,

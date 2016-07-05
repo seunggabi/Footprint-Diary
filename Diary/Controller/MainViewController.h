@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Model/UserModel.h"
-#import "Model/FootprintModel.h"
-#import "Model/DBConnector.h"
+#import "../Model/UserModel.h"
+#import "../Model/FootprintModel.h"
+#import "../Model/DBConnector.h"
 
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 

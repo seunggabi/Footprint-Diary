@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "Model/UserModel.h"
 
 @interface MainViewController ()
 
