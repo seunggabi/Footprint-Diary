@@ -25,6 +25,8 @@
 		BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB61D24181800E5F658 /* Assets.xcassets */; };
 		BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */; };
 		BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */; };
+		BFBDBBE51D2B413700E19822 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDBBE31D2B413700E19822 /* SettingTableViewController.m */; };
+		BFBDBBE61D2B413700E19822 /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		BF76DDB91D24181800E5F658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF76DDBB1D24181800E5F658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BFBDBBE21D2B413700E19822 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		BFBDBBE31D2B413700E19822 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,9 +141,6 @@
 				285346331D2C22220001F378 /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
-				BF6648311D2A018400D922EC /* SettingTableViewController.h */,
-				BF6648321D2A018400D922EC /* SettingTableViewController.m */,
-				BF6648331D2A018400D922EC /* SettingTableViewController.xib */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -208,10 +210,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF6648351D2A018400D922EC /* SettingTableViewController.xib in Resources */,
+				BFBDBBE61D2B413700E19822 /* SettingTableViewController.xib in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
+				BF62D4151D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */,
+				BF62D4101D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */,
+				BF62D40F1D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-23_90.jpeg in Resources */,
 				BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */,
+				BF62D4111D2BBD2300121884 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
+				BF62D4141D2BBD3C00121884 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

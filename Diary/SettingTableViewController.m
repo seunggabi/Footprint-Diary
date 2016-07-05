@@ -2,7 +2,7 @@
 //  SettingTableViewController.m
 //  Diary
 //
-//  Created by PC GUARD on 2016. 7. 4..
+//  Created by PC GUARD on 2016. 7. 5..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    mySetting = [[NSMutableArray alloc]initWithObjects:
-                 @"Data 1 in array",@"Data 2 in array",@"Data 3 in array",
-                 @"Data 4 in array",@"Data 5 in array",@"Data 5 in array",
-                 @"Data 6 in array",@"Data 7 in array",@"Data 8 in array",
-                 @"Data 9 in array", nil];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,64 +30,15 @@
 }
 
 #pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
-(NSInteger)section{
-    return [mySetting count]/2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
-(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier = @"cellID";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:
-                UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    NSString *stringForCell;
-    if (indexPath.section == 0) {
-        stringForCell= [mySetting objectAtIndex:indexPath.row];
-        
-    }
-    else if (indexPath.section == 1){
-        stringForCell= [mySetting objectAtIndex:indexPath.row+ [mySetting count]/2];
-        
-    }
-    [cell.textLabel setText:stringForCell];
-    return cell;
-}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 2;
+    return 0;
 }
 
-
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:
-(NSInteger)section{
-    NSString *headerTitle;
-    if (section==0) {
-        headerTitle = @"Section 1 Header";
-    }
-    else{
-        headerTitle = @"Section 2 Header";
-        
-    }
-    return headerTitle;
-}
-
-
-#pragma mark - TableView delegate
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
-(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"Section:%d Row:%d selected and its data is %@",
-          indexPath.section,indexPath.row,cell.textLabel.text);
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
 /*
