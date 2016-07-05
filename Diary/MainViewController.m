@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "UserModel.h"
+#import "Model/UserModel.h"
 
 @interface MainViewController ()
 
@@ -40,10 +40,9 @@
     
     // DBConnector UPDATE 사용
     [[DBConnector getInstance] updateTable:@"Footprint" data:@{@"address":@"zzz"} where:nil];
-    [modelFootPrint selectFootprint];
     
     // SELECT 확인
-    NSDictionary *fp = [modelFootPrint.fp getObj];
+    NSDictionary *fp = [[[modelFootPrint selectFootprint:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",fp);
     
     [super viewDidLoad];

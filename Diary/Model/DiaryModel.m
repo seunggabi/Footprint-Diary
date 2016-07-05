@@ -46,13 +46,13 @@
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             Diary *d = [[Diary alloc] init];
             
-            d.d_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 0)];
+            d.d_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             d.d_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            d.d_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_text(stmt, 2)];
-            d.weather = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 3)];
+            d.d_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];
+            d.weather = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
             d.title = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
             d.content = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
-            d.e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 6)];
+            d.e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 6)];
             [list addObject:d];
         }
         sqlite3_finalize(stmt);
@@ -65,7 +65,7 @@
     
     //[self deleteDiary];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@')", d.d_id, d.d_date, d.d_time, d.weather, d.title, d.content, d.e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_data, d_time, weather, title, content, e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Diary Failed!");

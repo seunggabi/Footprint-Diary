@@ -41,14 +41,14 @@
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             user.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
             user.sex = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            user.age = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 2)];
-            user.height = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 3)];
-            user.weight = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 4)];
+            user.age = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 2)];
+            user.height = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
+            user.weight = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 4)];
             user.password = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
             user.question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 6)];
             user.answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 7)];
-            user.skin_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 8)];
-            user.timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_text(stmt, 9)];
+            user.skin_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 8)];
+            user.timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 9)];
         }
         sqlite3_finalize(stmt);
     }
