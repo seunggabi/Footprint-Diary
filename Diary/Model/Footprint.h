@@ -13,9 +13,9 @@
 @property (strong, nonatomic) NSNumber *fp_id;
 @property (strong, nonatomic) NSString *fp_date;
 @property (strong, nonatomic) NSDate *fp_time;
-@property (strong, nonatomic) NSNumber *GPS_X;
-@property (strong, nonatomic) NSNumber *GPS_Y;
-@property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSNumber *fp_GPS_X;
+@property (strong, nonatomic) NSNumber *fp_GPS_Y;
+@property (strong, nonatomic) NSString *fp_address;
 
 -(NSDictionary *) getObj;
 

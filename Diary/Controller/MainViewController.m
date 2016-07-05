@@ -27,7 +27,7 @@
     [modelUser createUser];
     [modelUser insertUser:[modelUser getSampleData]];
     // DBConnector UPDATE 사용
-    [[DBConnector getInstance] updateTable:@"user" data:@{@"u_name":@"kim",@"age":@"19"} where:nil];
+    [[DBConnector getInstance] updateTable:@"user" data:@{@"u_name":@"kim",@"u_age":@"19"} where:nil];
     [modelUser selectUser];
     // SELECT 확인
     NSDictionary *user = [modelUser.user getObj];
@@ -39,7 +39,7 @@
     [modelFootPrint createFootprint];
     [modelFootPrint insertFootprint:[modelFootPrint getSampleData]];
     // DBConnector UPDATE 사용
-    [[DBConnector getInstance] updateTable:@"Footprint" data:@{@"address":@"zzz"} where:nil];
+    [[DBConnector getInstance] updateTable:@"Footprint" data:@{@"fp_address":@"zzz"} where:nil];
     // SELECT 확인
     NSDictionary *fp = [[[modelFootPrint selectFootprint:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",fp);
@@ -50,7 +50,7 @@
     [modelDiary createDiary];
     [modelDiary insertDiary:[modelDiary getSampleData]];
     // DBConnector UPDATE 사용
-    [[DBConnector getInstance] updateTable:@"Diary" data:@{@"content":@"일기 수정완료"} where:nil];
+    [[DBConnector getInstance] updateTable:@"Diary" data:@{@"d_content":@"일기 수정완료"} where:nil];
     // SELECT 확인
     NSDictionary *d = [[[modelDiary selectDiary:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",d);
@@ -61,7 +61,7 @@
     [modelSticker createSticker];
     [modelSticker insertSticker:[modelSticker getSampleData]];
     // DBConnector UPDATE 사용
-    [[DBConnector getInstance] updateTable:@"Sticker" data:@{@"color":@0} where:nil];
+    [[DBConnector getInstance] updateTable:@"Sticker" data:@{@"s_color":@0} where:nil];
     // SELECT 확인
     NSDictionary *s = [[[modelSticker selectSticker:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",s);

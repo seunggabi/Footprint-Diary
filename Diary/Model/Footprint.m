@@ -13,12 +13,12 @@
 @synthesize fp_id;
 @synthesize fp_date;
 @synthesize fp_time;
-@synthesize GPS_X;
-@synthesize GPS_Y;
-@synthesize address;
+@synthesize fp_GPS_X;
+@synthesize fp_GPS_Y;
+@synthesize fp_address;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"GPS_X":GPS_X, @"GPS_Y":GPS_Y, @"address":address};
+    NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"fp_GPS_X":fp_GPS_X, @"fp_GPS_Y":fp_GPS_Y, @"fp_address":fp_address};
     return obj;
 }
 

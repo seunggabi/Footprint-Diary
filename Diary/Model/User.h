@@ -11,15 +11,15 @@
 @interface User : NSObject
 
 @property (strong, nonatomic) NSString *u_name;
-@property (strong, nonatomic) NSString *sex;
-@property (strong, nonatomic) NSNumber *age;
-@property (strong, nonatomic) NSNumber *height;
-@property (strong, nonatomic) NSNumber *weight;
-@property (strong, nonatomic) NSString *password;
-@property (strong, nonatomic) NSString *question;
-@property (strong, nonatomic) NSString *answer;
-@property (strong, nonatomic) NSNumber *skin_id;
-@property (strong, nonatomic) NSNumber *timer;
+@property (strong, nonatomic) NSString *u_sex;
+@property (strong, nonatomic) NSNumber *u_age;
+@property (strong, nonatomic) NSNumber *u_height;
+@property (strong, nonatomic) NSNumber *u_weight;
+@property (strong, nonatomic) NSString *u_password;
+@property (strong, nonatomic) NSString *u_question;
+@property (strong, nonatomic) NSString *u_answer;
+@property (strong, nonatomic) NSNumber *u_sk_id;
+@property (strong, nonatomic) NSNumber *u_timer;
 
 -(NSDictionary *) getObj;
 

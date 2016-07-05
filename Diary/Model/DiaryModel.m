@@ -26,7 +26,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Diary' (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_date TEXT, d_time INTEGER, weather INTEGER, title TEXT, content TEXT, d_e_id INTEGER)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Diary' (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_date TEXT, d_time INTEGER, d_weather INTEGER, d_title TEXT, d_content TEXT, d_e_id INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -49,9 +49,9 @@
             d.d_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             d.d_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
             d.d_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];
-            d.weather = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
-            d.title = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
-            d.content = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            d.d_weather = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
+            d.d_title = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
+            d.d_content = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
             d.d_e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 6)];
             [list addObject:d];
         }
@@ -65,7 +65,7 @@
     
     //[self deleteDiary];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_date, d_time, weather, title, content, d_e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.weather, d.title, d.content, d.d_e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_date, d_time, weather, title, content, d_e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.d_weather, d.d_title, d.d_content, d.d_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Diary Failed!");
@@ -106,9 +106,9 @@
     d.d_id = @0;
     d.d_date = @"2016-07-05";
     d.d_time = [[NSDate alloc] init];
-    d.weather = @0;
-    d.title = @"좋은날";
-    d.content = @"아이유";
+    d.d_weather = @0;
+    d.d_title = @"좋은날";
+    d.d_content = @"아이유";
     d.d_e_id = @0;
     return d;
 }

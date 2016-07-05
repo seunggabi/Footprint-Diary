@@ -11,18 +11,18 @@
 @implementation User
 
 @synthesize u_name;
-@synthesize sex;
-@synthesize age;
-@synthesize height;
-@synthesize weight;
-@synthesize password;
-@synthesize question;
-@synthesize answer;
-@synthesize skin_id;
-@synthesize timer;
+@synthesize u_sex;
+@synthesize u_age;
+@synthesize u_height;
+@synthesize u_weight;
+@synthesize u_password;
+@synthesize u_question;
+@synthesize u_answer;
+@synthesize u_sk_id;
+@synthesize u_timer;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"u_name":u_name, @"sex":sex, @"age":age, @"height":height, @"weight":weight, @"password":password, @"question":question, @"answer":answer, @"skin_id":skin_id, @"timer":timer};
+    NSDictionary *obj = @{@"u_name":u_name, @"u_sex":u_sex, @"u_age":u_age, @"u_height":u_height, @"u_weight":u_weight, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_sk_id":u_sk_id, @"u_timer":u_timer};
     return obj;
 }
 @end

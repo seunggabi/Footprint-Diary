@@ -25,7 +25,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Footprint' (fp_id INTEGER PRIMARY KEY AUTOINCREMENT, fp_date TEXT, fp_time INTEGER, GPS_X DOUBLE, GPS_Y DOUBLE, address TEXT)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Footprint' (fp_id INTEGER PRIMARY KEY AUTOINCREMENT, fp_date TEXT, fp_time INTEGER, fp_GPS_X DOUBLE, fp_GPS_Y DOUBLE, fp_address TEXT)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -47,9 +47,9 @@
             f.fp_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             f.fp_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
             f.fp_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];
-            f.GPS_X = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 3)];
-            f.GPS_Y = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 4)];
-            f.address = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            f.fp_GPS_X = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 3)];
+            f.fp_GPS_Y = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 4)];
+            f.fp_address = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
             [list addObject:f];
         }
         sqlite3_finalize(stmt);
@@ -62,7 +62,7 @@
     
     //[self deleteFootprint];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, GPS_X, GPS_Y, address) VALUES ('%@', '%f', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.GPS_X, f.GPS_Y, f.address];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address) VALUES ('%@', '%f', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Footprint Failed!");
@@ -102,9 +102,9 @@
     Footprint *f = [[Footprint alloc] init];
     f.fp_date = @"2016-07-05";
     f.fp_time = [NSDate date] ;
-    f.GPS_X = @127.1945001;
-    f.GPS_Y = @37.227448;
-    f.address = @"우리집";
+    f.fp_GPS_X = @127.1945001;
+    f.fp_GPS_Y = @37.227448;
+    f.fp_address = @"우리집";
     return f;
 }
 

@@ -20,9 +20,9 @@ typedef enum weather {
 @property (strong, nonatomic) NSNumber *d_id;
 @property (strong, nonatomic) NSString *d_date;
 @property (strong, nonatomic) NSDate *d_time;
-@property (strong, nonatomic) NSNumber *weather;
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSNumber *d_weather;
+@property (strong, nonatomic) NSString *d_title;
+@property (strong, nonatomic) NSString *d_content;
 @property (strong, nonatomic) NSNumber *d_e_id;
 
 @end

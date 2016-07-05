@@ -26,7 +26,7 @@
     char *err;
 
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, sex CHAR(2), age INTEGER, height INTEGER, weight INTEGER, password TEXT, question TEXT, answer TEXT, skin_id INTEGER, timer INTEGER)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, u_sex CHAR(2), u_age INTEGER, u_height INTEGER, u_weight INTEGER, u_password TEXT, u_question TEXT, u_answer TEXT, u_sk_id INTEGER, u_timer INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -40,15 +40,15 @@
     if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             user.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            user.sex = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            user.age = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 2)];
-            user.height = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
-            user.weight = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 4)];
-            user.password = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
-            user.question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 6)];
-            user.answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 7)];
-            user.skin_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 8)];
-            user.timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 9)];
+            user.u_sex = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            user.u_age = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 2)];
+            user.u_height = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
+            user.u_weight = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 4)];
+            user.u_password = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            user.u_question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 6)];
+            user.u_answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 7)];
+            user.u_sk_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 8)];
+            user.u_timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 9)];
         }
         sqlite3_finalize(stmt);
     }
@@ -60,7 +60,7 @@
     
     [self deleteUser];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %@, %@, %@, '%@', '%@', '%@', '%@', '%@')", u.u_name, u.sex, u.age, u.height, u.weight, u.password, u.question, u.answer, u.skin_id, u.timer];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', %@, %@, %@, '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_sex, u.u_age, u.u_height, u.u_weight, u.u_password, u.u_question, u.u_answer, u.u_sk_id, u.u_timer];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT User Failed!");
@@ -99,15 +99,15 @@
 -(User *) getSampleData {
     User *u = [[User alloc] init];
     u.u_name = @"김승갑";
-    u.sex = @"M";
-    u.age = @25;
-    u.height = @172;
-    u.weight = @83;
-    u.password = @"1234";
-    u.question = @"이 세상에서 제일 소중한 것은?";
-    u.answer = @"나";
-    u.skin_id = @0;
-    u.timer = @1;
+    u.u_sex = @"M";
+    u.u_age = @25;
+    u.u_height = @172;
+    u.u_weight = @83;
+    u.u_password = @"1234";
+    u.u_question = @"이 세상에서 제일 소중한 것은?";
+    u.u_answer = @"나";
+    u.u_sk_id = @0;
+    u.u_timer = @1;
     return u;
 }
 

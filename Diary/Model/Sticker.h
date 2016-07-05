@@ -23,7 +23,7 @@ typedef enum color {
 
 @property (strong, nonatomic) NSNumber *s_id;
 @property (strong, nonatomic) NSString *s_date;
-@property (strong, nonatomic) NSNumber *color;
+@property (strong, nonatomic) NSNumber *s_color;
 @property (strong, nonatomic) NSNumber *s_e_id;
 
 -(NSDictionary *) getObj;

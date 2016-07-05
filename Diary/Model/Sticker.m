@@ -12,11 +12,11 @@
 
 @synthesize s_id;
 @synthesize s_date;
-@synthesize color;
+@synthesize s_color;
 @synthesize s_e_id;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"s_id":s_id, @"s_date":s_date, @"color":color, @"s_e_id":s_e_id};
+    NSDictionary *obj = @{@"s_id":s_id, @"s_date":s_date, @"s_color":s_color, @"s_e_id":s_e_id};
     return obj;
 } 
 
