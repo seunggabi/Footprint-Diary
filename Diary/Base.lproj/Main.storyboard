@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wJ0-Iw-hRp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wJ0-Iw-hRp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,6 @@
         <!--Navigation Controller-->
         <scene sceneID="a7d-L1-7A7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TY6-Xs-h7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="8Bv-iu-IGS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="H4c-Kp-XkM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -17,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TY6-Xs-h7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1894.5" y="-2566.5"/>
         </scene>
         <!--Calender-->
         <scene sceneID="jPb-VG-ipt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQG-xg-KRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="N7B-hE-zPm" sceneMemberID="viewController">
+                <viewController id="N7B-hE-zPm" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Dr-ox-hE3"/>
                         <viewControllerLayoutGuide type="bottom" id="B35-r3-Jku"/>
@@ -50,6 +49,7 @@
                     <navigationItem key="navigationItem" title="Calender" id="bBn-4U-ysh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQG-xg-KRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2632.5" y="-3366.5"/>
         </scene>
@@ -989,7 +989,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bQ0-Fy-cf7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r6g-rT-k2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MEy-WT-dkT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bdI-7B-BnP"/>
@@ -1005,6 +1004,7 @@
                         <segue destination="JtT-Ff-wnv" kind="relationship" relationship="viewControllers" id="aln-tV-roA"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6g-rT-k2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3101.5" y="-3372.5"/>
         </scene>

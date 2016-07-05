@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "SettingTableViewController.h"
 
 @interface ViewController ()
 
