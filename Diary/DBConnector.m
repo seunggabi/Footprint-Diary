@@ -78,7 +78,6 @@
         query = [query stringByAppendingString:key];
         query = [query stringByAppendingString:[NSString stringWithFormat:@"='%@'", data[key]]];
         firstCheck = FALSE;
-        NSLog(@"%@", query);
     }
     if(where != nil) {
         query = [query stringByAppendingString:@" WHERE "];

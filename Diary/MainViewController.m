@@ -21,11 +21,11 @@
     
     [modelUser dropUser];
     [modelUser createUser];
-    [modelUser setUser:[modelUser getSampleData]];
-    
+    [modelUser insertUser:[modelUser getSampleData]];
+
     [[DBConnector getInstance] updateTable:@"user" data:@{@"name":@"kim",@"age":@"19"} where:nil];
-    
-    NSDictionary *array = [modelUser getUser];
+    [modelUser selectUser];
+    NSDictionary *array = [modelUser.user getObj];
     NSLog(@"%@",array);
     
     [super viewDidLoad];
