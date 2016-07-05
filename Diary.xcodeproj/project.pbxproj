@@ -50,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */,
 				BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,9 +58,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286EC5AE1D2AA4030002A8EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				286EC5AB1D2A80910002A8EB /* DBConnector.h */,
+				286EC5AC1D2A80910002A8EB /* DBConnector.m */,
+				286EC5A31D2A7EE00002A8EB /* UserModel.h */,
+				286EC5A41D2A7EE00002A8EB /* UserModel.m */,
+				286EC5AF1D2BB6F80002A8EB /* User.h */,
+				286EC5B01D2BB6F80002A8EB /* User.m */,
+				286EC5B51D2BC8510002A8EB /* FootprintModel.h */,
+				286EC5B61D2BC8510002A8EB /* FootprintModel.m */,
+				286EC5B21D2BC3630002A8EB /* Footprint.h */,
+				286EC5B31D2BC3630002A8EB /* Footprint.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
+				286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */,
 				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
 				BF76DDA91D24181800E5F658 /* Diary */,
 				BF76DDA81D24181800E5F658 /* Products */,
@@ -82,7 +102,6 @@
 				BFBDBBE41D2B413700E19822 /* SettingTableViewController.xib */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
-				BF76DDB01D24181800E5F658 /* ViewController.h */,
 				BF76DDB11D24181800E5F658 /* ViewController.m */,
 				BF76DDB31D24181800E5F658 /* Main.storyboard */,
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
