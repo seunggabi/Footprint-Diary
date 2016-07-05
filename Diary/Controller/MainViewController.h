@@ -14,6 +14,7 @@
 #import "../Model/StickerModel.h"
 #import "../Model/EmoticonModel.h"
 #import "../Model/PhotoModel.h"
+#import "../Model/HealthModel.h"
 
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,6 +24,7 @@
 @property (strong, nonatomic) StickerModel *modelSticker;
 @property (strong, nonatomic) EmoticonModel *modelEmoticon;
 @property (strong, nonatomic) PhotoModel *modelPhoto;
+@property (strong, nonatomic) HealthModel *modelHealth;
 
 @end
 

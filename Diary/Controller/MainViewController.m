@@ -19,6 +19,7 @@
 @synthesize modelSticker;
 @synthesize modelPhoto;
 @synthesize modelEmoticon;
+@synthesize modelHealth;
 
 - (void)viewDidLoad {
     // UserModel 연동
@@ -87,6 +88,18 @@
     // SELECT 확인
     NSDictionary *p = [[[modelPhoto selectPhoto:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",p);
+    
+    // HealthModel 연동
+    modelHealth = [[HealthModel alloc] init];
+    [modelHealth dropHealth];
+    [modelHealth createHealth];
+    [modelHealth insertHealth:[modelHealth getSampleData]];
+    // DBConnector UPDATE 사용
+    [[DBConnector getInstance] updateTable:@"Health" data:@{@"h_count":@1234} where:nil];
+    // SELECT 확인
+    NSDictionary *h = [[[modelHealth selectHealth:nil] objectAtIndex:0] getObj];
+    NSLog(@"%@",h);
+
     
     [super viewDidLoad];
 }
