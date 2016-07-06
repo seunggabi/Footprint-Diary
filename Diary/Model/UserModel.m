@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) createUser {
+-(void) create {
     char *err;
 
     if(_createQuery == nil) {
@@ -34,7 +34,7 @@
     }
 }
 
--(User *) selectUser {
+-(User *) select {
     NSString *selectQuery = @"SELECT * FROM user";
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
@@ -70,7 +70,7 @@
     }
 }
 
--(void) deleteUser {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM user";
@@ -83,7 +83,7 @@
     }
 }
 
--(void) dropUser {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'user'";

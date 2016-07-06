@@ -21,7 +21,7 @@
     return self;
 }
 
--(void) createHealthInfo {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -33,7 +33,7 @@
     }
 }
 
--(NSMutableArray *) selectHealthInfo:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Health_Information";
     if(where != nil) {
@@ -58,7 +58,7 @@
     return list;
 }
 
--(void) insertHealthInfo:(HealthInformation *)hi {
+-(void) insert:(HealthInformation *)hi {
     char *err;
     
     //[self deleteHealthInformation];
@@ -73,7 +73,7 @@
     }
 }
 
--(void) deleteHealthInfo {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Health_Information";
@@ -86,7 +86,7 @@
     }
 }
 
--(void) dropHealthInfo {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Health_Information'";

@@ -18,11 +18,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createDiary;
--(NSMutableArray *) selectDiary :(NSString *)where;
--(void) insertDiary:(Diary *)d;
--(void) deleteDiary;
--(void) dropDiary;
+-(void) create;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insert:(Diary *)d;
+-(void) delete;
+-(void) drop;
 
 -(Diary *) getSampleData;
 

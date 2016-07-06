@@ -18,11 +18,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createSticker;
--(NSMutableArray *) selectSticker :(NSString *)where;
--(void) insertSticker:(Sticker *)s;
--(void) deleteSticker;
--(void) dropSticker;
+-(void) create;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insert:(Sticker *)s;
+-(void) delete;
+-(void) drop;
 
 -(Sticker *) getSampleData;
 

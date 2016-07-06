@@ -18,11 +18,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createPhoto;
--(NSMutableArray *) selectPhoto :(NSString *)where;
--(void) insertPhoto:(Photo *)p;
--(void) deletePhoto;
--(void) dropPhoto;
+-(void) create;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insert:(Photo *)p;
+-(void) delete;
+-(void) drop;
 
 -(Photo *) getSampleData;
 

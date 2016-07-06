@@ -19,11 +19,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createUser;
--(User *) selectUser;
--(void) insertUser:(User *)u;
--(void) deleteUser;
--(void) dropUser;
+-(void) create;
+-(User *) select;
+-(void) insert:(User *)u;
+-(void) delete;
+-(void) drop;
 
 -(User *) getSampleData;
 

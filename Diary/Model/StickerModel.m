@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) createSticker {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -34,7 +34,7 @@
     }
 }
 
--(NSMutableArray *) selectSticker:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Sticker";
     if(where != nil) {
@@ -57,7 +57,7 @@
     return list;
 }
 
--(void) insertSticker:(Sticker *)s {
+-(void) insert:(Sticker *)s {
     char *err;
     
     //[self deleteSticker];
@@ -72,7 +72,7 @@
     }
 }
 
--(void) deleteSticker {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Sticker";
@@ -85,7 +85,7 @@
     }
 }
 
--(void) dropSticker {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Sticker'";

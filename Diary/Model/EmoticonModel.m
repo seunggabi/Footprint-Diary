@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) createEmoticon {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -34,7 +34,7 @@
     }
 }
 
--(NSMutableArray *) selectEmoticon:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Emoticon";
     if(where != nil) {
@@ -56,7 +56,7 @@
     return list;
 }
 
--(void) insertEmoticon:(Emoticon *)e {
+-(void) insert:(Emoticon *)e {
     char *err;
     
     //[self deleteEmoticon];
@@ -71,7 +71,7 @@
     }
 }
 
--(void) deleteEmoticon {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Emoticon";
@@ -84,7 +84,7 @@
     }
 }
 
--(void) dropEmoticon {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Emoticon'";

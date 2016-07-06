@@ -19,11 +19,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createFootprint;
--(NSMutableArray *) selectFootprint:(NSString *)where;
--(void) insertFootprint:(Footprint *)u;
--(void) deleteFootprint;
--(void) dropFootprint;
+-(void) create;
+-(NSMutableArray *) select:(NSString *)where;
+-(void) insert:(Footprint *)u;
+-(void) delete;
+-(void) drop;
 
 -(Footprint *) getSampleData;
 

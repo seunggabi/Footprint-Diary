@@ -18,11 +18,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createEmoticon;
--(NSMutableArray *) selectEmoticon :(NSString *)where;
--(void) insertEmoticon:(Emoticon *)e;
--(void) deleteEmoticon;
--(void) dropEmoticon;
+-(void) create;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insert:(Emoticon *)e;
+-(void) delete;
+-(void) drop;
 
 -(Emoticon *) getSampleData;
 
