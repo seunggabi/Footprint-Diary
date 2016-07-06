@@ -41,7 +41,7 @@
     return db;
 }
 
--(void) deleteTable:(NSString *)tableName {
+-(void) deleteTable :(NSString *)tableName {
     char *err;
     
     NSString *query = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
@@ -54,7 +54,7 @@
     }
 }
 
--(void) dropTable:(NSString *)tableName {
+-(void) dropTable :(NSString *)tableName {
     char *err;
     
     NSString *query = [NSString stringWithFormat:@"DROP TABLE %@", tableName];
@@ -67,7 +67,7 @@
     }
 }
 
--(void) updateTable:(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where {
+-(void) updateTable :(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where {
     char *err;
     NSString *query = [NSString stringWithFormat:@"UPDATE %@ SET ", tableName];
     BOOL firstCheck = TRUE;

@@ -20,9 +20,9 @@
 
 -(id) init;
 -(void) create;
--(NSMutableArray *) select:(NSString *)where;
--(void) insertData:(Footprint *)u;
--(void) delete;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insertData :(Footprint *)u;
+-(void) delete :(NSString *)where;
 -(void) drop;
 
 -(Footprint *) getSampleData;

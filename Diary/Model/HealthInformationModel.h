@@ -21,7 +21,7 @@
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
 -(void) insertData:(HealthInformation *)h;
--(void) delete;
+-(void) delete :(NSString *)where;
 -(void) drop;
 
 -(HealthInformation *) getSampleData;
