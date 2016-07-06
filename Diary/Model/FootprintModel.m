@@ -101,7 +101,7 @@
 -(Footprint *) getSampleData {
     Footprint *f = [[Footprint alloc] init];
     f.fp_date = @"2016-07-05";
-    f.fp_time = [NSDate date] ;
+    f.fp_time = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     f.fp_GPS_X = @127.1945001;
     f.fp_GPS_Y = @37.227448;
     f.fp_address = @"우리집";

@@ -105,7 +105,7 @@
     Diary *d = [[Diary alloc] init];
     d.d_id = @0;
     d.d_date = @"2016-07-05";
-    d.d_time = [[NSDate alloc] init];
+    d.d_time = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     d.d_weather = @0;
     d.d_title = @"좋은날";
     d.d_content = @"아이유";

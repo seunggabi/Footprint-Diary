@@ -101,14 +101,14 @@
 -(Health *) getSampleData {
     Health *h = [[Health alloc] init];
     h.h_date = @"2016-07-06";
-    h.h_time = [NSDate date];
+    h.h_time = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     h.h_id = @0;
     h.h_count = @123;
     return h;
 }
 
 -(NSNumber *) getTodayNowCount {
-    NSDate *date = [NSDate date];
+    NSDate *date = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *today = [dateFormatter stringFromDate:date];

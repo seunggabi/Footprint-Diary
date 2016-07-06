@@ -20,6 +20,7 @@
 @synthesize modelPhoto;
 @synthesize modelEmoticon;
 @synthesize modelHealth;
+@synthesize modelHealthInfo;
 
 - (void)viewDidLoad {
     // UserModel 연동
@@ -100,6 +101,16 @@
     NSDictionary *h = [[[modelHealth selectHealth:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",h);
 
+    // HealthInformationModel 연동
+    modelHealthInfo = [[HealthInformationModel alloc] init];
+    [modelHealthInfo dropHealthInfo];
+    [modelHealthInfo createHealthInfo];
+    [modelHealthInfo insertHealthInfo:[modelHealthInfo getSampleData]];
+    // DBConnector UPDATE 사용
+    [[DBConnector getInstance] updateTable:@"Health_Information" data:@{@"hi_comment":@"좋으니까 좋음"} where:nil];
+    // SELECT 확인
+    NSDictionary *hi = [[[modelHealthInfo selectHealthInfo:nil] objectAtIndex:0] getObj];
+    NSLog(@"%@",hi);
     
     [super viewDidLoad];
 }

@@ -15,6 +15,7 @@
 #import "../Model/EmoticonModel.h"
 #import "../Model/PhotoModel.h"
 #import "../Model/HealthModel.h"
+#import "../Model/HealthInformationModel.h"
 
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) EmoticonModel *modelEmoticon;
 @property (strong, nonatomic) PhotoModel *modelPhoto;
 @property (strong, nonatomic) HealthModel *modelHealth;
+@property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
 
 @end
 
