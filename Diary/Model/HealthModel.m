@@ -36,13 +36,13 @@
 
 -(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
-    NSString *selectQuery = @"SELECT * FROM Health";
+    NSString *query = @"SELECT * FROM Health";
     if(where != nil) {
-        selectQuery = [selectQuery stringByAppendingString:@" WHERE "];
-        selectQuery = [selectQuery stringByAppendingString:where];
+        query = [query stringByAppendingString:@" WHERE "];
+        query = [query stringByAppendingString:where];
     }
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             Health *h = [[Health alloc] init];
             
@@ -72,10 +72,14 @@
     }
 }
 
--(void) delete {
+-(void) delete :(NSString *)where {
     char *err;
     
     NSString *query = @"DELETE FROM Health";
+    if(where != nil) {
+        query = [query stringByAppendingString:@" WHERE "];
+        query = [query stringByAppendingString:where];
+    }
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"DELETE Health Failed!");

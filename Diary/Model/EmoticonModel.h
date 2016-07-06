@@ -20,8 +20,8 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Emoticon *)e;
--(void) delete;
+-(void) insertData :(Emoticon *)e;
+-(void) delete :(NSString *)where;
 -(void) drop;
 
 -(Emoticon *) getSampleData;

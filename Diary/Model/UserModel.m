@@ -35,9 +35,9 @@
 }
 
 -(User *) select {
-    NSString *selectQuery = @"SELECT * FROM user";
+    NSString *query = @"SELECT * FROM user";
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [selectQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             user.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
             user.u_sex = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];

@@ -21,7 +21,7 @@
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
 -(void) insertData:(Photo *)p;
--(void) delete;
+-(void) delete :(NSString *)where;
 -(void) drop;
 
 -(Photo *) getSampleData;

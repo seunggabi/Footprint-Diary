@@ -20,8 +20,8 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Sticker *)s;
--(void) delete;
+-(void) insertData :(Sticker *)s;
+-(void) delete :(NSString *)where;
 -(void) drop;
 
 -(Sticker *) getSampleData;
