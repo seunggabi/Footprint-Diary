@@ -20,7 +20,7 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insert:(HealthInformation *)h;
+-(void) insertData:(HealthInformation *)h;
 -(void) delete;
 -(void) drop;
 

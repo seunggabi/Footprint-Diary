@@ -60,7 +60,7 @@
     return list;
 }
 
--(void) insert:(Diary *)d {
+-(void) insertData:(Diary *)d {
     char *err;
     
     //[self deleteDiary];

@@ -56,7 +56,7 @@
     return list;
 }
 
--(void) insert:(Photo *)p {
+-(void) insertData:(Photo *)p {
     char *err;
     
     //[self deletePhoto];

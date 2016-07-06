@@ -57,7 +57,7 @@
     return list;
 }
 
--(void) insert:(Sticker *)s {
+-(void) insertData:(Sticker *)s {
     char *err;
     
     //[self deleteSticker];

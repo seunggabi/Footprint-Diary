@@ -57,7 +57,7 @@
     return list;
 }
 
--(void) insert:(Health *)h {
+-(void) insertData:(Health *)h {
     char *err;
     
     //[self deleteHealth];

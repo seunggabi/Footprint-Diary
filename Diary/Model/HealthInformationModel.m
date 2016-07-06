@@ -58,7 +58,7 @@
     return list;
 }
 
--(void) insert:(HealthInformation *)hi {
+-(void) insertData:(HealthInformation *)hi {
     char *err;
     
     //[self deleteHealthInformation];

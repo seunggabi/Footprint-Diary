@@ -20,7 +20,7 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insert:(Emoticon *)e;
+-(void) insertData:(Emoticon *)e;
 -(void) delete;
 -(void) drop;
 

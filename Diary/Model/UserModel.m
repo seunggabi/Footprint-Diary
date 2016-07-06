@@ -55,7 +55,7 @@
     return user;
 }
 
--(void) insertUser:(User *)u {
+-(void) insertData:(User *)u {
     char *err;
     
     [self delete];

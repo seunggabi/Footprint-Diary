@@ -56,7 +56,7 @@
     return list;
 }
 
--(void) insert:(Emoticon *)e {
+-(void) insertData:(Emoticon *)e {
     char *err;
     
     //[self deleteEmoticon];

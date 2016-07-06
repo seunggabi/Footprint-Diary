@@ -20,7 +20,7 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insert:(Diary *)d;
+-(void) insertData:(Diary *)d;
 -(void) delete;
 -(void) drop;
 

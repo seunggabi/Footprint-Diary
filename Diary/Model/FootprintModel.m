@@ -57,7 +57,7 @@
     return list;
 }
 
--(void) insert:(Footprint *)f {
+-(void) insertData:(Footprint *)f {
     char *err;
     
     //[self deleteFootprint];

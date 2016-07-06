@@ -21,7 +21,7 @@
 -(id) init;
 -(void) create;
 -(User *) select;
--(void) insert:(User *)u;
+-(void) insertData:(User *)u;
 -(void) delete;
 -(void) drop;
 

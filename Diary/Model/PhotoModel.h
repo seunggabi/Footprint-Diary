@@ -20,7 +20,7 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insert:(Photo *)p;
+-(void) insertData:(Photo *)p;
 -(void) delete;
 -(void) drop;
 

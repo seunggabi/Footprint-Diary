@@ -21,7 +21,7 @@
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select:(NSString *)where;
--(void) insert:(Footprint *)u;
+-(void) insertData:(Footprint *)u;
 -(void) delete;
 -(void) drop;
 

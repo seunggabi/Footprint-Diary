@@ -18,11 +18,11 @@
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
--(void) createHealth;
--(NSMutableArray *) selectHealth :(NSString *)where;
--(void) insertHealth:(Health *)h;
--(void) deleteHealth;
--(void) dropHealth;
+-(void) create;
+-(NSMutableArray *) select :(NSString *)where;
+-(void) insertData:(Health *)h;
+-(void) delete;
+-(void) drop;
 
 -(Health *) getSampleData;
 -(NSNumber *) getTodayNowCount;
