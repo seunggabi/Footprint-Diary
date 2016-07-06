@@ -21,7 +21,7 @@
     return self;
 }
 
--(void) createFootprint {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -33,7 +33,7 @@
     }
 }
 
--(NSMutableArray *) selectFootprint:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Footprint";
     if(where != nil) {
@@ -57,7 +57,7 @@
     return list;
 }
 
--(void) insertFootprint:(Footprint *)f {
+-(void) insertData:(Footprint *)f {
     char *err;
     
     //[self deleteFootprint];
@@ -72,7 +72,7 @@
     }
 }
 
--(void) deleteFootprint {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Footprint";
@@ -85,7 +85,7 @@
     }
 }
 
--(void) dropFootprint {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Footprint'";

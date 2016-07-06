@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) createPhoto {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -34,7 +34,7 @@
     }
 }
 
--(NSMutableArray *) selectPhoto:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Photo";
     if(where != nil) {
@@ -56,7 +56,7 @@
     return list;
 }
 
--(void) insertPhoto:(Photo *)p {
+-(void) insertData:(Photo *)p {
     char *err;
     
     //[self deletePhoto];
@@ -71,7 +71,7 @@
     }
 }
 
--(void) deletePhoto {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Photo";
@@ -84,7 +84,7 @@
     }
 }
 
--(void) dropPhoto {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Photo'";

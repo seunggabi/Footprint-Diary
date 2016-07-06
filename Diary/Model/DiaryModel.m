@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) createDiary {
+-(void) create {
     char *err;
     
     if(_createQuery == nil) {
@@ -34,7 +34,7 @@
     }
 }
 
--(NSMutableArray *) selectDiary:(NSString *)where {
+-(NSMutableArray *) select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *selectQuery = @"SELECT * FROM Diary";
     if(where != nil) {
@@ -60,7 +60,7 @@
     return list;
 }
 
--(void) insertDiary:(Diary *)d {
+-(void) insertData:(Diary *)d {
     char *err;
     
     //[self deleteDiary];
@@ -75,7 +75,7 @@
     }
 }
 
--(void) deleteDiary {
+-(void) delete {
     char *err;
     
     NSString *query = @"DELETE FROM Diary";
@@ -88,7 +88,7 @@
     }
 }
 
--(void) dropDiary {
+-(void) drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Diary'";
