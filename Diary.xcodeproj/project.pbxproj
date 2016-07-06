@@ -45,6 +45,7 @@
 		BFF1C2DF1D2C99B600E995D9 /* photo_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF1C2DE1D2C99B600E995D9 /* photo_24.png */; };
 		BFF1C2E11D2C99CC00E995D9 /* save_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF1C2E01D2C99CC00E995D9 /* save_24.png */; };
 		BFF1C2E31D2C99DA00E995D9 /* smile_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF1C2E21D2C99DA00E995D9 /* smile_24.png */; };
+		BFF1C2E51D2CBEA800E995D9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1C2E41D2CBEA800E995D9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		BFF1C2DE1D2C99B600E995D9 /* photo_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_24.png; sourceTree = "<group>"; };
 		BFF1C2E01D2C99CC00E995D9 /* save_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save_24.png; sourceTree = "<group>"; };
 		BFF1C2E21D2C99DA00E995D9 /* smile_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile_24.png; sourceTree = "<group>"; };
+		BFF1C2E41D2CBEA800E995D9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF1C2E51D2CBEA800E995D9 /* MapKit.framework in Frameworks */,
 				286EC5AA1D2A7F0A0002A8EB /* libsqlite3.tbd in Frameworks */,
 				BF80FCAB1D264F6B00ADB9E8 /* CoreLocation.framework in Frameworks */,
 			);
@@ -188,6 +191,7 @@
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
+				BFF1C2E41D2CBEA800E995D9 /* MapKit.framework */,
 				286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */,
 				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
 				BF76DDA91D24181800E5F658 /* Diary */,
