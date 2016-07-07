@@ -11,6 +11,7 @@
 		226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */; };
 		226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */; };
 		226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */; };
+		226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */; };
 		2853465F1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
 		285346601D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */; };
 		285346611D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
@@ -30,7 +31,6 @@
 		28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1891D2C491100D8B9E3 /* Photo.m */; };
 		28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */; };
 		28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18F1D2C58C200D8B9E3 /* Health.m */; };
-		28E5E1931D2C60AA00D8B9E3 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1921D2C60AA00D8B9E3 /* HealthModel.m */; };
 		28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */; };
 		28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1981D2C7CA900D8B9E3 /* HealthInformationModel.m */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
@@ -81,6 +81,8 @@
 		226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
 		226A3A2A1D2EB7CD00FC0FF8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
+		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
 		2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
 		2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; sourceTree = "<group>"; };
 		2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		28E5E18E1D2C58C200D8B9E3 /* Health.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Health.h; sourceTree = "<group>"; };
 		28E5E18F1D2C58C200D8B9E3 /* Health.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Health.m; sourceTree = "<group>"; };
-		28E5E1911D2C60AA00D8B9E3 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
-		28E5E1921D2C60AA00D8B9E3 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
 		28E5E1941D2C7A3D00D8B9E3 /* HealthInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthInformation.h; sourceTree = "<group>"; };
 		28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInformation.m; sourceTree = "<group>"; };
 		28E5E1971D2C7CA900D8B9E3 /* HealthInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthInformationModel.h; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 				28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */,
 				28E5E18E1D2C58C200D8B9E3 /* Health.h */,
 				28E5E18F1D2C58C200D8B9E3 /* Health.m */,
-				28E5E1911D2C60AA00D8B9E3 /* HealthModel.h */,
-				28E5E1921D2C60AA00D8B9E3 /* HealthModel.m */,
+				226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */,
+				226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */,
 				28E5E1941D2C7A3D00D8B9E3 /* HealthInformation.h */,
 				28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */,
 				28E5E1971D2C7CA900D8B9E3 /* HealthInformationModel.h */,
@@ -446,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
+				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
@@ -475,7 +476,6 @@
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
 				226A3A271D2EB7A700FC0FF8 /* DatePickerViewController.m in Sources */,
-				28E5E1931D2C60AA00D8B9E3 /* HealthModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
