@@ -30,6 +30,7 @@
 		28E5E1931D2C60AA00D8B9E3 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1921D2C60AA00D8B9E3 /* HealthModel.m */; };
 		28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */; };
 		28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1981D2C7CA900D8B9E3 /* HealthInformationModel.m */; };
+		BF6A3EFF1D2DF7B9003444DA /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = BF6A3EFE1D2DF7B9003444DA /* 참잘했어요.png */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -99,6 +100,7 @@
 		28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInformation.m; sourceTree = "<group>"; };
 		28E5E1971D2C7CA900D8B9E3 /* HealthInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthInformationModel.h; sourceTree = "<group>"; };
 		28E5E1981D2C7CA900D8B9E3 /* HealthInformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInformationModel.m; sourceTree = "<group>"; };
+		BF6A3EFE1D2DF7B9003444DA /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "참잘했어요.png"; path = "../../참잘했어요.png"; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				BF9436AB1D2D597000F02BDA /* home.png */,
 				BF9436AC1D2D597000F02BDA /* note.png */,
 				BF9436AD1D2D597000F02BDA /* star.png */,
+				BF6A3EFE1D2DF7B9003444DA /* 참잘했어요.png */,
 				BF9436AE1D2D597000F02BDA /* KakaoTalk_Photo_2016-07-07-00-20-00_74.png */,
 				BF9436AF1D2D597000F02BDA /* KakaoTalk_Photo_2016-07-07-00-19-50_99.png */,
 				BF77525F1D2D54BF00260DA0 /* location-pointer-1.png */,
@@ -340,6 +343,7 @@
 				BF7752621D2D54C600260DA0 /* uploading-files-to-the-cloud.png in Resources */,
 				BF77526A1D2D54E700260DA0 /* calendar-with-day-5.png in Resources */,
 				BF7752661D2D54D500260DA0 /* piece-of-paper-and-pencil.png in Resources */,
+				BF6A3EFF1D2DF7B9003444DA /* 참잘했어요.png in Resources */,
 				BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */,
 				BF9436B21D2D597000F02BDA /* note.png in Resources */,
 				BF7752561D2D541E00260DA0 /* arrow-pointing-to-left.png in Resources */,
