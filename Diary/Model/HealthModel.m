@@ -62,16 +62,16 @@
     
     //[self deleteHealth];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health (h_date, h_time, h_count) VALUES ('%@', '%f', '%d')", h.h_date, [h.h_time timeIntervalSince1970], [[self getTodayNowCount] intValue]+1];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health (h_date, h_time, h_count) VALUES ('%@', '%f', '%@')", h.h_date, [h.h_time timeIntervalSince1970], h.h_count];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Health Failed!");
     }
     else {
-        NSLog(@"INSERT Health Success!");
+        NSLog(@"INSERT Health Success!: %@", h.h_count);
     }
 }
-
+ 
 -(void) delete :(NSString *)where {
     char *err;
     
@@ -116,7 +116,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *today = [dateFormatter stringFromDate:date];
-    NSString *countQuery = [NSString stringWithFormat:@"SELECT count(*) FROM Health WHERE date='%@'",today];
+    NSString *countQuery = [NSString stringWithFormat:@"SELECT * FROM Health WHERE date='%@' ORDER BY h_count DESC LIMIT 1",today];
     NSNumber *todayCount;
     
     sqlite3_stmt *stmt;
