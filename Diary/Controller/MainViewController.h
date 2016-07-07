@@ -17,6 +17,7 @@
 #import "../Model/HealthModel.h"
 #import "../Model/HealthInformationModel.h"
 
+@import CoreMotion;
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UserModel *modelUser;
@@ -27,6 +28,7 @@
 @property (strong, nonatomic) PhotoModel *modelPhoto;
 @property (strong, nonatomic) HealthModel *modelHealth;
 @property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
+@property (strong, nonatomic) CMPedometer *pedometer;
 
 @end
 

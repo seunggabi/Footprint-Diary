@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		285346361D2C22220001F378 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346351D2C22220001F378 /* MainViewController.m */; };
+		226A3A271D2EB7A700FC0FF8 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A221D2EB7A700FC0FF8 /* DatePickerViewController.m */; };
+		226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */; };
+		226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */; };
+		226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */; };
 		2853465F1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
 		285346601D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */; };
 		285346611D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
@@ -70,8 +73,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		285346341D2C22220001F378 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		285346351D2C22220001F378 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		226A3A211D2EB7A700FC0FF8 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		226A3A221D2EB7A700FC0FF8 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		226A3A231D2EB7A700FC0FF8 /* HistoricViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricViewController.h; sourceTree = "<group>"; };
+		226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricViewController.m; sourceTree = "<group>"; };
+		226A3A251D2EB7A700FC0FF8 /* PedometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
+		226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
+		226A3A2A1D2EB7CD00FC0FF8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
 		2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; sourceTree = "<group>"; };
 		2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
@@ -175,11 +184,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		226A3A201D2EB7A700FC0FF8 /* Pedometer */ = {
+			isa = PBXGroup;
+			children = (
+				226A3A211D2EB7A700FC0FF8 /* DatePickerViewController.h */,
+				226A3A221D2EB7A700FC0FF8 /* DatePickerViewController.m */,
+				226A3A231D2EB7A700FC0FF8 /* HistoricViewController.h */,
+				226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */,
+				226A3A251D2EB7A700FC0FF8 /* PedometerViewController.h */,
+				226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */,
+			);
+			path = Pedometer;
+			sourceTree = "<group>";
+		};
 		285346331D2C22220001F378 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				285346341D2C22220001F378 /* MainViewController.h */,
-				285346351D2C22220001F378 /* MainViewController.m */,
+				226A3A2A1D2EB7CD00FC0FF8 /* MainViewController.h */,
+				226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +323,7 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				226A3A201D2EB7A700FC0FF8 /* Pedometer */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
@@ -436,19 +459,22 @@
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
-				285346361D2C22220001F378 /* MainViewController.m in Sources */,
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,
 				7D95027D1D2FD09900B57D4D /* VRGAppDelegate.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
 				7D95027F1D2FD09900B57D4D /* VRGViewController.m in Sources */,
+				226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
 				7D95027E1D2FD09900B57D4D /* VRGCalendarView.m in Sources */,
+				226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */,
+				226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
 				7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */,
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
+				226A3A271D2EB7A700FC0FF8 /* DatePickerViewController.m in Sources */,
 				28E5E1931D2C60AA00D8B9E3 /* HealthModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
