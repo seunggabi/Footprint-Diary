@@ -18,11 +18,12 @@
 @synthesize u_password;
 @synthesize u_question;
 @synthesize u_answer;
-@synthesize u_sk_id;
+@synthesize u_th_id;
 @synthesize u_timer;
+@synthesize u_tutorial;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"u_name":u_name, @"u_sex":u_sex, @"u_age":u_age, @"u_height":u_height, @"u_weight":u_weight, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_sk_id":u_sk_id, @"u_timer":u_timer};
+    NSDictionary *obj = @{@"u_name":u_name, @"u_sex":u_sex, @"u_age":u_age, @"u_height":u_height, @"u_weight":u_weight, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_th_id":u_th_id, @"u_timer":u_timer, @"u_tutorial":u_tutorial};
     return obj;
 }
 @end

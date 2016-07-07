@@ -122,7 +122,7 @@
     
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
     }];
-    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 0.0001
+    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 1
                                                   target: self
                                                 selector:@selector(getPedomterCount)
                                                 userInfo: nil repeats:YES];

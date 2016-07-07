@@ -11,10 +11,7 @@
 @interface HealthInformation : NSObject
 
 @property (strong, nonatomic) NSNumber *hi_id;
-@property (strong, nonatomic) NSNumber *hi_type;
-@property (strong, nonatomic) NSString *hi_title;
 @property (strong, nonatomic) NSString *hi_comment;
-@property (strong, nonatomic) NSString *hi_link;
 
 -(NSDictionary *) getObj;
 

@@ -18,8 +18,9 @@
 @property (strong, nonatomic) NSString *u_password;
 @property (strong, nonatomic) NSString *u_question;
 @property (strong, nonatomic) NSString *u_answer;
-@property (strong, nonatomic) NSNumber *u_sk_id;
+@property (strong, nonatomic) NSNumber *u_th_id;
 @property (strong, nonatomic) NSNumber *u_timer;
+@property (strong, nonatomic) NSString *u_tutorial;
 
 -(NSDictionary *) getObj;
 

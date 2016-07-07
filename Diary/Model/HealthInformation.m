@@ -11,13 +11,10 @@
 @implementation HealthInformation
 
 @synthesize hi_id;
-@synthesize hi_type;
-@synthesize hi_title;
 @synthesize hi_comment;
-@synthesize hi_link;
 
 -(NSDictionary *) getObj {
-    return @{@"hi_id":hi_id, @"hi_type":hi_type, @"hi_title":hi_title, @"hi_comment":hi_comment, @"hi_link":hi_link};
+    return @{@"hi_id":hi_id, @"hi_comment":hi_comment};
 }
 
 @end
