@@ -40,8 +40,8 @@
     [[DBConnector getInstance] updateTable:@"user" data:@{@"u_name":@"kim",@"u_age":@"19"} where:nil];
     [modelUser select];
     // SELECT 확인
-    NSDictionary *user = [modelUser.user getObj];
-    NSLog(@"%@",user);
+    //NSDictionary *user = [modelUser.user getObj];
+    //NSLog(@"%@",user);
 
     // FootprintModel 연동
     modelFootPrint = [[FootprintModel alloc] init];
