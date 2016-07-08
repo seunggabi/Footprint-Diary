@@ -22,6 +22,14 @@
 @synthesize modelHealth;
 @synthesize modelHealthInfo;
 
+- (CMPedometer *)pedometer {
+    
+    if (!_pedometer) {
+        _pedometer = [[CMPedometer alloc]init];
+    }
+    return _pedometer;
+}
+
 - (void)viewDidLoad {
     // UserModel 연동
     modelUser = [[UserModel alloc] init];
@@ -112,7 +120,40 @@
     NSDictionary *hi = [[[modelHealthInfo select:nil] objectAtIndex:0] getObj];
     NSLog(@"%@",hi);
     
+    [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+    }];
+    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 1
+                                                  target: self
+                                                selector:@selector(getPedomterCount)
+                                                userInfo: nil repeats:YES];
     [super viewDidLoad];
+}
+
+-(void)getPedomterCount {
+    Health *health = [[Health alloc] init];
+    health.h_time = [NSDate date];
+    NSDate *date = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyy-MM-dd"];
+    NSString *today = [dateFormatter stringFromDate:date];
+    health.h_date = today;
+    NSDate *now = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
+    NSDate *start = [gregorian dateFromComponents:components];
+    
+    // take "now" and normalise to 23:59
+    components.hour = 23;
+    components.minute = 59;
+    components.second = 59;
+    NSDate *end = [gregorian dateFromComponents:components];
+    
+    // display results
+    [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+        health.h_count = pedometerData;
+        //NSLog(health.h_count);
+    }];
+    [modelHealth insertData:health];
 }
 
 - (void)didReceiveMemoryWarning {

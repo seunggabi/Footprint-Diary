@@ -1,30 +1,29 @@
 //
-//  HealthModel.h
+//  ThemeModel.h
 //  Diary
 //
-//  Created by 김승갑 on 2016. 7. 6..
+//  Created by 김승갑 on 2016. 7. 8..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "Health.h"
+#import "Theme.h"
 
-@interface HealthModel : NSObject {
+@interface ThemeModel : NSObject {
     sqlite3 *db;
 }
 
-@property (strong, nonatomic) Health *health;
+@property (strong, nonatomic) Theme *theme;
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
 -(void) create;
 -(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Health *)h;
+-(void) insertData:(Theme *)h;
 -(void) delete :(NSString *)where;
 -(void) drop;
 
--(Health *) getSampleData;
--(NSNumber *) getTodayNowCount;
+-(Theme *) getSampleData;
 
 @end

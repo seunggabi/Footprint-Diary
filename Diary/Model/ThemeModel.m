@@ -1,22 +1,22 @@
 //
-//  HealthInformationModel.m
+//  ThemeModel.m
 //  Diary
 //
-//  Created by 김승갑 on 2016. 7. 6..
+//  Created by 김승갑 on 2016. 7. 8..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "HealthInformationModel.h"
+#import "ThemeModel.h"
 #import "DBConnector.h"
 
-@implementation HealthInformationModel
-@synthesize healthInfo;
+@implementation ThemeModel
+@synthesize theme;
 
 -(id) init {
     self = [super init];
     if(self) {
         db = [[DBConnector getInstance] getDB];
-        healthInfo = [[HealthInformation alloc] init];
+        theme = [[Theme alloc] init];
     }
     return self;
 }
@@ -25,7 +25,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Health_Information' (hi_id INTEGER PRIMARY KEY AUTOINCREMENT, hi_comment TEXT)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Theme' (th_id INTEGER PRIMARY KEY AUTOINCREMENT, th_top TEXT, th_bottom TEXT, th_main TEXT, th_font TEXT)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -35,7 +35,7 @@
 
 -(NSMutableArray *) select :(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
-    NSString *query = @"SELECT * FROM Health_Information";
+    NSString *query = @"SELECT * FROM Theme";
     if(where != nil) {
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
@@ -43,44 +43,46 @@
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            HealthInformation *hi = [[HealthInformation alloc] init];
+            Theme *t = [[Theme alloc] init];
             
-            hi.hi_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
-            hi.hi_comment = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-
-            [list addObject:hi];
+            t.th_top = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
+            t.th_bottom = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            t.th_main = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
+            t.th_font = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
+            
+            [list addObject:t];
         }
         sqlite3_finalize(stmt);
     }
     return list;
 }
 
--(void) insertData :(HealthInformation *)hi {
+-(void) insertData :(Theme *)t {
     char *err;
     
-    //[self deleteHealthInformation];
+    //[self deletetheme];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health_Information (hi_comment) VALUES ('%@')", hi.hi_comment];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Theme (th_top, th_bottom, th_main, th_font) VALUES ('%@', '%@', '%@', '%@')", t.th_top, t.th_bottom, t.th_main, t.th_font];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"INSERT HealthInfo Failed!");
+        NSAssert(0,@"INSERT theme Failed!");
     }
     else {
-        NSLog(@"INSERT HealthInfo Success!");
+        NSLog(@"INSERT theme Success!");
     }
 }
 
 -(void) delete :(NSString *)where {
     char *err;
     
-    NSString *query = @"DELETE FROM Health_Information";
+    NSString *query = @"DELETE FROM Theme";
     if(where != nil) {
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"DELETE HealthInfo Failed!");
+        NSAssert(0,@"DELETE theme Failed!");
     }
     else {
         NSLog(@"DELETE Health Success!");
@@ -90,20 +92,23 @@
 -(void) drop {
     char *err;
     
-    NSString *query = @"DROP TABLE IF EXISTS 'Health_Information'";
+    NSString *query = @"DROP TABLE IF EXISTS 'Theme'";
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"DROP HealthInfo Failed!");
+        NSAssert(0,@"DROP theme Failed!");
     }
     else {
         NSLog(@"DROP Health Success!");
     }
 }
 
--(HealthInformation *) getSampleData {
-    HealthInformation *hi = [[HealthInformation alloc] init];
-    hi.hi_comment = @"그냥 좋음";
-    return hi;
+-(Theme *) getSampleData {
+    Theme *t = [[Theme alloc] init];
+    t.th_top = @"0xFFFFFF";
+    t.th_bottom = @"0x000000";
+    t.th_main = @"0xFFFFFF";
+    t.th_font = @"0x000000";
+    return t;
 }
 
 @end
