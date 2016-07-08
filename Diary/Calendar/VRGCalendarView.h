@@ -16,9 +16,9 @@
 #define kVRGCalendarViewDayWidth 44
 #define kVRGCalendarViewDayHeight 44
 
-@protocol CalendarViewDelegate;
-@interface CalendarView : UIView {
-    id <CalendarViewDelegate> delegate;
+@protocol VRGCalendarViewDelegate;
+@interface VRGCalendarView : UIView {
+    id <VRGCalendarViewDelegate> delegate;
     
     NSDate *currentMonth;
     
@@ -35,7 +35,7 @@
     NSArray *markedColors;
 }
 
-@property (nonatomic, retain) id <CalendarViewDelegate> delegate;
+@property (nonatomic, retain) id <VRGCalendarViewDelegate> delegate;
 @property (nonatomic, retain) NSDate *currentMonth;
 @property (nonatomic, retain) UILabel *labelCurrentMonth;
 @property (nonatomic, retain) UIImageView *animationView_A;
@@ -60,7 +60,7 @@
 
 @end
 
-@protocol CalendarViewDelegate <NSObject>
--(void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
--(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date;
+@protocol VRGCalendarViewDelegate <NSObject>
+-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
+-(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
 @end

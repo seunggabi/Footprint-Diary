@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Vurig Media. All rights reserved.
 //
 
-#import "CalendarView.h"
+#import "VRGCalendarView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "NSDate+convenience.h"
 #import "NSMutableArray+convenience.h"
 #import "UIView+convenience.h"
 
-@implementation CalendarView
+@implementation VRGCalendarView
 @synthesize currentMonth,delegate,labelCurrentMonth, animationView_A,animationView_B;
 @synthesize markedDates,markedColors,calendarHeight,selectedDate;
 
@@ -122,7 +122,7 @@
     }
     
     //Animation
-    __block CalendarView *blockSafeSelf = self;
+    __block VRGCalendarView *blockSafeSelf = self;
     [UIView animateWithDuration:.35
                      animations:^{
                          [self updateSize];
@@ -180,7 +180,7 @@
         animationView_B.frameY = animationView_A.frameY - animationView_B.frameHeight + 3;
     }
     
-    __block CalendarView *blockSafeSelf = self;
+    __block VRGCalendarView *blockSafeSelf = self;
     [UIView animateWithDuration:.35
                      animations:^{
                          [self updateSize];
@@ -563,5 +563,4 @@
     self.markedDates=nil;
     self.markedColors=nil;
 }
-
 @end
