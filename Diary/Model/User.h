@@ -11,10 +11,6 @@
 @interface User : NSObject
 
 @property (strong, nonatomic) NSString *u_name;
-@property (strong, nonatomic) NSString *u_sex;
-@property (strong, nonatomic) NSNumber *u_age;
-@property (strong, nonatomic) NSNumber *u_height;
-@property (strong, nonatomic) NSNumber *u_weight;
 @property (strong, nonatomic) NSString *u_password;
 @property (strong, nonatomic) NSString *u_question;
 @property (strong, nonatomic) NSString *u_answer;
