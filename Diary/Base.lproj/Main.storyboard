@@ -127,15 +127,11 @@
         <!--Footprint Diary-->
         <scene sceneID="Zs2-Ni-fzx">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="vIL-xR-lgv" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="vIL-xR-lgv" customClass="FootprintViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="twA-HN-JtE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="DeD-qA-WAE">
-                                <rect key="frame" x="20" y="87" width="335" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="E19-sA-GNM">
                                 <rect key="frame" x="20" y="246" width="215" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,6 +200,17 @@
                                     <segue destination="xP2-9M-eKh" kind="push" id="uTf-it-t8f"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="Uid-yH-P7G">
+                                <rect key="frame" x="0.0" y="67" width="375" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="DeD-qA-WAE">
+                                        <rect key="frame" x="20" y="20" width="335" height="146"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -218,6 +225,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapScreen" destination="Uid-yH-P7G" id="laO-Uz-ViR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ib-N3-p2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
