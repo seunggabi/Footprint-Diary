@@ -18,5 +18,5 @@
 @property (weak, nonatomic) IBOutlet UIView *mapScreen;
 @property (strong, nonatomic) MTMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-
+@property (strong, nonatomic) MTMapReverseGeoCoder *reverseGeoCoder;
 @end
