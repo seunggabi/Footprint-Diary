@@ -20,4 +20,3 @@
 @property (strong, nonatomic) IBOutlet UILabel *flightsDownLabel;
 
 @end
-

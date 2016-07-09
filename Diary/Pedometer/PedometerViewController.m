@@ -8,7 +8,6 @@
 
 #import "PedometerViewController.h"
 
-
 @interface PedometerViewController ()
 
 @end
@@ -111,16 +110,5 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @end
