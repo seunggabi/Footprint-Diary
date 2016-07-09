@@ -198,10 +198,10 @@
 		28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		28E5E25C1D3031B000D8B9E3 /* FootprintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintViewController.h; sourceTree = "<group>"; };
 		28E5E25D1D3031B000D8B9E3 /* FootprintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
-		28E5E28F1D3113A400D8B9E3 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		28E5E2901D3113A400D8B9E3 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerScheduler.h; path = Diary/Helper/TimerScheduler.h; sourceTree = SOURCE_ROOT; };
 		28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerScheduler.m; path = Diary/Helper/TimerScheduler.m; sourceTree = SOURCE_ROOT; };
+		28E5E29B1D312FD200D8B9E3 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helper.h; path = Diary/Helper/Helper.h; sourceTree = SOURCE_ROOT; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* arrow-pointing-to-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-left.png"; sourceTree = "<group>"; };
 		7D9502101D2FC74E00B57D4D /* arrow-pointing-to-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-right.png"; sourceTree = "<group>"; };
@@ -429,7 +429,7 @@
 			children = (
 				28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */,
 				28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */,
-				28E5E28F1D3113A400D8B9E3 /* Helper.h */,
+				28E5E29B1D312FD200D8B9E3 /* Helper.h */,
 				28E5E2901D3113A400D8B9E3 /* Helper.m */,
 			);
 			name = Helper;
