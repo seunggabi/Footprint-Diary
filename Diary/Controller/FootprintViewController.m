@@ -7,28 +7,36 @@
 //
 
 #import "FootprintViewController.h"
+#import "../Helper/TimerScheduler.h"
+#import "../Helper/Helper.h"
 
-@interface FootprintViewController () <CLLocationManagerDelegate>
+@interface FootprintViewController () <CLLocationManagerDelegate, MTMapViewDelegate, MTMapReverseGeoCoderDelegate>
 
 @end
 
 @implementation FootprintViewController
 
+@synthesize modelFootprint;
 @synthesize mapView;
 @synthesize locationManager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    modelFootprint = [[FootprintModel alloc] init];
+    
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
-    [mapView setDaumMapApiKey:@"6b7224206f752f1cf8d8d7b49546d424"];
+    [mapView setDaumMapApiKey:[Helper getInstance].apiKey];
     mapView.delegate = self;
     mapView.baseMapType = MTMapTypeHybrid;
     [self.mapScreen addSubview:mapView];
     
-    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 20
-                                                  target: self
-                                                selector:@selector(getGPS)
-                                                userInfo: nil repeats:YES];
+    locationManager = [[CLLocationManager alloc]init];
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:3
+                                                                                     target:self
+                                                                                   selector:@selector(getGPS)
+                                                                                   userInfo:nil
+                                                                                    repeats:YES]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +50,6 @@
 -(void)startLocationManager
 {
     NSLog(@"start GPS");
-    locationManager = [[CLLocationManager alloc]init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
@@ -50,23 +57,22 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    CLLocation *crnLoc = [locations lastObject];
-    NSString *lat = [NSString stringWithFormat:@"%.8f", crnLoc.coordinate.latitude];
-    NSString *log = [NSString stringWithFormat:@"%.8f", crnLoc.coordinate.longitude];
-    NSLog(@"%@ %@", lat, log);
-    
-    NSLog(@"stop GPS");
     [locationManager stopUpdatingLocation];
+    CLLocation *crnLoc = [locations lastObject];
+    NSNumber *lat = [NSNumber numberWithDouble:crnLoc.coordinate.latitude];
+    NSNumber *log = [NSNumber numberWithDouble:crnLoc.coordinate.longitude];
+    
+    Footprint *fp = [[Footprint alloc] init];
+    fp.fp_date = [[Helper getInstance] getToday];
+    fp.fp_time = [NSDate date];
+    fp.fp_GPS_X = lat;
+    fp.fp_GPS_Y = log;
+    fp.fp_address = [MTMapReverseGeoCoder findAddressForMapPoint:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([lat doubleValue],[log doubleValue])] withOpenAPIKey:[Helper getInstance].apiKey];
+    [modelFootprint insertData:fp];
+    
+    NSDictionary *d = [[[modelFootprint select:@"1=1 ORDER BY fp_id DESC"] objectAtIndex:0] getObj];
+    NSLog(@"%@", d);
+    NSLog(@"stop GPS");
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

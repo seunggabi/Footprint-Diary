@@ -68,7 +68,8 @@
 		28E5E2531D302FE900D8B9E3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E5E2521D302FE900D8B9E3 /* libstdc++.6.0.9.tbd */; };
 		28E5E2551D302FF500D8B9E3 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */; };
 		28E5E25E1D3031B000D8B9E3 /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E25D1D3031B000D8B9E3 /* FootprintViewController.m */; };
-		28E5E28D1D30FE9D00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E28C1D30FE9D00D8B9E3 /* TimerScheduler.m */; };
+		28E5E2911D3113A400D8B9E3 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2901D3113A400D8B9E3 /* Helper.m */; };
+		28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D9502251D2FC74E00B57D4D /* arrow-pointing-to-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020F1D2FC74E00B57D4D /* arrow-pointing-to-left.png */; };
 		7D9502261D2FC74E00B57D4D /* arrow-pointing-to-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502101D2FC74E00B57D4D /* arrow-pointing-to-right.png */; };
@@ -197,8 +198,10 @@
 		28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		28E5E25C1D3031B000D8B9E3 /* FootprintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintViewController.h; sourceTree = "<group>"; };
 		28E5E25D1D3031B000D8B9E3 /* FootprintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
-		28E5E28B1D30FE9D00D8B9E3 /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerScheduler.h; sourceTree = "<group>"; };
-		28E5E28C1D30FE9D00D8B9E3 /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
+		28E5E28F1D3113A400D8B9E3 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		28E5E2901D3113A400D8B9E3 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerScheduler.h; path = Diary/Helper/TimerScheduler.h; sourceTree = SOURCE_ROOT; };
+		28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerScheduler.m; path = Diary/Helper/TimerScheduler.m; sourceTree = SOURCE_ROOT; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* arrow-pointing-to-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-left.png"; sourceTree = "<group>"; };
 		7D9502101D2FC74E00B57D4D /* arrow-pointing-to-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-right.png"; sourceTree = "<group>"; };
@@ -294,13 +297,11 @@
 				28E5E25D1D3031B000D8B9E3 /* FootprintViewController.m */,
 				226A3A2A1D2EB7CD00FC0FF8 /* MainViewController.h */,
 				226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */,
-				28E5E28B1D30FE9D00D8B9E3 /* TimerScheduler.h */,
-				28E5E28C1D30FE9D00D8B9E3 /* TimerScheduler.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		285346591D2C27090001F378 /* resource */ = {
+		285346591D2C27090001F378 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */,
@@ -330,6 +331,7 @@
 				2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */,
 				2853465D1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */,
 			);
+			name = Resource;
 			path = resource;
 			sourceTree = "<group>";
 		};
@@ -384,7 +386,8 @@
 				28E5E2151D302F0800D8B9E3 /* DaumMap.framework */,
 				28E5E2161D302F0800D8B9E3 /* Resources */,
 			);
-			path = DaumMap.embeddedframework;
+			name = DaumMap.embeddedframework;
+			path = Diary/DaumMap.embeddedframework;
 			sourceTree = "<group>";
 		};
 		28E5E2161D302F0800D8B9E3 /* Resources */ = {
@@ -421,6 +424,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		28E5E28E1D310B6900D8B9E3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */,
+				28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */,
+				28E5E28F1D3113A400D8B9E3 /* Helper.h */,
+				28E5E2901D3113A400D8B9E3 /* Helper.m */,
+			);
+			name = Helper;
+			path = helper;
+			sourceTree = "<group>";
+		};
 		7D95026A1D2FD09900B57D4D /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +466,7 @@
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
+				28E5E2141D302F0800D8B9E3 /* DaumMap.embeddedframework */,
 				28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */,
 				28E5E2521D302FE900D8B9E3 /* libstdc++.6.0.9.tbd */,
 				28E5E2501D302FD200D8B9E3 /* QuartzCore.framework */,
@@ -474,7 +490,6 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				28E5E2141D302F0800D8B9E3 /* DaumMap.embeddedframework */,
 				226A3A201D2EB7A700FC0FF8 /* Pedometer */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
@@ -483,7 +498,8 @@
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDB31D24181800E5F658 /* Main.storyboard */,
 				7D95026A1D2FD09900B57D4D /* Calendar */,
-				285346591D2C27090001F378 /* resource */,
+				285346591D2C27090001F378 /* Resource */,
+				28E5E28E1D310B6900D8B9E3 /* Helper */,
 				285346331D2C22220001F378 /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
@@ -511,6 +527,7 @@
 				BF76DDA31D24181800E5F658 /* Sources */,
 				BF76DDA41D24181800E5F658 /* Frameworks */,
 				BF76DDA51D24181800E5F658 /* Resources */,
+				28E5E2951D31209000D8B9E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -619,6 +636,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28E5E2951D31209000D8B9E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF76DDA31D24181800E5F658 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -636,6 +669,7 @@
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
 				7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
+				28E5E2911D3113A400D8B9E3 /* Helper.m in Sources */,
 				7DA28EB11D32336800DDBBC2 /* VRGCalendarView.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
 				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
@@ -652,12 +686,12 @@
 				7DA28EAE1D32336800DDBBC2 /* DiaryEditViewController.m in Sources */,
 				28E5E1E81D2ED73400D8B9E3 /* Theme.m in Sources */,
 				226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */,
-				28E5E28D1D30FE9D00D8B9E3 /* TimerScheduler.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
 				7DA28EB21D32336800DDBBC2 /* VRGCalendarViewController.m in Sources */,
 				226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */,
 				226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
+				28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */,
 				7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */,
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
