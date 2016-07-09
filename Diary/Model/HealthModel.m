@@ -71,7 +71,7 @@
         NSLog(@"INSERT Health Success!: %@", h.h_count);
     }
 }
- 
+
 -(void) delete :(NSString *)where {
     char *err;
     

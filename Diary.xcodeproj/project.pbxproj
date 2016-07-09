@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22682B391D303E290015854E /* SettingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B381D303E290015854E /* SettingMenuViewController.m */; };
+		22682B3C1D303E7D0015854E /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B3B1D303E7D0015854E /* MyInfoViewController.m */; };
+		22682B3F1D303EA50015854E /* MySettingModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B3E1D303EA50015854E /* MySettingModifyViewController.m */; };
+		22682B421D303EC90015854E /* PasswordSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B411D303EC90015854E /* PasswordSettingViewController.m */; };
+		22682B451D303EF90015854E /* PasswordChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B441D303EF90015854E /* PasswordChangeViewController.m */; };
+		22682B481D303F1C0015854E /* GoToTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B471D303F1C0015854E /* GoToTutorialViewController.m */; };
+		22682B4B1D303F370015854E /* PasswordFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B4A1D303F370015854E /* PasswordFindViewController.m */; };
+		22682B4E1D3048960015854E /* HealthInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22682B4D1D3048960015854E /* HealthInfoViewController.m */; };
 		226A3A271D2EB7A700FC0FF8 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A221D2EB7A700FC0FF8 /* DatePickerViewController.m */; };
 		226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */; };
 		226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */; };
 		226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */; };
 		226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */; };
+		22924AD81D3104C400B61C46 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22924AD71D3104C400B61C46 /* SettingTableViewController.m */; };
+		22DC19731D30E6420085D288 /* FSLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DC196E1D30E6420085D288 /* FSLineChart.m */; };
+		22DC19741D30E6420085D288 /* UIColor+FSPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DC19701D30E6420085D288 /* UIColor+FSPalette.m */; };
+		22DC19751D30E6420085D288 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DC19721D30E6420085D288 /* HealthViewController.m */; };
 		2853465F1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
 		285346601D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */; };
 		285346611D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
@@ -73,6 +85,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22682B371D303E290015854E /* SettingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingMenuViewController.h; sourceTree = "<group>"; };
+		22682B381D303E290015854E /* SettingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingMenuViewController.m; sourceTree = "<group>"; };
+		22682B3A1D303E7D0015854E /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		22682B3B1D303E7D0015854E /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		22682B3D1D303EA50015854E /* MySettingModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingModifyViewController.h; sourceTree = "<group>"; };
+		22682B3E1D303EA50015854E /* MySettingModifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySettingModifyViewController.m; sourceTree = "<group>"; };
+		22682B401D303EC90015854E /* PasswordSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordSettingViewController.h; sourceTree = "<group>"; };
+		22682B411D303EC90015854E /* PasswordSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordSettingViewController.m; sourceTree = "<group>"; };
+		22682B431D303EF90015854E /* PasswordChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordChangeViewController.h; sourceTree = "<group>"; };
+		22682B441D303EF90015854E /* PasswordChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordChangeViewController.m; sourceTree = "<group>"; };
+		22682B461D303F1C0015854E /* GoToTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoToTutorialViewController.h; sourceTree = "<group>"; };
+		22682B471D303F1C0015854E /* GoToTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoToTutorialViewController.m; sourceTree = "<group>"; };
+		22682B491D303F370015854E /* PasswordFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordFindViewController.h; sourceTree = "<group>"; };
+		22682B4A1D303F370015854E /* PasswordFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordFindViewController.m; sourceTree = "<group>"; };
+		22682B4C1D3048960015854E /* HealthInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthInfoViewController.h; sourceTree = "<group>"; };
+		22682B4D1D3048960015854E /* HealthInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInfoViewController.m; sourceTree = "<group>"; };
 		226A3A211D2EB7A700FC0FF8 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		226A3A221D2EB7A700FC0FF8 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		226A3A231D2EB7A700FC0FF8 /* HistoricViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricViewController.h; sourceTree = "<group>"; };
@@ -83,6 +111,14 @@
 		226A3A2B1D2EB7CD00FC0FF8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
 		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
+		22924AD61D3104C400B61C46 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		22924AD71D3104C400B61C46 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		22DC196D1D30E6420085D288 /* FSLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLineChart.h; sourceTree = "<group>"; };
+		22DC196E1D30E6420085D288 /* FSLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLineChart.m; sourceTree = "<group>"; };
+		22DC196F1D30E6420085D288 /* UIColor+FSPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FSPalette.h"; sourceTree = "<group>"; };
+		22DC19701D30E6420085D288 /* UIColor+FSPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FSPalette.m"; sourceTree = "<group>"; };
+		22DC19711D30E6420085D288 /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
+		22DC19721D30E6420085D288 /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		2853465A1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
 		2853465B1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; sourceTree = "<group>"; };
 		2853465C1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
@@ -184,6 +220,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22682B361D303DE50015854E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				22924AD61D3104C400B61C46 /* SettingTableViewController.h */,
+				22924AD71D3104C400B61C46 /* SettingTableViewController.m */,
+				22682B371D303E290015854E /* SettingMenuViewController.h */,
+				22682B381D303E290015854E /* SettingMenuViewController.m */,
+				22682B3A1D303E7D0015854E /* MyInfoViewController.h */,
+				22682B3B1D303E7D0015854E /* MyInfoViewController.m */,
+				22682B3D1D303EA50015854E /* MySettingModifyViewController.h */,
+				22682B3E1D303EA50015854E /* MySettingModifyViewController.m */,
+				22682B401D303EC90015854E /* PasswordSettingViewController.h */,
+				22682B411D303EC90015854E /* PasswordSettingViewController.m */,
+				22682B431D303EF90015854E /* PasswordChangeViewController.h */,
+				22682B441D303EF90015854E /* PasswordChangeViewController.m */,
+				22682B461D303F1C0015854E /* GoToTutorialViewController.h */,
+				22682B471D303F1C0015854E /* GoToTutorialViewController.m */,
+				22682B491D303F370015854E /* PasswordFindViewController.h */,
+				22682B4A1D303F370015854E /* PasswordFindViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		226A3A201D2EB7A700FC0FF8 /* Pedometer */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +252,31 @@
 				226A3A241D2EB7A700FC0FF8 /* HistoricViewController.m */,
 				226A3A251D2EB7A700FC0FF8 /* PedometerViewController.h */,
 				226A3A261D2EB7A700FC0FF8 /* PedometerViewController.m */,
+				22682B4C1D3048960015854E /* HealthInfoViewController.h */,
+				22682B4D1D3048960015854E /* HealthInfoViewController.m */,
 			);
 			path = Pedometer;
+			sourceTree = "<group>";
+		};
+		22DC196B1D30E6420085D288 /* HealthInfo */ = {
+			isa = PBXGroup;
+			children = (
+				22DC196C1D30E6420085D288 /* FSLineChart */,
+				22DC19711D30E6420085D288 /* HealthViewController.h */,
+				22DC19721D30E6420085D288 /* HealthViewController.m */,
+			);
+			path = HealthInfo;
+			sourceTree = "<group>";
+		};
+		22DC196C1D30E6420085D288 /* FSLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				22DC196D1D30E6420085D288 /* FSLineChart.h */,
+				22DC196E1D30E6420085D288 /* FSLineChart.m */,
+				22DC196F1D30E6420085D288 /* UIColor+FSPalette.h */,
+				22DC19701D30E6420085D288 /* UIColor+FSPalette.m */,
+			);
+			path = FSLineChart;
 			sourceTree = "<group>";
 		};
 		285346331D2C22220001F378 /* Controller */ = {
@@ -323,6 +405,8 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				22DC196B1D30E6420085D288 /* HealthInfo */,
+				22682B361D303DE50015854E /* Setting */,
 				226A3A201D2EB7A700FC0FF8 /* Pedometer */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
@@ -448,14 +532,18 @@
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
+				22682B4E1D3048960015854E /* HealthInfoViewController.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
+				22682B3C1D303E7D0015854E /* MyInfoViewController.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
+				22682B391D303E290015854E /* SettingMenuViewController.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
+				22DC19751D30E6420085D288 /* HealthViewController.m in Sources */,
 				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
@@ -466,7 +554,13 @@
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
 				7D95027F1D2FD09900B57D4D /* VRGViewController.m in Sources */,
+				22682B421D303EC90015854E /* PasswordSettingViewController.m in Sources */,
+				22682B4B1D303F370015854E /* PasswordFindViewController.m in Sources */,
 				226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */,
+				22924AD81D3104C400B61C46 /* SettingTableViewController.m in Sources */,
+				22DC19731D30E6420085D288 /* FSLineChart.m in Sources */,
+				22682B451D303EF90015854E /* PasswordChangeViewController.m in Sources */,
+				22DC19741D30E6420085D288 /* UIColor+FSPalette.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
 				7D95027E1D2FD09900B57D4D /* VRGCalendarView.m in Sources */,
 				226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */,
@@ -476,6 +570,8 @@
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
 				226A3A271D2EB7A700FC0FF8 /* DatePickerViewController.m in Sources */,
+				22682B481D303F1C0015854E /* GoToTutorialViewController.m in Sources */,
+				22682B3F1D303EA50015854E /* MySettingModifyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

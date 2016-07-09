@@ -126,6 +126,7 @@
                                                   target: self
                                                 selector:@selector(getPedomterCount)
                                                 userInfo: nil repeats:YES];
+    //NSLog();
     [super viewDidLoad];
 }
 
