@@ -37,11 +37,11 @@
     [modelUser create];
     [modelUser insertData:[modelUser getSampleData]];
     // DBConnector UPDATE 사용
-    [[DBConnector getInstance] updateTable:@"user" data:@{@"u_name":@"kim",@"u_age":@"19"} where:nil];
+    [[DBConnector getInstance] updateTable:@"user" data:@{@"u_name":@"kim"} where:nil];
     [modelUser select];
     // SELECT 확인
-    NSDictionary *user = [modelUser.user getObj];
-    NSLog(@"%@",user);
+    //NSDictionary *user = [modelUser.user getObj];
+    //NSLog(@"%@",user);
 
     // FootprintModel 연동
     modelFootPrint = [[FootprintModel alloc] init];
@@ -122,7 +122,7 @@
     
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
     }];
-    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 0.0001
+    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 1
                                                   target: self
                                                 selector:@selector(getPedomterCount)
                                                 userInfo: nil repeats:YES];

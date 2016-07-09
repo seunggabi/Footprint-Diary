@@ -47,10 +47,10 @@
     NSString *query = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"delete %@ Failed!", tableName);
+        NSAssert(0,@"DELETE %@ Failed!", tableName);
     }
     else {
-        NSLog(@"delete %@ success!", tableName);
+        NSLog(@"DELETE %@ success!", tableName);
     }
 }
 
@@ -60,10 +60,10 @@
     NSString *query = [NSString stringWithFormat:@"DROP TABLE %@", tableName];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"drop %@ Failed!", tableName);
+        NSAssert(0,@"DROP %@ Failed!", tableName);
     }
     else {
-        NSLog(@"drop %@ success!", tableName);
+        NSLog(@"DROP %@ success!", tableName);
     }
 }
 
@@ -85,10 +85,10 @@
     }
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"update %@ Failed!",tableName);
+        NSAssert(0,@"UPDATE %@ Failed!",tableName);
     }
     else {
-        NSLog(@"update %@ success!", tableName);
+        NSLog(@"UPDATE %@ success!", tableName);
     }
 }
 

@@ -25,7 +25,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Health_Information' (hi_id INTEGER PRIMARY KEY AUTOINCREMENT, hi_type INTEGER, hi_title TEXT, hi_comment TEXT, hi_link TEXT)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Health_Information' (hi_id INTEGER PRIMARY KEY AUTOINCREMENT, hi_comment TEXT)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -46,10 +46,7 @@
             HealthInformation *hi = [[HealthInformation alloc] init];
             
             hi.hi_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
-            hi.hi_type = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 1)];
-            hi.hi_title = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
-            hi.hi_comment = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
-            hi.hi_link = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
+            hi.hi_comment = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
 
             [list addObject:hi];
         }
@@ -63,7 +60,7 @@
     
     //[self deleteHealthInformation];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health_Information (hi_type, hi_title, hi_comment, hi_link) VALUES ('%@', '%@', '%@', '%@')", hi.hi_type, hi.hi_title, hi.hi_comment, hi.hi_link];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health_Information (hi_comment) VALUES ('%@')", hi.hi_comment];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT HealthInfo Failed!");
@@ -105,10 +102,7 @@
 
 -(HealthInformation *) getSampleData {
     HealthInformation *hi = [[HealthInformation alloc] init];
-    hi.hi_type = @0;
-    hi.hi_title = @"비타민 C의 좋은점";
     hi.hi_comment = @"그냥 좋음";
-    hi.hi_link = @"www.naver.com";
     return hi;
 }
 
