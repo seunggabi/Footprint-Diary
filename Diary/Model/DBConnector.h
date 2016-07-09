@@ -14,6 +14,7 @@
 }
 
 +(DBConnector *) getInstance;
+
 -(NSString *) filePath;
 -(void) openDB;
 -(sqlite3 *) getDB;

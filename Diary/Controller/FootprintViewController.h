@@ -12,6 +12,7 @@
 
 @interface FootprintViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *mapScreen;
 @property (strong, nonatomic) MTMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 

@@ -8,53 +8,55 @@
 
 #import "FootprintViewController.h"
 
-@interface FootprintViewController ()
-@property (weak, nonatomic) IBOutlet UIView *mapScreen;
+@interface FootprintViewController () <CLLocationManagerDelegate>
 
 @end
 
 @implementation FootprintViewController
 
+@synthesize mapView;
+@synthesize locationManager;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
-    [_mapView setDaumMapApiKey:@"6b7224206f752f1cf8d8d7b49546d424"];
-    _mapView.delegate = self;
-    _mapView.baseMapType = MTMapTypeHybrid;
-    [self.mapScreen addSubview:_mapView];
-    [self getGPS];
+    mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
+    [mapView setDaumMapApiKey:@"6b7224206f752f1cf8d8d7b49546d424"];
+    mapView.delegate = self;
+    mapView.baseMapType = MTMapTypeHybrid;
+    [self.mapScreen addSubview:mapView];
+    
+    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 20
+                                                  target: self
+                                                selector:@selector(getGPS)
+                                                userInfo: nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)getGPS {
     [self startLocationManager];
-    [self.locationManager requestWhenInUseAuthorization];
-    
 }
 
 -(void)startLocationManager
 {
-    _locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
-    _locationManager.delegate = self; // we set the delegate of locationManager to self.
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
-    [_locationManager startUpdatingLocation];  //requesting location updates
+    NSLog(@"start GPS");
+    locationManager = [[CLLocationManager alloc]init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
 }
 
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error retrieving your location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [errorAlert show];
-    NSLog(@"Error: %@",error.description);
-}
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{ 
+{
     CLLocation *crnLoc = [locations lastObject];
     NSString *lat = [NSString stringWithFormat:@"%.8f", crnLoc.coordinate.latitude];
     NSString *log = [NSString stringWithFormat:@"%.8f", crnLoc.coordinate.longitude];
     NSLog(@"%@ %@", lat, log);
+    
+    NSLog(@"stop GPS");
+    [locationManager stopUpdatingLocation];
 }
 
 /*
