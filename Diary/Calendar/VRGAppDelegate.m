@@ -8,7 +8,7 @@
 
 #import "VRGAppDelegate.h"
 
-#import "VRGViewController.h"
+#import "VRGCalendarViewController.h"
 
 @implementation VRGAppDelegate
 
