@@ -122,7 +122,7 @@
         <!--Footprint Diary-->
         <scene sceneID="Zs2-Ni-fzx">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="vIL-xR-lgv" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="vIL-xR-lgv" customClass="FootprintViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="twA-HN-JtE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,6 +213,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapScreen" destination="Uid-yH-P7G" id="laO-Uz-ViR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ib-N3-p2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,4 +25,6 @@ typedef enum weather {
 @property (strong, nonatomic) NSString *d_content;
 @property (strong, nonatomic) NSNumber *d_e_id;
 
+-(NSDictionary *) getObj;
+
 @end
