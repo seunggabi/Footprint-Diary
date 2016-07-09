@@ -1,30 +1,34 @@
 //
-//  VRGViewController.m
-//  Vurig Calendar
+//  VRGCalendarViewController.m
+//  Diary
 //
-//  Created by in 't Veen Tjeerd on 5/29/12.
-//  Copyright (c) 2012 Vurig. All rights reserved.
+//  Created by mju on 2016. 7. 10..
+//  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "VRGViewController.h"
+#import "VRGCalendarViewController.h"
 
+@interface VRGCalendarViewController ()
 
-
-@interface VRGViewController ()
 
 @end
+@implementation VRGCalendarViewController
 
-@implementation VRGViewController
+@synthesize diary;
+@synthesize emoticon;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     self.calendarView.backgroundColor = [UIColor clearColor];
     VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
     calendar.delegate = self;
     [self.calendarView addSubview:calendar];
 }
+//-(Diary *)getDiary:(NSDate *)date{
+//    // diary =
+//}
 
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     NSDate *currentDate = [NSDate date];
@@ -35,7 +39,12 @@
         [calendarView markDates:dates];
     }
 }
-
+//- (IBAction)goDetail:(id)sender{
+//    DetailView * detail = [[DetailView alloc] initWithNibName:@"DetailView" bundle:nil];
+//    detail.indexDay = [sender tag];
+//    NSLog(@"INDEX DAY : %d", [sender tag]);
+//    [self presentViewController:detail animated:YES completion:nil];
+//}
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
     NSLog(@"Selected date = %@",date);
 }

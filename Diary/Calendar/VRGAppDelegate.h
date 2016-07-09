@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class VRGViewController;
+@class VRGCalendarViewController;
 
 @interface VRGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) VRGViewController *viewController;
+@property (strong, nonatomic) VRGCalendarViewController *viewController;
 
 @end
