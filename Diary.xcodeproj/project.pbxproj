@@ -85,6 +85,14 @@
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
 		7D033A6D1D324F560028CE44 /* VRGCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* VRGCalendarViewController.m */; };
+		7D033A791D3251400028CE44 /* DetailNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A721D3251400028CE44 /* DetailNotes.m */; };
+		7D033A7A1D3251400028CE44 /* DetailNotes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A731D3251400028CE44 /* DetailNotes.xib */; };
+		7D033A7B1D3251400028CE44 /* NewNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A751D3251400028CE44 /* NewNoteView.m */; };
+		7D033A7C1D3251400028CE44 /* NewNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A761D3251400028CE44 /* NewNoteView.xib */; };
+		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
+		7D033A841D3252E60028CE44 /* DiaryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A821D3252E60028CE44 /* DiaryListViewController.xib */; };
+		7D033A861D32586B0028CE44 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A851D32586B0028CE44 /* cell_background.png */; };
+		7D033B091D3269540028CE44 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = 7D033B081D3269540028CE44 /* weather */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D9502251D2FC74E00B57D4D /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020F1D2FC74E00B57D4D /* left.png */; };
 		7D9502261D2FC74E00B57D4D /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502101D2FC74E00B57D4D /* right.png */; };
@@ -243,6 +251,17 @@
 		7D033A661D324F2F0028CE44 /* DiaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryViewController.xib; sourceTree = "<group>"; };
 		7D033A6B1D324F560028CE44 /* VRGCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarViewController.h; sourceTree = "<group>"; };
 		7D033A6C1D324F560028CE44 /* VRGCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarViewController.m; sourceTree = "<group>"; };
+		7D033A711D3251400028CE44 /* DetailNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailNotes.h; sourceTree = "<group>"; };
+		7D033A721D3251400028CE44 /* DetailNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailNotes.m; sourceTree = "<group>"; };
+		7D033A731D3251400028CE44 /* DetailNotes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailNotes.xib; sourceTree = "<group>"; };
+		7D033A741D3251400028CE44 /* NewNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewNoteView.h; sourceTree = "<group>"; };
+		7D033A751D3251400028CE44 /* NewNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewNoteView.m; sourceTree = "<group>"; };
+		7D033A761D3251400028CE44 /* NewNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewNoteView.xib; sourceTree = "<group>"; };
+		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
+		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
+		7D033A821D3252E60028CE44 /* DiaryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryListViewController.xib; sourceTree = "<group>"; };
+		7D033A851D32586B0028CE44 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
+		7D033B081D3269540028CE44 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; name = weather; path = emoticon/weather; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		7D9502101D2FC74E00B57D4D /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
@@ -383,7 +402,9 @@
 		285346591D2C27090001F378 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BF5C94F31D324F1C006AF2A8 /* weather */,
+				7D033B081D3269540028CE44 /* weather */,
+				BF5C94FB1D324FAD006AF2A8 /* emoticon */,
+				7D033A851D32586B0028CE44 /* cell_background.png */,
 				7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */,
 				7D95020F1D2FC74E00B57D4D /* left.png */,
 				7D9502101D2FC74E00B57D4D /* right.png */,
@@ -395,7 +416,6 @@
 				7D9502161D2FC74E00B57D4D /* home.png */,
 				7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
 				7D9502181D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */,
-				BF5C94FB1D324FAD006AF2A8 /* emoticon */,
 				7D9502191D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */,
 				7D95021A1D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */,
 				7D95021C1D2FC74E00B57D4D /* setting.png */,
@@ -519,9 +539,18 @@
 				7D033A611D324F2F0028CE44 /* DiaryEditViewController.h */,
 				7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */,
 				7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */,
+				7D033A801D3252E60028CE44 /* DiaryListViewController.h */,
+				7D033A811D3252E60028CE44 /* DiaryListViewController.m */,
+				7D033A821D3252E60028CE44 /* DiaryListViewController.xib */,
 				7D033A641D324F2F0028CE44 /* DiaryViewController.h */,
 				7D033A651D324F2F0028CE44 /* DiaryViewController.m */,
 				7D033A661D324F2F0028CE44 /* DiaryViewController.xib */,
+				7D033A711D3251400028CE44 /* DetailNotes.h */,
+				7D033A721D3251400028CE44 /* DetailNotes.m */,
+				7D033A731D3251400028CE44 /* DetailNotes.xib */,
+				7D033A741D3251400028CE44 /* NewNoteView.h */,
+				7D033A751D3251400028CE44 /* NewNoteView.m */,
+				7D033A761D3251400028CE44 /* NewNoteView.xib */,
 				7DA28EA81D32336800DDBBC2 /* EmoticonViewController.h */,
 				7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */,
 				7DA28EAA1D32336800DDBBC2 /* VRGCalendarView.h */,
@@ -654,6 +683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D033A841D3252E60028CE44 /* DiaryListViewController.xib in Resources */,
 				28E5E2421D302F0800D8B9E3 /* map_pinup@3x.png in Resources */,
 				28E5E2381D302F0800D8B9E3 /* info_box_tail.png in Resources */,
 				28E5E2401D302F0800D8B9E3 /* map_pin_shadow@3x.png in Resources */,
@@ -661,6 +691,7 @@
 				28E5E24B1D302F0800D8B9E3 /* point_sprite.png in Resources */,
 				28E5E2441D302F0800D8B9E3 /* map_pinup_custom@3x.png in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
+				7D033A7A1D3251400028CE44 /* DetailNotes.xib in Resources */,
 				28E5E2371D302F0800D8B9E3 /* info_box.png in Resources */,
 				28E5E2481D302F0800D8B9E3 /* map_present_tracking.png in Resources */,
 				7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */,
@@ -673,14 +704,16 @@
 				28E5E2431D302F0800D8B9E3 /* map_pinup_custom.png in Resources */,
 				7D9502261D2FC74E00B57D4D /* right.png in Resources */,
 				7D95022C1D2FC74E00B57D4D /* home.png in Resources */,
-				BF5C94F41D324F1C006AF2A8 /* weather in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
 				7D9502251D2FC74E00B57D4D /* left.png in Resources */,
 				28E5E24C1D302F0800D8B9E3 /* shadow_balloon.png in Resources */,
+				7D033B091D3269540028CE44 /* weather in Resources */,
 				7D9502321D2FC74E00B57D4D /* setting.png in Resources */,
+				7D033A7C1D3251400028CE44 /* NewNoteView.xib in Resources */,
 				28E5E23A1D302F0800D8B9E3 /* map_pin@3x.png in Resources */,
 				28E5E2351D302F0800D8B9E3 /* daum_th_line.png in Resources */,
 				28E5E2491D302F0800D8B9E3 /* noimage.png in Resources */,
+				7D033A861D32586B0028CE44 /* cell_background.png in Resources */,
 				2853465F1D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */,
 				7D95022B1D2FC74E00B57D4D /* heart.png in Resources */,
 				28E5E2331D302F0800D8B9E3 /* copyright.png in Resources */,
@@ -752,6 +785,7 @@
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
+				7D033A7B1D3251400028CE44 /* NewNoteView.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
 				7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */,
 				22A1D58A1D324DB600058642 /* GoToTutorialViewController.m in Sources */,
@@ -767,6 +801,7 @@
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,
 				22A1D5901D324DB600058642 /* SettingMenuViewController.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
+				7D033A791D3251400028CE44 /* DetailNotes.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
 				226A3A281D2EB7A700FC0FF8 /* HistoricViewController.m in Sources */,
@@ -780,6 +815,7 @@
 				22A1D58B1D324DB600058642 /* MyInfoViewController.m in Sources */,
 				28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
+				7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */,
 				28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */,
 				7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */,
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,

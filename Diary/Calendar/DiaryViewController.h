@@ -14,6 +14,7 @@
 
 @interface DiaryViewController : UIViewController
 
+@property int indexNumber;
 @property (assign, nonatomic) NSDate *indexDate;
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSMutableArray *photo;

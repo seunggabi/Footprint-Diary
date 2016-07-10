@@ -13,6 +13,8 @@
 @end
 
 @implementation DiaryViewController
+@synthesize indexDate;
+@synthesize indexNumber;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -27,7 +27,6 @@
     [super viewDidLoad];
     originImage = [UIImage imageNamed:@"default.png"];
     [pImageView setImage:originImage];
-    modelDiary = [[DiaryModel alloc] init];
     [modelDiary create];
     // Do any additional setup after loading the view.
 }
@@ -81,7 +80,7 @@
         diary.d_weather = @0;
         [modelDiary insertData:diary];
         //Back to main view
-        NSLog(@"modelDiary %@", modelDiary.diary.d_content);
+        NSLog(@"content %@", diary.d_content );
         NSLog(@"modelDiary %@", diary);
         [self dismissViewControllerAnimated:YES completion:nil];
     }
