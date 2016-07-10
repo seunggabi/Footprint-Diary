@@ -546,7 +546,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5nX-ji-0vZ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5nX-ji-0vZ" id="ZSd-8s-n58">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -569,7 +569,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="O7l-3E-AMm">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O7l-3E-AMm" id="T8x-Bb-jbG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -592,7 +592,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="NEv-A4-Alv" detailTextLabel="L5j-Xj-yHc" style="IBUITableViewCellStyleSubtitle" id="NpQ-9H-KTW">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="180" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NpQ-9H-KTW" id="nV2-GE-rM2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -1235,7 +1235,7 @@
         <scene sceneID="hkR-GE-pup">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jso-de-jAw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" image="KakaoTalk_Photo_2016-07-07-00-20-00_74.png" id="o4b-wN-4uJ"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="setting.png" id="o4b-wN-4uJ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AGp-5X-SSf">
@@ -1275,7 +1275,7 @@
         <scene sceneID="t8o-pG-CJy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6U6-4P-8qn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calender" image="calendar-with-day-5.png" id="L2p-17-pkM"/>
+                    <tabBarItem key="tabBarItem" title="Calender" image="calendar.png" id="L2p-17-pkM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ADD-IQ-ftu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1316,6 +1316,7 @@
         <image name="calendar-with-day-5.png" width="30" height="30"/>
         <image name="heart.png" width="30" height="30"/>
         <image name="note.png" width="30" height="30"/>
+        <image name="setting.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kBW-Ke-Z46"/>
