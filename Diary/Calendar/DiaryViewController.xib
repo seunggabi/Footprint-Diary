@@ -36,19 +36,19 @@
                     <state key="normal" title="사진"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-1v-PwG">
-                    <rect key="frame" x="286" y="69" width="52" height="30"/>
+                    <rect key="frame" x="315" y="69" width="52" height="30"/>
                     <state key="normal" title="이모티콘"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-c8-OUi">
-                    <rect key="frame" x="232" y="69" width="52" height="30"/>
+                    <rect key="frame" x="255" y="69" width="52" height="30"/>
                     <state key="normal" title="이모티콘"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li8-1l-lh0">
-                    <rect key="frame" x="176" y="69" width="56" height="30"/>
+                    <rect key="frame" x="191" y="69" width="56" height="30"/>
                     <state key="normal" title=" 이모티콘"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yld-6U-0LL">
-                    <rect key="frame" x="107" y="69" width="86" height="30"/>
+                    <rect key="frame" x="103" y="69" width="86" height="30"/>
                     <state key="normal" title="이모티콘표시x"/>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-Pn-S7A">
@@ -57,6 +57,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-5K-evP">
+                    <rect key="frame" x="227" y="629" width="30" height="30"/>
+                    <state key="normal" title="삭제"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-A9-Gfu">
+                    <rect key="frame" x="105" y="629" width="30" height="30"/>
+                    <state key="normal" title="수정"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

@@ -27,6 +27,9 @@
 @property (strong, nonatomic) StickerModel *modelSticker;
 @property (strong, nonatomic) EmoticonModel *modelEmoticon;
 @property (strong, nonatomic) PhotoModel *modelPhoto;
+@property (strong, nonatomic) Diary *diary;
+@property (strong, nonatomic) Emoticon *emoticon;
+@property (strong, nonatomic) Sticker *sticker;
 @property (weak, nonatomic) IBOutlet UITextField *title;
 
 -(IBAction)runGeneralPicker;
