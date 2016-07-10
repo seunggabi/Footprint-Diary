@@ -81,7 +81,6 @@
 		28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */; };
 		28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2B91D313CF500D8B9E3 /* Theme.m */; };
 		28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */; };
-		28E5E2C91D32424A00D8B9E3 /* HelperTool_TEST.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2C81D32424A00D8B9E3 /* HelperTool_TEST.m */; };
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
@@ -236,8 +235,6 @@
 		28E5E2B91D313CF500D8B9E3 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		28E5E2BA1D313CF500D8B9E3 /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
 		28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
-		28E5E2C71D32424A00D8B9E3 /* HelperTool_TEST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperTool_TEST.h; sourceTree = "<group>"; };
-		28E5E2C81D32424A00D8B9E3 /* HelperTool_TEST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperTool_TEST.m; sourceTree = "<group>"; };
 		7D033A611D324F2F0028CE44 /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
 		7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
 		7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryEditViewController.xib; sourceTree = "<group>"; };
@@ -509,8 +506,6 @@
 		28E5E28E1D310B6900D8B9E3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				28E5E2C71D32424A00D8B9E3 /* HelperTool_TEST.h */,
-				28E5E2C81D32424A00D8B9E3 /* HelperTool_TEST.m */,
 				28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */,
 				28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */,
 			);
@@ -755,7 +750,6 @@
 				22A1D58E1D324DB600058642 /* PasswordFindViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
-				28E5E2C91D32424A00D8B9E3 /* HelperTool_TEST.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
