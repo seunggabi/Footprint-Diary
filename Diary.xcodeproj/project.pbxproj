@@ -85,7 +85,6 @@
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
-		7D033A6A1D324F2F0028CE44 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A661D324F2F0028CE44 /* DiaryViewController.xib */; };
 		7D033A6D1D324F560028CE44 /* VRGCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* VRGCalendarViewController.m */; };
 		7D033A791D3251400028CE44 /* DetailNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A721D3251400028CE44 /* DetailNotes.m */; };
 		7D033A7A1D3251400028CE44 /* DetailNotes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A731D3251400028CE44 /* DetailNotes.xib */; };
@@ -94,6 +93,7 @@
 		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
 		7D033A841D3252E60028CE44 /* DiaryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A821D3252E60028CE44 /* DiaryListViewController.xib */; };
 		7D033A861D32586B0028CE44 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A851D32586B0028CE44 /* cell_background.png */; };
+		7D033B091D3269540028CE44 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = 7D033B081D3269540028CE44 /* weather */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D9502251D2FC74E00B57D4D /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020F1D2FC74E00B57D4D /* left.png */; };
 		7D9502261D2FC74E00B57D4D /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502101D2FC74E00B57D4D /* right.png */; };
@@ -120,8 +120,6 @@
 		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
 		7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */; };
 		7DA28EB11D32336800DDBBC2 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */; };
-		7DA28EB21D32336800DDBBC2 /* VRGCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAD1D32336800DDBBC2 /* VRGCalendarViewController.m */; };
-		BF5C94F41D324F1C006AF2A8 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94F31D324F1C006AF2A8 /* weather */; };
 		BF5C94FC1D324FAD006AF2A8 /* emoticon in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94FB1D324FAD006AF2A8 /* emoticon */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
@@ -265,6 +263,7 @@
 		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
 		7D033A821D3252E60028CE44 /* DiaryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryListViewController.xib; sourceTree = "<group>"; };
 		7D033A851D32586B0028CE44 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
+		7D033B081D3269540028CE44 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; name = weather; path = emoticon/weather; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		7D9502101D2FC74E00B57D4D /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
@@ -297,9 +296,6 @@
 		7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		7DA28EAA1D32336800DDBBC2 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
-		7DA28EAC1D32336800DDBBC2 /* VRGCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarViewController.h; sourceTree = "<group>"; };
-		7DA28EAD1D32336800DDBBC2 /* VRGCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarViewController.m; sourceTree = "<group>"; };
-		BF5C94F31D324F1C006AF2A8 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = weather; sourceTree = "<group>"; };
 		BF5C94FB1D324FAD006AF2A8 /* emoticon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoticon; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -407,6 +403,8 @@
 		285346591D2C27090001F378 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7D033B081D3269540028CE44 /* weather */,
+				BF5C94FB1D324FAD006AF2A8 /* emoticon */,
 				7D033A851D32586B0028CE44 /* cell_background.png */,
 				7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */,
 				7D95020F1D2FC74E00B57D4D /* left.png */,
@@ -419,7 +417,6 @@
 				7D9502161D2FC74E00B57D4D /* home.png */,
 				7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
 				7D9502181D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */,
-				BF5C94FB1D324FAD006AF2A8 /* emoticon */,
 				7D9502191D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */,
 				7D95021A1D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */,
 				7D95021C1D2FC74E00B57D4D /* setting.png */,
@@ -710,11 +707,11 @@
 				28E5E2431D302F0800D8B9E3 /* map_pinup_custom.png in Resources */,
 				7D9502261D2FC74E00B57D4D /* right.png in Resources */,
 				7D95022C1D2FC74E00B57D4D /* home.png in Resources */,
-				BF5C94F41D324F1C006AF2A8 /* weather in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
 				7D9502251D2FC74E00B57D4D /* left.png in Resources */,
 				28E5E24C1D302F0800D8B9E3 /* shadow_balloon.png in Resources */,
-				7D9502321D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-07-00-20-00_74.png in Resources */,
+				7D033B091D3269540028CE44 /* weather in Resources */,
+				7D9502321D2FC74E00B57D4D /* setting.png in Resources */,
 				7D033A7C1D3251400028CE44 /* NewNoteView.xib in Resources */,
 				28E5E23A1D302F0800D8B9E3 /* map_pin@3x.png in Resources */,
 				28E5E2351D302F0800D8B9E3 /* daum_th_line.png in Resources */,
