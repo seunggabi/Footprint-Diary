@@ -85,7 +85,6 @@
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
-		7D033A6A1D324F2F0028CE44 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A661D324F2F0028CE44 /* DiaryViewController.xib */; };
 		7D033A6D1D324F560028CE44 /* VRGCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* VRGCalendarViewController.m */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D9502251D2FC74E00B57D4D /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020F1D2FC74E00B57D4D /* left.png */; };
@@ -113,7 +112,6 @@
 		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
 		7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */; };
 		7DA28EB11D32336800DDBBC2 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */; };
-		7DA28EB21D32336800DDBBC2 /* VRGCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAD1D32336800DDBBC2 /* VRGCalendarViewController.m */; };
 		BF5C94F41D324F1C006AF2A8 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94F31D324F1C006AF2A8 /* weather */; };
 		BF5C94FC1D324FAD006AF2A8 /* emoticon in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94FB1D324FAD006AF2A8 /* emoticon */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
@@ -280,8 +278,6 @@
 		7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		7DA28EAA1D32336800DDBBC2 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
-		7DA28EAC1D32336800DDBBC2 /* VRGCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarViewController.h; sourceTree = "<group>"; };
-		7DA28EAD1D32336800DDBBC2 /* VRGCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarViewController.m; sourceTree = "<group>"; };
 		BF5C94F31D324F1C006AF2A8 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = weather; sourceTree = "<group>"; };
 		BF5C94FB1D324FAD006AF2A8 /* emoticon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoticon; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -576,23 +572,23 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				22DC196B1D30E6420085D288 /* HealthInfo */,
-				22682B361D303DE50015854E /* Setting */,
-				226A3A201D2EB7A700FC0FF8 /* Pedometer */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
 				BF76DDB31D24181800E5F658 /* Main.storyboard */,
+				BF76DDB01D24181800E5F658 /* ViewController.h */,
+				BF76DDB11D24181800E5F658 /* ViewController.m */,
+				22DC196B1D30E6420085D288 /* HealthInfo */,
+				22682B361D303DE50015854E /* Setting */,
+				226A3A201D2EB7A700FC0FF8 /* Pedometer */,
 				7D95026A1D2FD09900B57D4D /* Calendar */,
 				285346591D2C27090001F378 /* Resource */,
 				28E5E28E1D310B6900D8B9E3 /* Helper */,
 				285346331D2C22220001F378 /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
-				BF76DDB01D24181800E5F658 /* ViewController.h */,
-				BF76DDB11D24181800E5F658 /* ViewController.m */,
 			);
 			path = Diary;
 			sourceTree = "<group>";

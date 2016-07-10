@@ -17,9 +17,10 @@
 @synthesize u_th_id;
 @synthesize u_timer;
 @synthesize u_tutorial;
+@synthesize u_lock;
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"u_name":u_name, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_th_id":u_th_id, @"u_timer":u_timer, @"u_tutorial":u_tutorial};
+    NSDictionary *obj = @{@"u_name":u_name, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_th_id":u_th_id, @"u_timer":u_timer, @"u_tutorial":u_tutorial, @"u_lock":u_lock};
     return obj;
 }
 @end

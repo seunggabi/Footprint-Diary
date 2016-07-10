@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSNumber *u_th_id;
 @property (strong, nonatomic) NSNumber *u_timer;
 @property (strong, nonatomic) NSString *u_tutorial;
+@property (strong, nonatomic) NSString *u_lock;
 
 -(NSDictionary *) getObj;
 
