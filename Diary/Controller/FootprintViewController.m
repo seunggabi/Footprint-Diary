@@ -62,10 +62,9 @@
     CLLocation *crnLoc = [locations lastObject];
     NSNumber *lat = [NSNumber numberWithDouble:crnLoc.coordinate.latitude];
     NSNumber *log = [NSNumber numberWithDouble:crnLoc.coordinate.longitude];
-    
     Footprint *fp = [[Footprint alloc] init];
     fp.fp_date = [[Helper getInstance] getToday];
-    fp.fp_time = [NSDate date];
+    fp.fp_time = [[Helper getInstance] getDate];
     fp.fp_GPS_X = lat;
     fp.fp_GPS_Y = log;
     fp.fp_address = [MTMapReverseGeoCoder findAddressForMapPoint:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([lat doubleValue],[log doubleValue])] withOpenAPIKey:[Helper getInstance].apiKey];
