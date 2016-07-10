@@ -81,6 +81,7 @@
 		28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */; };
 		28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2B91D313CF500D8B9E3 /* Theme.m */; };
 		28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */; };
+		28E5E2D51D32A09A00D8B9E3 /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2D41D32A09A00D8B9E3 /* HelperTool.m */; };
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
@@ -119,7 +120,6 @@
 		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
 		7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */; };
 		7DA28EB11D32336800DDBBC2 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */; };
-		BF5C94F41D324F1C006AF2A8 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94F31D324F1C006AF2A8 /* weather */; };
 		BF5C94FC1D324FAD006AF2A8 /* emoticon in Resources */ = {isa = PBXBuildFile; fileRef = BF5C94FB1D324FAD006AF2A8 /* emoticon */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
@@ -243,6 +243,8 @@
 		28E5E2B91D313CF500D8B9E3 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		28E5E2BA1D313CF500D8B9E3 /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
 		28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
+		28E5E2D31D32A09A00D8B9E3 /* HelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperTool.h; path = Diary/Helper/HelperTool.h; sourceTree = SOURCE_ROOT; };
+		28E5E2D41D32A09A00D8B9E3 /* HelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperTool.m; path = Diary/Helper/HelperTool.m; sourceTree = SOURCE_ROOT; };
 		7D033A611D324F2F0028CE44 /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
 		7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
 		7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryEditViewController.xib; sourceTree = "<group>"; };
@@ -294,7 +296,6 @@
 		7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		7DA28EAA1D32336800DDBBC2 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		7DA28EAB1D32336800DDBBC2 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
-		BF5C94F31D324F1C006AF2A8 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = weather; sourceTree = "<group>"; };
 		BF5C94FB1D324FAD006AF2A8 /* emoticon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoticon; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -528,6 +529,8 @@
 			children = (
 				28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */,
 				28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */,
+				28E5E2D31D32A09A00D8B9E3 /* HelperTool.h */,
+				28E5E2D41D32A09A00D8B9E3 /* HelperTool.m */,
 			);
 			name = Helper;
 			path = helper;
@@ -809,6 +812,7 @@
 				7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */,
 				22DC19741D30E6420085D288 /* UIColor+FSPalette.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
+				28E5E2D51D32A09A00D8B9E3 /* HelperTool.m in Sources */,
 				226A3A2C1D2EB7CD00FC0FF8 /* MainViewController.m in Sources */,
 				226A3A291D2EB7A700FC0FF8 /* PedometerViewController.m in Sources */,
 				22A1D58D1D324DB600058642 /* PasswordChangeViewController.m in Sources */,
