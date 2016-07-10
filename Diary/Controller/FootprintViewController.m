@@ -26,23 +26,45 @@
     
     modelFootprint = [[FootprintModel alloc] init];
     modelUser = [[UserModel alloc] init];
-    [modelUser drop];
-    [modelUser create];
-    User *u = [modelUser getSampleData];
-    [modelUser insertData:u];
+    
+//    [modelFootprint drop];
+//    [modelFootprint create];
+    
+    User *u = [modelUser select];
+    NSMutableArray *footprintList = [modelFootprint select:nil];
     
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
     [mapView setDaumMapApiKey:[Helper getInstance].apiKey];
+    mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingOnWithoutHeading;
     mapView.delegate = self;
     mapView.baseMapType = MTMapTypeHybrid;
+    for(int i=0; i<footprintList.count; i++) {
+        Footprint *fp = [footprintList objectAtIndex:i];
+        MTMapPOIItem *poiItem = [MTMapPOIItem poiItem];
+        poiItem.itemName = fp.fp_address;
+        poiItem.mapPoint = [MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([fp.fp_GPS_Y doubleValue],[fp.fp_GPS_X doubleValue])];
+        poiItem.markerType = MTMapPOIItemMarkerTypeBluePin;
+        poiItem.showAnimationType = MTMapPOIItemShowAnimationTypeDropFromHeaven;
+        poiItem.draggable = NO;
+        [mapView addPOIItems:[NSArray arrayWithObjects:poiItem, nil]];
+    }
+    
     [self.mapScreen addSubview:mapView];
     
     locationManager = [[CLLocationManager alloc]init];
-    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]*60
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]*5
                                                                                      target:self
                                                                                    selector:@selector(getGPS)
                                                                                    userInfo:nil
                                                                                     repeats:YES]];
+}
+
+- (void)MTMapView:(MTMapView*)mapView updateCurrentLocation:(MTMapPoint*)location withAccuracy:(MTMapLocationAccuracy)accuracy {
+    MTMapPointGeo currentLocationPointGeo = location.mapPointGeo;
+    NSLog(@"MTMapView updateCurrentLocation (%f,%f) accuracy (%f)",
+          currentLocationPointGeo.latitude,
+          currentLocationPointGeo.longitude,
+          accuracy);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,15 +92,14 @@
     Footprint *fp = [[Footprint alloc] init];
     fp.fp_date = [[Helper getInstance] getToday];
     fp.fp_time = [[Helper getInstance] getDate];
-    fp.fp_GPS_X = lat;
-    fp.fp_GPS_Y = log;
-    fp.fp_address = [MTMapReverseGeoCoder findAddressForMapPoint:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([lat doubleValue],[log doubleValue])] withOpenAPIKey:[Helper getInstance].apiKey];
-    
-    if(fp.fp_address != nil) {
-        [modelFootprint insertData:fp];
-    }
+    fp.fp_GPS_X = log;
+    fp.fp_GPS_Y = lat;
+    [fp setAddress];
+    [modelFootprint insertData:fp];
+
     NSDictionary *d = [[[modelFootprint select:@"1=1 ORDER BY fp_id DESC"] objectAtIndex:0] getObj];
     NSLog(@"%@", d);
     NSLog(@"stop GPS");
 }
+
 @end

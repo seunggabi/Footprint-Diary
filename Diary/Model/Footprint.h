@@ -18,5 +18,6 @@
 @property (strong, nonatomic) NSString *fp_address;
 
 -(NSDictionary *) getObj;
+-(void) setAddress;
 
 @end
