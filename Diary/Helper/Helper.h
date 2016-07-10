@@ -17,5 +17,5 @@
 +(Helper *) getInstance;
 -(NSString *) getToday;
 -(NSDate *) getDate;
-
+ 
 @end 

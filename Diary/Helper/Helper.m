@@ -9,7 +9,7 @@
 #import "Helper.h"
 
 @implementation Helper
-
+ 
 @synthesize apiKey;
 @synthesize getAddressURL;
 
