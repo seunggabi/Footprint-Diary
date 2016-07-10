@@ -79,7 +79,6 @@
     // display results
     [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
         health.h_count = pedometerData;
-        //NSLog(health.h_count);
     }];
     [modelHealth insertData:health];
 }

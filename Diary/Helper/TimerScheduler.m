@@ -30,10 +30,10 @@
 }
 
 -(void) setPedometerTimer:(NSTimer *)t {
-    if(footprintTiemr != nil) {
-        [footprintTiemr invalidate];
+    if(pedometerTimer != nil) {
+        [pedometerTimer invalidate];
     }
-    footprintTiemr = t;
+    pedometerTimer = t;
 }
 
 @end
