@@ -26,7 +26,7 @@
     char *err;
 
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, u_password TEXT, u_question TEXT, u_answer TEXT, u_th_id INTEGER, u_timer INTEGER, u_tutorial CHAR(2)), u_lock CHAR(2))"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, u_password TEXT, u_question TEXT, u_answer TEXT, u_th_id INTEGER, u_timer INTEGER, u_tutorial CHAR(2), u_lock CHAR(2))"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);

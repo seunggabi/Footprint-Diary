@@ -7,6 +7,15 @@
 //
 
 #import "HelperTool.h"
+#import "../Model/DBConnector.h"
+#import "../Model/UserModel.h"
+#import "../Model/FootprintModel.h"
+#import "../Model/DiaryModel.h"
+#import "../Model/StickerModel.h"
+#import "../Model/EmoticonModel.h"
+#import "../Model/PhotoModel.h"
+#import "../Model/HealthModel.h"
+#import "../Model/HealthInformationModel.h"
 
 @implementation HelperTool
  
@@ -35,6 +44,25 @@
 -(NSDate *) getDate {
     NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     return date;
+}
+
+-(void) settingDB {
+    UserModel *modelUser = [[UserModel alloc] init];
+    [modelUser create];
+    FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
+    [modelFootPrint create];
+    DiaryModel *modelDiary = [[DiaryModel alloc] init];
+    [modelDiary create];
+    StickerModel *modelSticker = [[StickerModel alloc] init];
+    [modelSticker create];
+    EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
+    [modelEmoticon create];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];
+    [modelPhoto create];
+    HealthModel *modelHealth = [[HealthModel alloc] init];
+    [modelHealth create];
+    HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
+    [modelHealthInfo create];
 }
 
 @end
