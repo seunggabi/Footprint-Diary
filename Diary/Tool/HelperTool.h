@@ -26,7 +26,8 @@
 
 +(HelperTool *) getInstance;
 
--(void) settingDB;
+-(void) installDB;
+-(void) removeDB;
 -(NSString *) getToday;
 -(NSDate *) getDate;
 

@@ -33,6 +33,46 @@
     return instance;
 }
 
+-(void) installDB {
+    UserModel *modelUser = [[UserModel alloc] init];
+    FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
+    DiaryModel *modelDiary = [[DiaryModel alloc] init];
+    StickerModel *modelSticker = [[StickerModel alloc] init];
+    EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
+    HealthModel *modelHealth = [[HealthModel alloc] init];
+    HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
+    
+    [modelUser create];
+    [modelFootPrint create];
+    [modelDiary create];
+    [modelSticker create];
+    [modelEmoticon create];
+    [modelPhoto create];
+    [modelHealth create];
+    [modelHealthInfo create];
+}
+
+-(void) removeDB {
+    UserModel *modelUser = [[UserModel alloc] init];
+    FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
+    DiaryModel *modelDiary = [[DiaryModel alloc] init];
+    StickerModel *modelSticker = [[StickerModel alloc] init];
+    EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
+    HealthModel *modelHealth = [[HealthModel alloc] init];
+    HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
+    
+    [modelUser drop];
+    [modelFootPrint drop];
+    [modelDiary drop];
+    [modelSticker drop];
+    [modelEmoticon drop];
+    [modelPhoto drop];
+    [modelHealth drop];
+    [modelHealthInfo drop];
+}
+
 -(NSString *) getToday {
     NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -44,25 +84,6 @@
 -(NSDate *) getDate {
     NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     return date;
-}
-
--(void) settingDB {
-    UserModel *modelUser = [[UserModel alloc] init];
-    [modelUser create];
-    FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
-    [modelFootPrint create];
-    DiaryModel *modelDiary = [[DiaryModel alloc] init];
-    [modelDiary create];
-    StickerModel *modelSticker = [[StickerModel alloc] init];
-    [modelSticker create];
-    EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
-    [modelEmoticon create];
-    PhotoModel *modelPhoto = [[PhotoModel alloc] init];
-    [modelPhoto create];
-    HealthModel *modelHealth = [[HealthModel alloc] init];
-    [modelHealth create];
-    HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
-    [modelHealthInfo create];
 }
 
 @end

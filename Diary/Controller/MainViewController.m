@@ -53,10 +53,11 @@
     
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
     }];
-    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval: 5
-                                                                                     target: self
+    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval:5
+                                                                                     target:self
                                                                                    selector:@selector(getPedomterCount)
-                                                                                   userInfo: nil repeats:YES]];
+                                                                                   userInfo:nil
+                                                                                    repeats:YES]];
     [super viewDidLoad];
 }
 

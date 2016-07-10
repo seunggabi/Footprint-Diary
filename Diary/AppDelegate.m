@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[HelperTool getInstance] settingDB];
+    [[HelperTool getInstance] installDB];
     [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     return YES;
 }
