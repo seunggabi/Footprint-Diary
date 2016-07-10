@@ -16,20 +16,51 @@
 
 @synthesize diary;
 @synthesize emoticon;
+@synthesize indexDate;
+@synthesize modelDiary;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    modelDiary = [[DiaryModel alloc] init];
+    [modelDiary create];
     self.calendarView.backgroundColor = [UIColor clearColor];
     VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
     calendar.delegate = self;
     [self.calendarView addSubview:calendar];
 }
-//-(Diary *)getDiary:(NSDate *)date{
-//    // diary =
-//}
 
+-(Diary *)getDiary:(NSDate *)date{
+    diary = [[Diary alloc] init];
+    NSMutableArray *diaryModel = [modelDiary select:nil];
+    NSLog(@"modelDIARY: %@", diaryModel);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyy-MM-dd"];
+    NSString *iDate = [dateFormatter stringFromDate:date];
+    for(int i = 0; i<diaryModel.count; i++){
+        if([[diaryModel objectAtIndex:i] d_date]== iDate){
+            if([[diaryModel objectAtIndex:i] d_content])
+                return diary;
+        }
+    }
+    return nil;
+}
+
+- (void)goDiaryView:(NSDate *)date{
+    
+    DiaryViewController * diaryView= [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
+    diaryView.indexDate = date;
+    [self presentViewController:diaryView animated:YES completion:nil];
+}
+    
+- (void)goDiaryEditView:(NSDate *)date{
+   
+    DiaryEditViewController *editView = [[DiaryEditViewController alloc] initWithNibName:@"DiaryEditViewController" bundle:nil];
+    editView.indexDate = date;
+    [self presentViewController:editView animated:YES completion:nil];
+}
+    
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     NSDate *currentDate = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
@@ -39,15 +70,18 @@
         [calendarView markDates:dates];
     }
 }
-//- (IBAction)goDetail:(id)sender{
-//    DetailView * detail = [[DetailView alloc] initWithNibName:@"DetailView" bundle:nil];
-//    detail.indexDay = [sender tag];
-//    NSLog(@"INDEX DAY : %d", [sender tag]);
-//    [self presentViewController:detail animated:YES completion:nil];
-//}
+
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
+    diary = [self getDiary:date];
+    if(diary){
+        [self goDiaryView:date];
+    }else{
+        [self goDiaryEditView:date];
+    }
     NSLog(@"Selected date = %@",date);
 }
+
+
 
 - (void)viewDidUnload
 {

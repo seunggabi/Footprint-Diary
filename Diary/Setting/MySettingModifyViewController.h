@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Model/User.h"
+#import "../Model/User.h"
 
 @interface MySettingModifyViewController : UIViewController
 
