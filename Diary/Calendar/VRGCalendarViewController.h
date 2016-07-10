@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Diary.h"
+#import "../Model/Diary.h"
+#import "../Model/DiaryModel.h"
 #import "Emoticon.h"
 #import "VRGCalendarView.h"
+#import "DiaryViewController.h"
+#import "DiaryEditViewController.h"
 
 @interface VRGCalendarViewController : UIViewController<VRGCalendarViewDelegate>{
     
 }
-
-@property (weak, nonatomic) IBOutlet VRGCalendarView *calendarView;
 @property (strong, nonatomic) Diary *diary;
+@property (strong, nonatomic) NSDate *indexDate;
+@property (strong, nonatomic) DiaryModel *modelDiary;
+@property (weak, nonatomic) IBOutlet VRGCalendarView *calendarView;
 @property (strong, nonatomic) Emoticon *emoticon;
 
 -(Diary *)getDiary:(NSDate *)date;
