@@ -6,17 +6,17 @@
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "Helper.h"
+#import "HelperTool.h"
 
-@implementation Helper
+@implementation HelperTool
  
 @synthesize apiKey;
 @synthesize getAddressURL;
 
-+(Helper *) getInstance {
-    static Helper *instance;
++(HelperTool *) getInstance {
+    static HelperTool *instance;
     if(instance == nil) {
-        instance = [[Helper alloc] init];
+        instance = [[HelperTool alloc] init];
         instance.apiKey = @"c55252cb847d401d333ca2bd5ed78ba5";
         instance.getAddressURL = @"https://apis.daum.net/local/geo/coord2detailaddr?inputCoordSystem=WGS84&output=json&apikey=";
         instance.getAddressURL = [instance.getAddressURL stringByAppendingString:instance.apiKey];

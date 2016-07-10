@@ -7,7 +7,7 @@
 //
 
 #import "Footprint.h"
-#import "../Helper/Helper.h"
+#import "../Helper/HelperTool.h"
 
 @implementation Footprint
 
@@ -24,7 +24,7 @@
 }
 
 -(void) setAddress {
-    NSString *urlText = [Helper getInstance].getAddressURL;
+    NSString *urlText = [HelperTool getInstance].getAddressURL;
     urlText = [urlText stringByAppendingString:@"&x="];
     urlText = [urlText stringByAppendingString:[fp_GPS_X stringValue]];
     urlText = [urlText stringByAppendingString:@"&y="];

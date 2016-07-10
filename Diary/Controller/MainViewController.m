@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "../Helper/TimerScheduler.h"
-#import "../Helper/Helper.h"
+#import "../Helper/HelperTool.h"
 
 @interface MainViewController ()
 
@@ -63,7 +63,7 @@
 -(void)getPedomterCount {
     Health *health = [[Health alloc] init];
     health.h_time = [NSDate date];
-    NSString *today = [[Helper getInstance] getToday];
+    NSString *today = [[HelperTool getInstance] getToday];
     health.h_date = today;
     NSDate *now = [NSDate date];
     NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];

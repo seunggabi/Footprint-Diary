@@ -8,7 +8,7 @@
 
 #import "FootprintViewController.h"
 #import "../Helper/TimerScheduler.h"
-#import "../Helper/Helper.h"
+#import "../Helper/HelperTool.h"
 
 @interface FootprintViewController () <CLLocationManagerDelegate, MTMapViewDelegate, MTMapReverseGeoCoderDelegate>
 
@@ -34,7 +34,7 @@
     NSMutableArray *footprintList = [modelFootprint select:nil];
     
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
-    [mapView setDaumMapApiKey:[Helper getInstance].apiKey];
+    [mapView setDaumMapApiKey:[HelperTool getInstance].apiKey];
     mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingOnWithoutHeading;
     mapView.delegate = self;
     mapView.baseMapType = MTMapTypeHybrid;
@@ -90,8 +90,8 @@
     NSNumber *lat = [NSNumber numberWithDouble:crnLoc.coordinate.latitude];
     NSNumber *log = [NSNumber numberWithDouble:crnLoc.coordinate.longitude];
     Footprint *fp = [[Footprint alloc] init];
-    fp.fp_date = [[Helper getInstance] getToday];
-    fp.fp_time = [[Helper getInstance] getDate];
+    fp.fp_date = [[HelperTool getInstance] getToday];
+    fp.fp_time = [[HelperTool getInstance] getDate];
     fp.fp_GPS_X = log;
     fp.fp_GPS_Y = lat;
     [fp setAddress];

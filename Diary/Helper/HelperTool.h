@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <DaumMap/MTMapReverseGeoCoder.h>
 
-@interface Helper : NSObject
+@interface HelperTool : NSObject
 
 @property (strong, nonatomic) NSString *apiKey;
 @property (strong, nonatomic) NSString *getAddressURL;
 
-+(Helper *) getInstance;
++(HelperTool *) getInstance;
 -(NSString *) getToday;
 -(NSDate *) getDate;
  
