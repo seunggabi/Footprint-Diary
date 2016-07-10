@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) NSString *apiKey;
 @property (strong, nonatomic) NSString *getAddressURL;
-
+ 
 +(Helper *) getInstance;
 -(NSString *) getToday;
 -(NSDate *) getDate;
