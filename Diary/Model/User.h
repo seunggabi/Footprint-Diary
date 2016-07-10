@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSString *u_tutorial;
 @property (strong, nonatomic) NSString *u_lock;
 
++(User *) user:(NSString *)name password:(NSString *)password question:(NSString *)question answer:(NSString *)answer th_id:(NSNumber *)th_id timer:(NSNumber *)timer tutorial:(NSString *)tutorial lock:(NSString *)lock;
 -(NSDictionary *) getObj;
 
 @end
