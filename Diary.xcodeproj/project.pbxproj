@@ -81,6 +81,7 @@
 		28E5E29A1D31219C00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */; };
 		28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2B91D313CF500D8B9E3 /* Theme.m */; };
 		28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */; };
+		28E5E2C91D32424A00D8B9E3 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2C81D32424A00D8B9E3 /* Helper.m */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D9502251D2FC74E00B57D4D /* arrow-pointing-to-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020F1D2FC74E00B57D4D /* arrow-pointing-to-left.png */; };
 		7D9502261D2FC74E00B57D4D /* arrow-pointing-to-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502101D2FC74E00B57D4D /* arrow-pointing-to-right.png */; };
@@ -234,6 +235,8 @@
 		28E5E2B91D313CF500D8B9E3 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		28E5E2BA1D313CF500D8B9E3 /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
 		28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
+		28E5E2C71D32424A00D8B9E3 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		28E5E2C81D32424A00D8B9E3 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* arrow-pointing-to-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-left.png"; sourceTree = "<group>"; };
 		7D9502101D2FC74E00B57D4D /* arrow-pointing-to-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-pointing-to-right.png"; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 		28E5E28E1D310B6900D8B9E3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				28E5E2C71D32424A00D8B9E3 /* Helper.h */,
+				28E5E2C81D32424A00D8B9E3 /* Helper.m */,
 				28E5E2981D31219C00D8B9E3 /* TimerScheduler.h */,
 				28E5E2991D31219C00D8B9E3 /* TimerScheduler.m */,
 			);
@@ -744,6 +749,7 @@
 				28E5E25E1D3031B000D8B9E3 /* FootprintViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
+				28E5E2C91D32424A00D8B9E3 /* Helper.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				22682B3C1D303E7D0015854E /* MyInfoViewController.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
