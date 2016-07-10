@@ -17,14 +17,19 @@
 @implementation FootprintViewController
 
 @synthesize modelFootprint;
+@synthesize modelUser;
 @synthesize mapView;
 @synthesize locationManager;
-@synthesize reverseGeoCoder;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     modelFootprint = [[FootprintModel alloc] init];
+    modelUser = [[UserModel alloc] init];
+    [modelUser drop];
+    [modelUser create];
+    User *u = [modelUser getSampleData];
+    [modelUser insertData:u];
     
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
     [mapView setDaumMapApiKey:[Helper getInstance].apiKey];
@@ -33,7 +38,7 @@
     [self.mapScreen addSubview:mapView];
     
     locationManager = [[CLLocationManager alloc]init];
-    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:3
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]*60
                                                                                      target:self
                                                                                    selector:@selector(getGPS)
                                                                                    userInfo:nil
@@ -68,21 +73,12 @@
     fp.fp_GPS_X = lat;
     fp.fp_GPS_Y = log;
     fp.fp_address = [MTMapReverseGeoCoder findAddressForMapPoint:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([lat doubleValue],[log doubleValue])] withOpenAPIKey:[Helper getInstance].apiKey];
-    [modelFootprint insertData:fp];
     
-    MTMapReverseGeoCoder *rGeoCoder = [[MTMapReverseGeoCoder alloc] initWithMapPoint:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([lat doubleValue],[log doubleValue])] withDelegate:self withOpenAPIKey:[Helper getInstance].apiKey];
-    
-    self.reverseGeoCoder = rGeoCoder; // retain
-    [reverseGeoCoder startFindingAddress];
-    
+    if(fp.fp_address != nil) {
+        [modelFootprint insertData:fp];
+    }
     NSDictionary *d = [[[modelFootprint select:@"1=1 ORDER BY fp_id DESC"] objectAtIndex:0] getObj];
     NSLog(@"%@", d);
     NSLog(@"stop GPS");
 }
-
-- (void)MTMapReverseGeoCoder:(MTMapReverseGeoCoder*)rGeoCoder foundAddress:(NSString*)addressString {
-    NSLog(@"Address = [%@]", addressString);
-    self.reverseGeoCoder = nil;
-}
-
 @end
