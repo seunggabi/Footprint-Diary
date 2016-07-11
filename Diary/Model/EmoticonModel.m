@@ -102,6 +102,9 @@
 }
 
 -(void) install {
+    [self drop];
+    [self create];
+    
     NSMutableArray *emoticonList = [[NSMutableArray alloc] init];
     [emoticonList addObject:[Emoticon emoticon:@"맥주" src:@"beer.png"]];
     [emoticonList addObject:[Emoticon emoticon:@"영수중" src:@"bill.png"]];
@@ -186,6 +189,9 @@
     [emoticonList addObject:[Emoticon emoticon:@"와인잔" src:@"wine.png"]];
     [emoticonList addObject:[Emoticon emoticon:@"윙크" src:@"wink.png"]];
 
+    for(int i=0; i<emoticonList.count; i++) {
+        [self insertData:[emoticonList objectAtIndex:i]];
+    }
 }
 
 -(Emoticon *) getSampleData {

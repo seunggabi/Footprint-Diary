@@ -234,6 +234,8 @@
 		28E5E41D1D32A1BA00D8B9E3 /* wink.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E5E3B91D32A1BA00D8B9E3 /* wink.png */; };
 		28E5E42A1D32A3FF00D8B9E3 /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4271D32A3FF00D8B9E3 /* HelperTool.m */; };
 		28E5E42B1D32A3FF00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4291D32A3FF00D8B9E3 /* TimerScheduler.m */; };
+		28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E42D1D33C0A900D8B9E3 /* Weather.m */; };
+		28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */; };
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
@@ -573,6 +575,10 @@
 		28E5E4271D32A3FF00D8B9E3 /* HelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperTool.m; sourceTree = "<group>"; };
 		28E5E4281D32A3FF00D8B9E3 /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerScheduler.h; sourceTree = "<group>"; };
 		28E5E4291D32A3FF00D8B9E3 /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
+		28E5E42C1D33C0A900D8B9E3 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		28E5E42D1D33C0A900D8B9E3 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		28E5E42F1D33C1DF00D8B9E3 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		7D033A611D324F2F0028CE44 /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
 		7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
 		7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryEditViewController.xib; sourceTree = "<group>"; };
@@ -815,6 +821,10 @@
 				28E5E2B91D313CF500D8B9E3 /* Theme.m */,
 				28E5E2BA1D313CF500D8B9E3 /* ThemeModel.h */,
 				28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */,
+				28E5E42C1D33C0A900D8B9E3 /* Weather.h */,
+				28E5E42D1D33C0A900D8B9E3 /* Weather.m */,
+				28E5E42F1D33C1DF00D8B9E3 /* WeatherModel.h */,
+				28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1476,6 +1486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */,
 				22A1D58C1D324DB600058642 /* MySettingModifyViewController.m in Sources */,
 				28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */,
 				22A1D58F1D324DB600058642 /* PasswordSettingViewController.m in Sources */,
@@ -1520,6 +1531,7 @@
 				22A1D58D1D324DB600058642 /* PasswordChangeViewController.m in Sources */,
 				22A1D58B1D324DB600058642 /* MyInfoViewController.m in Sources */,
 				28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */,
+				28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
 				7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */,
 				7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */,
