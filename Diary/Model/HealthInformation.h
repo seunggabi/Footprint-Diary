@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSNumber *hi_id;
 @property (strong, nonatomic) NSString *hi_comment;
 
++(HealthInformation *) healthInformation:(NSString *)comment;
 -(NSDictionary *) getObj;
 
 @end

@@ -18,6 +18,17 @@
 @synthesize d_content;
 @synthesize d_e_id;
 
++(Diary *) diary:(NSString *)date time:(NSDate *)time weather:(NSNumber *)weather title:(NSString *)title content:(NSString *)content e_id:(NSNumber *)e_id {
+    Diary *d = [[Diary alloc] init];
+    d.d_date = date;
+    d.d_time = time;
+    d.d_weather = weather;
+    d.d_title = title;
+    d.d_content = content;
+    d.d_e_id = e_id;
+    return d;
+}
+
 -(NSDictionary *) getObj {
     NSDictionary *obj = @{@"d_id":d_id, @"d_date":d_date, @"d_time":d_time, @"d_weather":d_weather, @"d_title":d_title, @"d_content":d_content, @"e_id":d_e_id};
     return obj;

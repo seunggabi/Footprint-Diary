@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HelperTool.h"
 
 
 @interface AppDelegate ()
@@ -17,6 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[HelperTool getInstance] installDB];
+    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     return YES;
 }
 
@@ -26,7 +29,6 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

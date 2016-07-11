@@ -26,7 +26,7 @@
     char *err;
 
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, u_password TEXT, u_question TEXT, u_answer TEXT, u_th_id INTEGER, u_timer INTEGER, u_tutorial CHAR(2))"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'user' (u_name TEXT, u_password TEXT, u_question TEXT, u_answer TEXT, u_th_id INTEGER, u_timer INTEGER, u_tutorial CHAR(2), u_lock CHAR(2))"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -56,7 +56,7 @@
     
     [self delete];
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_password, u.u_question, u.u_answer, u.u_th_id, u.u_timer, u.u_tutorial];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_password, u.u_question, u.u_answer, u.u_th_id, u.u_timer, u.u_tutorial, u.u_lock];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT User Failed!");
@@ -101,6 +101,7 @@
     u.u_th_id = @0;
     u.u_timer = @1;
     u.u_tutorial = @"Y";
+    u.u_lock = @"N";
     return u;
 }
 

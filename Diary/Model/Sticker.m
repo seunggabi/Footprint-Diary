@@ -15,6 +15,14 @@
 @synthesize s_color;
 @synthesize s_e_id;
 
++(Sticker *) sticker:(NSString *)date color:(NSNumber *)color e_id:(NSNumber *)e_id {
+    Sticker *s = [[Sticker alloc] init];
+    s.s_date = date;
+    s.s_color = color;
+    s.s_e_id = e_id;
+    return s;
+}
+
 -(NSDictionary *) getObj {
     NSDictionary *obj = @{@"s_id":s_id, @"s_date":s_date, @"s_color":s_color, @"s_e_id":s_e_id};
     return obj;

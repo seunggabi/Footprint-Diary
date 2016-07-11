@@ -7,8 +7,8 @@
 //
 
 #import "FootprintViewController.h"
-#import "../Helper/TimerScheduler.h"
-#import "../Helper/HelperTool.h"
+#import "../Tool/TimerScheduler.h"
+#import "../Tool/HelperTool.h"
 
 @interface FootprintViewController () <CLLocationManagerDelegate, MTMapViewDelegate, MTMapReverseGeoCoderDelegate>
 
@@ -37,18 +37,29 @@
     [mapView setDaumMapApiKey:[HelperTool getInstance].apiKey];
     mapView.currentLocationTrackingMode = MTMapCurrentLocationTrackingOnWithoutHeading;
     mapView.delegate = self;
-    mapView.baseMapType = MTMapTypeHybrid;
+    mapView.baseMapType = MTMapTypeStandard;
+    
+    MTMapPolyline *polyline = [MTMapPolyline polyLine];
+    polyline.polylineColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.5f];
+    
+    NSMutableArray *mapPointList = [[NSMutableArray alloc] init];
     for(int i=0; i<footprintList.count; i++) {
         Footprint *fp = [footprintList objectAtIndex:i];
         MTMapPOIItem *poiItem = [MTMapPOIItem poiItem];
         poiItem.itemName = fp.fp_address;
         poiItem.mapPoint = [MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([fp.fp_GPS_Y doubleValue],[fp.fp_GPS_X doubleValue])];
         poiItem.markerType = MTMapPOIItemMarkerTypeBluePin;
+        poiItem.markerSelectedType = MTMapPOIItemMarkerSelectedTypeRedPin;
         poiItem.showAnimationType = MTMapPOIItemShowAnimationTypeDropFromHeaven;
         poiItem.draggable = NO;
+        poiItem.tag = i;
         [mapView addPOIItems:[NSArray arrayWithObjects:poiItem, nil]];
+        [mapPointList addObject:[MTMapPoint mapPointWithGeoCoord:MTMapPointGeoMake([fp.fp_GPS_Y doubleValue],[fp.fp_GPS_X doubleValue])]];
     }
-    
+    [polyline addPoints:mapPointList];
+
+    [mapView addPolyline:polyline];
+    [mapView fitMapViewAreaToShowPolyline:polyline];
     [self.mapScreen addSubview:mapView];
     
     locationManager = [[CLLocationManager alloc]init];

@@ -26,6 +26,7 @@ typedef enum color {
 @property (strong, nonatomic) NSNumber *s_color;
 @property (strong, nonatomic) NSNumber *s_e_id;
 
++(Sticker *) sticker:(NSString *)date color:(NSNumber *)color e_id:(NSNumber *)e_id;
 -(NSDictionary *) getObj;
 
 @end

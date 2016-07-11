@@ -7,7 +7,7 @@
 //
 
 #import "Footprint.h"
-#import "../Helper/HelperTool.h"
+#import "../Tool/HelperTool.h"
 
 @implementation Footprint
 
@@ -17,6 +17,16 @@
 @synthesize fp_GPS_X;
 @synthesize fp_GPS_Y;
 @synthesize fp_address;
+
++(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address {
+    Footprint *fp = [[Footprint alloc] init];
+    fp.fp_date = date;
+    fp.fp_time = time;
+    fp.fp_GPS_X = gps_x;
+    fp.fp_GPS_Y = gps_y;
+    fp.fp_address = address;
+    return fp;
+}
 
 -(NSDictionary *) getObj {
     NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"fp_GPS_X":fp_GPS_X, @"fp_GPS_Y":fp_GPS_Y, @"fp_address":fp_address};

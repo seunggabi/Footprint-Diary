@@ -101,6 +101,30 @@
     }
 }
 
+-(void) install {
+    NSMutableArray *emoticonList = [[NSMutableArray alloc] init];
+    [emoticonList addObject:[Emoticon emoticon:@"맥주" src:@"beer.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"영수중" src:@"bill.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"사탕" src:@"candy.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"의자" src:@"chair.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"치킨" src:@"chicken.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"어려움" src:@"confused.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"미소" src:@"cool.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"썩소" src:@"cool-1.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"푸딩" src:@"creme-caramel.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"케익" src:@"crepe.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    [emoticonList addObject:[Emoticon emoticon:@"노잼" src:@"calm.png"]];
+    
+}
+
 -(Emoticon *) getSampleData {
     Emoticon *e = [[Emoticon alloc] init];
     e.e_name = @"sad";
