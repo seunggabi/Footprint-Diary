@@ -1,18 +1,18 @@
 //
-//  VRGCalendarViewController.m
+//  CalendarViewController.m
 //  Diary
 //
 //  Created by mju on 2016. 7. 10..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "VRGCalendarViewController.h"
+#import "CalendarViewController.h"
 
-@interface VRGCalendarViewController ()
+@interface CalendarViewController ()
 
 
 @end
-@implementation VRGCalendarViewController
+@implementation CalendarViewController
 
 @synthesize diary;
 @synthesize emoticon;
@@ -22,27 +22,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     modelDiary = [[DiaryModel alloc] init];
     self.calendarView.backgroundColor = [UIColor clearColor];
-    VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
+    CalendarView *calendar = [[CalendarView alloc] init];
     calendar.delegate = self;
+    calendar.diaryList = [modelDiary select:nil];
     [self.calendarView addSubview:calendar];
 }
 
 -(Diary *)getDiary:(NSDate *)date{
     diary = [[Diary alloc] init];
-    NSMutableArray *diaryModel = [modelDiary select:nil];
-   
-    NSLog(@"modelDIARY: %@", diaryModel);
-    NSLog(@"content : %@", ((Diary *)[diaryModel objectAtIndex:0]).d_content);
-    
+    NSMutableArray *diaryList = [modelDiary select:nil];
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *iDate = [dateFormatter stringFromDate:date];
-    for(int i = 0; i<diaryModel.count; i++){
-        if([[diaryModel objectAtIndex:i] d_date]== iDate){
-            if([[diaryModel objectAtIndex:i] d_content])
+    for(int i = 0; i<diaryList.count; i++){
+        if(((Diary *)[diaryList objectAtIndex:i]).d_date == iDate){
+            if(((Diary *)[diaryList objectAtIndex:i]).d_content)
                 return diary;
         }
     }
@@ -63,7 +60,7 @@
     [self presentViewController:editView animated:YES completion:nil];
 }
     
--(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
+-(void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     NSDate *currentDate = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:currentDate];
@@ -73,7 +70,7 @@
     }
 }
 
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date {
+-(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
     diary = [self getDiary:date];
     if(diary){
         [self goDiaryView:date];
@@ -83,12 +80,9 @@
     NSLog(@"Selected date = %@",date);
 }
 
-
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

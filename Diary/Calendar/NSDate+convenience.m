@@ -34,7 +34,7 @@
 -(int)firstWeekDayInMonth {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:2]; //monday is first day
+    [gregorian setFirstWeekday:1]; //monday is first day
     //[gregorian setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"nl_NL"]];
     
     //Set date to first of month
@@ -48,7 +48,7 @@
 -(NSDate *)offsetMonth:(int)numMonths {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:2]; //monday is first day
+    [gregorian setFirstWeekday:1]; //monday is first day
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setMonth:numMonths];
@@ -61,7 +61,7 @@
 -(NSDate *)offsetHours:(int)hours {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:2]; //monday is first day
+    [gregorian setFirstWeekday:1]; //monday is first day
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     //[offsetComponents setMonth:numMonths];
@@ -74,7 +74,7 @@
 -(NSDate *)offsetDay:(int)numDays {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:2]; //monday is first day
+    [gregorian setFirstWeekday:1]; //monday is first day
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setDay:numDays];
@@ -107,7 +107,7 @@
 +(NSDate *)dateStartOfWeek {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:2]; //monday is first day
+    [gregorian setFirstWeekday:1]; //monday is first day
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
 

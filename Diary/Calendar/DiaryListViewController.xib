@@ -94,7 +94,7 @@
                 <constraint firstItem="fyM-Jm-vT4" firstAttribute="leading" secondItem="CkJ-Iz-hzU" secondAttribute="leading" constant="18" id="zcz-U8-4qJ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="201" y="273"/>
+            <point key="canvasLocation" x="64" y="223"/>
         </view>
         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ftu-0n-37q">
             <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
