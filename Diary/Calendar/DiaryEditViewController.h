@@ -17,12 +17,14 @@
 #import "../Model/PhotoModel.h"
 
 @interface DiaryEditViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
 
+@property (strong, nonatomic) UIImage *originImage;
 @property (strong, nonatomic) NSDate *indexDate;
 @property (retain, nonatomic) IBOutlet UIButton *btnSave;
 @property (strong, nonatomic) IBOutlet UIImageView *pImageView;
-@property (strong, nonatomic) UIImage *originImage;
 @property (retain, nonatomic) IBOutlet UITextView *content;
+@property (weak, nonatomic) IBOutlet UITextField *title;
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) StickerModel *modelSticker;
 @property (strong, nonatomic) EmoticonModel *modelEmoticon;
@@ -30,7 +32,6 @@
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) Sticker *sticker;
-@property (weak, nonatomic) IBOutlet UITextField *title;
 
 -(IBAction)runGeneralPicker;
 -(IBAction)writeDiary;

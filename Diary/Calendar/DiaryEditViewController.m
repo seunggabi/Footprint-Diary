@@ -27,13 +27,22 @@
     [super viewDidLoad];
     originImage = [UIImage imageNamed:@"default.png"];
     [pImageView setImage:originImage];
+    modelDiary = [[DiaryModel alloc] init];
     [modelDiary create];
-    // Do any additional setup after loading the view.
+    modelPhoto = [[PhotoModel alloc] init];
+    [modelPhoto create];
+    modelSticker = [[StickerModel alloc] init];
+    [modelSticker create];
+    modelEmoticon = [[EmoticonModel alloc] init];
+    [modelEmoticon create];
+    
+}
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 -(IBAction)runGeneralPicker{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -62,17 +71,27 @@
 
 -(IBAction)writeDiary{
     if ([title.text length]!=0) {//Title is  existed
+        Photo *photo = [[Photo alloc] init];
         Diary *diary = [[Diary alloc] init];
+
         diary.d_time = indexDate;
         //Disable Keyboard
         [content resignFirstResponder];
         //Set Frame of textview when edit note
         [content setFrame:CGRectMake(0, 77, 319, 381)];
-
+        NSMutableArray *dataMutableArray = [[NSUserDefaults standardUserDefaults]mutableArrayValueForKey:@"diary"];
+        // get current date
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyy-MM-dd"];
         NSString *iDate = [dateFormatter stringFromDate:indexDate];
+        NSString *dateTitle = title.text;
+        //Save new content, date, title of Note to new index of array.
+        [dataMutableArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:dateTitle,@"title",indexDate,@"date",content.text,@"content", nil]];
+        //Back to main view
+        [self dismissViewControllerAnimated:YES completion:nil];
+       
         NSString *diaryTitle = title.text;
+        photo.p_date = iDate;
         diary.d_date = iDate;
         diary.d_title = diaryTitle;
         diary.d_content = content.text;
@@ -98,14 +117,5 @@
 -(IBAction)goEmoticon:(id)sender{
     
 }
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

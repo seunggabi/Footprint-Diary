@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiaryEditViewController">
             <connections>
+                <outlet property="back" destination="kgm-lE-H0s" id="sem-LM-fgJ"/>
                 <outlet property="content" destination="hg4-Yw-uyj" id="Mgr-7w-kon"/>
                 <outlet property="pImageView" destination="MeK-nH-PrE" id="Qth-En-KiR"/>
                 <outlet property="title" destination="kxi-eI-CUc" id="XHB-i8-Oxh"/>
@@ -39,6 +40,11 @@
                     <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                     <items>
                         <navigationItem title="Title" id="v9C-tE-7kR">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;뒤로" id="kgm-lE-H0s">
+                                <connections>
+                                    <action selector="back:" destination="-1" id="950-VQ-iBf"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="저장" id="tar-Ws-u8e">
                                 <connections>
                                     <action selector="writeDiary" destination="-1" id="Gmt-If-Oh1"/>
@@ -47,32 +53,32 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
-                    <rect key="frame" x="35" y="69" width="30" height="30"/>
-                    <state key="normal" title="사진"/>
-                    <connections>
-                        <action selector="runGeneralPicker" destination="-1" eventType="touchUpInside" id="s4e-Sp-RJw"/>
-                    </connections>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0W-1B-0vI">
+                    <rect key="frame" x="306" y="68" width="34" height="30"/>
+                    <state key="normal" title="이모티콘" image="happy-1.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0W-1B-0vI">
-                    <rect key="frame" x="315" y="69" width="52" height="30"/>
-                    <state key="normal" title="이모티콘"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-mA-nt8">
-                    <rect key="frame" x="255" y="69" width="52" height="30"/>
-                    <state key="normal" title="이모티콘"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-mA-nt8">
+                    <rect key="frame" x="262" y="68" width="32" height="30"/>
+                    <state key="normal" title="이모티콘" image="beer.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
-                    <rect key="frame" x="107" y="69" width="86" height="30"/>
-                    <state key="normal" title="이모티콘표시x"/>
+                    <rect key="frame" x="172" y="69" width="30" height="30"/>
+                    <state key="normal" title="X"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-y3-gSo">
-                    <rect key="frame" x="201" y="69" width="56" height="30"/>
-                    <state key="normal" title=" 이모티콘"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-y3-gSo">
+                    <rect key="frame" x="210" y="68" width="31" height="30"/>
+                    <state key="normal" title=" 이모티콘" image="sunny.png"/>
                 </button>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
                     <rect key="frame" x="27" y="145" width="313" height="128"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
+                    <rect key="frame" x="32" y="68" width="29" height="30"/>
+                    <state key="normal" title="사진" image="photo.png"/>
+                    <connections>
+                        <action selector="runGeneralPicker" destination="-1" eventType="touchUpInside" id="s4e-Sp-RJw"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -97,4 +103,10 @@
             <point key="canvasLocation" x="175.5" y="251.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="beer.png" width="30" height="30"/>
+        <image name="happy-1.png" width="30" height="30"/>
+        <image name="photo.png" width="30" height="30"/>
+        <image name="sunny.png" width="30" height="30"/>
+    </resources>
 </document>

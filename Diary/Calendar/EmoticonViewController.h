@@ -12,7 +12,6 @@
 
 @interface EmoticonViewController : UIViewController
 
-
 @property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) Sticker *sticker;
 

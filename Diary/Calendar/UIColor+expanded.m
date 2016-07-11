@@ -1,34 +1,5 @@
 #import "UIColor+Expanded.h"
 
-/*
- 
- Thanks to Poltras, Millenomi, Eridius, Nownot, WhatAHam, jberry,
- and everyone else who helped out but whose name is inadvertantly omitted
- 
- */
-
-/*
- Current outstanding request list:
- 
- - PolarBearFarm - color descriptions ([UIColor warmGrayWithHintOfBlueTouchOfRedAndSplashOfYellowColor])
- - Crayola color set
- - Eridius - UIColor needs a method that takes 2 colors and gives a third complementary one
- - Consider UIMutableColor that can be adjusted (brighter, cooler, warmer, thicker-alpha, etc)
- */
-
-/*
- FOR REFERENCE: Color Space Models: enum CGColorSpaceModel {
- kCGColorSpaceModelUnknown = -1,
- kCGColorSpaceModelMonochrome,
- kCGColorSpaceModelRGB,
- kCGColorSpaceModelCMYK,
- kCGColorSpaceModelLab,
- kCGColorSpaceModelDeviceN,
- kCGColorSpaceModelIndexed,
- kCGColorSpaceModelPattern
- };
- */
-
 // Static cache of looked up color names. Used with +colorWithName:
 static NSMutableDictionary *colorNameCache = nil;
 
@@ -180,10 +151,7 @@ static NSMutableDictionary *colorNameCache = nil;
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
 	
-	// http://en.wikipedia.org/wiki/Luma_(video)
-	// Y = 0.2126 R + 0.7152 G + 0.0722 B
-	return [UIColor colorWithWhite:r*0.2126f + g*0.7152f + b*0.0722f
-							 alpha:a];
+	return [UIColor colorWithWhite:r*0.2126f + g*0.7152f + b*0.0722f alpha:a];
 	
 }
 
@@ -433,18 +401,7 @@ static NSMutableDictionary *colorNameCache = nil;
 #endif // SUPPORTS_UNDOCUMENTED_API
 
 @implementation UIColor (UIColor_Expanded_Support)
-/*
- * Database of color names and hex rgb values, derived
- * from the css 3 color spec:
- *	http://www.w3.org/TR/css3-color/
- *
- * We think this is a very compact way of storing
- * this information, and relatively cheap to lookup.
- *
- * Note that we search for color names starting with ','
- * and terminated by '#', so that we don't get false matches.
- * For this reason, the database begins with ','.
- */
+
 static const char *colorNameDB = ","
 "aliceblue#f0f8ff,antiquewhite#faebd7,aqua#00ffff,aquamarine#7fffd4,azure#f0ffff,"
 "beige#f5f5dc,bisque#ffe4c4,black#000000,blanchedalmond#ffebcd,blue#0000ff,"
@@ -483,8 +440,6 @@ static const char *colorNameDB = ","
 + (UIColor *)searchForColorByName:(NSString *)cssColorName {
 	UIColor *result = nil;
 	
-	// Compile the string we'll use to search against the database
-	// We search for ",<colorname>#" to avoid false matches
 	const char *searchString = [[NSString stringWithFormat:@",%@#", cssColorName] UTF8String];
 	
 	// Search for the color name

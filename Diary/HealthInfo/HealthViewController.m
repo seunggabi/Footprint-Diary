@@ -7,43 +7,63 @@
 //
 
 #import "HealthViewController.h"
-#import "FSLineChart.h"
-#import "UIColor+FSPalette.h"
-#import "PedometerViewController.h"
-#import "HistoricViewController.h"
-#import "../Model/HealthInformation.h"
 
 @interface HealthViewController ()
-
-@property (strong, nonatomic) IBOutlet UILabel *tip1;
-@property (strong, nonatomic) IBOutlet UILabel *tip2;
-@property (nonatomic, strong) IBOutlet FSLineChart *chart;
-@property (strong, nonatomic) IBOutlet FSLineChart *chartWithDates;
-@property (strong, nonatomic) HealthInformation *hi;
 
 @end
 
 @implementation HealthViewController
 
+@synthesize modelHealth;
+@synthesize modelHealthInfo;
+
+- (CMPedometer *)pedometer {
+    if (!_pedometer) {
+        _pedometer = [[CMPedometer alloc]init];
+    }
+    return _pedometer;
+}
+
 - (void)viewDidLoad {
+    modelHealth = [[HealthModel alloc] init];
+    [modelHealth create];
+    modelHealthInfo = [[HealthInformationModel alloc] init];
+    
     [super viewDidLoad];
     
-    //[self loadSimpleChart];
     [self loadChartWithDates];
 }
 
 #pragma mark - Setting up the charts
 
 - (void)loadChartWithDates {
-    self.hi = [[HealthInformation alloc] init];
-    self.hi.hi_comment = @"헬스정보1";
-    self.tip1.text = self.hi.hi_comment;
-    self.tip2.text = @"헬스정보2";
-
+    //__block NSNumber *tempData;
+    /*
+     헬스정보팁을 불러오는곳
+     */
+    /*NSMutableArray *healthInfoList = [[NSMutableArray alloc] init];
+     healthInfoList = [modelHealthInfo select:nil];
+     
+     self.tip1.text = ((HealthInformation *)[healthInfoList objectAtIndex:0]).hi_comment;
+     self.tip2.text = @"헬스정보2";*/
+    
+    [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+        //tempData = pedometerData;
+    }];
+    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                                                     target: self
+                                                                                   selector:@selector(getPedomterCount)
+                                                                                   userInfo: nil repeats:YES]];
+    
+    
+    NSLog(@"awqqwer");
+    //NSLog(@"%ld", (long)tempData);
+    
     // Generating some dummy data
-    int oneDayToSec = 7200;
+    int oneDayToSec = 1440;
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:oneDayToSec+1];
     for(int i=0;i<oneDayToSec+1;i++) {
+        //int temp = [self getPedomterCount];
         chartData[i] = [NSNumber numberWithFloat: 1/*(float)i / 30.0f + (float)(rand() % 100)*/];
     }
     NSMutableArray* months = [NSMutableArray arrayWithCapacity:oneDayToSec];
@@ -58,8 +78,7 @@
             str = [NSString stringWithFormat:@"%d", i];
         }
         [months addObject: str];
-        //NSLog(@"%@", months);
-        }
+    }
     
     _chartWithDates.verticalGridStep = 6;
     _chartWithDates.horizontalGridStep = oneDayToSec;
@@ -79,7 +98,35 @@
         return [NSString stringWithFormat:@"%.0f 회", value];
     };
     
+    
     [_chartWithDates setChartData:chartData];
+}
+
+-(void)getPedomterCount {
+    Health *health = [[Health alloc] init];
+    health.h_time = [NSDate date];
+    NSString *today = [[HelperTool getInstance] getToday];
+    health.h_date = today;
+    NSDate *now = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
+    NSDate *start = [gregorian dateFromComponents:components];
+    
+    // take "now" and normalise to 23:59
+    components.hour = 23;
+    components.minute = 59;
+    components.second = 59;
+    NSDate *end = [gregorian dateFromComponents:components];
+    
+    // display results
+    [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+        health.h_count = pedometerData;
+        // NSLog(health.h_count);
+    }];
+    
+    [modelHealth insertData:health];
+    
+    //return (int)health.h_count;
 }
 
 @end
