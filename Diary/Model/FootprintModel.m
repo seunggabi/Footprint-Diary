@@ -62,7 +62,7 @@
 -(void) insertData:(Footprint *)f {
     char *err;
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address, f.fp_h_count) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address, f.fp_h_count];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address, fp_h_count) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address, f.fp_h_count];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Footprint Failed!");
