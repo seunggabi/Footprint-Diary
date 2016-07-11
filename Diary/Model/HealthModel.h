@@ -23,8 +23,7 @@
 -(void) insertData:(Health *)h;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(Health *) getSampleData;
--(NSNumber *) getTodayNowCount;
+-(Health *) RecentData :(NSString *)date;
 
 @end

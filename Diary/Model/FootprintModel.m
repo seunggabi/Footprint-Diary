@@ -25,7 +25,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Footprint' (fp_id INTEGER PRIMARY KEY AUTOINCREMENT, fp_date TEXT, fp_time INTEGER, fp_GPS_X DOUBLE, fp_GPS_Y DOUBLE, fp_address TEXT)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Footprint' (fp_id INTEGER PRIMARY KEY AUTOINCREMENT, fp_date TEXT, fp_time INTEGER, fp_GPS_X DOUBLE, fp_GPS_Y DOUBLE, fp_address TEXT, fp_h_count INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -50,6 +50,8 @@
             f.fp_GPS_X = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 3)];
             f.fp_GPS_Y = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 4)];
             f.fp_address = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
+            f.fp_h_count = [NSNumber numberWithDouble:(double)sqlite3_column_double(stmt, 6)];
+
             [list addObject:f];
         }
         sqlite3_finalize(stmt);
@@ -60,7 +62,7 @@
 -(void) insertData:(Footprint *)f {
     char *err;
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address) VALUES ('%@', '%f', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address, f.fp_h_count) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address, f.fp_h_count];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Footprint Failed!");
@@ -108,6 +110,7 @@
     f.fp_GPS_X = @127.1945001;
     f.fp_GPS_Y = @37.227448;
     f.fp_address = @"우리집";
+    f.fp_h_count = @12345;
     return f;
 }
 

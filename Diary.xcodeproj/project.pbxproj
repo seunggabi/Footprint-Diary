@@ -1205,7 +1205,7 @@
 				TargetAttributes = {
 					BF76DDA61D24181800E5F658 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HQBSRRWLY7;
+						DevelopmentTeam = VTAR8G3EEE;
 					};
 				};
 			};
@@ -1662,7 +1662,7 @@
 				);
 				INFOPLIST_FILE = Diary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mju12345.Diary123;
+				PRODUCT_BUNDLE_IDENTIFIER = mju12345.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1680,7 +1680,7 @@
 				);
 				INFOPLIST_FILE = Diary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mju12345.Diary123;
+				PRODUCT_BUNDLE_IDENTIFIER = mju12345.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

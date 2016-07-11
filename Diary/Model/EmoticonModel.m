@@ -32,7 +32,9 @@
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
-    [self install];
+    if(![self exist]) {
+        [self install];
+    }
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -188,6 +190,10 @@
     for(int i=0; i<emoticonList.count; i++) {
         [self insertData:[emoticonList objectAtIndex:i]];
     }
+}
+
+-(BOOL) exist {
+    return [self select:nil].count > 0;
 }
 
 -(Emoticon *) getSampleData {

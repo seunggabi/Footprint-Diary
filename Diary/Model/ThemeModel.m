@@ -29,9 +29,11 @@
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Tabled Failed to Creath.");
+        NSAssert(0,@"Tabled Failed to Create.");
     }
-    [self install];
+    if(![self exist]) {
+        [self install];
+    }
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -110,6 +112,10 @@
     for(int i=0; i<themeList.count; i++) {
         [self insertData:[themeList objectAtIndex:i]];
     }
+}
+
+-(BOOL) exist {
+    return [self select:nil].count > 0;
 }
 
 -(Theme *) getSampleData {

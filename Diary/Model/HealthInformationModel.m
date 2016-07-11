@@ -29,9 +29,11 @@
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Tabled Failed to Creath.");
+        NSAssert(0,@"Tabled Failed to Create.");
     }
-    [self install];
+    if(![self exist]) {
+        [self install];
+    }
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -123,11 +125,28 @@
     }
 }
 
+-(BOOL) exist {
+    return [self select:nil].count > 0;
+}
 
 -(HealthInformation *) getSampleData {
     HealthInformation *hi = [[HealthInformation alloc] init];
     hi.hi_comment = @"그냥 좋음";
     return hi;
+}
+
+-(NSMutableArray *) getInfoTwo {
+    NSMutableArray *infoList = [self select:nil];
+    NSMutableArray *infoTwo = [[NSMutableArray alloc] init];
+    int one = rand()%infoList.count;
+    int two = rand()%infoList.count;
+    
+    while(one == two) {
+        two = rand()%infoList.count;
+    }
+    [infoTwo addObject:[infoList objectAtIndex:one]];
+    [infoTwo addObject:[infoList objectAtIndex:two]];
+    return infoTwo;
 }
 
 @end

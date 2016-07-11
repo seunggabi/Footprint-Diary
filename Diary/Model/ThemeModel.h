@@ -23,8 +23,8 @@
 -(void) insertData:(Theme *)h;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(void) install;
+-(BOOL) exist;
 -(Theme *) getSampleData;
 
 @end

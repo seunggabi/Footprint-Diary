@@ -63,7 +63,7 @@
     [self.mapScreen addSubview:mapView];
     
     locationManager = [[CLLocationManager alloc]init];
-    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]*5
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]>0?[u.u_timer intValue]:1*5
                                                                                      target:self
                                                                                    selector:@selector(getGPS)
                                                                                    userInfo:nil

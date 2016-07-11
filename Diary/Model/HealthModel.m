@@ -30,7 +30,7 @@
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Tabled Failed to Creath.");
+        NSAssert(0,@"Tabled Failed to Create.");
     }
 }
 
@@ -109,22 +109,20 @@
     return h;
 }
 
--(NSNumber *) getTodayNowCount {
-    NSDate *date = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyy-MM-dd"];
-    NSString *today = [dateFormatter stringFromDate:date];
-    NSString *countQuery = [NSString stringWithFormat:@"SELECT * FROM Health WHERE date='%@' ORDER BY h_count DESC LIMIT 1",today];
-    NSNumber *todayCount;
-    
+-(Health *) RecentData:(NSString *)date {
+    Health *h = [[Health alloc] init];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM Health WHERE h_date='%@' ORDER BY h_id DESC Limit 1,1", date];
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [countQuery UTF8String], -1, &stmt, nil) == SQLITE_OK){
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            todayCount = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
+            h.h_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
+            h.h_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            h.h_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];
+            h.h_count = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
         }
         sqlite3_finalize(stmt);
     }
-    return todayCount;
+    return h;
 }
 
 @end

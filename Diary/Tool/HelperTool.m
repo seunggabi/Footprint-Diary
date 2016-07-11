@@ -16,6 +16,7 @@
 #import "../Model/PhotoModel.h"
 #import "../Model/HealthModel.h"
 #import "../Model/HealthInformationModel.h"
+#import "../Model/WeatherModel.h"
 
 @implementation HelperTool
 
@@ -39,9 +40,10 @@
     DiaryModel *modelDiary = [[DiaryModel alloc] init];
     StickerModel *modelSticker = [[StickerModel alloc] init];
     EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
-    PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
+    WeatherModel *modelWeather = [[WeatherModel alloc] init];
     
     [modelUser create];
     [modelFootPrint create];
@@ -51,6 +53,7 @@
     [modelPhoto create];
     [modelHealth create];
     [modelHealthInfo create];
+    [modelWeather create];
 }
 
 -(void) removeDB {
@@ -62,6 +65,8 @@
     PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
+    WeatherModel *modelWeather = [[WeatherModel alloc] init];
+    
     
     [modelUser drop];
     [modelFootPrint drop];
@@ -71,6 +76,7 @@
     [modelPhoto drop];
     [modelHealth drop];
     [modelHealthInfo drop];
+    [modelWeather drop];
 }
 
 -(NSString *) getToday {
@@ -84,6 +90,20 @@
 -(NSDate *) getDate {
     NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     return date;
+}
+
+-(NSDate *) stringToDate:(NSString *)date {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSDate *d = [dateFormat dateFromString:date];
+    return d;
+}
+
+-(NSString *) dateToString:(NSDate *)date {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSString *d = [dateFormat stringFromDate:date];
+    return d;
 }
 
 @end

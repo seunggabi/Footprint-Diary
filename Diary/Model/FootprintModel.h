@@ -24,7 +24,6 @@
 -(void) insertData :(Footprint *)u;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(Footprint *) getSampleData;
 
 @end

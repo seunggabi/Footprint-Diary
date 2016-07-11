@@ -30,5 +30,7 @@
 -(void) removeDB;
 -(NSString *) getToday;
 -(NSDate *) getDate;
+-(NSDate *) stringToDate:(NSString *)date;
+-(NSString *) dateToString:(NSDate *)date;
 
 @end

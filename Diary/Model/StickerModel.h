@@ -23,7 +23,6 @@
 -(void) insertData :(Sticker *)s;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(Sticker *) getSampleData;
 
 @end
