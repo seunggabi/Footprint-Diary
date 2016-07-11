@@ -74,7 +74,7 @@
 }
 
 -(NSString *) getToday {
-    NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
+    NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *today = [dateFormatter stringFromDate:date];

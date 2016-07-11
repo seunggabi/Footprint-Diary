@@ -46,14 +46,12 @@
 }
 
 - (void)goDiaryView:(NSDate *)date{
-    
-    DiaryViewController * diaryView= [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
+    DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
     diaryView.indexDate = date;
     [self presentViewController:diaryView animated:YES completion:nil];
 }
     
 - (void)goDiaryEditView:(NSDate *)date{
-   
     DiaryEditViewController *editView = [[DiaryEditViewController alloc] initWithNibName:@"DiaryEditViewController" bundle:nil];
     editView.indexDate = date;
     [self presentViewController:editView animated:YES completion:nil];
