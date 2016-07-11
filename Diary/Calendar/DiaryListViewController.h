@@ -1,5 +1,5 @@
 //
-//  DairyListViewController.h
+//  DiaryListViewController.h
 //  Diary
 //
 //  Created by mju on 2016. 7. 10..
@@ -12,21 +12,24 @@
 #import "DiaryViewController.h"
 #import "DiaryEditViewController.h"
 
-@interface DairyListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >
+@interface DiaryListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >
 {
     
 }
+@property (strong, nonatomic) IBOutlet UITextField *sDateText;
+@property (strong, nonatomic) IBOutlet UITextField *eDateText;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
 
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) Diary *diary;
-@property (strong, nonatomic) NSString *startDate;
-@property (strong, nonatomic) NSString *endDate;
+@property (weak, nonatomic) IBOutlet UITextField *startDate;
+@property (weak, nonatomic) IBOutlet UITextField *endDate;
 @property (strong, nonatomic) NSMutableArray *diaryList;
 @property (strong, nonatomic) NSMutableArray *sticker;
 @property (retain, nonatomic) IBOutlet UITableView  *table;
 
-- (IBAction)goDiaryView:(UIButton *)sender;
--(void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
--(void)showDiaryList;
+- (IBAction)showDiaryList:(UIButton *)sender;
+-(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
+
 
 @end

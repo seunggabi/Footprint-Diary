@@ -1,5 +1,5 @@
 //
-//  VRGCalendarViewController.h
+//  CalendarViewController.h
 //  Diary
 //
 //  Created by mju on 2016. 7. 10..
@@ -10,18 +10,18 @@
 #import "../Model/Diary.h"
 #import "../Model/DiaryModel.h"
 #import "Emoticon.h"
-#import "VRGCalendarView.h"
+#import "CalendarView.h"
 #import "DiaryViewController.h"
 #import "DiaryEditViewController.h"
 
-@interface VRGCalendarViewController : UIViewController<VRGCalendarViewDelegate>{
+@interface CalendarViewController : UIViewController<CalendarViewDelegate>{
     
 }
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSDate *indexDate;
 @property (strong, nonatomic) DiaryModel *modelDiary;
-@property (weak, nonatomic) IBOutlet VRGCalendarView *calendarView;
 @property (strong, nonatomic) Emoticon *emoticon;
+@property (weak, nonatomic) IBOutlet CalendarView *calendarView;
 
 -(Diary *)getDiary:(NSDate *)date;
 @end

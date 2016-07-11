@@ -9,16 +9,16 @@
 
 #import <UIKit/UIKit.h>
 #import "UIColor+expanded.h"
-
+#import "../Model/DiaryModel.h"
 #define kVRGCalendarViewTopBarHeight 60
 #define kVRGCalendarViewWidth 320
 
 #define kVRGCalendarViewDayWidth 44
-#define kVRGCalendarViewDayHeight 44
+#define kVRGCalendarViewDayHeight 55
 
-@protocol VRGCalendarViewDelegate;
-@interface VRGCalendarView : UIView {
-    id <VRGCalendarViewDelegate> delegate;
+@protocol CalendarViewDelegate;
+@interface CalendarView : UIView {
+    id <CalendarViewDelegate> delegate;
     
     NSDate *currentMonth;
     
@@ -33,15 +33,17 @@
     
     NSArray *markedDates;
     NSArray *markedColors;
+    NSArray *markedDiarys;
 }
-
-@property (nonatomic, retain) id <VRGCalendarViewDelegate> delegate;
+@property (nonatomic, retain) id <CalendarViewDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray *diaryList;
 @property (nonatomic, retain) NSDate *currentMonth;
 @property (nonatomic, retain) UILabel *labelCurrentMonth;
 @property (nonatomic, retain) UIImageView *animationView_A;
 @property (nonatomic, retain) UIImageView *animationView_B;
 @property (nonatomic, retain) NSArray *markedDates;
 @property (nonatomic, retain) NSArray *markedColors;
+@property (nonatomic, retain) NSArray *markedDiarys;
 @property (nonatomic, getter = calendarHeight) float calendarHeight;
 @property (nonatomic, retain, getter = selectedDate) NSDate *selectedDate;
 
@@ -60,7 +62,7 @@
 
 @end
 
-@protocol VRGCalendarViewDelegate <NSObject>
--(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
+@protocol CalendarViewDelegate <NSObject>
+-(void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
+-(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date;
 @end
