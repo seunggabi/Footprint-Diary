@@ -37,7 +37,7 @@
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *iDate = [dateFormatter stringFromDate:date];
     for(int i = 0; i<diaryList.count; i++){
-        if(((Diary *)[diaryList objectAtIndex:i]).d_date == iDate){
+        if([((Diary *)[diaryList objectAtIndex:i]).d_date isEqualToString:iDate]){
             if(((Diary *)[diaryList objectAtIndex:i]).d_content)
                 return diary;
         }
