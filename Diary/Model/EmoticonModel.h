@@ -23,6 +23,7 @@
 -(void) insertData :(Emoticon *)e;
 -(void) delete :(NSString *)where;
 -(void) drop;
+-(void) install;
 
 -(Emoticon *) getSampleData;
 
