@@ -59,9 +59,7 @@
 
 -(void) insertData :(Sticker *)s {
     char *err;
-    
-    //[self deleteSticker];
-    
+        
     NSString *query = [NSString stringWithFormat:@"INSERT INTO Sticker (s_date, s_color, s_e_id) VALUES ('%@', '%@', '%@')", s.s_date, s.s_color, s.s_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);

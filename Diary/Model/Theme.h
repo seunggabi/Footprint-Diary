@@ -10,7 +10,7 @@
 
 @interface Theme : NSObject
 
-@property (strong, nonatomic) NSString *th_id;
+@property (strong, nonatomic) NSNumber *th_id;
 @property (strong, nonatomic) NSString *th_top;
 @property (strong, nonatomic) NSString *th_bottom;
 @property (strong, nonatomic) NSString *th_main;
