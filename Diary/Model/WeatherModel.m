@@ -100,6 +100,37 @@
     }
 }
 
+-(void) install {
+    [self drop];
+    [self create];
+    
+    NSMutableArray *weatherList = [[NSMutableArray alloc] init];
+    [weatherList addObject:[Weather weather:@"맥주" src:@"beer.png"]];
+    [weatherList addObject:[Weather weather:@"영수중" src:@"bill.png"]];
+    [weatherList addObject:[Weather weather:@"노잼" src:@"calm.png"]];
+    [weatherList addObject:[Weather weather:@"사탕" src:@"candy.png"]];
+    [weatherList addObject:[Weather weather:@"의자" src:@"chair.png"]];
+    [weatherList addObject:[Weather weather:@"치킨" src:@"chicken.png"]];
+    [weatherList addObject:[Weather weather:@"어려움" src:@"confused.png"]];
+    [weatherList addObject:[Weather weather:@"미소" src:@"cool.png"]];
+    [weatherList addObject:[Weather weather:@"썩소" src:@"cool-1.png"]];
+    [weatherList addObject:[Weather weather:@"푸딩" src:@"creme-caramel.png"]];
+    [weatherList addObject:[Weather weather:@"크로아상" src:@"croissant.png"]];
+    [weatherList addObject:[Weather weather:@"훌쩍" src:@"crying-1.png"]];
+    [weatherList addObject:[Weather weather:@"울음" src:@"crying.png"]];
+    [weatherList addObject:[Weather weather:@"악마" src:@"devil.png"]];
+    [weatherList addObject:[Weather weather:@"계란" src:@"egg.png"]];
+    [weatherList addObject:[Weather weather:@"물고기" src:@"fish.png"]];
+    [weatherList addObject:[Weather weather:@"꽃" src:@"flower.png"]];
+    [weatherList addObject:[Weather weather:@"포크" src:@"fork.png"]];
+    [weatherList addObject:[Weather weather:@"소녀" src:@"girl.png"]];
+    [weatherList addObject:[Weather weather:@"햄버거" src:@"hamburguer.png"]];
+    
+    for(int i=0; i<weatherList.count; i++) {
+        [self insertData:[weatherList objectAtIndex:i]];
+    }
+}
+
 -(Weather *) getSampleData {
     Weather *w = [[Weather alloc] init];
     w.w_id = @0;

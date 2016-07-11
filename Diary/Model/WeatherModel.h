@@ -24,7 +24,7 @@
 -(void) delete :(NSString *)where;
 -(void) drop;
 
+-(void) install;
 -(Weather *) getSampleData;
-
 
 @end
