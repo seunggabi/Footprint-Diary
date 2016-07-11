@@ -7,8 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "../Tool/TimerScheduler.h"
+#import "../Model/HealthModel.h"
+#import "../Model/HealthInformationModel.h"
+#import "../Tool/HelperTool.h"
+#import "FSLineChart.h"
+#import "UIColor+FSPalette.h"
+
+@import CoreMotion;
 
 @interface HealthViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *tip1;
+@property (strong, nonatomic) IBOutlet UILabel *tip2;
+@property (nonatomic, strong) IBOutlet FSLineChart *chart;
+@property (strong, nonatomic) IBOutlet FSLineChart *chartWithDates;
+@property (strong, nonatomic) CMPedometer *pedometer;
+@property (strong, nonatomic) HealthModel *modelHealth;
+@property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
 
 @end
