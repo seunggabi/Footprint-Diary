@@ -18,14 +18,27 @@
 @synthesize modelDiary;
 @synthesize sDateText;
 @synthesize eDateText;
+@synthesize datePicker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     sDateText.text = @"123";
     modelDiary = [[DiaryModel alloc] init];
     [modelDiary create];
+
+    
 }
 
+-(void)changeDatePicker
+{
+    NSDateFormatter *dateFormat;
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMM d, yyy hh:mm:ssa"];
+    
+    self.sDateText.text = [NSString stringWithFormat:@"%@",datePicker.date];
+                           [self.sDateText resignFirstResponder];
+}
+                           
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -49,8 +62,7 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSMutableArray * searchModel = [self loadDiaryListData:sDateText.text endDate:eDateText.text];
     return searchModel.count;
 }
@@ -59,9 +71,7 @@
     return 50;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *diaryModel = [modelDiary select:nil];
     NSLog(@"content %@", [[diaryModel objectAtIndex:1] d_content]);
 
@@ -87,8 +97,7 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //Set status can select for cell of table
     [table deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"didSelectRowAtIndexPath");

@@ -239,7 +239,6 @@
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
 		7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* CalendarViewController.m */; };
 		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
-		7D033A841D3252E60028CE44 /* DiaryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A821D3252E60028CE44 /* DiaryListViewController.xib */; };
 		7D033A861D32586B0028CE44 /* cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A851D32586B0028CE44 /* cell_background.png */; };
 		7D033B0F1D33A8260028CE44 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A661D324F2F0028CE44 /* DiaryViewController.xib */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
@@ -584,7 +583,6 @@
 		7D033A6C1D324F560028CE44 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
 		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
-		7D033A821D3252E60028CE44 /* DiaryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryListViewController.xib; sourceTree = "<group>"; };
 		7D033A851D32586B0028CE44 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D95020F1D2FC74E00B57D4D /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
@@ -1062,7 +1060,6 @@
 				7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */,
 				7D033A801D3252E60028CE44 /* DiaryListViewController.h */,
 				7D033A811D3252E60028CE44 /* DiaryListViewController.m */,
-				7D033A821D3252E60028CE44 /* DiaryListViewController.xib */,
 				7D033A641D324F2F0028CE44 /* DiaryViewController.h */,
 				7D033A651D324F2F0028CE44 /* DiaryViewController.m */,
 				7D033A661D324F2F0028CE44 /* DiaryViewController.xib */,
@@ -1198,7 +1195,7 @@
 				TargetAttributes = {
 					BF76DDA61D24181800E5F658 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4GGTR9UKYY;
+						DevelopmentTeam = HQBSRRWLY7;
 					};
 				};
 			};
@@ -1226,7 +1223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D033B0F1D33A8260028CE44 /* DiaryViewController.xib in Resources */,
-				7D033A841D3252E60028CE44 /* DiaryListViewController.xib in Resources */,
 				28E5E3C01D32A1BA00D8B9E3 /* confused.png in Resources */,
 				28E5E3461D32A1B200D8B9E3 /* tide-1.png in Resources */,
 				28E5E2421D302F0800D8B9E3 /* map_pinup@3x.png in Resources */,
