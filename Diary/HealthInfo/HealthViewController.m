@@ -26,18 +26,19 @@
 
 - (void)viewDidLoad {
     modelHealth = [[HealthModel alloc] init];
-    [modelHealth create];
     modelHealthInfo = [[HealthInformationModel alloc] init];
-    
+    NSString *today = [[HelperTool getInstance] getToday];
     [super viewDidLoad];
     
-    [self loadChartWithDates];
+    [self loadChartWithDates:today];
 }
 
 #pragma mark - Setting up the charts
 
-- (void)loadChartWithDates {
-    //__block NSNumber *tempData;
+- (void)loadChartWithDates:(NSString *)date {
+    
+    Health *health = [[Health alloc] init];
+    __block NSInteger tempData;
     /*
      헬스정보팁을 불러오는곳
      */
@@ -48,23 +49,32 @@
      self.tip2.text = @"헬스정보2";*/
     
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
-        //tempData = pedometerData;
+        
     }];
     [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval: 1.0
                                                                                      target: self
                                                                                    selector:@selector(getPedomterCount)
                                                                                    userInfo: nil repeats:YES]];
     
+    //NSString *date = @"2016-07-11";
+    NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", date]];
+    for(int i=0; i<healthList.count; i++) {
+        NSLog(@"%@",[((Health *)[healthList objectAtIndex:i]) getObj]);
+    }
     
-    NSLog(@"awqqwer");
     //NSLog(@"%ld", (long)tempData);
     
     // Generating some dummy data
+    
+    
     int oneDayToSec = 1440;
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:oneDayToSec+1];
     for(int i=0;i<oneDayToSec+1;i++) {
+       /* NSLog(@"%@", health.h_count);
+        NSLog(@"--------------------------");*/
         //int temp = [self getPedomterCount];
-        chartData[i] = [NSNumber numberWithFloat: 1/*(float)i / 30.0f + (float)(rand() % 100)*/];
+        
+        chartData[i] = [NSNumber numberWithFloat: tempData/*(float)i / 30.0f + (float)(rand() % 100)*/];
     }
     NSMutableArray* months = [NSMutableArray arrayWithCapacity:oneDayToSec];
     
@@ -104,7 +114,7 @@
 
 -(void)getPedomterCount {
     Health *health = [[Health alloc] init];
-    health.h_time = [NSDate date];
+    health.h_time = [[HelperTool getInstance] getDate];
     NSString *today = [[HelperTool getInstance] getToday];
     health.h_date = today;
     NSDate *now = [NSDate date];
@@ -120,11 +130,10 @@
     
     // display results
     [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
-        health.h_count = pedometerData;
-        // NSLog(health.h_count);
+        health.h_count = pedometerData.numberOfSteps;
+        [modelHealth insertData:health];
     }];
     
-    [modelHealth insertData:health];
     
     //return (int)health.h_count;
 }
