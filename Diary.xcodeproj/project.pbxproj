@@ -236,6 +236,7 @@
 		28E5E42B1D32A3FF00D8B9E3 /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4291D32A3FF00D8B9E3 /* TimerScheduler.m */; };
 		28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E42D1D33C0A900D8B9E3 /* Weather.m */; };
 		28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */; };
+		28E5E4341D3427E000D8B9E3 /* FootprintTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4331D3427E000D8B9E3 /* FootprintTool.m */; };
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
 		7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */; };
 		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
@@ -579,6 +580,8 @@
 		28E5E42D1D33C0A900D8B9E3 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		28E5E42F1D33C1DF00D8B9E3 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		28E5E4321D3427E000D8B9E3 /* FootprintTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintTool.h; sourceTree = "<group>"; };
+		28E5E4331D3427E000D8B9E3 /* FootprintTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintTool.m; sourceTree = "<group>"; };
 		7D033A611D324F2F0028CE44 /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
 		7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
 		7D033A631D324F2F0028CE44 /* DiaryEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryEditViewController.xib; sourceTree = "<group>"; };
@@ -1058,6 +1061,8 @@
 				28E5E4271D32A3FF00D8B9E3 /* HelperTool.m */,
 				28E5E4281D32A3FF00D8B9E3 /* TimerScheduler.h */,
 				28E5E4291D32A3FF00D8B9E3 /* TimerScheduler.m */,
+				28E5E4321D3427E000D8B9E3 /* FootprintTool.h */,
+				28E5E4331D3427E000D8B9E3 /* FootprintTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1509,6 +1514,7 @@
 				7DA28EB11D32336800DDBBC2 /* CalendarView.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
 				22DC19751D30E6420085D288 /* HealthViewController.m in Sources */,
+				28E5E4341D3427E000D8B9E3 /* FootprintTool.m in Sources */,
 				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
 				28E5E42B1D32A3FF00D8B9E3 /* TimerScheduler.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,

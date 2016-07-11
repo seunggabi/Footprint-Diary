@@ -25,7 +25,6 @@
 @property (strong, nonatomic) NSString *getAddressURL;
 
 +(HelperTool *) getInstance;
-
 -(void) installDB;
 -(void) removeDB;
 -(NSString *) getToday;

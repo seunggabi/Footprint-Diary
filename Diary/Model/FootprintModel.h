@@ -25,5 +25,6 @@
 -(void) delete :(NSString *)where;
 -(void) drop;
 -(Footprint *) getSampleData;
+-(NSMutableArray *) getDateList :(NSString *)date;
 
 @end

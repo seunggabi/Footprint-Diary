@@ -114,4 +114,9 @@
     return f;
 }
 
+-(NSMutableArray *) getDateList:(NSString *)date {
+    NSMutableArray *list = [self select:[NSString stringWithFormat:@"fp_date='%@'", date]];
+    return list;
+}
+
 @end
