@@ -33,7 +33,6 @@
 -(Diary *)getDiary:(NSDate *)date{
     diary = [[Diary alloc] init];
     NSMutableArray *diaryList = [modelDiary select:nil];
-
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *iDate = [dateFormatter stringFromDate:date];

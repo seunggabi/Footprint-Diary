@@ -40,7 +40,6 @@
     } else {
         [self setNeedsDisplay];
     }
-    
     if ([delegate respondsToSelector:@selector(calendarView:dateSelected:)]) [delegate calendarView:self dateSelected:self.selectedDate];
 }
 
@@ -53,7 +52,6 @@
     for (int i = 0; i<[dates count]; i++) {
         [colors addObject:[UIColor colorWithHexString:@"0x383838"]];
     }
-    
     self.markedColors = [NSArray arrayWithArray:colors];
     
     [self setNeedsDisplay];
@@ -66,21 +64,16 @@
     
     [self setNeedsDisplay];
 }
-
 #pragma mark - Set date to now
 -(void)reset {
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components =
-    [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |
-                           NSDayCalendarUnit) fromDate: [NSDate date]];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: [NSDate date]];
     self.currentMonth = [gregorian dateFromComponents:components]; //clean month
     
     [self updateSize];
     [self setNeedsDisplay];
     [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:NO];
 }
-
 #pragma mark - Next & Previous
 -(void)showNextMonth {
     if (isAnimating) return;
@@ -187,7 +180,7 @@
                          [self updateSize];
                          
                          if (hasPreviousDays) {
-                             animationView_A.frameY = animationView_B.frameHeight-(kVRGCalendarViewDayHeight+3); 
+                             animationView_A.frameY = animationView_B.frameHeight-(kVRGCalendarViewDayHeight+3);
                              
                          } else {
                              animationView_A.frameY = animationView_B.frameHeight-3;
@@ -223,8 +216,8 @@
 }
 
 #pragma mark - Touches
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
-{       
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self];
     
@@ -246,7 +239,7 @@
     }
     
     self.markedDates=nil;
-    self.markedColors=nil;  
+    self.markedColors=nil;
     
     CGRect rectArrowLeft = CGRectMake(0, 0, 50, 40);
     CGRect rectArrowRight = CGRectMake(self.frame.size.width-50, 0, 50, 40);
@@ -299,8 +292,7 @@
     CGContextAddLineToPoint(context,xmargin,ymargin+arrowSize/2);
     CGContextAddLineToPoint(context,xmargin+arrowSize/1.5, ymargin);
     
-    CGContextSetFillColorWithColor(context, 
-                                   [UIColor blackColor].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextFillPath(context);
     
     //Arrow right
@@ -310,8 +302,7 @@
     CGContextAddLineToPoint(context,self.frame.size.width-(xmargin+arrowSize/1.5),ymargin+arrowSize);
     CGContextAddLineToPoint(context,self.frame.size.width-(xmargin+arrowSize/1.5), ymargin);
     
-    CGContextSetFillColorWithColor(context, 
-                                   [UIColor blackColor].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextFillPath(context);
     
     //Weekdays
@@ -321,7 +312,7 @@
     NSMutableArray *weekdays = [[NSMutableArray alloc] initWithArray:[dateFormatter shortWeekdaySymbols]];
     [weekdays moveObjectFromIndex:1 toIndex:1];
     NSLog(@"weeksDAY : %@",weekdays);
-    CGContextSetFillColorWithColor(context, 
+    CGContextSetFillColorWithColor(context,
                                    [UIColor colorWithHexString:@"0x383838"].CGColor);
     // 달력 SUN, MON, TUE, THU, FRI, SAT 표시
     for (int i =0; i<[weekdays count]; i++) {
@@ -381,8 +372,7 @@
     CGContextSetAllowsAntialiasing(context, YES);
     
     //Draw days
-    CGContextSetFillColorWithColor(context, 
-                                   [UIColor colorWithHexString:@"0x383838"].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x383838"].CGColor);
     
     int numBlocks = numRows*7;
     NSDate *previousMonth = [self.currentMonth offsetMonth:-1];
@@ -428,19 +418,16 @@
             targetDate = (prevMonthNumDays-firstWeekDay)+(i+1);
             NSString *hex = (isSelectedDatePreviousMonth) ? @"0x383838" : @"aaaaaa";
             
-            CGContextSetFillColorWithColor(context, 
-                                           [UIColor colorWithHexString:hex].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
         } else if (i>=(firstWeekDay+currentMonthNumDays)) { //next month
             targetDate = (i+1) - (firstWeekDay+currentMonthNumDays);
             NSString *hex = (isSelectedDateNextMonth) ? @"0x383838" : @"aaaaaa";
-            CGContextSetFillColorWithColor(context, 
-                                           [UIColor colorWithHexString:hex].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
         } else { //current month
             // isCurrentMonth = YES;
             targetDate = (i-firstWeekDay)+1;
             NSString *hex = (isSelectedDatePreviousMonth || isSelectedDateNextMonth) ? @"0xaaaaaa" : @"0x383838";
-            CGContextSetFillColorWithColor(context, 
-                                           [UIColor colorWithHexString:hex].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
         }
         
         NSString *date = [NSString stringWithFormat:@"%i",targetDate];
@@ -457,8 +444,7 @@
             date = [date stringByAppendingString:[NSString stringWithFormat:@"%d",targetDate]];
             if([((Diary *)[diaryList objectAtIndex:j]).d_date isEqualToString:date] && i<(firstWeekDay+currentMonthNumDays)) {
                 NSString *hex = @"0xFF0000";
-                CGContextSetFillColorWithColor(context,
-                                               [UIColor colorWithHexString:hex].CGColor);
+                CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
             }
         }
         //draw selected date
@@ -467,25 +453,21 @@
             CGContextAddRect(context, rectangleGrid);
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x006dbc"].CGColor);
             CGContextFillPath(context);
-            CGContextSetFillColorWithColor(context, 
-                                           [UIColor whiteColor].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
         } else if (todayBlock==i) {
             CGRect rectangleGrid = CGRectMake(targetX,targetY,kVRGCalendarViewDayWidth+2,kVRGCalendarViewDayHeight+2);
             CGContextAddRect(context, rectangleGrid);
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x383838"].CGColor);
             CGContextFillPath(context);
-            CGContextSetFillColorWithColor(context, 
-                                           [UIColor whiteColor].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
         }
         [date drawInRect:CGRectMake(targetX+2, targetY+10, kVRGCalendarViewDayWidth, kVRGCalendarViewDayHeight) withFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:17] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
     }
-
     //Draw markings
     if (!self.markedDates || isSelectedDatePreviousMonth || isSelectedDateNextMonth) return;
     
     for (int i = 0; i<[self.markedDates count]; i++) {
         id markedDateObj = [self.markedDates objectAtIndex:i];
-        
         int targetDate;
         if ([markedDateObj isKindOfClass:[NSNumber class]]) {
             targetDate = [(NSNumber *)markedDateObj intValue];
@@ -495,7 +477,7 @@
         } else {
             continue;
         }
-
+        
         int targetBlock = firstWeekDay + (targetDate-1);
         int targetColumn = targetBlock%7;
         int targetRow = targetBlock/7;
@@ -553,12 +535,10 @@
     return self;
 }
 
--(void)dealloc {
-    
+-(void)dealloc {    
     self.delegate=nil;
     self.currentMonth=nil;
     self.labelCurrentMonth=nil;
-    
     self.markedDates=nil;
     self.markedColors=nil;
 }

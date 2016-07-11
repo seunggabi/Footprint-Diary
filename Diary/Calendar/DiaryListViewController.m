@@ -10,7 +10,6 @@
 
 @interface DiaryListViewController ()
 
-
 @end
 
 @implementation DiaryListViewController
@@ -43,11 +42,7 @@
 
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{
     diary = [[Diary alloc] init];
-    int startDate = 0;
-    int endDate = 0;
     NSMutableArray *diaryModel = [modelDiary select:nil];
-    
- 
     return diaryModel;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -92,10 +87,8 @@
     return cell;
 }
 
-//Go to detail current note
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     //Set status can select for cell of table
     [table deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"didSelectRowAtIndexPath");
@@ -113,16 +106,5 @@
     //Go to new view
     [self presentViewController:diaryView animated:YES completion:nil];
 }
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
