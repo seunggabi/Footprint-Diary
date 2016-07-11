@@ -120,7 +120,6 @@
     [UIView animateWithDuration:.35
                      animations:^{
                          [self updateSize];
-                         //blockSafeSelf.frameHeight = 100;
                          if (hasNextMonthDays) {
                              animationView_A.frameY = -animationView_A.frameHeight + kVRGCalendarViewDayHeight+3;
                          } else {
@@ -530,7 +529,6 @@
         labelCurrentMonth.textAlignment = UITextAlignmentCenter;
         
         [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
-        //        [self reset];
     }
     return self;
 }
