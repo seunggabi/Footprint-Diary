@@ -12,10 +12,13 @@
 #import "DiaryViewController.h"
 #import "DiaryEditViewController.h"
 
-@interface DairyListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >
+@interface DiaryListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >
 {
     
 }
+@property (strong, nonatomic) IBOutlet UITextField *sDateText;
+@property (strong, nonatomic) IBOutlet UITextField *eDateText;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
 
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) Diary *diary;
@@ -26,7 +29,7 @@
 @property (retain, nonatomic) IBOutlet UITableView  *table;
 
 - (IBAction)goDiaryView:(UIButton *)sender;
--(void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
--(void)showDiaryList;
+-(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
+
 
 @end

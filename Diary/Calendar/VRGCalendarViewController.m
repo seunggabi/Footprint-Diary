@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [modelDiary create];
+    modelDiary = [[DiaryModel alloc] init];
     self.calendarView.backgroundColor = [UIColor clearColor];
     VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
     calendar.delegate = self;
@@ -31,9 +31,12 @@
 }
 
 -(Diary *)getDiary:(NSDate *)date{
+    diary = [[Diary alloc] init];
     NSMutableArray *diaryModel = [modelDiary select:nil];
+   
     NSLog(@"modelDIARY: %@", diaryModel);
-    NSLog(@"content : %@", [[diaryModel objectAtIndex:1] d_content]);
+    NSLog(@"content : %@", ((Diary *)[diaryModel objectAtIndex:0]).d_content);
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     NSString *iDate = [dateFormatter stringFromDate:date];

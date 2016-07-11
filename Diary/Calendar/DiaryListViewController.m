@@ -8,15 +8,16 @@
 
 #import "DiaryListViewController.h"
 
-@interface DairyListViewController ()
-
+@interface DiaryListViewController ()
 
 @end
 
-@implementation DairyListViewController
+@implementation DiaryListViewController
 @synthesize table;
 @synthesize diary;
 @synthesize modelDiary;
+@synthesize sDateText;
+@synthesize eDateText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +36,32 @@
     [table reloadData];
 }
 
+- (IBAction)showDiaryList:(id)sender {
+    [self loadDiaryListData:sDateText.text endDate:eDateText.text];
+}
+
+-(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{
+    diary = [[Diary alloc] init];
+    int startDate = 0;
+    int endDate = 0;
+    NSMutableArray *diaryModel = [modelDiary select:nil];
+    NSMutableArray *searchModel = [[NSMutableArray alloc] init];
+ 
+    for(int i = 0; i<diaryModel.count; i++){
+        if([[diaryModel objectAtIndex:i] d_date] == sDate){
+           startDate = i;
+        }
+    }
+    for(int i = 0; i<diaryModel.count; i++){
+        if([[diaryModel objectAtIndex:i] d_date] == eDate){
+            endDate = i;
+        }
+    }
+    for(int i = startDate; i<endDate; i++){
+       searchModel = [[diaryModel objectAtIndex:i] copy];
+    }
+    return searchModel;
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -42,11 +69,9 @@
 //Return number row in table
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    diary = [[Diary alloc] init];
-    NSMutableArray *diaryModel = [modelDiary select:nil];
-    NSLog(@"numberOfRowsInSection : %lu", (unsigned long)diaryModel.count);
+    NSMutableArray * searchModel = [self loadDiaryListData:sDateText.text endDate:eDateText.text];
     //Count object of array
-    return diaryModel.count;
+    return searchModel.count;
 }
 
 //Return height of row
@@ -109,23 +134,19 @@
     NSMutableArray *diaryModel = [modelDiary select:nil];
     //create new view
     DiaryViewController *diaryView =  [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
+    NSMutableArray *dataMutableArray = [[NSUserDefaults standardUserDefaults]mutableArrayValueForKey:@"diary"];
+    //create new view
+    
     //set object of current note
-    diaryView.diary = [diaryModel objectAtIndex:indexPath.row];
+    diaryView.dicArray = [dataMutableArray objectAtIndex:indexPath.row];
     diaryView.indexNumber = indexPath.row;
+   
+//    diaryView.diary = [diaryModel objectAtIndex:indexPath.row];
+//    diaryView.indexNumber = indexPath.row;
     //Go to new view
     [self presentViewController:diaryView animated:YES completion:nil];
 }
 
-//Create new note
-- (IBAction)newNote:(UIButton *)sender{
-    //Init New view
-    DiaryViewController *diaryView =  [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    diary = [[Diary alloc] init];
-    NSMutableArray *diaryModel = [modelDiary select:nil];
-    diaryView.indexNumber = diaryModel.count;
-    //Go to new view
-    [self presentViewController:diaryView animated:YES completion:nil];
-}
 
 /*
  #pragma mark - Navigation
