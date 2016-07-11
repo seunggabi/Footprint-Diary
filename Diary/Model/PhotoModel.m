@@ -59,8 +59,6 @@
 -(void) insertData :(Photo *)p {
     char *err;
     
-    //[self deletePhoto];
-    
     NSString *query = [NSString stringWithFormat:@"INSERT INTO Photo (p_date, p_src) VALUES ('%@', '%@')", p.p_date, p.p_src];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);

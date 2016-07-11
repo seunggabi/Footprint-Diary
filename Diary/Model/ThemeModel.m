@@ -25,12 +25,13 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Theme' (th_id INTEGER PRIMARY KEY AUTOINCREMENT, th_top TEXT, th_bottom TEXT, th_main TEXT, th_font TEXT)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Theme' (th_id INTEGER PRIMARY KEY AUTOINCREMENT, th_name TEXT, th_top TEXT, th_bottom TEXT, th_main TEXT, th_font TEXT)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Creath.");
     }
+    [self install];
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -46,10 +47,11 @@
             Theme *t = [[Theme alloc] init];
             
             t.th_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
-            t.th_top = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            t.th_bottom = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
-            t.th_main = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
-            t.th_font = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
+            t.th_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            t.th_top = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
+            t.th_bottom = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
+            t.th_main = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 4)];
+            t.th_font = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 5)];
             
             [list addObject:t];
         }
@@ -61,9 +63,7 @@
 -(void) insertData :(Theme *)t {
     char *err;
     
-    //[self deletetheme];
-    
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Theme (th_top, th_bottom, th_main, th_font) VALUES ('%@', '%@', '%@', '%@')", t.th_top, t.th_bottom, t.th_main, t.th_font];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Theme (th_name, th_top, th_bottom, th_main, th_font) VALUES ('%@', '%@', '%@', '%@', '%@')", t.th_name, t.th_top, t.th_bottom, t.th_main, t.th_font];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT theme Failed!");
@@ -103,8 +103,18 @@
     }
 }
 
+-(void) install {
+    NSMutableArray *themeList = [[NSMutableArray alloc] init];
+    [themeList addObject:[Theme theme:@"테마이름" top:@"상단" main:@"메인" bottom:@"하단" font:@"폰트"]];
+    
+    for(int i=0; i<themeList.count; i++) {
+        [self insertData:[themeList objectAtIndex:i]];
+    }
+}
+
 -(Theme *) getSampleData {
     Theme *t = [[Theme alloc] init];
+    t.th_name = @"Sample";
     t.th_top = @"0xFFFFFF";
     t.th_bottom = @"0x000000";
     t.th_main = @"0xFFFFFF";

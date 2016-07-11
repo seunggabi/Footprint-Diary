@@ -24,6 +24,7 @@
 -(void) delete :(NSString *)where;
 -(void) drop;
 
+-(void) install;
 -(Theme *) getSampleData;
 
 @end

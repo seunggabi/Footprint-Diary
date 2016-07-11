@@ -60,8 +60,6 @@
 -(void) insertData:(Health *)h {
     char *err;
     
-    //[self deleteHealth];
-    
     NSString *query = [NSString stringWithFormat:@"INSERT INTO Health (h_date, h_time, h_count) VALUES ('%@', '%f', '%@')", h.h_date, [h.h_time timeIntervalSince1970], h.h_count];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);

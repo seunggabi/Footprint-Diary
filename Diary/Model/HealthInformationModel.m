@@ -31,6 +31,7 @@
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Creath.");
     }
+    [self install];
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -99,9 +100,6 @@
 }
 
 -(void) install {
-    [self drop];
-    [self create];
-    
     NSMutableArray *healthInfoList = [[NSMutableArray alloc] init];
     [healthInfoList addObject:[HealthInformation healthInformation:@"걷기는 심박수 증가, 스트레스 해소, 혈압조절 등 다양한 효과를 얻을 수 있다."]];
     [healthInfoList addObject:[HealthInformation healthInformation:@"사람이 한걸음을 걸었을 때 소모되는 열량은 약 3.3cal 이다."]];

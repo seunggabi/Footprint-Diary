@@ -32,6 +32,7 @@
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Creath.");
     }
+    [self install];
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -101,9 +102,6 @@
 }
 
 -(void) install {
-    [self drop];
-    [self create];
-    
     NSMutableArray *weatherList = [[NSMutableArray alloc] init];
     [weatherList addObject:[Weather weather:@"맥주" src:@"beer.png"]];
     [weatherList addObject:[Weather weather:@"영수중" src:@"bill.png"]];
