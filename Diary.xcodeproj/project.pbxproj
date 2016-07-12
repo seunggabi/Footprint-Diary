@@ -222,7 +222,6 @@
 		7D11EC511D352F6100575DED /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB761D352F6000575DED /* key.png */; };
 		7D11EC541D352F6100575DED /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB791D352F6000575DED /* lock.png */; };
 		7D11EC551D352F6100575DED /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7A1D352F6000575DED /* Marker.png */; };
-		7D11EC561D352F6100575DED /* noncheckbox.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */; };
 		7D11EC571D352F6100575DED /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7C1D352F6100575DED /* note.png */; };
 		7D11EC581D352F6100575DED /* outbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7D1D352F6100575DED /* outbox.png */; };
 		7D11EC591D352F6100575DED /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7E1D352F6100575DED /* page1.png */; };
@@ -584,7 +583,6 @@
 		7D11EB761D352F6000575DED /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		7D11EB791D352F6000575DED /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		7D11EB7A1D352F6000575DED /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
-		7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noncheckbox.jpeg; sourceTree = "<group>"; };
 		7D11EB7C1D352F6100575DED /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
 		7D11EB7D1D352F6100575DED /* outbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outbox.png; sourceTree = "<group>"; };
 		7D11EB7E1D352F6100575DED /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
@@ -906,7 +904,6 @@
 				7D11EB761D352F6000575DED /* key.png */,
 				7D11EB791D352F6000575DED /* lock.png */,
 				7D11EB7A1D352F6000575DED /* Marker.png */,
-				7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */,
 				7D11EB7C1D352F6100575DED /* note.png */,
 				7D11EB7D1D352F6100575DED /* outbox.png */,
 				7D11EB7E1D352F6100575DED /* page1.png */,
@@ -1343,7 +1340,6 @@
 				7D11ECA01D352F6100575DED /* weather-1.png in Resources */,
 				7D11EC121D352F6100575DED /* lobster.png in Resources */,
 				7D11EC511D352F6100575DED /* key.png in Resources */,
-				7D11EC561D352F6100575DED /* noncheckbox.jpeg in Resources */,
 				7D11EC7B1D352F6100575DED /* morning-rain.png in Resources */,
 				28E5E2481D302F0800D8B9E3 /* map_present_tracking.png in Resources */,
 				7D033A681D324F2F0028CE44 /* DiaryEditViewController.xib in Resources */,
@@ -1508,7 +1504,6 @@
 				28E5E2361D302F0800D8B9E3 /* detail_button.png in Resources */,
 				7D11EC5E1D352F6100575DED /* photo.png in Resources */,
 				7D11EC991D352F6100575DED /* tide-1.png in Resources */,
-				7D11EC531D352F6100575DED /* line.png in Resources */,
 				7D11ECAC1D35333D00575DED /* Cell.xib in Resources */,
 				7D11EC941D352F6100575DED /* sunset-2.png in Resources */,
 				28E5E24A1D302F0800D8B9E3 /* noimage256.png in Resources */,
