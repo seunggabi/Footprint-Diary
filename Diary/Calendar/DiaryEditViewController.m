@@ -180,7 +180,7 @@
             }
             break;
     }
-}
+} 
 
 -(IBAction)goEmoticon:(id)sender{
     EmoticonViewController *emoticonView = [[EmoticonViewController alloc] initWithNibName:@"EmoticonViewController" bundle:nil];
