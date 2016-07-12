@@ -37,7 +37,7 @@
 }
 
 - (void)getGPS {
-    NSLog(@"start GPS");
+  //  NSLog(@"start GPS");
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
