@@ -2,8 +2,8 @@
 //  PageViewController.h
 //  PageWithScrollView
 //
-//  Created by 유경수 on 2014. 5. 5..
-//  Copyright (c) 2014년 유경수. All rights reserved.
+//  Created by 김승갑 on 2016. 7. 12..
+//  Copyright (c) 2016년 김승갑. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
