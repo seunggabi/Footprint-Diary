@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *diaryList;
 @property (strong, nonatomic) NSMutableArray *sticker;
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UITextField *sDateText;
 @property (strong, nonatomic) IBOutlet UITextField *eDateText;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;

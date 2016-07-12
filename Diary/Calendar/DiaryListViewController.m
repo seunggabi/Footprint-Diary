@@ -47,7 +47,6 @@
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
     tempText.text = [dateFormatter stringFromDate:datePicker.date];
     NSLog(@"%@", [dateFormatter stringFromDate:datePicker.date]);
-    datePicker.hidden = YES;
     [tempText setNeedsDisplay];
 }
                            
@@ -64,13 +63,14 @@
     [self loadDiaryListData:sDateText.text endDate:eDateText.text];
 }
 
-- (IBAction)touchSDate:(id)sender {
-    NSLog(@"touch");
+- (IBAction)touchBeginSDate:(id)sender {
+    NSLog(@"touchsDate");
     datePicker.hidden = NO;
     tempText = sDateText;
 }
 
 - (IBAction)touchEDate:(id)sender {
+    NSLog(@"touchsDate");
     datePicker.hidden = NO;
     tempText = eDateText;
 }
