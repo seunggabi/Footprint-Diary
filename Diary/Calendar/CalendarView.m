@@ -13,11 +13,11 @@
 #import "UIView+convenience.h"
 
 @implementation CalendarView
-@synthesize currentMonth, delegate, labelCurrentMonth, animationView_A, animationView_B;
-@synthesize markedDates, markedColors, markedDiarys, calendarHeight,selectedDate;
-@synthesize diaryList;
 
-#pragma mark - Select Date
+@synthesize diaryList;
+@synthesize markedDates, markedColors, markedDiarys, calendarHeight,selectedDate;
+@synthesize currentMonth, delegate, labelCurrentMonth, animationView_A, animationView_B;
+
 -(void)selectDate:(int)date {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit fromDate:self.currentMonth];
@@ -43,8 +43,6 @@
     if ([delegate respondsToSelector:@selector(calendarView:dateSelected:)]) [delegate calendarView:self dateSelected:self.selectedDate];
 }
 
-#pragma mark - Mark Dates
-//NSArray can either contain NSDate objects or NSNumber objects with an int of the day.
 -(void)markDates:(NSArray *)dates {
     self.markedDates = dates;
     NSMutableArray *colors = [[NSMutableArray alloc] init];
@@ -57,14 +55,13 @@
     [self setNeedsDisplay];
 }
 
-//NSArray can either contain NSDate objects or NSNumber objects with an int of the day.
 -(void)markDates:(NSArray *)dates withColors:(NSArray *)colors {
     self.markedDates = dates;
     self.markedColors = colors;
     
     [self setNeedsDisplay];
 }
-#pragma mark - Set date to now
+
 -(void)reset {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: [NSDate date]];
@@ -74,12 +71,12 @@
     [self setNeedsDisplay];
     [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:NO];
 }
-#pragma mark - Next & Previous
+
 -(void)showNextMonth {
     if (isAnimating) return;
-    self.markedDates=nil;
-    isAnimating=YES;
-    prepAnimationNextMonth=YES;
+    self.markedDates = nil;
+    isAnimating = YES;
+    prepAnimationNextMonth = YES;
     
     [self setNeedsDisplay];
     
@@ -87,14 +84,12 @@
     int numBlocks = [self numRows]*7;
     BOOL hasNextMonthDays = lastBlock<numBlocks;
     
-    //Old month
     float oldSize = self.calendarHeight;
     UIImage *imageCurrentMonth = [self drawCurrentState];
     
-    //New month
     self.currentMonth = [currentMonth offsetMonth:1];
     if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight: animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];
-    prepAnimationNextMonth=NO;
+    prepAnimationNextMonth = NO;
     [self setNeedsDisplay];
     
     UIImage *imageNextMonth = [self drawCurrentState];
@@ -103,7 +98,6 @@
     [animationHolder setClipsToBounds:YES];
     [self addSubview:animationHolder];
     
-    //Animate
     self.animationView_A = [[UIImageView alloc] initWithImage:imageCurrentMonth];
     self.animationView_B = [[UIImageView alloc] initWithImage:imageNextMonth];
     [animationHolder addSubview:animationView_A];
@@ -115,7 +109,6 @@
         animationView_B.frameY = animationView_A.frameY + animationView_A.frameHeight -3;
     }
     
-    //Animation
     __block CalendarView *blockSafeSelf = self;
     [UIView animateWithDuration:.35
                      animations:^{
@@ -130,9 +123,9 @@
                      completion:^(BOOL finished) {
                          [animationView_A removeFromSuperview];
                          [animationView_B removeFromSuperview];
-                         blockSafeSelf.animationView_A=nil;
-                         blockSafeSelf.animationView_B=nil;
-                         isAnimating=NO;
+                         blockSafeSelf.animationView_A = nil;
+                         blockSafeSelf.animationView_B = nil;
+                         isAnimating = NO;
                          [animationHolder removeFromSuperview];
                      }
      ];
@@ -140,19 +133,17 @@
 
 -(void)showPreviousMonth {
     if (isAnimating) return;
-    isAnimating=YES;
-    self.markedDates=nil;
-    //Prepare current screen
+    isAnimating = YES;
+    self.markedDates = nil;
     prepAnimationPreviousMonth = YES;
     [self setNeedsDisplay];
     BOOL hasPreviousDays = [currentMonth firstWeekDayInMonth]>1;
     float oldSize = self.calendarHeight;
     UIImage *imageCurrentMonth = [self drawCurrentState];
     
-    //Prepare next screen
     self.currentMonth = [currentMonth offsetMonth:-1];
     if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight:animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];
-    prepAnimationPreviousMonth=NO;
+    prepAnimationPreviousMonth = NO;
     [self setNeedsDisplay];
     UIImage *imagePreviousMonth = [self drawCurrentState];
     
@@ -190,16 +181,14 @@
                      completion:^(BOOL finished) {
                          [animationView_A removeFromSuperview];
                          [animationView_B removeFromSuperview];
-                         blockSafeSelf.animationView_A=nil;
-                         blockSafeSelf.animationView_B=nil;
-                         isAnimating=NO;
+                         blockSafeSelf.animationView_A = nil;
+                         blockSafeSelf.animationView_B = nil;
+                         isAnimating = NO;
                          [animationHolder removeFromSuperview];
                      }
      ];
 }
 
-
-#pragma mark - update size & row count
 -(void)updateSize {
     self.frameHeight = self.calendarHeight;
     [self setNeedsDisplay];
@@ -220,9 +209,8 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self];
     
-    self.selectedDate=nil;
+    self.selectedDate = nil;
     
-    //Touch a specific day
     if (touchPoint.y > kVRGCalendarViewTopBarHeight) {
         float xLocation = touchPoint.x;
         float yLocation = touchPoint.y-kVRGCalendarViewTopBarHeight;
@@ -237,19 +225,17 @@
         return;
     }
     
-    self.markedDates=nil;
-    self.markedColors=nil;
+    self.markedDates = nil;
+    self.markedColors = nil;
     
     CGRect rectArrowLeft = CGRectMake(0, 0, 50, 40);
     CGRect rectArrowRight = CGRectMake(self.frame.size.width-50, 0, 50, 40);
     
-    //Touch either arrows or month in middle
     if (CGRectContainsPoint(rectArrowLeft, touchPoint)) {
         [self showPreviousMonth];
     } else if (CGRectContainsPoint(rectArrowRight, touchPoint)) {
         [self showNextMonth];
     } else if (CGRectContainsPoint(self.labelCurrentMonth.frame, touchPoint)) {
-        //Detect touch in current month
         int currentMonthIndex = [self.currentMonth month];
         int todayMonth = [[NSDate date] month];
         [self reset];
@@ -257,8 +243,7 @@
     }
 }
 
-#pragma mark - Drawing
-- (void)drawRect:(CGRect)rect{
+-(void)drawRect:(CGRect)rect{
     int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMMM yyyy"];
@@ -270,18 +255,15 @@
     
     CGContextClearRect(UIGraphicsGetCurrentContext(),rect);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    // 달력 표시 바
     CGRect rectangle = CGRectMake(0,0,self.frame.size.width,kVRGCalendarViewTopBarHeight);
     CGContextAddRect(context, rectangle);
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextFillPath(context);
     
-    //Arrows
     int arrowSize = 12;
     int xmargin = 20;
     int ymargin = 18;
     
-    //Arrow Left
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, xmargin+arrowSize/1.5, ymargin);
     CGContextAddLineToPoint(context,xmargin+arrowSize/1.5,ymargin+arrowSize);
@@ -291,7 +273,6 @@
     CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextFillPath(context);
     
-    //Arrow right
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, self.frame.size.width-(xmargin+arrowSize/1.5), ymargin);
     CGContextAddLineToPoint(context,self.frame.size.width-xmargin,ymargin+arrowSize/2);
@@ -301,15 +282,12 @@
     CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextFillPath(context);
     
-    //Weekdays
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat=@"EEE";
-    //always assume gregorian with monday first
+    dateFormatter.dateFormat = @"EEE";
     NSMutableArray *weekdays = [[NSMutableArray alloc] initWithArray:[dateFormatter shortWeekdaySymbols]];
     [weekdays moveObjectFromIndex:1 toIndex:1];
     CGContextSetFillColorWithColor(context,
                                    [UIColor colorWithHexString:@"0x383838"].CGColor);
-    // 달력 SUN, MON, TUE, THU, FRI, SAT 표시
     for (int i =0; i<[weekdays count]; i++) {
         NSString *weekdayValue = (NSString *)[weekdays objectAtIndex:i];
         UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12];
@@ -319,15 +297,13 @@
     int numRows = [self numRows];
     
     CGContextSetAllowsAntialiasing(context, NO);
-    
-    //Grid background
+
     float gridHeight = numRows*(kVRGCalendarViewDayHeight+2)+1;
     CGRect rectangleGrid = CGRectMake(0,kVRGCalendarViewTopBarHeight,self.frame.size.width,gridHeight);
     CGContextAddRect(context, rectangleGrid);
     CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xf3f3f3"].CGColor);
     CGContextFillPath(context);
     
-    //Grid white lines
     CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, 0, kVRGCalendarViewTopBarHeight+1);
@@ -337,36 +313,27 @@
         CGContextAddLineToPoint(context, i*(kVRGCalendarViewDayWidth+1)+i*1-1, kVRGCalendarViewTopBarHeight+gridHeight);
         
         if (i>numRows-1) continue;
-        //rows
         CGContextMoveToPoint(context, 0, kVRGCalendarViewTopBarHeight+i*(kVRGCalendarViewDayHeight+1)+i*1+1);
         CGContextAddLineToPoint(context, kVRGCalendarViewWidth, kVRGCalendarViewTopBarHeight+i*(kVRGCalendarViewDayHeight+1)+i*1+1);
     }
     
     CGContextStrokePath(context);
-    
-    //Grid dark lines
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithHexString:@"0xcfd4d8"].CGColor);
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, 0, kVRGCalendarViewTopBarHeight);
     CGContextAddLineToPoint(context, kVRGCalendarViewWidth, kVRGCalendarViewTopBarHeight);
     for (int i = 1; i<7; i++) {
-        //columns
         CGContextMoveToPoint(context, i*(kVRGCalendarViewDayWidth+1)+i*1, kVRGCalendarViewTopBarHeight);
         CGContextAddLineToPoint(context, i*(kVRGCalendarViewDayWidth+1)+i*1, kVRGCalendarViewTopBarHeight+gridHeight);
         
         if (i>numRows-1) continue;
-        //rows
         CGContextMoveToPoint(context, 0, kVRGCalendarViewTopBarHeight+i*(kVRGCalendarViewDayHeight+1)+i*1);
         CGContextAddLineToPoint(context, kVRGCalendarViewWidth, kVRGCalendarViewTopBarHeight+i*(kVRGCalendarViewDayHeight+1)+i*1);
     }
     CGContextMoveToPoint(context, 0, gridHeight+kVRGCalendarViewTopBarHeight);
     CGContextAddLineToPoint(context, kVRGCalendarViewWidth, gridHeight+kVRGCalendarViewTopBarHeight);
-    
     CGContextStrokePath(context);
-    
     CGContextSetAllowsAntialiasing(context, YES);
-    
-    //Draw days
     CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x383838"].CGColor);
     
     int numBlocks = numRows*7;
@@ -375,7 +342,6 @@
     int prevMonthNumDays = [previousMonth numDaysInMonth];
     int selectedDateBlock = ([selectedDate day]-1)+firstWeekDay;
     
-    //prev next month
     BOOL isSelectedDatePreviousMonth = prepAnimationPreviousMonth;
     BOOL isSelectedDateNextMonth = prepAnimationNextMonth;
     
@@ -407,7 +373,6 @@
         int targetX = targetColumn * (kVRGCalendarViewDayWidth+2);
         int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight+2);
         
-        // BOOL isCurrentMonth = NO;
         if (i<firstWeekDay) { //previous month
             targetDate = (prevMonthNumDays-firstWeekDay)+(i+1);
             NSString *hex = (isSelectedDatePreviousMonth) ? @"0x383838" : @"aaaaaa";
@@ -418,7 +383,6 @@
             NSString *hex = (isSelectedDateNextMonth) ? @"0x383838" : @"aaaaaa";
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
         } else { //current month
-            // isCurrentMonth = YES;
             targetDate = (i-firstWeekDay)+1;
             NSString *hex = (isSelectedDatePreviousMonth || isSelectedDateNextMonth) ? @"0xaaaaaa" : @"0x383838";
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
@@ -513,9 +477,9 @@
     self = [super initWithFrame:CGRectMake(0, 0, kVRGCalendarViewWidth, 0)];
     if (self) {
         self.contentMode = UIViewContentModeTop;
-        self.clipsToBounds=YES;
+        self.clipsToBounds = YES;
         
-        isAnimating=NO;
+        isAnimating = NO;
         self.labelCurrentMonth = [[UILabel alloc] initWithFrame:CGRectMake(34, 0, kVRGCalendarViewWidth-68, 40)];
         [self addSubview:labelCurrentMonth];
         labelCurrentMonth.backgroundColor=[UIColor whiteColor];
@@ -523,16 +487,16 @@
         labelCurrentMonth.textColor = [UIColor colorWithHexString:@"0x383838"];
         labelCurrentMonth.textAlignment = UITextAlignmentCenter;
         
-        [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
+        [self performSelector:@selector(reset) withObject:nil afterDelay:0.1];
     }
     return self;
 }
 
 -(void)dealloc {    
-    self.delegate=nil;
-    self.currentMonth=nil;
-    self.labelCurrentMonth=nil;
-    self.markedDates=nil;
-    self.markedColors=nil;
+    self.delegate = nil;
+    self.currentMonth = nil;
+    self.labelCurrentMonth = nil;
+    self.markedDates = nil;
+    self.markedColors = nil;
 }
 @end

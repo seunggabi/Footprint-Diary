@@ -9,6 +9,6 @@
 
 @interface NSMutableArray (Convenience)
 
-- (void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
+-(void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
 
 @end

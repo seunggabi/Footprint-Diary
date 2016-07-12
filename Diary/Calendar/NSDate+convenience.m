@@ -15,7 +15,6 @@
     return [components year];
 }
 
-
 -(int)month {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components = [gregorian components:NSMonthCalendarUnit fromDate:self];
@@ -30,8 +29,8 @@
 
 -(int)firstWeekDayInMonth {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:1]; //monday is first day
-    //Set date to first of month
+    [gregorian setFirstWeekday:1];
+  
     NSDateComponents *comps = [gregorian components:NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit fromDate:self];
     [comps setDay:1];
     NSDate *newDate = [gregorian dateFromComponents:comps];
@@ -41,7 +40,7 @@
 
 -(NSDate *)offsetMonth:(int)numMonths {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:1]; //monday is first day
+    [gregorian setFirstWeekday:1];
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setMonth:numMonths];
@@ -51,7 +50,7 @@
 
 -(NSDate *)offsetHours:(int)hours {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:1]; //monday is first day
+    [gregorian setFirstWeekday:1];
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setHour:hours];
@@ -61,7 +60,7 @@
 
 -(NSDate *)offsetDay:(int)numDays {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:1]; //monday is first day
+    [gregorian setFirstWeekday:1];
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setDay:numDays];
@@ -86,7 +85,7 @@
 
 +(NSDate *)dateStartOfWeek {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setFirstWeekday:1]; //monday is first day
+    [gregorian setFirstWeekday:1];
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
 
@@ -95,8 +94,7 @@
     NSDate *beginningOfWeek = [gregorian dateByAddingComponents:componentsToSubtract toDate:[NSDate date] options:0];
     
     NSDateComponents *componentsStripped = [gregorian components: (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: beginningOfWeek];
-    
-    //gestript
+
     beginningOfWeek = [gregorian dateFromComponents: componentsStripped];
     
     return beginningOfWeek;
@@ -110,9 +108,9 @@
     NSDate *endOfWeek = [gregorian dateByAddingComponents:componentsToAdd toDate:[NSDate date] options:0];
     
     NSDateComponents *componentsStripped = [gregorian components: (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate: endOfWeek];
-    
-    //gestript
+
     endOfWeek = [gregorian dateFromComponents: componentsStripped];
     return endOfWeek;
 }
+
 @end

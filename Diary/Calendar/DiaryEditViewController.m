@@ -13,17 +13,15 @@
 @end
 
 @implementation DiaryEditViewController
+
 @synthesize pImageView;
 @synthesize originImage;
 @synthesize title;
 @synthesize content;
 @synthesize indexDate;
-@synthesize modelDiary;
-@synthesize modelPhoto;
-@synthesize modelSticker;
-@synthesize modelEmoticon;
-@synthesize modelWeather;
 @synthesize radioButton1, radioButton2, radioButton3, radioButton4;
+@synthesize modelDiary, modelPhoto, modelSticker, modelEmoticon, modelWeather;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     originImage = [UIImage imageNamed:@"default.png"];
@@ -38,6 +36,7 @@
     [modelEmoticon create];
     modelWeather = [[WeatherModel alloc] init];
     [modelWeather create];
+    
     [radioButton1 setImage:[UIImage imageNamed:@"radioButtonOn.png"] forState:UIControlStateSelected];
     radioButton1.layer.cornerRadius=22;
     radioButton1.layer.masksToBounds=YES;
@@ -58,8 +57,6 @@
     radioButton4.layer.masksToBounds=YES;
     radioButton4.tag = 4;
     [radioButton4 addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-
-    
 }
 
 -(IBAction)back:(id)sender {
@@ -71,7 +68,6 @@
 }
 -(IBAction)runGeneralPicker{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.delegate = self;
     picker.allowsEditing = NO;
@@ -87,7 +83,6 @@
     originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self finishedPicker];
     [pImageView setImage:originImage];
-    
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -95,20 +90,18 @@
 }
 
 -(IBAction)writeDiary{
-    if ([title.text length]!=0) {//Title is  existed
+    if ([title.text length]!=0) {
         Photo *photo = [[Photo alloc] init];
         Diary *diary = [[Diary alloc] init];
         Weather *weather = [[Weather alloc] init];
         
-                //Disable Keyboard
         [content resignFirstResponder];
-        //Set Frame of textview when edit note
         [content setFrame:CGRectMake(0, 77, 319, 381)];
-        // get current date
+ 
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyy-MM-dd"];
         NSString *iDate = [dateFormatter stringFromDate:indexDate];
-        //Back to main view
+        
         [self dismissViewControllerAnimated:YES completion:nil];
         photo.p_date = iDate;
         
@@ -120,12 +113,9 @@
         diary.d_w_id = @0;
         
         [modelDiary insertData:diary];
-        //Back to main view
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    else//Title is not existed
-    {
-        //Call alert view for notice user add title note
+    else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Noctice"
                                                         message:@"You must type your note title!"
                                                        delegate:nil

@@ -8,8 +8,6 @@
 
 #import "NSMutableArray+convenience.h"
 
-
-
 @implementation NSMutableArray (Convenience)
 
 -(void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to{

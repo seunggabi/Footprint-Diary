@@ -15,23 +15,22 @@
 @interface DiaryListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >{
 }
 
-@property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) Diary *diary;
-@property (strong, nonatomic) NSMutableArray *diaryList;
-@property (strong, nonatomic) NSMutableArray *sticker;
+@property (strong, nonatomic) DiaryModel *modelDiary;
 
-@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (strong, nonatomic) NSMutableArray *diaryList;
+@property (strong, nonatomic) NSMutableArray *stickerList;
+
 @property (strong, nonatomic) IBOutlet UITextField *sDateText;
 @property (strong, nonatomic) IBOutlet UITextField *eDateText;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
-@property (weak, nonatomic) IBOutlet UITextField *startDate;
-@property (weak, nonatomic) IBOutlet UITextField *endDate;
-@property (retain, nonatomic) IBOutlet UITableView  *table;
-@property (weak, nonatomic) IBOutlet UIButton *buttonPressed;
 @property (strong, nonatomic) IBOutlet UITextField *tempText;
 
+@property (retain, nonatomic) IBOutlet UITableView  *table;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 -(IBAction)showDiaryList:(UIButton *)sender;
--(IBAction)touchBeginSDate:(id)sender;
+-(IBAction)touchSDate:(id)sender;
 -(IBAction)touchEDate:(id)sender;
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField;

@@ -61,7 +61,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C02-tn-IZ7">
                     <rect key="frame" x="31" y="77" width="29" height="30"/>
-                    <state key="normal" title="사진" image="photo.png"/>
+                    <state key="normal" title="사진" image="photo_24.png"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-Ft-Hmg">
                     <rect key="frame" x="31" y="109" width="314" height="28"/>
@@ -80,7 +80,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGi-6r-WsW">
                     <rect key="frame" x="315" y="77" width="30" height="30"/>
-                    <state key="normal" image="happy-1.png"/>
+                    <state key="normal" image="smile.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4O-lq-TvG">
                     <rect key="frame" x="116" y="629" width="30" height="30"/>
@@ -169,8 +169,8 @@
     </objects>
     <resources>
         <image name="beer.png" width="30" height="30"/>
-        <image name="happy-1.png" width="30" height="30"/>
-        <image name="photo.png" width="30" height="30"/>
+        <image name="photo_24.png" width="24" height="24"/>
+        <image name="smile.png" width="24" height="24"/>
         <image name="sunny.png" width="30" height="30"/>
     </resources>
 </document>

@@ -13,16 +13,18 @@
 @end
 
 @implementation DiaryListViewController
+
 @synthesize table;
 @synthesize diary;
-@synthesize modelDiary;
 @synthesize sDateText;
 @synthesize eDateText;
 @synthesize datePicker;
 @synthesize tempText;
+@synthesize modelDiary;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     modelDiary = [[DiaryModel alloc] init];
     [modelDiary create];
     datePicker.datePickerMode = UIDatePickerModeDate;
@@ -64,13 +66,11 @@
 }
 
 - (IBAction)touchSDate:(id)sender {
-    NSLog(@"touchSDate");
     datePicker.hidden = NO;
     tempText = sDateText;
 }
 
 - (IBAction)touchEDate:(id)sender {
-    NSLog(@"touchEDate");
     datePicker.hidden = NO;
     tempText = eDateText;
 }
@@ -108,7 +108,6 @@
     [lblTitleNote setBackgroundColor:[UIColor clearColor]];
     [cell addSubview:lblTitleNote];
     
-    //Set time string for note
     UILabel *lblDateTime = [[UILabel alloc] initWithFrame:CGRectMake(238, 7, 80, 36)];
     [lblDateTime setFont:[UIFont systemFontOfSize:13]];
     lblDateTime.text = [[diaryModel objectAtIndex:indexPath.row] d_date];
@@ -120,13 +119,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //Set status can select for cell of table
     [table deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"didSelectRowAtIndexPath");
-    //Get array of note
     diary = [[Diary alloc] init];
     NSMutableArray *diaryList = [modelDiary select:nil];
-    //create new view
     DiaryViewController *diaryView =  [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
     
     [self presentViewController:diaryView animated:YES completion:nil];

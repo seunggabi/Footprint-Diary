@@ -10,8 +10,8 @@
 
 @interface CalendarViewController ()
 
-
 @end
+
 @implementation CalendarViewController
 
 @synthesize diary;

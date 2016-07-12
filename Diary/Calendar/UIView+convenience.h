@@ -15,7 +15,6 @@
 @property (nonatomic) CGFloat frameX;
 @property (nonatomic) CGFloat frameY;
 
-// Setting these modifies the origin but not the size.
 @property (nonatomic) CGFloat frameRight;
 @property (nonatomic) CGFloat frameBottom;
 
