@@ -119,7 +119,7 @@
     [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
         
         [self presentPedometerData:pedometerData];
-    }];
+    }]; 
 }
 
 
