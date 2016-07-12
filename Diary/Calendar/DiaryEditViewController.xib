@@ -10,6 +10,10 @@
                 <outlet property="back" destination="kgm-lE-H0s" id="sem-LM-fgJ"/>
                 <outlet property="content" destination="hg4-Yw-uyj" id="Mgr-7w-kon"/>
                 <outlet property="pImageView" destination="MeK-nH-PrE" id="Qth-En-KiR"/>
+                <outlet property="radioButton1" destination="lCJ-Pr-Aql" id="vQy-sG-IXA"/>
+                <outlet property="radioButton2" destination="ca6-tO-u8s" id="XF3-xp-Caj"/>
+                <outlet property="radioButton3" destination="Jb6-5i-ncg" id="NbZ-Ne-D1P"/>
+                <outlet property="radioButton4" destination="5Gv-oo-7Cb" id="NzJ-Y2-x77"/>
                 <outlet property="title" destination="kxi-eI-CUc" id="XHB-i8-Oxh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
