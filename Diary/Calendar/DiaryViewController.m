@@ -57,13 +57,7 @@
     content.text = [dicArray objectForKey:@"content"];
     content.editable = FALSE;
 }
-
--(void)showDiary{
-    
-}
-
-- (IBAction)delete:(UIButton *)sender
-{
+- (IBAction)delete:(id)sender {
     //Call alert view for notice user delete note
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Noctice"
                                                     message:@"Do you want to delete this file?"
@@ -73,6 +67,9 @@
     //Set tag for alert
     alert.tag = 1;
     [alert show];
+}
+
+- (IBAction)changeDiary:(id)sender {
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

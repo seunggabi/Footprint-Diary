@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiaryViewController">
             <connections>
+                <outlet property="changeDiary" destination="eNA-A9-Gfu" id="b5d-t0-DBB"/>
+                <outlet property="delete" destination="BC3-5K-evP" id="RIg-Da-8Jo"/>
                 <outlet property="view" destination="cpK-DU-L6s" id="wMl-Dt-rNg"/>
             </connections>
         </placeholder>
@@ -20,6 +22,7 @@
                 </mapView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-aE-XV1">
                     <rect key="frame" x="27" y="107" width="313" height="30"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.91372549020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -64,10 +67,16 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-5K-evP">
                     <rect key="frame" x="227" y="629" width="30" height="30"/>
                     <state key="normal" title="삭제"/>
+                    <connections>
+                        <action selector="delete:" destination="-1" eventType="touchUpInside" id="qX5-BP-yp7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-A9-Gfu">
                     <rect key="frame" x="105" y="629" width="30" height="30"/>
                     <state key="normal" title="수정"/>
+                    <connections>
+                        <action selector="changeDiary:" destination="-1" eventType="touchUpInside" id="xwm-m4-UW0"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

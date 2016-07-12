@@ -20,21 +20,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-eI-CUc">
-                    <rect key="frame" x="27" y="107" width="313" height="30"/>
+                    <rect key="frame" x="31" y="107" width="313" height="30"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.91372549020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-Yw-uyj">
-                    <rect key="frame" x="27" y="281" width="313" height="128"/>
+                    <rect key="frame" x="31" y="281" width="313" height="128"/>
                     <color key="backgroundColor" red="0.92156862750000001" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-nH-PrE">
-                    <rect key="frame" x="27" y="417" width="313" height="107"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
-                    <rect key="frame" x="27" y="540" width="313" height="107"/>
+                    <rect key="frame" x="31" y="417" width="313" height="107"/>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-0k-ov9">
                     <rect key="frame" x="0.0" y="19" width="375" height="44"/>
@@ -58,7 +56,7 @@
                     <state key="normal" title="X"/>
                 </button>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
-                    <rect key="frame" x="27" y="145" width="313" height="128"/>
+                    <rect key="frame" x="31" y="145" width="313" height="128"/>
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
                     <rect key="frame" x="32" y="68" width="29" height="30"/>
@@ -85,6 +83,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
                     <rect key="frame" x="296" y="68" width="41" height="30"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
+                    <rect key="frame" x="31" y="540" width="313" height="107"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

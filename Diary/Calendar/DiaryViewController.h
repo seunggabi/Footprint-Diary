@@ -31,9 +31,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *title;
 @property (retain, nonatomic) IBOutlet UITextView *content;
 @property (strong, nonatomic) IBOutlet UIImageView *pImageView;
+@property (weak, nonatomic) IBOutlet UIButton *changeDiary;
+@property (weak, nonatomic) IBOutlet UIButton *delete;
 
 -(void)loadDiaryData:(NSString *)date;
--(void)showDiary;
 -(void)delete:(NSString *)date;
 
 @end
