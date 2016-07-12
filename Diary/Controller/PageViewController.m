@@ -67,9 +67,9 @@
         checkbox.hidden = YES;
     }
     
-    [checkbox setBackgroundImage:[UIImage imageNamed:@"cool.png"]
+    [checkbox setBackgroundImage:[UIImage imageNamed:@"checkbox.jpeg"]
                         forState:UIControlStateNormal];
-    [checkbox setBackgroundImage:[UIImage imageNamed:@"smile.png"]
+    [checkbox setBackgroundImage:[UIImage imageNamed:@"checkboxSelected.jpeg"]
                         forState:UIControlStateSelected];
     checkbox.backgroundColor=nil;
     // 현재 페이지의 이미지와 텍스트 적용

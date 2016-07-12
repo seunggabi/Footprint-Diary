@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Emoticon.h"
-#import "Sticker.h"
 
-@interface EmoticonViewController : UIViewController
+@interface EmoticonViewController : UIViewController<UICollectionViewDelegate , UICollectionViewDataSource>{
+    
+    NSMutableArray *imgList;
+}
 
-@property (strong, nonatomic) Emoticon *emoticon;
-@property (strong, nonatomic) Sticker *sticker;
-
--(Emoticon *)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

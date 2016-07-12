@@ -10,7 +10,10 @@
                 <outlet property="back" destination="kgm-lE-H0s" id="sem-LM-fgJ"/>
                 <outlet property="content" destination="hg4-Yw-uyj" id="Mgr-7w-kon"/>
                 <outlet property="pImageView" destination="MeK-nH-PrE" id="Qth-En-KiR"/>
-                <outlet property="radioButton4" destination="5Gv-oo-7Cb" id="NzJ-Y2-x77"/>
+                <outlet property="radioButton1" destination="e5r-Wf-Sn7" id="jSN-Sm-1r0"/>
+                <outlet property="radioButton2" destination="bAp-wd-D4c" id="eYS-Ii-hZk"/>
+                <outlet property="radioButton3" destination="kHW-Fq-lnG" id="0sl-QN-zkJ"/>
+                <outlet property="radioButton4" destination="5Pn-Ym-6ZM" id="gTf-gm-Dcp"/>
                 <outlet property="title" destination="kxi-eI-CUc" id="XHB-i8-Oxh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,15 +56,15 @@
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
-                    <rect key="frame" x="32" y="76" width="29" height="30"/>
-                    <state key="normal" title="사진" image="photo.png"/>
+                    <rect key="frame" x="31" y="76" width="29" height="30"/>
+                    <state key="normal" title="사진" image="photo_24.png"/>
                     <connections>
                         <action selector="runGeneralPicker" destination="-1" eventType="touchUpInside" id="s4e-Sp-RJw"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
                     <rect key="frame" x="314" y="76" width="30" height="30"/>
-                    <state key="normal" image="happy-1.png"/>
+                    <state key="normal" image="smile.png"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
                     <rect key="frame" x="31" y="540" width="314" height="107"/>
@@ -69,10 +72,6 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
                     <rect key="frame" x="31" y="145" width="314" height="128"/>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-oo-7Cb">
-                    <rect key="frame" x="315" y="45" width="45" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
                     <rect key="frame" x="208" y="78" width="30" height="30"/>
                     <state key="normal" title="X"/>
@@ -84,18 +83,25 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
                     <rect key="frame" x="242" y="76" width="30" height="30"/>
                     <state key="normal" image="sunny.png"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-Kh-pc1">
-                    <rect key="frame" x="279" y="44" width="45" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-Tr-hp4">
-                    <rect key="frame" x="245" y="44" width="45" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
+                    <connections>
+                        <action selector="goEmoticon:" destination="-1" eventType="touchUpInside" id="KXj-Mz-ioo"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5r-Wf-Sn7">
-                    <rect key="frame" x="213" y="44" width="45" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
+                    <rect key="frame" x="212" y="53" width="22" height="22"/>
+                    <state key="normal" title="Button" image="radioButtonOff.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-Fq-lnG">
+                    <rect key="frame" x="280" y="53" width="22" height="22"/>
+                    <state key="normal" title="Button" image="radioButtonOff.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-Ym-6ZM">
+                    <rect key="frame" x="318" y="53" width="22" height="22"/>
+                    <state key="normal" title="Button" image="radioButtonOff.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-wd-D4c">
+                    <rect key="frame" x="246" y="53" width="22" height="22"/>
+                    <state key="normal" title="Button" image="radioButtonOff.png"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -111,9 +117,9 @@
     </objects>
     <resources>
         <image name="beer.png" width="30" height="30"/>
-        <image name="happy-1.png" width="30" height="30"/>
-        <image name="nobtn.png" width="50" height="40"/>
-        <image name="photo.png" width="30" height="30"/>
+        <image name="photo_24.png" width="24" height="24"/>
+        <image name="radioButtonOff.png" width="300" height="300"/>
+        <image name="smile.png" width="24" height="24"/>
         <image name="sunny.png" width="30" height="30"/>
     </resources>
 </document>

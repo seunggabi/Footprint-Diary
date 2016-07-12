@@ -38,22 +38,22 @@
     [modelEmoticon create];
     modelWeather = [[WeatherModel alloc] init];
     [modelWeather create];
-    [radioButton1 setImage:[UIImage imageNamed:@"selectedbtn.png"] forState:UIControlStateSelected];
+    [radioButton1 setImage:[UIImage imageNamed:@"radioButtonOn.png"] forState:UIControlStateSelected];
     radioButton1.layer.cornerRadius=22;
     radioButton1.layer.masksToBounds=YES;
     radioButton1.tag = 1;
     [radioButton1 addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [radioButton2 setImage:[UIImage imageNamed:@"selectedbtn.png"] forState:UIControlStateSelected];
+    [radioButton2 setImage:[UIImage imageNamed:@"radioButtonOn.png"] forState:UIControlStateSelected];
     radioButton2.layer.cornerRadius=22;
     radioButton2.layer.masksToBounds=YES;
     radioButton2.tag = 2;
     [radioButton2 addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [radioButton3 setImage:[UIImage imageNamed:@"selectedbtn.png"] forState:UIControlStateSelected];
+    [radioButton3 setImage:[UIImage imageNamed:@"radioButtonOn.png"] forState:UIControlStateSelected];
     radioButton3.layer.cornerRadius=22;
     radioButton3.layer.masksToBounds=YES;
     radioButton3.tag = 3;
     [radioButton3 addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [radioButton4 setImage:[UIImage imageNamed:@"selectedbtn.png"] forState:UIControlStateSelected];
+    [radioButton4 setImage:[UIImage imageNamed:@"radioButtonOn.png"] forState:UIControlStateSelected];
     radioButton4.layer.cornerRadius=22;
     radioButton4.layer.masksToBounds=YES;
     radioButton4.tag = 4;
@@ -179,11 +179,12 @@
                 [radioButton3 setSelected:NO];
             }
             break;
-    }
-}
+    } 
+} 
 
 -(IBAction)goEmoticon:(id)sender{
-    
+    EmoticonViewController *emoticonView = [[EmoticonViewController alloc] initWithNibName:@"EmoticonViewController" bundle:nil];
+    [self presentViewController:emoticonView animated:YES completion:nil];
 }
 
 @end
