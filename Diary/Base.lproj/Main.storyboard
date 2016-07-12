@@ -131,55 +131,47 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="DeD-qA-WAE">
-                                        <rect key="frame" x="20" y="20" width="335" height="146"/>
+                                        <rect key="frame" x="20" y="40" width="335" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </mapView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="h8A-z7-Ef0">
-                                <rect key="frame" x="20" y="392" width="335" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발자국" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OdV-vH-ZR8">
-                                <rect key="frame" x="103" y="568" width="45" height="21"/>
+                                <rect key="frame" x="103" y="589" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CCB-Ae-8pH">
-                                <rect key="frame" x="20" y="568" width="75" height="21"/>
+                                <rect key="frame" x="20" y="589" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pmb-lt-wlH">
-                                <rect key="frame" x="180" y="568" width="75" height="21"/>
+                                <rect key="frame" x="180" y="589" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2OG-uB-Gda">
-                                <rect key="frame" x="268" y="568" width="33" height="21"/>
+                                <rect key="frame" x="263" y="589" width="33" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nxo-fM-Ikg">
-                                <rect key="frame" x="103" y="617" width="30" height="30"/>
+                                <rect key="frame" x="103" y="628" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="수정"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uj1-3A-a70">
-                                <rect key="frame" x="245" y="617" width="30" height="30"/>
+                                <rect key="frame" x="244" y="628" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="삭제"/>
                             </button>
@@ -202,9 +194,17 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="E19-sA-GNM">
-                                <rect key="frame" x="20" y="246" width="215" height="131"/>
+                                <rect key="frame" x="20" y="268" width="215" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="h8A-z7-Ef0">
+                                <rect key="frame" x="20" y="423" width="335" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ib-N3-p2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-211.5" y="-3310.5"/>
+            <point key="canvasLocation" x="-113.5" y="-3328.5"/>
         </scene>
         <!--Location-->
         <scene sceneID="kDM-kh-utI">
@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf7-xq-tVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339.5" y="-3351.5"/>
+            <point key="canvasLocation" x="405.5" y="-3334.5"/>
         </scene>
         <!--GPS-->
         <scene sceneID="zbE-3L-WUI">
@@ -629,7 +629,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLq-7I-Xcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453.5" y="398.5"/>
+            <point key="canvasLocation" x="-1509.5" y="456.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eSH-BX-aGH">
@@ -788,7 +788,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnh-re-VFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-893.5" y="16.5"/>
+            <point key="canvasLocation" x="-1967.5" y="456.5"/>
         </scene>
         <!--Setting-->
         <scene sceneID="H0B-qd-42X">
@@ -972,7 +972,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-sZ-ye0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701.5" y="-834.5"/>
+            <point key="canvasLocation" x="-1246.5" y="-620.5"/>
         </scene>
         <!--테마-->
         <scene sceneID="cDr-ZN-dhc">
@@ -1376,7 +1376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D57-HB-ruT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193.5" y="-476.5"/>
+            <point key="canvasLocation" x="226.5" y="-918.5"/>
         </scene>
         <!--내 설정-->
         <scene sceneID="CBy-aT-1l5">
@@ -1540,7 +1540,66 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqH-iK-AGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1740.5" y="-818.5"/>
+            <point key="canvasLocation" x="-2234.5" y="-644.5"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="HLs-GJ-CTn">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" pageSpacing="4" navigationOrientation="horizontal" spineLocation="none" id="wBK-0c-q9f" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="BJw-nL-qoR" kind="push" id="gAN-28-Z2b"/>
+                        <segue destination="FGl-J6-mpu" kind="push" id="q3Y-rH-fkr"/>
+                        <segue destination="CbB-PQ-Uy2" kind="push" id="9ap-Wl-fnR"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDn-EE-VsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2502" y="-4283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yqy-5X-lpP">
+            <objects>
+                <viewController id="BJw-nL-qoR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Agg-Fs-VJz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.90017558050000002" blue="0.88435847540000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ImP-Lz-7Zl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bux-Qi-VTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2082" y="-4322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hf9-hT-Gwi">
+            <objects>
+                <viewController id="FGl-J6-mpu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1L-HL-J7h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.8193800376" blue="0.57479962549999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ePx-Eu-PxL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMe-CM-a5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1680" y="-4323"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2v3-BC-xx1">
+            <objects>
+                <viewController id="CbB-PQ-Uy2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvI-op-TSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BgZ-g2-oZK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKb-s9-m8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1268" y="-4338"/>
         </scene>
         <!--Item-->
         <scene sceneID="IPn-WR-7Zh">
@@ -1580,7 +1639,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xec-p8-YS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1759" y="-3344"/>
+            <point key="canvasLocation" x="-1699" y="-3334"/>
         </scene>
         <!--Setting-->
         <scene sceneID="hkR-GE-pup">
@@ -1600,7 +1659,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm7-79-Lfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1202.5" y="-826.5"/>
+            <point key="canvasLocation" x="-1731.5" y="-620.5"/>
         </scene>
         <!--health-->
         <scene sceneID="bo5-0z-Bc5">
@@ -1639,7 +1698,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA3-UC-eS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1212" y="-3351"/>
+            <point key="canvasLocation" x="-1274" y="-3344"/>
         </scene>
         <!--List-->
         <scene sceneID="Np5-J1-qIa">
@@ -1663,7 +1722,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FerrisWheel.jpg" width="750" height="1335"/>
+        <image name="balloon.jpg" width="550" height="1030"/>
+        <image name="bottle.jpg" width="750" height="1335"/>
+        <image name="cactus.jpg" width="750" height="1335"/>
         <image name="calendar.png" width="30" height="30"/>
+        <image name="city.jpg" width="750" height="1335"/>
+        <image name="cloud.jpg" width="750" height="1335"/>
+        <image name="firework.jpg" width="750" height="1335"/>
+        <image name="flower.jpg" width="750" height="1335"/>
+        <image name="greek.jpg" width="550" height="1030"/>
         <image name="heart.png" width="30" height="30"/>
         <image name="icecream.jpg" width="720" height="1280"/>
         <image name="note.png" width="30" height="30"/>
