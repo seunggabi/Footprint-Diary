@@ -821,13 +821,13 @@
 		28E1EA5C1D355395006DF06B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				28E1EC061D355499006DF06B /* radioButtonOff.png */,
+				28E1EC071D355499006DF06B /* radioButtonOn.png */,
 				28E1EA5D1D355395006DF06B /* background */,
 				28E1EA711D355395006DF06B /* Calendar-Month.png */,
 				28E1EA721D355395006DF06B /* checkbox.jpeg */,
 				28E1EA731D355395006DF06B /* checkboxSelected.jpeg */,
 				28E1EA741D355395006DF06B /* checkmark.png */,
-				28E1EC061D355499006DF06B /* radioButtonOff.png */,
-				28E1EC071D355499006DF06B /* radioButtonOn.png */,
 				28E1EA751D355395006DF06B /* emoticon */,
 				28E1EADA1D355395006DF06B /* heart.png */,
 				28E1EADB1D355395006DF06B /* help.png */,

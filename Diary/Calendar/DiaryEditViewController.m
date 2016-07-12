@@ -67,6 +67,7 @@
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 -(IBAction)runGeneralPicker{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;

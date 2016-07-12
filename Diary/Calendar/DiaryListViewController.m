@@ -95,7 +95,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *diaryModel = [modelDiary select:nil];
-    NSLog(@"content %@", [[diaryModel objectAtIndex:1] d_content]);
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
@@ -104,13 +103,13 @@
     
     UILabel *lblTitleNote = [[UILabel alloc] initWithFrame:CGRectMake(47, 7, 185, 36)];
     [lblTitleNote setFont:[UIFont boldSystemFontOfSize:13]];
-    lblTitleNote.text = ((Diary *)[diaryModel objectAtIndex:indexPath.row]).d_content;
+ //   lblTitleNote.text = ((Diary *)[diaryModel objectAtIndex:indexPath.row]).d_content;
     [lblTitleNote setBackgroundColor:[UIColor clearColor]];
     [cell addSubview:lblTitleNote];
     
     UILabel *lblDateTime = [[UILabel alloc] initWithFrame:CGRectMake(238, 7, 80, 36)];
     [lblDateTime setFont:[UIFont systemFontOfSize:13]];
-    lblDateTime.text = [[diaryModel objectAtIndex:indexPath.row] d_date];
+//    lblDateTime.text = ((Diary *)[diaryModel objectAtIndex:indexPath.row]).d_date;
     [lblDateTime setBackgroundColor:[UIColor clearColor]];
     lblDateTime.textAlignment = UITextAlignmentRight;
     [cell addSubview:lblDateTime];
@@ -123,7 +122,7 @@
     NSLog(@"didSelectRowAtIndexPath");
     diary = [[Diary alloc] init];
     NSMutableArray *diaryList = [modelDiary select:nil];
-    DiaryViewController *diaryView =  [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
+    DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
     
     [self presentViewController:diaryView animated:YES completion:nil];
 }
