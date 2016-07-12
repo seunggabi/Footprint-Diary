@@ -21,6 +21,7 @@
     if(instance == nil) {
         instance = [[PedometerTool alloc] init];
         instance.pedometer = [[CMPedometer alloc]init];
+        instance.modelHealth = [[HealthModel alloc] init];
     }
     return instance;
 }
@@ -28,7 +29,7 @@
 -(void)start {
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
     }];
-    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval:5
+    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval:60
                                                                                      target:self
                                                                                    selector:@selector(getPedometerCount)
                                                                                    userInfo:nil
@@ -53,9 +54,9 @@
     
     // display results
     [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
-        health.h_count = (NSNumber *)pedometerData;
+        health.h_count = pedometerData.numberOfSteps;
+        [modelHealth insertData:health];
     }];
-    [modelHealth insertData:health];
 }
 
 

@@ -292,7 +292,6 @@
 		28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */; };
 		28E5E4341D3427E000D8B9E3 /* FootprintTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4331D3427E000D8B9E3 /* FootprintTool.m */; };
 		28E5E4581D34F47400D8B9E3 /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4511D34F47400D8B9E3 /* FootprintViewController.m */; };
-		28E5E4591D34F47400D8B9E3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4531D34F47400D8B9E3 /* MainViewController.m */; };
 		28E5E45A1D34F47400D8B9E3 /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4551D34F47400D8B9E3 /* PageScrollViewController.m */; };
 		28E5E45B1D34F47400D8B9E3 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4571D34F47400D8B9E3 /* PageViewController.m */; };
 		7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A621D324F2F0028CE44 /* DiaryEditViewController.m */; };
@@ -646,8 +645,6 @@
 		28E5E4331D3427E000D8B9E3 /* FootprintTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintTool.m; sourceTree = "<group>"; };
 		28E5E4501D34F47400D8B9E3 /* FootprintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintViewController.h; sourceTree = "<group>"; };
 		28E5E4511D34F47400D8B9E3 /* FootprintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
-		28E5E4521D34F47400D8B9E3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		28E5E4531D34F47400D8B9E3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		28E5E4541D34F47400D8B9E3 /* PageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
 		28E5E4551D34F47400D8B9E3 /* PageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollViewController.m; sourceTree = "<group>"; };
 		28E5E4561D34F47400D8B9E3 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
@@ -1124,8 +1121,6 @@
 			children = (
 				28E5E4501D34F47400D8B9E3 /* FootprintViewController.h */,
 				28E5E4511D34F47400D8B9E3 /* FootprintViewController.m */,
-				28E5E4521D34F47400D8B9E3 /* MainViewController.h */,
-				28E5E4531D34F47400D8B9E3 /* MainViewController.m */,
 				28E5E4541D34F47400D8B9E3 /* PageScrollViewController.h */,
 				28E5E4551D34F47400D8B9E3 /* PageScrollViewController.m */,
 				28E5E4561D34F47400D8B9E3 /* PageViewController.h */,
@@ -1566,7 +1561,6 @@
 				7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
-				28E5E4591D34F47400D8B9E3 /* MainViewController.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,

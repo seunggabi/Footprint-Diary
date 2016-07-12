@@ -57,7 +57,14 @@
     fp.fp_GPS_X = log;
     fp.fp_GPS_Y = lat;
     [fp setAddress];
-    fp.fp_h_count = ((Health *)[[modelHealth select:@"1=1 ORDER BY h_id DESC LIMIT 1,1"] objectAtIndex:0]).h_count;
+    
+    NSMutableArray *arr = [modelHealth select:@"1=1 ORDER BY h_id DESC LIMIT 1,1"];
+    if(arr.count) {
+        Health *h = (Health *)[arr objectAtIndex:0];
+        fp.fp_h_count = h.h_count;
+    } else {
+        fp.fp_h_count = 0;
+    }
     [modelFootprint insertData:fp];
     
     NSDictionary *d = [[[modelFootprint select:@"1=1 ORDER BY fp_id DESC"] objectAtIndex:0] getObj];
