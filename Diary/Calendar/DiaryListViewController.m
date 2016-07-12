@@ -32,6 +32,8 @@
     
     sDateText.keyboardType = NO;
     sDateText.delegate = self;
+    eDateText.keyboardType = NO;
+    eDateText.delegate = self;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -67,6 +69,11 @@
     NSLog(@"touch");
     datePicker.hidden = NO;
     tempText = sDateText;
+}
+
+- (IBAction)touchEDate:(id)sender {
+    datePicker.hidden = NO;
+    tempText = eDateText;
 }
 
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{

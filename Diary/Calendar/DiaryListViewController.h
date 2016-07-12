@@ -35,6 +35,7 @@
 
 - (IBAction)showDiaryList:(UIButton *)sender;
 - (IBAction)touchSDate:(id)sender;
+- (IBAction)touchEDate:(id)sender;
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
 
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
