@@ -259,6 +259,9 @@
 		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
 		7DA28EB01D32336800DDBBC2 /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */; };
 		7DA28EB11D32336800DDBBC2 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* CalendarView.m */; };
+		BF5024891D351F3F00557AF0 /* noncheckbox.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF5024881D351F3F00557AF0 /* noncheckbox.jpeg */; };
+		BF50248B1D351F4800557AF0 /* checkbox.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF50248A1D351F4800557AF0 /* checkbox.jpeg */; };
+		BF50248D1D351F7900557AF0 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF50248C1D351F7900557AF0 /* page4.png */; };
 		BF5198071D348B9F00A110E6 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198061D348B9F00A110E6 /* line.png */; };
 		BF5198091D348BC200A110E6 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198081D348BC200A110E6 /* heart.png */; };
 		BF51980B1D348BCE00A110E6 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51980A1D348BCE00A110E6 /* help.png */; };
@@ -281,7 +284,6 @@
 		BF5198721D34D16B00A110E6 /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5198711D34D16B00A110E6 /* PageScrollViewController.m */; };
 		BF5198741D34D21900A110E6 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198731D34D21900A110E6 /* page1.png */; };
 		BF5198761D34D21D00A110E6 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198751D34D21D00A110E6 /* page2.png */; };
-		BF5198781D34D22100A110E6 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198771D34D22000A110E6 /* page4.png */; };
 		BF51987A1D34D22700A110E6 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198791D34D22700A110E6 /* page3.png */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
@@ -626,6 +628,9 @@
 		7DA28EA91D32336800DDBBC2 /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		7DA28EAA1D32336800DDBBC2 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		7DA28EAB1D32336800DDBBC2 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		BF5024881D351F3F00557AF0 /* noncheckbox.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noncheckbox.jpeg; sourceTree = "<group>"; };
+		BF50248A1D351F4800557AF0 /* checkbox.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkbox.jpeg; sourceTree = "<group>"; };
+		BF50248C1D351F7900557AF0 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		BF5198061D348B9F00A110E6 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		BF5198081D348BC200A110E6 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		BF51980A1D348BCE00A110E6 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
@@ -651,7 +656,6 @@
 		BF5198711D34D16B00A110E6 /* PageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollViewController.m; sourceTree = "<group>"; };
 		BF5198731D34D21900A110E6 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
 		BF5198751D34D21D00A110E6 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
-		BF5198771D34D22000A110E6 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		BF5198791D34D22700A110E6 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -781,13 +785,15 @@
 				28E5E3551D32A1BA00D8B9E3 /* emoticon */,
 				28E5E2D61D32A1B200D8B9E3 /* weather */,
 				7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */,
+				BF5024881D351F3F00557AF0 /* noncheckbox.jpeg */,
+				BF50248A1D351F4800557AF0 /* checkbox.jpeg */,
 				BF51982C1D34917700A110E6 /* right.png */,
 				BF5198301D34956400A110E6 /* post.png */,
 				BF51982E1D3491C300A110E6 /* Marker.png */,
 				BF5198731D34D21900A110E6 /* page1.png */,
 				BF5198751D34D21D00A110E6 /* page2.png */,
 				BF5198791D34D22700A110E6 /* page3.png */,
-				BF5198771D34D22000A110E6 /* page4.png */,
+				BF50248C1D351F7900557AF0 /* page4.png */,
 				BF51982A1D34917100A110E6 /* left.png */,
 				7D9502161D2FC74E00B57D4D /* home.png */,
 				7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
@@ -1321,6 +1327,7 @@
 				28E5E3181D32A1B200D8B9E3 /* celsius.png in Resources */,
 				28E5E33E1D32A1B200D8B9E3 /* sunny.png in Resources */,
 				28E5E3DE1D32A1BA00D8B9E3 /* highchair.png in Resources */,
+				BF50248B1D351F4800557AF0 /* checkbox.jpeg in Resources */,
 				BFFB3BFC1D33552D009BA558 /* FerrisWheel.jpg in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
 				28E5E2371D302F0800D8B9E3 /* info_box.png in Resources */,
@@ -1390,7 +1397,6 @@
 				28E5E3CA1D32A1BA00D8B9E3 /* egg.png in Resources */,
 				28E5E40E1D32A1BA00D8B9E3 /* steak.png in Resources */,
 				28E5E4181D32A1BA00D8B9E3 /* tongue-2.png in Resources */,
-				BF5198781D34D22100A110E6 /* page4.png in Resources */,
 				28E5E4041D32A1BA00D8B9E3 /* sad.png in Resources */,
 				28E5E3421D32A1B200D8B9E3 /* sunset.png in Resources */,
 				28E5E3F11D32A1BA00D8B9E3 /* nervous-1.png in Resources */,
@@ -1404,6 +1410,8 @@
 				7D95022E1D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */,
 				28E5E31F1D32A1B200D8B9E3 /* hail.png in Resources */,
 				28E5E41B1D32A1BA00D8B9E3 /* wine-1.png in Resources */,
+				BF50248D1D351F7900557AF0 /* page4.png in Resources */,
+				BF5024891D351F3F00557AF0 /* noncheckbox.jpeg in Resources */,
 				28E5E4071D32A1BA00D8B9E3 /* shouting.png in Resources */,
 				28E5E3F41D32A1BA00D8B9E3 /* pizza.png in Resources */,
 				28E5E3CB1D32A1BA00D8B9E3 /* fish.png in Resources */,
