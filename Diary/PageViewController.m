@@ -14,8 +14,11 @@
 
 @implementation PageViewController
 
-@synthesize imageView = _imageView;
-@synthesize titleLabel = _titleLabel;
+@synthesize imageView;
+@synthesize titleLabel;
+@synthesize startButton;
+@synthesize checkbox;
+@synthesize checkboxSelected;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,11 +61,25 @@
         default:
             break;
     }
+    if(page != 3) {
+        startButton.hidden = YES;
+        titleLabel.hidden = YES;
+        checkbox.hidden = YES;
+    }
     
+    [checkbox setBackgroundImage:[UIImage imageNamed:@"cool.png"]
+                        forState:UIControlStateNormal];
+    [checkbox setBackgroundImage:[UIImage imageNamed:@"smile.png"]
+                        forState:UIControlStateSelected];
+    checkbox.adjustsImageWhenHighlighted=NO;
     // 현재 페이지의 이미지와 텍스트 적용
-    [_imageView setImage:[UIImage imageNamed:imgName]];
-    [_titleLabel setText:[NSString stringWithFormat:@"Page %d",page]];
-    
+    [imageView setImage:[UIImage imageNamed:imgName]];    
+}
+
+- (IBAction)checkboxSelected:(id)sender {
+    checkboxSelected = !checkboxSelected; /* Toggle */
+    [checkbox setSelected:checkboxSelected];
+    [sender setHighlighted:NO];
 }
 
 @end
