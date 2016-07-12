@@ -16,6 +16,7 @@
 #import "../Model/EmoticonModel.h"
 #import "../Model/PhotoModel.h"
 #import "../Model/WeatherModel.h"
+#import "EmoticonViewController.h"
 
 @interface DiaryEditViewController : UIViewController
 
