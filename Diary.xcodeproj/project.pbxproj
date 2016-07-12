@@ -276,8 +276,13 @@
 		BF51982B1D34917100A110E6 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982A1D34917100A110E6 /* left.png */; };
 		BF51982D1D34917700A110E6 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982C1D34917700A110E6 /* right.png */; };
 		BF51982F1D3491C300A110E6 /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982E1D3491C300A110E6 /* Marker.png */; };
-		BF5198311D34956400A110E6 /* post.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198301D34956400A110E6 /* post.png */; };
 		BF5198331D34B08400A110E6 /* Calendar-Month.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198321D34B08400A110E6 /* Calendar-Month.png */; };
+		BF51986F1D34D16400A110E6 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51986E1D34D16400A110E6 /* PageViewController.m */; };
+		BF5198721D34D16B00A110E6 /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5198711D34D16B00A110E6 /* PageScrollViewController.m */; };
+		BF5198741D34D21900A110E6 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198731D34D21900A110E6 /* page1.png */; };
+		BF5198761D34D21D00A110E6 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198751D34D21D00A110E6 /* page2.png */; };
+		BF5198781D34D22100A110E6 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198771D34D22000A110E6 /* page4.png */; };
+		BF51987A1D34D22700A110E6 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198791D34D22700A110E6 /* page3.png */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -599,7 +604,6 @@
 		7D033A6C1D324F560028CE44 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
 		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
-		7D033A851D32586B0028CE44 /* cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background.png; sourceTree = "<group>"; };
 		7D033B781D34BA910028CE44 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D9502161D2FC74E00B57D4D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -641,6 +645,14 @@
 		BF51982E1D3491C300A110E6 /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
 		BF5198301D34956400A110E6 /* post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post.png; sourceTree = "<group>"; };
 		BF5198321D34B08400A110E6 /* Calendar-Month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-Month.png"; sourceTree = "<group>"; };
+		BF51986D1D34D15F00A110E6 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		BF51986E1D34D16400A110E6 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		BF5198701D34D16700A110E6 /* PageScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
+		BF5198711D34D16B00A110E6 /* PageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollViewController.m; sourceTree = "<group>"; };
+		BF5198731D34D21900A110E6 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		BF5198751D34D21D00A110E6 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		BF5198771D34D22000A110E6 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		BF5198791D34D22700A110E6 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -772,6 +784,10 @@
 				BF51982C1D34917700A110E6 /* right.png */,
 				BF5198301D34956400A110E6 /* post.png */,
 				BF51982E1D3491C300A110E6 /* Marker.png */,
+				BF5198731D34D21900A110E6 /* page1.png */,
+				BF5198751D34D21D00A110E6 /* page2.png */,
+				BF5198791D34D22700A110E6 /* page3.png */,
+				BF5198771D34D22000A110E6 /* page4.png */,
 				BF51982A1D34917100A110E6 /* left.png */,
 				7D9502161D2FC74E00B57D4D /* home.png */,
 				7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
@@ -1145,6 +1161,10 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				BF51986D1D34D15F00A110E6 /* PageViewController.h */,
+				BF51986E1D34D16400A110E6 /* PageViewController.m */,
+				BF5198701D34D16700A110E6 /* PageScrollViewController.h */,
+				BF5198711D34D16B00A110E6 /* PageScrollViewController.m */,
 				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
@@ -1270,6 +1290,7 @@
 				28E5E3501D32A1B200D8B9E3 /* wind-2.png in Resources */,
 				28E5E32E1D32A1B200D8B9E3 /* rainbow.png in Resources */,
 				28E5E2381D302F0800D8B9E3 /* info_box_tail.png in Resources */,
+				BF5198741D34D21900A110E6 /* page1.png in Resources */,
 				28E5E3521D32A1B200D8B9E3 /* wind-4.png in Resources */,
 				28E5E3F01D32A1BA00D8B9E3 /* napkins.png in Resources */,
 				BF5198091D348BC200A110E6 /* heart.png in Resources */,
@@ -1305,6 +1326,7 @@
 				28E5E2371D302F0800D8B9E3 /* info_box.png in Resources */,
 				28E5E3311D32A1B200D8B9E3 /* rainy.png in Resources */,
 				28E5E3E91D32A1BA00D8B9E3 /* menu.png in Resources */,
+				BF5198761D34D21D00A110E6 /* page2.png in Resources */,
 				28E5E3BB1D32A1BA00D8B9E3 /* bill.png in Resources */,
 				28E5E3ED1D32A1BA00D8B9E3 /* muted-1.png in Resources */,
 				28E5E2481D302F0800D8B9E3 /* map_present_tracking.png in Resources */,
@@ -1345,9 +1367,9 @@
 				28E5E31C1D32A1B200D8B9E3 /* cloudy-night.png in Resources */,
 				BF5198231D348E2D00A110E6 /* star.png in Resources */,
 				28E5E3FA1D32A1BA00D8B9E3 /* ribs.png in Resources */,
-				7D9502251D2FC74E00B57D4D /* left.png in Resources */,
 				28E5E33C1D32A1B200D8B9E3 /* storm.png in Resources */,
 				28E5E24C1D302F0800D8B9E3 /* shadow_balloon.png in Resources */,
+				BF51987A1D34D22700A110E6 /* page3.png in Resources */,
 				BFFB3C011D33552D009BA558 /* ocean.jpg in Resources */,
 				28E5E3E21D32A1BA00D8B9E3 /* ketchup.png in Resources */,
 				28E5E3511D32A1B200D8B9E3 /* wind-3.png in Resources */,
@@ -1368,6 +1390,7 @@
 				28E5E3CA1D32A1BA00D8B9E3 /* egg.png in Resources */,
 				28E5E40E1D32A1BA00D8B9E3 /* steak.png in Resources */,
 				28E5E4181D32A1BA00D8B9E3 /* tongue-2.png in Resources */,
+				BF5198781D34D22100A110E6 /* page4.png in Resources */,
 				28E5E4041D32A1BA00D8B9E3 /* sad.png in Resources */,
 				28E5E3421D32A1B200D8B9E3 /* sunset.png in Resources */,
 				28E5E3F11D32A1BA00D8B9E3 /* nervous-1.png in Resources */,
@@ -1492,7 +1515,6 @@
 				28E5E24A1D302F0800D8B9E3 /* noimage256.png in Resources */,
 				28E5E3DA1D32A1BA00D8B9E3 /* happy-7.png in Resources */,
 				7D033B791D34BA910028CE44 /* Main.storyboard in Resources */,
-				7D9502271D2FC74E00B57D4D /* chart.png in Resources */,
 				7D9502351D2FC74E00B57D4D /* photo.png in Resources */,
 				28E5E3CD1D32A1BA00D8B9E3 /* fork.png in Resources */,
 			);
@@ -1529,6 +1551,7 @@
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				22682B4E1D3048960015854E /* HealthInfoViewController.m in Sources */,
+				BF5198721D34D16B00A110E6 /* PageScrollViewController.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				28E5E25E1D3031B000D8B9E3 /* FootprintViewController.m in Sources */,
 				7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */,
@@ -1549,6 +1572,7 @@
 				28E5E42B1D32A3FF00D8B9E3 /* TimerScheduler.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
 				7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */,
+				BF51986F1D34D16400A110E6 /* PageViewController.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,
