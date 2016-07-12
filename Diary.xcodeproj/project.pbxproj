@@ -287,6 +287,7 @@
 		BF51982B1D34917100A110E6 /* arrow_left_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982A1D34917100A110E6 /* arrow_left_24.png */; };
 		BF51982D1D34917700A110E6 /* arrow_right_24.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982C1D34917700A110E6 /* arrow_right_24.png */; };
 		BF51982F1D3491C300A110E6 /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = BF51982E1D3491C300A110E6 /* Marker.png */; };
+		BF5198311D34956400A110E6 /* post.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5198301D34956400A110E6 /* post.png */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -659,6 +660,7 @@
 		BF51982A1D34917100A110E6 /* arrow_left_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_24.png; sourceTree = "<group>"; };
 		BF51982C1D34917700A110E6 /* arrow_right_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_24.png; sourceTree = "<group>"; };
 		BF51982E1D3491C300A110E6 /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
+		BF5198301D34956400A110E6 /* post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post.png; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -791,6 +793,7 @@
 				7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */,
 				7D95020F1D2FC74E00B57D4D /* left.png */,
 				BF51982C1D34917700A110E6 /* arrow_right_24.png */,
+				BF5198301D34956400A110E6 /* post.png */,
 				BF51982E1D3491C300A110E6 /* Marker.png */,
 				BF51982A1D34917100A110E6 /* arrow_left_24.png */,
 				7D9502101D2FC74E00B57D4D /* right.png */,
@@ -1375,6 +1378,7 @@
 				28E5E31C1D32A1B200D8B9E3 /* cloudy-night.png in Resources */,
 				BF5198231D348E2D00A110E6 /* star_24.png in Resources */,
 				28E5E3FA1D32A1BA00D8B9E3 /* ribs.png in Resources */,
+				BF5198311D34956400A110E6 /* post.png in Resources */,
 				BF76DDB51D24181800E5F658 /* Main.storyboard in Resources */,
 				7D9502251D2FC74E00B57D4D /* left.png in Resources */,
 				28E5E33C1D32A1B200D8B9E3 /* storm.png in Resources */,
