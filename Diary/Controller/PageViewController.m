@@ -2,8 +2,8 @@
 //  PageViewController.m
 //  PageWithScrollView
 //
-//  Created by 유경수 on 2014. 5. 5..
-//  Copyright (c) 2014년 유경수. All rights reserved.
+//  Created by 김승갑 on 2016. 7. 12..
+//  Copyright (c) 2016년 김승갑. All rights reserved.
 //
 
 #import "PageViewController.h"
@@ -71,7 +71,7 @@
                         forState:UIControlStateNormal];
     [checkbox setBackgroundImage:[UIImage imageNamed:@"smile.png"]
                         forState:UIControlStateSelected];
-    checkbox.adjustsImageWhenHighlighted=NO;
+    checkbox.backgroundColor=nil;
     // 현재 페이지의 이미지와 텍스트 적용
     [imageView setImage:[UIImage imageNamed:imgName]];    
 }
@@ -79,7 +79,7 @@
 - (IBAction)checkboxSelected:(id)sender {
     checkboxSelected = !checkboxSelected; /* Toggle */
     [checkbox setSelected:checkboxSelected];
-    [sender setHighlighted:NO];
+    [checkbox setHighlighted:NO];
 }
 
 @end
