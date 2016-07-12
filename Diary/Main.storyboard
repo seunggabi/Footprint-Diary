@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP9-sF-bg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1341.5625" y="-3497.0070422535209"/>
+            <point key="canvasLocation" x="-1854.5" y="-3522.5"/>
         </scene>
         <!--List-->
         <scene sceneID="S3r-oK-lgc">
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ib-N3-p2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212.8125" y="-3516.0211267605632"/>
+            <point key="canvasLocation" x="-1307.5" y="-3516.5"/>
         </scene>
         <!--Location-->
         <scene sceneID="kDM-kh-utI">
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf7-xq-tVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.3125" y="-3522.359154929577"/>
+            <point key="canvasLocation" x="-752.5" y="-3522.5"/>
         </scene>
         <!--GPS-->
         <scene sceneID="zbE-3L-WUI">
@@ -1476,7 +1476,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UiD-QA-H4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4106.25" y="-3521.8309859154929"/>
+            <point key="canvasLocation" x="-3889" y="-3531"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BdT-T7-yPh">
@@ -1651,15 +1651,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8K-mj-U8s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-I6-zjm">
-                                <rect key="frame" x="20" y="111" width="280" height="60"/>
+                                <rect key="frame" x="47" y="123" width="280" height="60"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="50"/>
                                 <color key="textColor" red="0.93085807480000005" green="0.98238417759999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8K-mj-U8s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1671,7 +1671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53u-K8-mNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2062.5" y="-4369.5"/>
+            <point key="canvasLocation" x="-2370.5" y="-4323.5"/>
         </scene>
     </scenes>
     <resources>
