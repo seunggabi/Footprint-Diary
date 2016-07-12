@@ -98,7 +98,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="touchBeginSDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="jUT-vu-UCD"/>
+                                    <action selector="touchSDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="44b-K0-aO7"/>
                                     <action selector="touchSDate:" destination="ipC-EX-pCR" eventType="editingDidEnd" id="Rag-1J-ypF"/>
                                 </connections>
                             </textField>
