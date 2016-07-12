@@ -219,13 +219,7 @@
 		7D11EC4A1D352F6100575DED /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB6F1D352F6000575DED /* help.png */; };
 		7D11EC4B1D352F6100575DED /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB701D352F6000575DED /* home.png */; };
 		7D11EC4C1D352F6100575DED /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB711D352F6000575DED /* info.png */; };
-		7D11EC4D1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB721D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
-		7D11EC4E1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB731D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */; };
-		7D11EC4F1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB741D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */; };
-		7D11EC501D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB751D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */; };
 		7D11EC511D352F6100575DED /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB761D352F6000575DED /* key.png */; };
-		7D11EC521D352F6100575DED /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB771D352F6000575DED /* left.png */; };
-		7D11EC531D352F6100575DED /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB781D352F6000575DED /* line.png */; };
 		7D11EC541D352F6100575DED /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB791D352F6000575DED /* lock.png */; };
 		7D11EC551D352F6100575DED /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7A1D352F6000575DED /* Marker.png */; };
 		7D11EC561D352F6100575DED /* noncheckbox.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */; };
@@ -242,7 +236,6 @@
 		7D11EC611D352F6100575DED /* radioButtonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB861D352F6100575DED /* radioButtonOff.png */; };
 		7D11EC621D352F6100575DED /* radioButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB871D352F6100575DED /* radioButtonOn.png */; };
 		7D11EC631D352F6100575DED /* resize.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB881D352F6100575DED /* resize.png */; };
-		7D11EC641D352F6100575DED /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB891D352F6100575DED /* right.png */; };
 		7D11EC651D352F6100575DED /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB8A1D352F6100575DED /* save.png */; };
 		7D11EC661D352F6100575DED /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB8B1D352F6100575DED /* setting.png */; };
 		7D11EC671D352F6100575DED /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EB8C1D352F6100575DED /* smile.png */; };
@@ -317,6 +310,7 @@
 		7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502701D2FD09900B57D4D /* UIColor+expanded.m */; };
 		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
 		7DA28EB11D32336800DDBBC2 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* CalendarView.m */; };
+		BF5026F11D3531BD00557AF0 /* checkboxSelected.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF5026F01D3531BD00557AF0 /* checkboxSelected.jpeg */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -587,13 +581,7 @@
 		7D11EB6F1D352F6000575DED /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		7D11EB701D352F6000575DED /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		7D11EB711D352F6000575DED /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
-		7D11EB721D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
-		7D11EB731D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg"; sourceTree = "<group>"; };
-		7D11EB741D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg"; sourceTree = "<group>"; };
-		7D11EB751D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg"; sourceTree = "<group>"; };
 		7D11EB761D352F6000575DED /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
-		7D11EB771D352F6000575DED /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
-		7D11EB781D352F6000575DED /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		7D11EB791D352F6000575DED /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		7D11EB7A1D352F6000575DED /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
 		7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noncheckbox.jpeg; sourceTree = "<group>"; };
@@ -610,7 +598,6 @@
 		7D11EB861D352F6100575DED /* radioButtonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOff.png; sourceTree = "<group>"; };
 		7D11EB871D352F6100575DED /* radioButtonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOn.png; sourceTree = "<group>"; };
 		7D11EB881D352F6100575DED /* resize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resize.png; sourceTree = "<group>"; };
-		7D11EB891D352F6100575DED /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		7D11EB8A1D352F6100575DED /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		7D11EB8B1D352F6100575DED /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		7D11EB8C1D352F6100575DED /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
@@ -690,6 +677,7 @@
 		7D9502721D2FD09900B57D4D /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
 		7DA28EAA1D32336800DDBBC2 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		7DA28EAB1D32336800DDBBC2 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		BF5026F01D3531BD00557AF0 /* checkboxSelected.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkboxSelected.jpeg; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -908,19 +896,14 @@
 				7D11EAF21D352F6000575DED /* background */,
 				7D11EB061D352F6000575DED /* Calendar-Month.png */,
 				7D11EB071D352F6000575DED /* checkbox.jpeg */,
+				BF5026F01D3531BD00557AF0 /* checkboxSelected.jpeg */,
 				7D11EB081D352F6000575DED /* checkmark.png */,
 				7D11EB091D352F6000575DED /* emoticon */,
 				7D11EB6E1D352F6000575DED /* heart.png */,
 				7D11EB6F1D352F6000575DED /* help.png */,
 				7D11EB701D352F6000575DED /* home.png */,
 				7D11EB711D352F6000575DED /* info.png */,
-				7D11EB721D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
-				7D11EB731D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */,
-				7D11EB741D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg */,
-				7D11EB751D352F6000575DED /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg */,
 				7D11EB761D352F6000575DED /* key.png */,
-				7D11EB771D352F6000575DED /* left.png */,
-				7D11EB781D352F6000575DED /* line.png */,
 				7D11EB791D352F6000575DED /* lock.png */,
 				7D11EB7A1D352F6000575DED /* Marker.png */,
 				7D11EB7B1D352F6100575DED /* noncheckbox.jpeg */,
@@ -937,13 +920,12 @@
 				7D11EB861D352F6100575DED /* radioButtonOff.png */,
 				7D11EB871D352F6100575DED /* radioButtonOn.png */,
 				7D11EB881D352F6100575DED /* resize.png */,
-				7D11EB891D352F6100575DED /* right.png */,
 				7D11EB8A1D352F6100575DED /* save.png */,
 				7D11EB8B1D352F6100575DED /* setting.png */,
 				7D11EB8C1D352F6100575DED /* smile.png */,
 				7D11EB8D1D352F6100575DED /* star.png */,
-				7D11EB8E1D352F6100575DED /* weather */,
 				7D11EBCE1D352F6100575DED /* 참잘했어요.png */,
+				7D11EB8E1D352F6100575DED /* weather */,
 			);
 			path = " Resource";
 			sourceTree = "<group>";
@@ -1311,6 +1293,7 @@
 				7D11EC791D352F6100575DED /* moon-6.png in Resources */,
 				7D11EC6C1D352F6100575DED /* clouds-1.png in Resources */,
 				7D11EC921D352F6100575DED /* sunrise.png in Resources */,
+				BF5026F11D3531BD00557AF0 /* checkboxSelected.jpeg in Resources */,
 				7D11EC901D352F6100575DED /* summer-rain.png in Resources */,
 				28E5E2421D302F0800D8B9E3 /* map_pinup@3x.png in Resources */,
 				7D11EBEF1D352F6100575DED /* crepe.png in Resources */,
@@ -1369,7 +1352,6 @@
 				7D11EC7E1D352F6100575DED /* night-snow.png in Resources */,
 				BF76DDB71D24181800E5F658 /* Assets.xcassets in Resources */,
 				7D11EBFA1D352F6100575DED /* girl.png in Resources */,
-				7D11EC4D1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */,
 				7D11EC391D352F6100575DED /* steak.png in Resources */,
 				28E5E23D1D302F0800D8B9E3 /* map_pin_red.png in Resources */,
 				7D11EC651D352F6100575DED /* save.png in Resources */,
@@ -1382,7 +1364,6 @@
 				7D11EC381D352F6100575DED /* spoon.png in Resources */,
 				7D11ECA61D352F6100575DED /* wind5.png in Resources */,
 				7D11EC361D352F6100575DED /* soup.png in Resources */,
-				7D11EC521D352F6100575DED /* left.png in Resources */,
 				7D11EC131D352F6100575DED /* meatballs.png in Resources */,
 				7D11EBF71D352F6100575DED /* flower.png in Resources */,
 				7D11EC3A1D352F6100575DED /* surprised-1.png in Resources */,
@@ -1418,7 +1399,6 @@
 				7D11EC111D352F6100575DED /* laughing.png in Resources */,
 				7D11EBF81D352F6100575DED /* fork.png in Resources */,
 				28E5E2351D302F0800D8B9E3 /* daum_th_line.png in Resources */,
-				7D11EC641D352F6100575DED /* right.png in Resources */,
 				7D11EC3C1D352F6100575DED /* surprised-3.png in Resources */,
 				7D11EC571D352F6100575DED /* note.png in Resources */,
 				7D11EBD21D352F6100575DED /* cactus.jpg in Resources */,
@@ -1447,7 +1427,6 @@
 				28E5E2451D302F0800D8B9E3 /* map_present.png in Resources */,
 				7D11EBD01D352F6100575DED /* balloon.jpg in Resources */,
 				7D11EC8E1D352F6100575DED /* storm-2.png in Resources */,
-				7D11EC4E1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg in Resources */,
 				7D11EC1A1D352F6100575DED /* muted.png in Resources */,
 				7D11EC911D352F6100575DED /* sunny.png in Resources */,
 				7D11EC671D352F6100575DED /* smile.png in Resources */,
@@ -1468,7 +1447,6 @@
 				7D11EC691D352F6100575DED /* bolt.png in Resources */,
 				7D11EC0B1D352F6100575DED /* hotdog.png in Resources */,
 				7D11EC7D1D352F6100575DED /* night-rain.png in Resources */,
-				7D11EC501D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-22_93.jpeg in Resources */,
 				7D11EC0E1D352F6100575DED /* kiss-1.png in Resources */,
 				7D11EC181D352F6100575DED /* muted-1.png in Resources */,
 				7D11EC8C1D352F6100575DED /* stars.png in Resources */,
@@ -1497,7 +1475,6 @@
 				28E5E2471D302F0800D8B9E3 /* map_present_direction.png in Resources */,
 				28E5E23E1D302F0800D8B9E3 /* map_pin_red@3x.png in Resources */,
 				7D11EC611D352F6100575DED /* radioButtonOff.png in Resources */,
-				7D11EC4F1D352F6100575DED /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */,
 				7D11EC661D352F6100575DED /* setting.png in Resources */,
 				7D11EC3B1D352F6100575DED /* surprised-2.png in Resources */,
 				7D11EC5C1D352F6100575DED /* page4.png in Resources */,

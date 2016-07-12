@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Calender-->
+        <!--발자국일기장-->
         <scene sceneID="xbW-tb-aX0">
             <objects>
                 <viewController id="ASw-U7-Pr8" customClass="CalendarViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Calender" id="Knf-3i-vPy">
+                    <navigationItem key="navigationItem" title="발자국일기장" id="Knf-3i-vPy">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="TsQ-lh-ffh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oMJ-wz-hP2">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-1854.5" y="-3522.5"/>
         </scene>
-        <!--List-->
+        <!--일기목록-->
         <scene sceneID="S3r-oK-lgc">
             <objects>
                 <viewController id="ipC-EX-pCR" customClass="DiaryListViewController" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="List" id="qiW-W1-aOd">
+                    <navigationItem key="navigationItem" title="일기목록" id="qiW-W1-aOd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="N6B-Ix-6V0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dxR-da-oqS">
                                 <rect key="frame" x="311" y="7" width="83" height="30"/>
@@ -133,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="-1342.5" y="-2571.1267605633802"/>
         </scene>
-        <!--Footprint Diary-->
+        <!--일기쓰기-->
         <scene sceneID="Zs2-Ni-fzx">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="vIL-xR-lgv" customClass="FootprintViewController" sceneMemberID="viewController">
@@ -215,7 +215,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="Diary" id="om3-VI-Bko"/>
-                    <navigationItem key="navigationItem" title="Footprint Diary" id="m6o-TO-TU1">
+                    <navigationItem key="navigationItem" title="일기쓰기" id="m6o-TO-TU1">
                         <barButtonItem key="rightBarButtonItem" image="save.png" id="R3B-Ny-phV"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -227,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="-1307.5" y="-3516.5"/>
         </scene>
-        <!--Location-->
+        <!--위치정보-->
         <scene sceneID="kDM-kh-utI">
             <objects>
                 <viewController id="xP2-9M-eKh" sceneMemberID="viewController">
@@ -323,7 +323,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Location" id="Lab-ce-FC4">
+                    <navigationItem key="navigationItem" title="위치정보" id="Lab-ce-FC4">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="m8L-0N-3Hb">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ogm-fL-oIO">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -383,7 +383,7 @@
             </objects>
             <point key="canvasLocation" x="6951.5625" y="-3133.6267605633802"/>
         </scene>
-        <!--Health-->
+        <!--헬스정보-->
         <scene sceneID="k9A-Fp-QCR">
             <objects>
                 <viewController id="buA-ea-wU0" customClass="HealthViewController" sceneMemberID="viewController">
@@ -497,7 +497,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Health" id="FrX-2w-fHJ"/>
+                    <navigationItem key="navigationItem" title="헬스정보" id="FrX-2w-fHJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="chartWithDates" destination="raI-D7-OM6" id="NgB-4q-qM1"/>
@@ -752,7 +752,7 @@
             </objects>
             <point key="canvasLocation" x="-3689.0625" y="482.21830985915489"/>
         </scene>
-        <!--Setting-->
+        <!--설정-->
         <scene sceneID="H0B-qd-42X">
             <objects>
                 <tableViewController id="JtT-Ff-wnv" sceneMemberID="viewController">
@@ -940,7 +940,7 @@
                             <outlet property="delegate" destination="JtT-Ff-wnv" id="5Av-bU-4ti"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Setting" id="X8P-SH-Obe"/>
+                    <navigationItem key="navigationItem" title="설정" id="X8P-SH-Obe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-sZ-ye0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1735,6 +1735,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bAw-Is-1nh"/>
-        <segue reference="tLb-UM-bbg"/>
+        <segue reference="HtY-OA-Btd"/>
     </inferredMetricsTieBreakers>
 </document>
