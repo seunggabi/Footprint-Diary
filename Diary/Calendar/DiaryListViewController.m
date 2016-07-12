@@ -8,7 +8,7 @@
 
 #import "DiaryListViewController.h"
 
-@interface DiaryListViewController ()
+@interface DiaryListViewController () <UITextFieldDelegate>
 
 @end
 
@@ -18,17 +18,40 @@
 @synthesize modelDiary;
 @synthesize sDateText;
 @synthesize eDateText;
+@synthesize datePicker;
+@synthesize tempText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    sDateText.text = @"123";
     modelDiary = [[DiaryModel alloc] init];
     [modelDiary create];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.date = [NSDate date];
+    [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
+    datePicker.hidden = YES;
+    
+    sDateText.keyboardType = NO;
+    sDateText.delegate = self;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)changeDatePicker
+{
+    NSDateFormatter *dateFormatter;
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyy-MM-dd"];
+    tempText.text = [dateFormatter stringFromDate:datePicker.date];
+    NSLog(@"%@", [dateFormatter stringFromDate:datePicker.date]);
+    datePicker.hidden = YES;
+    [tempText setNeedsDisplay];
+}
+                           
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,17 +63,22 @@
     [self loadDiaryListData:sDateText.text endDate:eDateText.text];
 }
 
+- (IBAction)touchSDate:(id)sender {
+    NSLog(@"touch");
+    datePicker.hidden = NO;
+    tempText = sDateText;
+}
+
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{
     diary = [[Diary alloc] init];
-    NSMutableArray *diaryModel = [modelDiary select:nil];
-    return diaryModel;
+    NSMutableArray *diaryList = [modelDiary select:nil];
+    return diaryList;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSMutableArray * searchModel = [self loadDiaryListData:sDateText.text endDate:eDateText.text];
     return searchModel.count;
 }
@@ -59,9 +87,7 @@
     return 50;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *diaryModel = [modelDiary select:nil];
     NSLog(@"content %@", [[diaryModel objectAtIndex:1] d_content]);
 
@@ -87,23 +113,16 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //Set status can select for cell of table
     [table deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"didSelectRowAtIndexPath");
     //Get array of note
     diary = [[Diary alloc] init];
-    NSMutableArray *diaryModel = [modelDiary select:nil];
+    NSMutableArray *diaryList = [modelDiary select:nil];
     //create new view
     DiaryViewController *diaryView =  [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    NSMutableArray *dataMutableArray = [[NSUserDefaults standardUserDefaults]mutableArrayValueForKey:@"diary"];
-    //create new view
     
-    //set object of current note
-    diaryView.dicArray = [dataMutableArray objectAtIndex:indexPath.row];
-    diaryView.indexNumber = indexPath.row;
-    //Go to new view
     [self presentViewController:diaryView animated:YES completion:nil];
 }
 

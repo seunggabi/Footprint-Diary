@@ -16,7 +16,9 @@
 #import "../Model/EmoticonModel.h"
 #import "../Model/PhotoModel.h"
 
-@interface DiaryViewController : UIViewController
+@interface DiaryViewController : UIViewController{
+    
+}
 
 @property int indexNumber;
 @property (retain, nonatomic) IBOutlet NSDictionary *dicArray;

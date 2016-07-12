@@ -23,7 +23,7 @@
 -(void) insertData :(Diary *)d;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(Diary *) getSampleData;
+-(NSMutableArray *) getTermList:(NSString *)sDate eDate:(NSString *)eDate;
 
 @end

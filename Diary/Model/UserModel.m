@@ -85,10 +85,10 @@
     NSString *query = @"DROP TABLE IF EXISTS 'user'";
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Drop User Failed!");
+        NSAssert(0,@"DROP User Failed!");
     }
     else {
-        NSLog(@"Drop User Success!");
+        NSLog(@"DROP User Success!");
     }
 }
 

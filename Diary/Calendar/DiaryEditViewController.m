@@ -96,7 +96,7 @@
         diary.d_title = diaryTitle;
         diary.d_content = content.text;
         diary.d_e_id = @0;
-        diary.d_weather = @0;
+        diary.d_w_id = @0;
         [modelDiary insertData:diary];
         //Back to main view
         NSLog(@"content %@", diary.d_content );

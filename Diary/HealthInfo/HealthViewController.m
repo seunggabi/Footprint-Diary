@@ -51,10 +51,6 @@
     [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
         
     }];
-    [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval: 1.0
-                                                                                     target: self
-                                                                                   selector:@selector(getPedomterCount)
-                                                                                   userInfo: nil repeats:YES]];
     
     //NSString *date = @"2016-07-11";
     NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", date]];

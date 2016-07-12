@@ -10,13 +10,14 @@
 
 @interface Theme : NSObject
 
-@property (strong, nonatomic) NSString *th_id;
+@property (strong, nonatomic) NSNumber *th_id;
+@property (strong, nonatomic) NSString *th_name;
 @property (strong, nonatomic) NSString *th_top;
-@property (strong, nonatomic) NSString *th_bottom;
 @property (strong, nonatomic) NSString *th_main;
+@property (strong, nonatomic) NSString *th_bottom;
 @property (strong, nonatomic) NSString *th_font;
 
-+(Theme *) theme:(NSString *)top bottom:(NSString *)bottom main:(NSString *)main font:(NSString *)font;
++(Theme *) theme:(NSString*)name top:(NSString *)top main:(NSString *)main bottom:(NSString *)bottom font:(NSString *)font;
 -(NSDictionary *) getObj;
 
 @end

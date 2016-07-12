@@ -16,6 +16,9 @@
 {
     
 }
+
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UITextField *sDateText;
 @property (strong, nonatomic) IBOutlet UITextField *eDateText;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
@@ -27,8 +30,13 @@
 @property (strong, nonatomic) NSMutableArray *diaryList;
 @property (strong, nonatomic) NSMutableArray *sticker;
 @property (retain, nonatomic) IBOutlet UITableView  *table;
+@property (weak, nonatomic) IBOutlet UIButton *buttonPressed;
+@property (strong, nonatomic) IBOutlet UITextField *tempText;
 
 - (IBAction)showDiaryList:(UIButton *)sender;
+- (IBAction)touchSDate:(id)sender;
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
+
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
 
 

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HelperTool.h"
+#import "Tool/HelperTool.h"
+#import "Tool/FootprintTool.h"
 
 
 @interface AppDelegate ()
@@ -19,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[HelperTool getInstance] installDB];
+    [[FootprintTool getInstance] start];
     [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     return YES;
 }

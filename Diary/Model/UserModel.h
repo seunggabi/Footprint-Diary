@@ -24,7 +24,6 @@
 -(void) insertData:(User *)u;
 -(void) delete;
 -(void) drop;
-
 -(User *) getSampleData;
 
 @end
