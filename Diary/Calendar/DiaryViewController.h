@@ -15,25 +15,28 @@
 #import "../Model/StickerModel.h"
 #import "../Model/EmoticonModel.h"
 #import "../Model/PhotoModel.h"
+#import "DiaryEditViewController.h"
 
-@interface DiaryViewController : UIViewController{
+@interface DiaryViewController : UIViewController<UITextFieldDelegate>{
     
 }
 
 @property int indexNumber;
-@property (retain, nonatomic) IBOutlet NSDictionary *dicArray;
 @property (strong, nonatomic) DiaryModel *modelDiary;
+@property (strong, nonatomic) Diary *selectedDiary;
 @property (assign, nonatomic) NSDate *indexDate;
-@property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSMutableArray *photo;
 @property (strong, nonatomic) NSMutableArray *emoticon;
 @property (strong, nonatomic) NSMutableArray *sticker;
-@property (weak, nonatomic) IBOutlet UITextField *title;
-@property (retain, nonatomic) IBOutlet UITextView *content;
+
 @property (strong, nonatomic) IBOutlet UIImageView *pImageView;
+@property (weak, nonatomic) IBOutlet UIButton *changeDiary;
+@property (weak, nonatomic) IBOutlet UIButton *delete;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UITextView *content;
+@property (retain, nonatomic) IBOutlet NSDictionary *dicArray;
 
 -(void)loadDiaryData:(NSString *)date;
--(void)showDiary;
 -(void)delete:(NSString *)date;
 
 @end

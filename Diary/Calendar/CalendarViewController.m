@@ -19,8 +19,7 @@
 @synthesize indexDate;
 @synthesize modelDiary;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     modelDiary = [[DiaryModel alloc] init];
     self.calendarView.backgroundColor = [UIColor clearColor];
@@ -45,9 +44,9 @@
     return nil;
 }
 
-- (void)goDiaryView:(NSDate *)date{
+- (void)goDiaryView:(Diary *)diary{
     DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    diaryView.indexDate = date;
+    diaryView.selectedDiary = diary;
     [self presentViewController:diaryView animated:YES completion:nil];
 }
     
@@ -70,20 +69,18 @@
 -(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
     diary = [self getDiary:date];
     if(diary){
-        [self goDiaryView:date];
+        [self goDiaryView:diary];
     }else{
         [self goDiaryEditView:date];
     }
     NSLog(@"Selected date = %@",date);
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 

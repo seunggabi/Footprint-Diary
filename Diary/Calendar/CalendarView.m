@@ -258,8 +258,7 @@
 }
 
 #pragma mark - Drawing
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect{
     int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
     NSLog(@"weekday: %d",firstWeekDay);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

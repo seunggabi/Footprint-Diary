@@ -32,6 +32,8 @@
     
     sDateText.keyboardType = NO;
     sDateText.delegate = self;
+    eDateText.keyboardType = NO;
+    eDateText.delegate = self;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -39,8 +41,7 @@
     return YES;
 }
 
--(void)changeDatePicker
-{
+-(void)changeDatePicker{
     NSDateFormatter *dateFormatter;
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];
@@ -67,6 +68,11 @@
     NSLog(@"touch");
     datePicker.hidden = NO;
     tempText = sDateText;
+}
+
+- (IBAction)touchEDate:(id)sender {
+    datePicker.hidden = NO;
+    tempText = eDateText;
 }
 
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{

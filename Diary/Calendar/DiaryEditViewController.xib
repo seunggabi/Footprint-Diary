@@ -16,28 +16,26 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-eI-CUc">
-                    <rect key="frame" x="27" y="107" width="313" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-eI-CUc">
+                    <rect key="frame" x="31" y="107" width="350" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.90716776560000001" blue="0.93357061100000005" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-Yw-uyj">
-                    <rect key="frame" x="27" y="281" width="313" height="128"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-Yw-uyj">
+                    <rect key="frame" x="31" y="281" width="350" height="128"/>
                     <color key="backgroundColor" red="0.92156862750000001" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-nH-PrE">
-                    <rect key="frame" x="27" y="417" width="313" height="107"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
-                    <rect key="frame" x="27" y="540" width="313" height="107"/>
+                    <rect key="frame" x="31" y="417" width="350" height="107"/>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-0k-ov9">
-                    <rect key="frame" x="0.0" y="19" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <items>
                         <navigationItem title="Title" id="v9C-tE-7kR">
                             <barButtonItem key="leftBarButtonItem" title="&lt;뒤로" id="kgm-lE-H0s">
@@ -54,12 +52,9 @@
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
-                    <rect key="frame" x="172" y="69" width="30" height="30"/>
+                    <rect key="frame" x="229" y="68" width="30" height="30"/>
                     <state key="normal" title="X"/>
                 </button>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
-                    <rect key="frame" x="27" y="145" width="313" height="128"/>
-                </mapView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
                     <rect key="frame" x="32" y="68" width="29" height="30"/>
                     <state key="normal" title="사진" image="photo.png"/>
@@ -68,44 +63,39 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunny.png" translatesAutoresizingMaskIntoConstraints="NO" id="flR-bc-DMq">
-                    <rect key="frame" x="210" y="68" width="36" height="30"/>
+                    <rect key="frame" x="259" y="68" width="36" height="30"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer.png" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-i5-dpl">
-                    <rect key="frame" x="254" y="68" width="36" height="30"/>
+                    <rect key="frame" x="301" y="68" width="36" height="30"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-vc-OYj">
-                    <rect key="frame" x="249" y="68" width="41" height="30"/>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-tl-S21">
-                    <rect key="frame" x="298" y="68" width="36" height="30"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
-                    <rect key="frame" x="208" y="68" width="41" height="30"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
                     <rect key="frame" x="296" y="68" width="41" height="30"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-tl-S21">
+                    <rect key="frame" x="342" y="68" width="36" height="30"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
+                    <rect key="frame" x="257" y="69" width="41" height="30"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
+                    <rect key="frame" x="340" y="68" width="41" height="30"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
+                    <rect key="frame" x="31" y="540" width="350" height="107"/>
+                </imageView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
+                    <rect key="frame" x="31" y="145" width="350" height="128"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="hpH-Op-vj5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="311-JN-djZ"/>
-                <constraint firstItem="MeK-nH-PrE" firstAttribute="top" secondItem="hg4-Yw-uyj" secondAttribute="bottom" constant="10" id="33g-Mc-O4s"/>
                 <constraint firstAttribute="trailing" secondItem="hpH-Op-vj5" secondAttribute="trailing" constant="20" id="9mQ-jq-Ql0"/>
-                <constraint firstItem="kxi-eI-CUc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="G5X-47-izW"/>
-                <constraint firstAttribute="bottom" secondItem="hpH-Op-vj5" secondAttribute="bottom" constant="20" id="PEj-js-kbe"/>
-                <constraint firstItem="Jvn-Ek-hLX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Pdr-ja-UlS"/>
-                <constraint firstAttribute="trailing" secondItem="Jvn-Ek-hLX" secondAttribute="trailing" constant="20" id="ZWv-y2-dlL"/>
-                <constraint firstItem="hg4-Yw-uyj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="cdE-pd-mQA"/>
                 <constraint firstAttribute="trailing" secondItem="MeK-nH-PrE" secondAttribute="trailing" constant="20" id="gQY-KU-DB4"/>
-                <constraint firstAttribute="trailing" secondItem="hg4-Yw-uyj" secondAttribute="trailing" constant="20" id="hIx-jy-Suj"/>
-                <constraint firstItem="Jvn-Ek-hLX" firstAttribute="top" secondItem="kxi-eI-CUc" secondAttribute="bottom" constant="10" id="ibr-3X-wtu"/>
-                <constraint firstItem="hg4-Yw-uyj" firstAttribute="top" secondItem="Jvn-Ek-hLX" secondAttribute="bottom" constant="10" id="kot-sd-Ygj"/>
-                <constraint firstItem="hpH-Op-vj5" firstAttribute="top" secondItem="MeK-nH-PrE" secondAttribute="bottom" constant="10" id="nkA-7A-RQe"/>
-                <constraint firstAttribute="trailing" secondItem="kxi-eI-CUc" secondAttribute="trailing" constant="35" id="yma-K3-0lF"/>
                 <constraint firstItem="MeK-nH-PrE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yxs-bt-oZ4"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="175.5" y="251.5"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="175" y="251"/>
         </view>
     </objects>
     <resources>
