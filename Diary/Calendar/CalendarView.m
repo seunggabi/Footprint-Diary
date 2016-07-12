@@ -260,11 +260,9 @@
 #pragma mark - Drawing
 - (void)drawRect:(CGRect)rect{
     int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
-    NSLog(@"weekday: %d",firstWeekDay);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMMM yyyy"];
     labelCurrentMonth.text = [formatter stringFromDate:self.currentMonth];
-    NSLog(@"labelCurrentMonth.text %@ ",labelCurrentMonth.text);
     [labelCurrentMonth sizeToFit];
     labelCurrentMonth.frameX = roundf(self.frame.size.width/2 - labelCurrentMonth.frameWidth/2);
     labelCurrentMonth.frameY = 10;
@@ -309,7 +307,6 @@
     //always assume gregorian with monday first
     NSMutableArray *weekdays = [[NSMutableArray alloc] initWithArray:[dateFormatter shortWeekdaySymbols]];
     [weekdays moveObjectFromIndex:1 toIndex:1];
-    NSLog(@"weeksDAY : %@",weekdays);
     CGContextSetFillColorWithColor(context,
                                    [UIColor colorWithHexString:@"0x383838"].CGColor);
     // 달력 SUN, MON, TUE, THU, FRI, SAT 표시
@@ -403,7 +400,6 @@
     if ([todayDate month] == [currentMonth month] && [todayDate year] == [currentMonth year]) {
         todayBlock = [todayDate day] + firstWeekDay - 1;
     }
-    NSLog(@" %d",numBlocks);
     for (int i=0; i<numBlocks; i++) {
         int targetDate = i;
         int targetColumn = i%7;

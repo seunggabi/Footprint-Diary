@@ -64,13 +64,13 @@
 }
 
 - (IBAction)touchSDate:(id)sender {
-    NSLog(@"touchsDate");
+    NSLog(@"touchSDate");
     datePicker.hidden = NO;
     tempText = sDateText;
 }
 
 - (IBAction)touchEDate:(id)sender {
-    NSLog(@"touchsDate");
+    NSLog(@"touchEDate");
     datePicker.hidden = NO;
     tempText = eDateText;
 }
