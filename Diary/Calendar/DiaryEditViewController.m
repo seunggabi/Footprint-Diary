@@ -179,7 +179,7 @@
                 [radioButton3 setSelected:NO];
             }
             break;
-    }
+    } 
 } 
 
 -(IBAction)goEmoticon:(id)sender{
