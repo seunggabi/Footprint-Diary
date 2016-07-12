@@ -19,8 +19,7 @@
 @synthesize indexDate;
 @synthesize modelDiary;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     modelDiary = [[DiaryModel alloc] init];
     self.calendarView.backgroundColor = [UIColor clearColor];
@@ -77,13 +76,11 @@
     NSLog(@"Selected date = %@",date);
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 

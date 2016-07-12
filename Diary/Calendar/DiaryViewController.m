@@ -22,8 +22,7 @@
 @synthesize selectedDiary;
 @synthesize dicArray;
 
--(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -95,7 +94,7 @@
         }
     }
 }
-- (IBAction)back:(id)sender {
+-(IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

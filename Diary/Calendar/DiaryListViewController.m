@@ -41,8 +41,7 @@
     return YES;
 }
 
--(void)changeDatePicker
-{
+-(void)changeDatePicker{
     NSDateFormatter *dateFormatter;
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyy-MM-dd"];

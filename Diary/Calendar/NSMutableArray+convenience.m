@@ -12,8 +12,7 @@
 
 @implementation NSMutableArray (Convenience)
 
-- (void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to
-{
+-(void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to{
     if (to != from) {
         id obj = [self objectAtIndex:from];
         [self removeObjectAtIndex:from];

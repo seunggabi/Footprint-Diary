@@ -17,10 +17,11 @@
 @interface CalendarViewController : UIViewController<CalendarViewDelegate>{
     
 }
-@property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSDate *indexDate;
+@property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) Emoticon *emoticon;
+
 @property (weak, nonatomic) IBOutlet CalendarView *calendarView;
 
 -(Diary *)getDiary:(NSDate *)date;
