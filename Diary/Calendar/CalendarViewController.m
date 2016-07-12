@@ -45,9 +45,9 @@
     return nil;
 }
 
-- (void)goDiaryView:(NSDate *)date{
+- (void)goDiaryView:(Diary *)diary{
     DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    diaryView.indexDate = date;
+    diaryView.selectedDiary = diary;
     [self presentViewController:diaryView animated:YES completion:nil];
 }
     
@@ -70,7 +70,7 @@
 -(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
     diary = [self getDiary:date];
     if(diary){
-        [self goDiaryView:date];
+        [self goDiaryView:diary];
     }else{
         [self goDiaryEditView:date];
     }

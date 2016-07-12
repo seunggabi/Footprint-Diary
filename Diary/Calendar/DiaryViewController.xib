@@ -8,80 +8,147 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiaryViewController">
             <connections>
                 <outlet property="changeDiary" destination="eNA-A9-Gfu" id="b5d-t0-DBB"/>
+                <outlet property="content" destination="g3e-Pn-S7A" id="LWT-Dr-ZM4"/>
                 <outlet property="delete" destination="BC3-5K-evP" id="RIg-Da-8Jo"/>
                 <outlet property="view" destination="cpK-DU-L6s" id="wMl-Dt-rNg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cpK-DU-L6s">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-6X-nhZ">
-                    <rect key="frame" x="27" y="145" width="313" height="128"/>
+                    <rect key="frame" x="31" y="145" width="350" height="128"/>
                 </mapView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-aE-XV1">
-                    <rect key="frame" x="27" y="107" width="313" height="30"/>
-                    <color key="backgroundColor" red="0.99215686270000003" green="0.91372549020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2e-30-QgY">
-                    <rect key="frame" x="27" y="417" width="313" height="107"/>
+                    <rect key="frame" x="31" y="417" width="350" height="107"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-kr-1bV">
-                    <rect key="frame" x="27" y="540" width="313" height="107"/>
+                    <rect key="frame" x="31" y="540" width="350" height="107"/>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-f9-pLY">
-                    <rect key="frame" x="0.0" y="19" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <items>
-                        <navigationItem title="Title" id="N0T-YT-7fD"/>
+                        <navigationItem title="Title" id="N0T-YT-7fD">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;뒤로" id="Ttv-8k-mAD">
+                                <connections>
+                                    <action selector="back:" destination="-1" id="ba8-ln-73H"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-ZO-uUk">
-                    <rect key="frame" x="35" y="69" width="30" height="30"/>
-                    <state key="normal" title="사진"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-1v-PwG">
-                    <rect key="frame" x="315" y="69" width="52" height="30"/>
-                    <state key="normal" title="이모티콘"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-c8-OUi">
-                    <rect key="frame" x="255" y="69" width="52" height="30"/>
-                    <state key="normal" title="이모티콘"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li8-1l-lh0">
-                    <rect key="frame" x="191" y="69" width="56" height="30"/>
-                    <state key="normal" title=" 이모티콘"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yld-6U-0LL">
-                    <rect key="frame" x="103" y="69" width="86" height="30"/>
-                    <state key="normal" title="이모티콘표시x"/>
-                </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-Pn-S7A">
-                    <rect key="frame" x="27" y="281" width="313" height="128"/>
+                    <rect key="frame" x="31" y="281" width="350" height="128"/>
                     <color key="backgroundColor" red="0.92156862750000001" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-5K-evP">
-                    <rect key="frame" x="227" y="629" width="30" height="30"/>
+                    <rect key="frame" x="266" y="682" width="30" height="30"/>
                     <state key="normal" title="삭제"/>
                     <connections>
                         <action selector="delete:" destination="-1" eventType="touchUpInside" id="qX5-BP-yp7"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-A9-Gfu">
-                    <rect key="frame" x="105" y="629" width="30" height="30"/>
+                    <rect key="frame" x="108" y="682" width="30" height="30"/>
                     <state key="normal" title="수정"/>
                     <connections>
                         <action selector="changeDiary:" destination="-1" eventType="touchUpInside" id="xwm-m4-UW0"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C02-tn-IZ7">
+                    <rect key="frame" x="31" y="65" width="29" height="30"/>
+                    <state key="normal" title="사진" image="photo.png"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RCQ-dX-C73">
+                    <rect key="frame" x="345" y="65" width="36" height="30"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfW-1J-Pah">
+                    <rect key="frame" x="303" y="65" width="36" height="30"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunny.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gbe-3Q-XwL">
+                    <rect key="frame" x="259" y="65" width="36" height="30"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roj-C9-IqI">
+                    <rect key="frame" x="230" y="65" width="30" height="30"/>
+                    <state key="normal" title="X"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-Ft-Hmg">
+                    <rect key="frame" x="31" y="109" width="350" height="28"/>
+                    <color key="backgroundColor" red="1" green="0.90716776560000001" blue="0.93357061100000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="258.5" y="254.5"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="258" y="254"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JeC-mw-tue">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-54-qGj">
+                    <rect key="frame" x="31" y="107" width="350" height="30"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.91372549020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wJJ-W0-rMF">
+                    <rect key="frame" x="31" y="281" width="350" height="128"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-4i-jUV">
+                    <rect key="frame" x="31" y="417" width="350" height="107"/>
+                </imageView>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqp-CX-hjr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="qqd-Ko-aEJ">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;뒤로" id="UM1-xA-bwF"/>
+                            <barButtonItem key="rightBarButtonItem" title="저장" id="j1K-5k-wnR"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-wV-L8O">
+                    <rect key="frame" x="31" y="145" width="350" height="128"/>
+                </mapView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aN0-wA-sgY">
+                    <rect key="frame" x="31" y="540" width="350" height="107"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wJJ-W0-rMF" firstAttribute="top" secondItem="kwh-wV-L8O" secondAttribute="bottom" constant="10" id="0RM-Yn-scm"/>
+                <constraint firstItem="kwh-wV-L8O" firstAttribute="top" secondItem="Imp-54-qGj" secondAttribute="bottom" constant="10" id="Eyd-tC-5JY"/>
+                <constraint firstAttribute="trailing" secondItem="wJJ-W0-rMF" secondAttribute="trailing" constant="20" id="Fp8-HI-DZ6"/>
+                <constraint firstAttribute="trailing" secondItem="aN0-wA-sgY" secondAttribute="trailing" constant="20" id="Hnv-tj-0j2"/>
+                <constraint firstItem="wJJ-W0-rMF" firstAttribute="leading" secondItem="JeC-mw-tue" secondAttribute="leading" constant="20" id="KYQ-JM-IZ5"/>
+                <constraint firstItem="aN0-wA-sgY" firstAttribute="top" secondItem="NEj-4i-jUV" secondAttribute="bottom" constant="10" id="XyF-IA-qlC"/>
+                <constraint firstAttribute="trailing" secondItem="NEj-4i-jUV" secondAttribute="trailing" constant="20" id="Yfs-Nw-weI"/>
+                <constraint firstAttribute="trailing" secondItem="kwh-wV-L8O" secondAttribute="trailing" constant="20" id="cj1-Cf-4f2"/>
+                <constraint firstItem="aN0-wA-sgY" firstAttribute="leading" secondItem="JeC-mw-tue" secondAttribute="leading" constant="20" id="eUR-pC-Gcv"/>
+                <constraint firstItem="NEj-4i-jUV" firstAttribute="leading" secondItem="JeC-mw-tue" secondAttribute="leading" constant="20" id="gZh-Ww-Dgk"/>
+                <constraint firstAttribute="trailing" secondItem="Imp-54-qGj" secondAttribute="trailing" constant="35" id="olt-lx-u8v"/>
+                <constraint firstAttribute="bottom" secondItem="aN0-wA-sgY" secondAttribute="bottom" constant="20" id="rfP-24-nPJ"/>
+                <constraint firstItem="kwh-wV-L8O" firstAttribute="leading" secondItem="JeC-mw-tue" secondAttribute="leading" constant="20" id="s4p-1o-HCg"/>
+                <constraint firstItem="Imp-54-qGj" firstAttribute="leading" secondItem="JeC-mw-tue" secondAttribute="leading" constant="20" id="wyT-9v-Hkq"/>
+                <constraint firstItem="NEj-4i-jUV" firstAttribute="top" secondItem="wJJ-W0-rMF" secondAttribute="bottom" constant="10" id="yCa-RJ-Cb3"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="200" y="254"/>
         </view>
     </objects>
+    <resources>
+        <image name="beer.png" width="30" height="30"/>
+        <image name="happy-1.png" width="30" height="30"/>
+        <image name="photo.png" width="30" height="30"/>
+        <image name="sunny.png" width="30" height="30"/>
+    </resources>
 </document>
