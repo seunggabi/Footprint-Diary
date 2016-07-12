@@ -23,8 +23,9 @@
 -(void) insertData:(HealthInformation *)h;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(void) install;
+-(BOOL) exist;
 -(HealthInformation *) getSampleData;
+-(NSMutableArray *) getInfoTwo;
 
 @end

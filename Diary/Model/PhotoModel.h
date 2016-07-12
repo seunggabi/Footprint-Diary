@@ -23,7 +23,6 @@
 -(void) insertData:(Photo *)p;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
 -(Photo *) getSampleData;
 
 @end

@@ -17,19 +17,21 @@
 @synthesize fp_GPS_X;
 @synthesize fp_GPS_Y;
 @synthesize fp_address;
+@synthesize fp_h_count;
 
-+(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address {
++(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address fp_h_count:(NSNumber *)fp_h_count {
     Footprint *fp = [[Footprint alloc] init];
     fp.fp_date = date;
     fp.fp_time = time;
     fp.fp_GPS_X = gps_x;
     fp.fp_GPS_Y = gps_y;
     fp.fp_address = address;
+    fp.fp_h_count = fp_h_count;
     return fp;
 }
 
 -(NSDictionary *) getObj {
-    NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"fp_GPS_X":fp_GPS_X, @"fp_GPS_Y":fp_GPS_Y, @"fp_address":fp_address};
+    NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"fp_GPS_X":fp_GPS_X, @"fp_GPS_Y":fp_GPS_Y, @"fp_address":fp_address, @"fp_h_count":fp_h_count};
     return obj;
 }
 

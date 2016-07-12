@@ -25,10 +25,11 @@
 @property (strong, nonatomic) NSString *getAddressURL;
 
 +(HelperTool *) getInstance;
-
 -(void) installDB;
 -(void) removeDB;
 -(NSString *) getToday;
 -(NSDate *) getDate;
+-(NSDate *) stringToDate:(NSString *)date;
+-(NSString *) dateToString:(NSDate *)date;
 
 @end

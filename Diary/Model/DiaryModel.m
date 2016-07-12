@@ -8,6 +8,7 @@
 
 #import "DiaryModel.h"
 #import "DBConnector.h"
+#import "HelperTool.h"
 
 @implementation DiaryModel
 
@@ -114,6 +115,16 @@
     d.d_content = @"아이유";
     d.d_e_id = @0;
     return d;
+}
+
+-(NSMutableArray *) getTermList:(NSString *)sDate eDate:(NSString *)eDate {
+    NSDate *s = [[HelperTool getInstance] stringToDate:sDate];
+    NSDate *e = [[HelperTool getInstance] stringToDate:eDate];
+    e = [e dateByAddingTimeInterval:60*60*24];
+    
+    NSString *where = [NSString stringWithFormat:@"d_time>='%f' AND d_time<'%f'", [s timeIntervalSince1970], [e timeIntervalSince1970]];
+    NSMutableArray *list = [self select:where];
+    return list;
 }
 
 @end

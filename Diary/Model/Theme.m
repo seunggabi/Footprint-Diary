@@ -11,13 +11,15 @@
 @implementation Theme
 
 @synthesize th_id;
+@synthesize th_name;
 @synthesize th_top;
-@synthesize th_bottom;
 @synthesize th_main;
+@synthesize th_bottom;
 @synthesize th_font;
 
-+(Theme *)theme:(NSString *)top bottom:(NSString *)bottom main:(NSString *)main font:(NSString *)font {
++(Theme *)theme:(NSString *)name top:(NSString *)top main:(NSString *)main bottom:(NSString *)bottom font:(NSString *)font {
     Theme *t = [[Theme alloc] init];
+    t.th_name = name;
     t.th_top = top;
     t.th_main = main;
     t.th_bottom = bottom;
@@ -25,7 +27,7 @@
     return t;
 }
 -(NSDictionary *) getObj {
-    return @{@"th_top":th_top, @"th_bottom":th_bottom, @"th_font":th_font, @"th_main":th_main};
+    return @{@"th_id":th_id, @"th_name":th_name, @"th_top":th_top, @"th_bottom":th_bottom, @"th_font":th_font, @"th_main":th_main};
 }
 
 @end

@@ -23,8 +23,8 @@
 -(void) insertData:(Weather *)w;
 -(void) delete :(NSString *)where;
 -(void) drop;
-
+-(void) install;
+-(BOOL) exist;
 -(Weather *) getSampleData;
-
 
 @end

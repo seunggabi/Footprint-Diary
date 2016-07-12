@@ -16,8 +16,9 @@
 @property (strong, nonatomic) NSNumber *fp_GPS_X;
 @property (strong, nonatomic) NSNumber *fp_GPS_Y;
 @property (strong, nonatomic) NSString *fp_address;
+@property (strong, nonatomic) NSNumber *fp_h_count;
 
-+(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address;
++(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address fp_h_count:(NSNumber *)fp_h_count;
 -(NSDictionary *) getObj;
 -(void) setAddress;
 

@@ -29,7 +29,10 @@
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
-        NSAssert(0,@"Tabled Failed to Creath.");
+        NSAssert(0,@"Tabled Failed to Create.");
+    }
+    if(![self exist]) {
+        [self install];
     }
 }
 
@@ -99,9 +102,6 @@
 }
 
 -(void) install {
-    [self drop];
-    [self create];
-    
     NSMutableArray *healthInfoList = [[NSMutableArray alloc] init];
     [healthInfoList addObject:[HealthInformation healthInformation:@"걷기는 심박수 증가, 스트레스 해소, 혈압조절 등 다양한 효과를 얻을 수 있다."]];
     [healthInfoList addObject:[HealthInformation healthInformation:@"사람이 한걸음을 걸었을 때 소모되는 열량은 약 3.3cal 이다."]];
@@ -125,11 +125,28 @@
     }
 }
 
+-(BOOL) exist {
+    return [self select:nil].count > 0;
+}
 
 -(HealthInformation *) getSampleData {
     HealthInformation *hi = [[HealthInformation alloc] init];
     hi.hi_comment = @"그냥 좋음";
     return hi;
+}
+
+-(NSMutableArray *) getInfoTwo {
+    NSMutableArray *infoList = [self select:nil];
+    NSMutableArray *infoTwo = [[NSMutableArray alloc] init];
+    int one = rand()%infoList.count;
+    int two = rand()%infoList.count;
+    
+    while(one == two) {
+        two = rand()%infoList.count;
+    }
+    [infoTwo addObject:[infoList objectAtIndex:one]];
+    [infoTwo addObject:[infoList objectAtIndex:two]];
+    return infoTwo;
 }
 
 @end

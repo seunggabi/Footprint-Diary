@@ -32,6 +32,9 @@
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
+    if(![self exist]) {
+        [self install];
+    }
 }
 
 -(NSMutableArray *) select :(NSString *)where {
@@ -58,9 +61,7 @@
 
 -(void) insertData :(Emoticon *)e {
     char *err;
-    
-    //[self deleteEmoticon];
-    
+
     NSString *query = [NSString stringWithFormat:@"INSERT INTO Emoticon (e_name, e_src) VALUES ('%@', '%@')", e.e_name, e.e_src];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -102,9 +103,6 @@
 }
 
 -(void) install {
-    [self drop];
-    [self create];
-    
     NSMutableArray *emoticonList = [[NSMutableArray alloc] init];
     [emoticonList addObject:[Emoticon emoticon:@"맥주" src:@"beer.png"]];
     [emoticonList addObject:[Emoticon emoticon:@"영수중" src:@"bill.png"]];
@@ -192,6 +190,10 @@
     for(int i=0; i<emoticonList.count; i++) {
         [self insertData:[emoticonList objectAtIndex:i]];
     }
+}
+
+-(BOOL) exist {
+    return [self select:nil].count > 0;
 }
 
 -(Emoticon *) getSampleData {
