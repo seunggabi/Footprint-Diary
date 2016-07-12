@@ -93,8 +93,6 @@
 		7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E92D1D3522DD00575DED /* EmoticonViewController.m */; };
 		7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */; };
 		7D11E9321D3523EF00575DED /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E9311D3523EF00575DED /* Cell.xib */; };
-		7D11E93B1D352C0100575DED /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E9391D352C0100575DED /* CollectionViewCell.m */; };
-		7D11E93C1D352C0100575DED /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E93A1D352C0100575DED /* CollectionViewCell.xib */; };
 		7D11EBCF1D352F6100575DED /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EAF31D352F6000575DED /* apple.jpg */; };
 		7D11EBD01D352F6100575DED /* balloon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EAF41D352F6000575DED /* balloon.jpg */; };
 		7D11EBD11D352F6100575DED /* bottle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EAF51D352F6000575DED /* bottle.jpg */; };
@@ -313,6 +311,7 @@
 		7D11ECA61D352F6100575DED /* wind5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EBCC1D352F6100575DED /* wind5.png */; };
 		7D11ECA71D352F6100575DED /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EBCD1D352F6100575DED /* windy.png */; };
 		7D11ECA81D352F6100575DED /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11EBCE1D352F6100575DED /* 참잘했어요.png */; };
+		7D11ECAC1D35333D00575DED /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11ECAB1D35333D00575DED /* Cell.xib */; };
 		7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */; };
 		7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026E1D2FD09900B57D4D /* NSMutableArray+convenience.m */; };
 		7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502701D2FD09900B57D4D /* UIColor+expanded.m */; };
@@ -462,9 +461,6 @@
 		7D11E92D1D3522DD00575DED /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewController.xib; sourceTree = "<group>"; };
 		7D11E9311D3523EF00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
-		7D11E9381D352C0100575DED /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		7D11E9391D352C0100575DED /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		7D11E93A1D352C0100575DED /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		7D11EAF31D352F6000575DED /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
 		7D11EAF41D352F6000575DED /* balloon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = balloon.jpg; sourceTree = "<group>"; };
 		7D11EAF51D352F6000575DED /* bottle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottle.jpg; sourceTree = "<group>"; };
@@ -683,6 +679,7 @@
 		7D11EBCC1D352F6100575DED /* wind5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind5.png; sourceTree = "<group>"; };
 		7D11EBCD1D352F6100575DED /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
 		7D11EBCE1D352F6100575DED /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
+		7D11ECAB1D35333D00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		7D95026B1D2FD09900B57D4D /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
 		7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
 		7D95026D1D2FD09900B57D4D /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
@@ -1168,9 +1165,7 @@
 				7D11E92C1D3522DD00575DED /* EmoticonViewController.h */,
 				7D11E92D1D3522DD00575DED /* EmoticonViewController.m */,
 				7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */,
-				7D11E9381D352C0100575DED /* CollectionViewCell.h */,
-				7D11E9391D352C0100575DED /* CollectionViewCell.m */,
-				7D11E93A1D352C0100575DED /* CollectionViewCell.xib */,
+				7D11ECAB1D35333D00575DED /* Cell.xib */,
 				7DA28EAA1D32336800DDBBC2 /* CalendarView.h */,
 				7DA28EAB1D32336800DDBBC2 /* CalendarView.m */,
 				7D033A6B1D324F560028CE44 /* CalendarViewController.h */,
@@ -1363,7 +1358,6 @@
 				7D11EBEC1D352F6100575DED /* cool-1.png in Resources */,
 				28E5E2371D302F0800D8B9E3 /* info_box.png in Resources */,
 				7D11ECA01D352F6100575DED /* weather-1.png in Resources */,
-				7D11E93C1D352C0100575DED /* CollectionViewCell.xib in Resources */,
 				7D11EC121D352F6100575DED /* lobster.png in Resources */,
 				7D11EC511D352F6100575DED /* key.png in Resources */,
 				7D11EC561D352F6100575DED /* noncheckbox.jpeg in Resources */,
@@ -1538,6 +1532,7 @@
 				7D11EC5E1D352F6100575DED /* photo.png in Resources */,
 				7D11EC991D352F6100575DED /* tide-1.png in Resources */,
 				7D11EC531D352F6100575DED /* line.png in Resources */,
+				7D11ECAC1D35333D00575DED /* Cell.xib in Resources */,
 				7D11EC941D352F6100575DED /* sunset-2.png in Resources */,
 				28E5E24A1D302F0800D8B9E3 /* noimage256.png in Resources */,
 				7D11EC741D352F6100575DED /* moon-1.png in Resources */,
@@ -1588,7 +1583,6 @@
 				22A1D58F1D324DB600058642 /* PasswordSettingViewController.m in Sources */,
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
-				7D11E93B1D352C0100575DED /* CollectionViewCell.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				22682B4E1D3048960015854E /* HealthInfoViewController.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
