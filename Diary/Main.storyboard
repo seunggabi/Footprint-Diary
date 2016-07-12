@@ -1462,7 +1462,6 @@
         <!--Item-->
         <scene sceneID="IPn-WR-7Zh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UiD-QA-H4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ANb-6Y-9LM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ou4-tF-obU"/>
                     <toolbarItems/>
@@ -1477,6 +1476,7 @@
                         <segue destination="4p1-P8-dCD" kind="relationship" relationship="rootViewController" id="iZI-3B-78S"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UiD-QA-H4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3420.5" y="-3516.5"/>
         </scene>
@@ -1732,6 +1732,7 @@
         <image name="tree.jpg" width="750" height="1335"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bAw-Is-1nh"/>
         <segue reference="tLb-UM-bbg"/>
     </inferredMetricsTieBreakers>
 </document>

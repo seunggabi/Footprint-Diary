@@ -244,8 +244,8 @@
 		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
 		7D033B0F1D33A8260028CE44 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A661D324F2F0028CE44 /* DiaryViewController.xib */; };
 		7D033B791D34BA910028CE44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D033B781D34BA910028CE44 /* Main.storyboard */; };
-		7D033BBB1D34E6BB0028CE44 /* nobtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033BB91D34E6BB0028CE44 /* nobtn.png */; };
-		7D033BBC1D34E6BB0028CE44 /* selectedbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033BBA1D34E6BB0028CE44 /* selectedbtn.png */; };
+		7D033BBF1D34F4CC0028CE44 /* nobtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033BBD1D34F4CC0028CE44 /* nobtn.png */; };
+		7D033BC01D34F4CC0028CE44 /* selectedbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D033BBE1D34F4CC0028CE44 /* selectedbtn.png */; };
 		7D9502241D2FC74E00B57D4D /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */; };
 		7D95022C1D2FC74E00B57D4D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502161D2FC74E00B57D4D /* home.png */; };
 		7D95022D1D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */; };
@@ -607,8 +607,8 @@
 		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
 		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
 		7D033B781D34BA910028CE44 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7D033BB91D34E6BB0028CE44 /* nobtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nobtn.png; sourceTree = "<group>"; };
-		7D033BBA1D34E6BB0028CE44 /* selectedbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedbtn.png; sourceTree = "<group>"; };
+		7D033BBD1D34F4CC0028CE44 /* nobtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nobtn.png; sourceTree = "<group>"; };
+		7D033BBE1D34F4CC0028CE44 /* selectedbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedbtn.png; sourceTree = "<group>"; };
 		7D95020E1D2FC74E00B57D4D /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
 		7D9502161D2FC74E00B57D4D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg"; sourceTree = "<group>"; };
@@ -781,8 +781,6 @@
 		285346591D2C27090001F378 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				7D033BB91D34E6BB0028CE44 /* nobtn.png */,
-				7D033BBA1D34E6BB0028CE44 /* selectedbtn.png */,
 				BFFB3BE21D33552D009BA558 /* background */,
 				28E5E3551D32A1BA00D8B9E3 /* emoticon */,
 				28E5E2D61D32A1B200D8B9E3 /* weather */,
@@ -795,6 +793,8 @@
 				BF5198791D34D22700A110E6 /* page3.png */,
 				BF5198771D34D22000A110E6 /* page4.png */,
 				BF51982A1D34917100A110E6 /* left.png */,
+				7D033BBD1D34F4CC0028CE44 /* nobtn.png */,
+				7D033BBE1D34F4CC0028CE44 /* selectedbtn.png */,
 				7D9502161D2FC74E00B57D4D /* home.png */,
 				7D9502171D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg */,
 				7D9502181D2FC74E00B57D4D /* KakaoTalk_Photo_2016-07-05-19-01-20_21.jpeg */,
@@ -1412,7 +1412,7 @@
 				28E5E41B1D32A1BA00D8B9E3 /* wine-1.png in Resources */,
 				28E5E4071D32A1BA00D8B9E3 /* shouting.png in Resources */,
 				28E5E3F41D32A1BA00D8B9E3 /* pizza.png in Resources */,
-				7D033BBC1D34E6BB0028CE44 /* selectedbtn.png in Resources */,
+				7D033BC01D34F4CC0028CE44 /* selectedbtn.png in Resources */,
 				28E5E3CB1D32A1BA00D8B9E3 /* fish.png in Resources */,
 				285346611D2C27090001F378 /* KakaoTalk_Photo_2016-07-05-19-01-21_99.jpeg in Resources */,
 				28E5E3191D32A1B200D8B9E3 /* clouds-1.png in Resources */,
@@ -1498,7 +1498,7 @@
 				28E5E3E11D32A1BA00D8B9E3 /* icecream.png in Resources */,
 				28E5E31D1D32A1B200D8B9E3 /* eclipse.png in Resources */,
 				BF51980B1D348BCE00A110E6 /* help.png in Resources */,
-				7D033BBB1D34E6BB0028CE44 /* nobtn.png in Resources */,
+				7D033BBF1D34F4CC0028CE44 /* nobtn.png in Resources */,
 				BFFB3BFD1D33552D009BA558 /* firework.jpg in Resources */,
 				28E5E3331D32A1B200D8B9E3 /* snowflake.png in Resources */,
 				28E5E3CC1D32A1BA00D8B9E3 /* flower.png in Resources */,

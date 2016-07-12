@@ -10,9 +10,6 @@
                 <outlet property="back" destination="kgm-lE-H0s" id="sem-LM-fgJ"/>
                 <outlet property="content" destination="hg4-Yw-uyj" id="Mgr-7w-kon"/>
                 <outlet property="pImageView" destination="MeK-nH-PrE" id="Qth-En-KiR"/>
-                <outlet property="radioButton1" destination="lCJ-Pr-Aql" id="vQy-sG-IXA"/>
-                <outlet property="radioButton2" destination="ca6-tO-u8s" id="XF3-xp-Caj"/>
-                <outlet property="radioButton3" destination="Jb6-5i-ncg" id="NbZ-Ne-D1P"/>
                 <outlet property="radioButton4" destination="5Gv-oo-7Cb" id="NzJ-Y2-x77"/>
                 <outlet property="title" destination="kxi-eI-CUc" id="XHB-i8-Oxh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,26 +17,26 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-eI-CUc">
-                    <rect key="frame" x="31" y="107" width="350" height="30"/>
+                    <rect key="frame" x="31" y="107" width="314" height="30"/>
                     <color key="backgroundColor" red="1" green="0.90716776560000001" blue="0.93357061100000005" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-Yw-uyj">
-                    <rect key="frame" x="31" y="281" width="350" height="128"/>
+                    <rect key="frame" x="31" y="281" width="314" height="128"/>
                     <color key="backgroundColor" red="0.92156862750000001" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-nH-PrE">
-                    <rect key="frame" x="31" y="417" width="350" height="107"/>
+                    <rect key="frame" x="31" y="417" width="314" height="107"/>
                 </imageView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-0k-ov9">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <items>
                         <navigationItem title="Title" id="v9C-tE-7kR">
                             <barButtonItem key="leftBarButtonItem" title="&lt;뒤로" id="kgm-lE-H0s">
@@ -55,56 +52,50 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
-                    <rect key="frame" x="229" y="78" width="30" height="30"/>
-                    <state key="normal" title="X"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
-                    <rect key="frame" x="32" y="68" width="29" height="30"/>
+                    <rect key="frame" x="32" y="76" width="29" height="30"/>
                     <state key="normal" title="사진" image="photo.png"/>
                     <connections>
                         <action selector="runGeneralPicker" destination="-1" eventType="touchUpInside" id="s4e-Sp-RJw"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunny.png" translatesAutoresizingMaskIntoConstraints="NO" id="flR-bc-DMq">
-                    <rect key="frame" x="265" y="76" width="36" height="30"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer.png" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-i5-dpl">
-                    <rect key="frame" x="309" y="77" width="31" height="30"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-vc-OYj">
-                    <rect key="frame" x="305" y="77" width="37" height="29"/>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-tl-S21">
-                    <rect key="frame" x="347" y="77" width="30" height="30"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
-                    <rect key="frame" x="345" y="76" width="34" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
+                    <rect key="frame" x="314" y="76" width="30" height="30"/>
+                    <state key="normal" image="happy-1.png"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
-                    <rect key="frame" x="31" y="540" width="350" height="107"/>
+                    <rect key="frame" x="31" y="540" width="314" height="107"/>
                 </imageView>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
-                    <rect key="frame" x="31" y="145" width="350" height="128"/>
+                    <rect key="frame" x="31" y="145" width="314" height="128"/>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-Pr-Aql">
-                    <rect key="frame" x="228" y="44" width="34" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-tO-u8s">
-                    <rect key="frame" x="267" y="44" width="34" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb6-5i-ncg">
-                    <rect key="frame" x="306" y="44" width="34" height="32"/>
-                    <state key="normal" title="Button" image="nobtn.png"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-oo-7Cb">
-                    <rect key="frame" x="345" y="44" width="34" height="32"/>
+                    <rect key="frame" x="315" y="45" width="45" height="32"/>
                     <state key="normal" title="Button" image="nobtn.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
-                    <rect key="frame" x="225" y="76" width="38" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
+                    <rect key="frame" x="208" y="78" width="30" height="30"/>
+                    <state key="normal" title="X"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-vc-OYj">
+                    <rect key="frame" x="280" y="76" width="30" height="30"/>
+                    <state key="normal" image="beer.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
+                    <rect key="frame" x="242" y="76" width="30" height="30"/>
+                    <state key="normal" image="sunny.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-Kh-pc1">
+                    <rect key="frame" x="279" y="44" width="45" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-Tr-hp4">
+                    <rect key="frame" x="245" y="44" width="45" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5r-Wf-Sn7">
+                    <rect key="frame" x="213" y="44" width="45" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -114,14 +105,14 @@
                 <constraint firstAttribute="trailing" secondItem="MeK-nH-PrE" secondAttribute="trailing" constant="20" id="gQY-KU-DB4"/>
                 <constraint firstItem="MeK-nH-PrE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yxs-bt-oZ4"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-            <point key="canvasLocation" x="175" y="251"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="174.5" y="250.5"/>
         </view>
     </objects>
     <resources>
         <image name="beer.png" width="30" height="30"/>
         <image name="happy-1.png" width="30" height="30"/>
-        <image name="nobtn.png" width="32" height="32"/>
+        <image name="nobtn.png" width="50" height="40"/>
         <image name="photo.png" width="30" height="30"/>
         <image name="sunny.png" width="30" height="30"/>
     </resources>
