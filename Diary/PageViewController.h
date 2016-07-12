@@ -12,8 +12,12 @@
 
 @property (strong,nonatomic)IBOutlet UIImageView *imageView;
 @property (strong,nonatomic)IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *checkbox;
+@property (assign, nonatomic) BOOL checkboxSelected;
 
 -(void)initPageViewInfo:(NSInteger)page;
+- (IBAction)checkboxSelected:(id)sender;
 
 
 @end

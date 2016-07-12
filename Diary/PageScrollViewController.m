@@ -44,7 +44,7 @@
     
     // 만약 최초에 보여줄 페이지를 변경하려면 아래줄의 주석을 풀어주면 됩니다.
     // Page는 원하는 페이지로 설정할 수 있습니다.
-     [self gotoPage:FALSE AtPage:2];
+     [self gotoPage:FALSE AtPage:0];
 }
 
 - (void)didReceiveMemoryWarning
