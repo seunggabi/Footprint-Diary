@@ -73,7 +73,6 @@
     }else{
         [self goDiaryEditView:date];
     }
-    NSLog(@"Selected date = %@",date);
 }
 
 - (void)viewDidUnload{
