@@ -34,6 +34,10 @@
 @property (retain, nonatomic) IBOutlet UITextView *content;
 @property (weak, nonatomic) IBOutlet UITextField *title;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton1;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton2;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton3;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton4;
 
 -(IBAction)runGeneralPicker;
 -(IBAction)writeDiary;

@@ -52,7 +52,7 @@
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-5n-e1C">
-                    <rect key="frame" x="229" y="68" width="30" height="30"/>
+                    <rect key="frame" x="229" y="78" width="30" height="30"/>
                     <state key="normal" title="X"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-9i-0KO">
@@ -63,22 +63,19 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunny.png" translatesAutoresizingMaskIntoConstraints="NO" id="flR-bc-DMq">
-                    <rect key="frame" x="259" y="68" width="36" height="30"/>
+                    <rect key="frame" x="265" y="76" width="36" height="30"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer.png" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-i5-dpl">
-                    <rect key="frame" x="301" y="68" width="36" height="30"/>
+                    <rect key="frame" x="309" y="77" width="31" height="30"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-vc-OYj">
-                    <rect key="frame" x="296" y="68" width="41" height="30"/>
+                    <rect key="frame" x="305" y="77" width="37" height="29"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-tl-S21">
-                    <rect key="frame" x="342" y="68" width="36" height="30"/>
+                    <rect key="frame" x="347" y="77" width="30" height="30"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
-                    <rect key="frame" x="257" y="69" width="41" height="30"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-bi-VJS">
-                    <rect key="frame" x="340" y="68" width="41" height="30"/>
+                    <rect key="frame" x="345" y="76" width="34" height="30"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-Op-vj5">
                     <rect key="frame" x="31" y="540" width="350" height="107"/>
@@ -86,6 +83,25 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Ek-hLX">
                     <rect key="frame" x="31" y="145" width="350" height="128"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-Pr-Aql">
+                    <rect key="frame" x="228" y="44" width="34" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-tO-u8s">
+                    <rect key="frame" x="267" y="44" width="34" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb6-5i-ncg">
+                    <rect key="frame" x="306" y="44" width="34" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-oo-7Cb">
+                    <rect key="frame" x="345" y="44" width="34" height="32"/>
+                    <state key="normal" title="Button" image="nobtn.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-Ob-qma">
+                    <rect key="frame" x="225" y="76" width="38" height="30"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -101,6 +117,7 @@
     <resources>
         <image name="beer.png" width="30" height="30"/>
         <image name="happy-1.png" width="30" height="30"/>
+        <image name="nobtn.png" width="32" height="32"/>
         <image name="photo.png" width="30" height="30"/>
         <image name="sunny.png" width="30" height="30"/>
     </resources>
