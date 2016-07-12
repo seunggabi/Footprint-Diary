@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Tool/TimerScheduler.h"
-#import "../Model/HealthModel.h"
-#import "../Model/HealthInformationModel.h"
-#import "../Tool/HelperTool.h"
+#import "TimerScheduler.h"
+#import "HealthModel.h"
+#import "HealthInformationModel.h"
+#import "HelperTool.h"
 #import "FSLineChart.h"
 #import "UIColor+FSPalette.h"
 

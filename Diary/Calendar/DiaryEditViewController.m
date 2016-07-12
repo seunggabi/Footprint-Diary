@@ -7,6 +7,7 @@
 //
 
 #import "DiaryEditViewController.h"
+#import "EmoticonViewController.h"
 
 @interface DiaryEditViewController ()
 

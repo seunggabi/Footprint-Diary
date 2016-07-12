@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <DaumMap/MTMapView.h>
 #import <DaumMap/MTMapReverseGeoCoder.h>
-#import "../Model/FootprintModel.h"
+#import "FootprintModel.h"
 
 @interface FootprintViewController : UIViewController
 

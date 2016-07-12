@@ -7,15 +7,15 @@
 //
 
 #import "HelperTool.h"
-#import "../Model/DBConnector.h"
-#import "../Model/UserModel.h"
-#import "../Model/FootprintModel.h"
-#import "../Model/DiaryModel.h"
-#import "../Model/StickerModel.h"
-#import "../Model/EmoticonModel.h"
-#import "../Model/PhotoModel.h"
-#import "../Model/HealthModel.h"
-#import "../Model/HealthInformationModel.h"
+#import "DBConnector.h"
+#import "UserModel.h"
+#import "FootprintModel.h"
+#import "DiaryModel.h"
+#import "StickerModel.h"
+#import "EmoticonModel.h"
+#import "PhotoModel.h"
+#import "HealthModel.h"
+#import "HealthInformationModel.h"
 
 #import <Foundation/Foundation.h>
 

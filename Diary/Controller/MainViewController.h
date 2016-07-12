@@ -7,27 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Model/DBConnector.h"
-#import "../Model/UserModel.h"
-#import "../Model/FootprintModel.h"
-#import "../Model/DiaryModel.h"
-#import "../Model/StickerModel.h"
-#import "../Model/EmoticonModel.h"
-#import "../Model/PhotoModel.h"
-#import "../Model/HealthModel.h"
-#import "../Model/HealthInformationModel.h"
 
 @import CoreMotion;
 @interface MainViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UserModel *modelUser;
-@property (strong, nonatomic) FootprintModel *modelFootPrint;
-@property (strong, nonatomic) DiaryModel *modelDiary;
-@property (strong, nonatomic) StickerModel *modelSticker;
-@property (strong, nonatomic) EmoticonModel *modelEmoticon;
-@property (strong, nonatomic) PhotoModel *modelPhoto;
-@property (strong, nonatomic) HealthModel *modelHealth;
-@property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
 @property (strong, nonatomic) CMPedometer *pedometer;
 
 @end
