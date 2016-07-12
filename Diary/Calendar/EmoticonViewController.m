@@ -14,30 +14,32 @@
 
 @implementation EmoticonViewController
 
+@synthesize collectionView;
+
 static NSString *cellIdentifier = @"Cell";
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    [super viewDidLoad];
-    
-    [_collectionView setDelegate:self];
-    [_collectionView setDataSource:self];
+    [collectionView setDelegate:self];
+    [collectionView setDataSource:self];
     
     UINib* nib = [UINib nibWithNibName:@"Cell" bundle:nil];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"imageCell"];
 
-    imgList = [[NSMutableArray alloc] initWithObjects:
-               @"img01.jpg",@"img02.jpg",@"img03.jpg",@"img04.jpg",@"img05.jpg",
-               @"img06.jpg",@"img07.jpg",@"img08.jpg",@"img09.jpg",nil];
+    imgList = [[NSMutableArray alloc] init];
+    UIImage* img = [UIImage imageNamed:@"cool.png"];
+    [imgList addObject:img];
+    [self.collectionView reloadData];
 }
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // 재사용 큐에 셀을 가져온다
-    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell forIndexPath:indexPath];
+    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
     
     // 표시할 이미지 설정
     UIImageView* imgView = (UIImageView*)[cell.contentView viewWithTag:100];
-
+    if (imgView) imgView.image = [UIImage imageNamed:@"cool.png"];
+    NSLog(@"%@", cell);
     
     return cell;
 }
@@ -45,11 +47,10 @@ static NSString *cellIdentifier = @"Cell";
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
+    return imgList.count;
 }
 
 

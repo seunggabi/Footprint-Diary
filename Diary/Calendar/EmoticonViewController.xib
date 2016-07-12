@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmoticonViewController">
             <connections>
-                <outlet property="collectionView" destination="OwI-1l-pRl" id="QJX-NY-5fh"/>
+                <outlet property="collectionView" destination="OwI-1l-pRl" id="B3F-5N-ign"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
