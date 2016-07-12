@@ -63,7 +63,7 @@
     [self loadDiaryListData:sDateText.text endDate:eDateText.text];
 }
 
-- (IBAction)touchBeginSDate:(id)sender {
+- (IBAction)touchSDate:(id)sender {
     NSLog(@"touchsDate");
     datePicker.hidden = NO;
     tempText = sDateText;
