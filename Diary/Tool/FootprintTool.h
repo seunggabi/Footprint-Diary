@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import "../Model/FootprintModel.h"
-#import "../Model/UserModel.h"
+#import "FootprintModel.h"
+#import "UserModel.h"
+#import "HealthModel.h"
 
 @interface FootprintTool : NSObject
 
 @property (strong, nonatomic) FootprintModel *modelFootprint;
 @property (strong, nonatomic) UserModel *modelUser;
+@property (strong, nonatomic) HealthModel *modelHealth;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 +(FootprintTool *) getInstance;

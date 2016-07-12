@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Model/Diary.h"
-#import "../Model/DiaryModel.h"
+#import "Diary.h"
+#import "DiaryModel.h"
 #import "DiaryViewController.h"
 #import "DiaryEditViewController.h"
 

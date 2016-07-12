@@ -10,10 +10,11 @@
 #import "HelperTool.h"
 #import "TimerScheduler.h"
 
-@implementation FootprintTool 
+@implementation FootprintTool
 
 @synthesize modelUser;
 @synthesize modelFootprint;
+@synthesize modelHealth;
 @synthesize locationManager;
 
 +(FootprintTool *) getInstance {
@@ -22,6 +23,7 @@
         instance = [[FootprintTool alloc] init];
         instance.modelFootprint = [[FootprintModel alloc] init];
         instance.modelUser = [[UserModel alloc] init];
+        instance.modelHealth = [[HealthModel alloc] init];
     }
     return instance;
 }
@@ -37,7 +39,7 @@
 }
 
 - (void)getGPS {
-  //  NSLog(@"start GPS");
+    NSLog(@"start GPS");
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
@@ -55,6 +57,7 @@
     fp.fp_GPS_X = log;
     fp.fp_GPS_Y = lat;
     [fp setAddress];
+    fp.fp_h_count = ((Health *)[[modelHealth select:@"1=1 ORDER BY h_id DESC LIMIT 1,1"] objectAtIndex:0]).h_count;
     [modelFootprint insertData:fp];
     
     NSDictionary *d = [[[modelFootprint select:@"1=1 ORDER BY fp_id DESC"] objectAtIndex:0] getObj];

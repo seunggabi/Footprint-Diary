@@ -7,8 +7,7 @@
 //
 
 #import "FootprintViewController.h"
-#import "../Tool/TimerScheduler.h"
-#import "../Tool/HelperTool.h"
+#import "HelperTool.h"
 
 @interface FootprintViewController () <MTMapViewDelegate, MTMapReverseGeoCoderDelegate>
 

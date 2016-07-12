@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Model/Diary.h"
-#import "../Model/Emoticon.h"
-#import "../Model/Photo.h"
-#import "../Model/Sticker.h"
-#import "../Model/DiaryModel.h"
-#import "../Model/StickerModel.h"
-#import "../Model/EmoticonModel.h"
-#import "../Model/PhotoModel.h"
-#import "../Model/WeatherModel.h"
+#import "Diary.h"
+#import "Emoticon.h"
+#import "Photo.h"
+#import "Sticker.h"
+#import "DiaryModel.h"
+#import "StickerModel.h"
+#import "EmoticonModel.h"
+#import "PhotoModel.h"
+#import "WeatherModel.h"
 
 @interface DiaryEditViewController : UIViewController
 

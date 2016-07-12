@@ -35,6 +35,7 @@
 		286EC5D41D2C16F20002A8EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CC1D2C16F20002A8EB /* User.m */; };
 		286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 286EC5CE1D2C16F20002A8EB /* UserModel.m */; };
 		28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CBDB441D2C3C980053D0DE /* EmoticonModel.m */; };
+		28E1EA5B1D350CF5006DF06B /* PedometerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1EA5A1D350CF5006DF06B /* PedometerTool.m */; };
 		28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1891D2C491100D8B9E3 /* Photo.m */; };
 		28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */; };
 		28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18F1D2C58C200D8B9E3 /* Health.m */; };
@@ -358,6 +359,8 @@
 		286EC5CE1D2C16F20002A8EB /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		28CBDB431D2C3C980053D0DE /* EmoticonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonModel.h; sourceTree = "<group>"; };
 		28CBDB441D2C3C980053D0DE /* EmoticonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonModel.m; sourceTree = "<group>"; };
+		28E1EA591D350CF5006DF06B /* PedometerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerTool.h; sourceTree = "<group>"; };
+		28E1EA5A1D350CF5006DF06B /* PedometerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerTool.m; sourceTree = "<group>"; };
 		28E5E1881D2C491100D8B9E3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		28E5E1891D2C491100D8B9E3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		28E5E18B1D2C4A3500D8B9E3 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
@@ -859,6 +862,8 @@
 				28E5E4291D32A3FF00D8B9E3 /* TimerScheduler.m */,
 				28E5E4321D3427E000D8B9E3 /* FootprintTool.h */,
 				28E5E4331D3427E000D8B9E3 /* FootprintTool.m */,
+				28E1EA591D350CF5006DF06B /* PedometerTool.h */,
+				28E1EA5A1D350CF5006DF06B /* PedometerTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1553,6 +1558,7 @@
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
 				28E5E45B1D34F47400D8B9E3 /* PageViewController.m in Sources */,
 				7D033A671D324F2F0028CE44 /* DiaryEditViewController.m in Sources */,
+				28E1EA5B1D350CF5006DF06B /* PedometerTool.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,

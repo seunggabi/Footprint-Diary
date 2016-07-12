@@ -7,7 +7,7 @@
 //
 
 #import "Footprint.h"
-#import "../Tool/HelperTool.h"
+#import "HelperTool.h"
 
 @implementation Footprint
 
