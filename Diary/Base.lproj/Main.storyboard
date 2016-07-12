@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ANb-6Y-9LM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="82p-Nj-lfA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -237,7 +237,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="Diary" id="om3-VI-Bko"/>
                     <navigationItem key="navigationItem" title="Footprint Diary" id="m6o-TO-TU1">
-                        <barButtonItem key="rightBarButtonItem" image="save_24.png" id="R3B-Ny-phV"/>
+                        <barButtonItem key="rightBarButtonItem" image="save.png" id="R3B-Ny-phV"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1593,10 +1593,12 @@
         <!--Page View Controller-->
         <scene sceneID="HLs-GJ-CTn">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" pageSpacing="4" navigationOrientation="horizontal" spineLocation="none" id="wBK-0c-q9f" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" pageSpacing="4" navigationOrientation="horizontal" spineLocation="none" id="wBK-0c-q9f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3rq-4S-uAB"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDn-EE-VsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2502" y="-4283"/>
+            <point key="canvasLocation" x="-2060" y="-4279"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Heq-PU-HWL">
@@ -1606,17 +1608,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CPi-GI-SUY">
-                                <rect key="frame" x="0.0" y="47" width="320" height="369"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg" id="CPi-GI-SUY">
+                                <rect key="frame" x="0.0" y="47" width="320" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Kvx-p0-Lph"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBo-fD-LDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2121" y="-4289"/>
+            <point key="canvasLocation" x="-1691" y="-4273"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="w5B-Q8-xnW">
@@ -1625,12 +1628,23 @@
                     <view key="view" contentMode="scaleToFill" id="aWR-Fn-HJa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="al3-Ao-h1U">
+                                <rect key="frame" x="131" y="470" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wBK-0c-q9f" kind="push" id="aBx-ch-qDJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FF6-ur-Oe9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjw-ml-E6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1709" y="-4271"/>
+            <point key="canvasLocation" x="-2539" y="-4301"/>
         </scene>
         <!--Item-->
         <scene sceneID="IPn-WR-7Zh">
@@ -1769,6 +1783,7 @@
     <resources>
         <image name="Calendar-Month.png" width="30" height="30"/>
         <image name="FerrisWheel.jpg" width="750" height="1335"/>
+        <image name="KakaoTalk_Photo_2016-07-05-19-01-18_19.jpeg" width="750" height="736"/>
         <image name="Marker.png" width="30" height="30"/>
         <image name="balloon.jpg" width="550" height="1030"/>
         <image name="bottle.jpg" width="750" height="1335"/>
@@ -1791,7 +1806,7 @@
         <image name="photo_24.png" width="24" height="24"/>
         <image name="post.png" width="379" height="412"/>
         <image name="rainywindow.jpg" width="720" height="1280"/>
-        <image name="save_24.png" width="24" height="24"/>
+        <image name="save.png" width="24" height="24"/>
         <image name="sea.jpg" width="750" height="1335"/>
         <image name="sea2.jpg" width="750" height="1335"/>
         <image name="setting.png" width="30" height="30"/>
