@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Model/EmoticonModel.h"
-#import "../Model/Emoticon.h"
-//#import "../Model/Weahter.h"
+#import "EmoticonModel.h"
+#import "WeatherModel.h"
 
 @interface EmoticonViewController : UIViewController<UICollectionViewDelegate , UICollectionViewDataSource>{
 }

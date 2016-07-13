@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIColor+expanded.h"
-#import "../Model/DiaryModel.h"
+#import "DiaryModel.h"
 
 #define kVRGCalendarViewTopBarHeight 60
 #define kVRGCalendarViewWidth 320

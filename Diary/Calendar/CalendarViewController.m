@@ -7,6 +7,7 @@
 //
 
 #import "CalendarViewController.h"
+#import "HelperTool.h"
 
 @interface CalendarViewController ()
 
@@ -38,13 +39,10 @@
 -(Diary *) getDiary:(NSDate *)date{
     diary = [[Diary alloc] init];
     NSMutableArray *diaryList = [modelDiary select:nil];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyy-MM-dd"];
-    NSString *iDate = [dateFormatter stringFromDate:date];
+    NSString *selectDay = [[HelperTool getInstance] dateToString:date];
     for(int i = 0; i<diaryList.count; i++){
-        if([((Diary *)[diaryList objectAtIndex:i]).d_date isEqualToString:iDate]){
-            if(((Diary *)[diaryList objectAtIndex:i]).d_content)
-                return diary;
+        if([((Diary *)[diaryList objectAtIndex:i]).d_date isEqualToString:selectDay]){
+            return diary;
         }
     }
     return nil;
