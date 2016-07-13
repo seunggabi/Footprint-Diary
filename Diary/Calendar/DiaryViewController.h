@@ -22,19 +22,21 @@
 }
 
 @property int indexNumber;
-@property (strong, nonatomic) DiaryModel *modelDiary;
-@property (strong, nonatomic) Diary *selectedDiary;
 @property (assign, nonatomic) NSDate *indexDate;
+
+@property (strong, nonatomic) Diary *selectedDiary;
+@property (strong, nonatomic) DiaryModel *modelDiary;
+
 @property (strong, nonatomic) NSMutableArray *photo;
 @property (strong, nonatomic) NSMutableArray *emoticon;
 @property (strong, nonatomic) NSMutableArray *sticker;
 
-@property (strong, nonatomic) IBOutlet UIImageView *pImageView;
-@property (weak, nonatomic) IBOutlet UIButton *changeDiary;
-@property (weak, nonatomic) IBOutlet UIButton *delete;
 @property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIButton *delete;
+@property (weak, nonatomic) IBOutlet UIButton *changeDiary;
 @property (weak, nonatomic) IBOutlet UITextView *content;
 @property (retain, nonatomic) IBOutlet NSDictionary *dicArray;
+@property (strong, nonatomic) IBOutlet UIImageView *pImageView;
 
 -(void)loadDiaryData:(NSString *)date;
 -(void)delete:(NSString *)date;

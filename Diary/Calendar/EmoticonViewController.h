@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EmoticonViewController : UIViewController<UICollectionViewDelegate , UICollectionViewDataSource>{
-    
-    NSMutableArray *imgList;
 }
 
+@property (strong, nonatomic) NSMutableArray *imageList;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

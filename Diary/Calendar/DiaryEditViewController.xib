@@ -88,19 +88,19 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5r-Wf-Sn7">
-                    <rect key="frame" x="212" y="53" width="22" height="22"/>
+                    <rect key="frame" x="216" y="53" width="22" height="22"/>
                     <state key="normal" title="Button" image="radioButtonOff.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-Fq-lnG">
-                    <rect key="frame" x="280" y="53" width="22" height="22"/>
+                    <rect key="frame" x="283" y="53" width="22" height="22"/>
                     <state key="normal" title="Button" image="radioButtonOff.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-Ym-6ZM">
-                    <rect key="frame" x="318" y="53" width="22" height="22"/>
+                    <rect key="frame" x="320" y="53" width="22" height="22"/>
                     <state key="normal" title="Button" image="radioButtonOff.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-wd-D4c">
-                    <rect key="frame" x="246" y="53" width="22" height="22"/>
+                    <rect key="frame" x="248" y="53" width="22" height="22"/>
                     <state key="normal" title="Button" image="radioButtonOff.png"/>
                 </button>
             </subviews>
@@ -118,7 +118,7 @@
     <resources>
         <image name="beer.png" width="30" height="30"/>
         <image name="photo_24.png" width="24" height="24"/>
-        <image name="radioButtonOff.png" width="300" height="300"/>
+        <image name="radioButtonOff.png" width="16" height="16"/>
         <image name="smile.png" width="24" height="24"/>
         <image name="sunny.png" width="30" height="30"/>
     </resources>

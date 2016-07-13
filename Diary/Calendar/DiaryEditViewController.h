@@ -21,23 +21,27 @@
 
 @property (strong, nonatomic) UIImage *originImage;
 @property (strong, nonatomic) NSDate *indexDate;
+
+@property (strong, nonatomic) PhotoModel *modelPhoto;
 @property (strong, nonatomic) DiaryModel *modelDiary;
+@property (strong, nonatomic) WeatherModel *modelWeather;
 @property (strong, nonatomic) StickerModel *modelSticker;
 @property (strong, nonatomic) EmoticonModel *modelEmoticon;
-@property (strong, nonatomic) PhotoModel *modelPhoto;
-@property (strong, nonatomic) WeatherModel *modelWeather;
+
 @property (strong, nonatomic) Diary *diary;
-@property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) Sticker *sticker;
+@property (strong, nonatomic) Emoticon *emoticon;
+
+@property (strong, nonatomic) IBOutlet UIButton *radioButton1;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton2;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton3;
+@property (strong, nonatomic) IBOutlet UIButton *radioButton4;
+
 @property (retain, nonatomic) IBOutlet UIButton *btnSave;
 @property (strong, nonatomic) IBOutlet UIImageView *pImageView;
 @property (retain, nonatomic) IBOutlet UITextView *content;
 @property (weak, nonatomic) IBOutlet UITextField *title;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
-@property (strong, nonatomic) IBOutlet UIButton *radioButton1;
-@property (strong, nonatomic) IBOutlet UIButton *radioButton2;
-@property (strong, nonatomic) IBOutlet UIButton *radioButton3;
-@property (strong, nonatomic) IBOutlet UIButton *radioButton4;
 
 -(IBAction)runGeneralPicker;
 -(IBAction)writeDiary;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zVY-Mg-dRu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zVY-Mg-dRu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-1854.5" y="-3522.5"/>
         </scene>
-        <!--일기목록-->
+        <!--일기 목록-->
         <scene sceneID="S3r-oK-lgc">
             <objects>
                 <viewController id="ipC-EX-pCR" customClass="DiaryListViewController" sceneMemberID="viewController">
@@ -58,44 +58,35 @@
                         <viewControllerLayoutGuide type="bottom" id="mJ1-WW-E1g"/>
                     </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="QBG-rD-r3r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시작일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyA-TC-Icl">
-                                <rect key="frame" x="50" y="91" width="45" height="21"/>
+                                <rect key="frame" x="35" y="91" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-9J-chx">
-                                <rect key="frame" x="300" y="87" width="73" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="touchEDate:" destination="ipC-EX-pCR" eventType="editingDidEnd" id="WsK-QW-cgL"/>
-                                    <action selector="touchEDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="coZ-oa-YeU"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="종료일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-Ip-a80">
-                                <rect key="frame" x="247" y="90" width="45" height="21"/>
+                                <rect key="frame" x="201" y="91" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUa-6n-mTS">
-                                <rect key="frame" x="206" y="90" width="46" height="21"/>
+                                <rect key="frame" x="185" y="91" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-1D-xck">
-                                <rect key="frame" x="0.0" y="120" width="414" height="125"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="126"/>
                                 <date key="date" timeIntervalSinceReferenceDate="489932809.19634598">
                                     <!--2016-07-11 12:26:49 +0000-->
                                 </date>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-9b-Jx6">
-                                <rect key="frame" x="103" y="87" width="73" height="30"/>
+                                <rect key="frame" x="88" y="87" width="90" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -104,16 +95,25 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Vz-0Aa">
-                                <rect key="frame" x="0.0" y="245" width="414" height="450"/>
+                                <rect key="frame" x="0.0" y="245" width="375" height="373"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-9J-chx">
+                                <rect key="frame" x="254" y="87" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="touchEDate:" destination="ipC-EX-pCR" eventType="editingDidEnd" id="WsK-QW-cgL"/>
+                                    <action selector="touchEDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="coZ-oa-YeU"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="일기목록" id="qiW-W1-aOd">
+                    <navigationItem key="navigationItem" title="일기 목록" id="qiW-W1-aOd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="N6B-Ix-6V0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dxR-da-oqS">
-                                <rect key="frame" x="311" y="7" width="83" height="30"/>
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="보기"/>
                                 <connections>
@@ -122,7 +122,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="datePicker" destination="5Fo-1D-xck" id="neM-hT-e8b"/>
                         <outlet property="eDateText" destination="Kdg-9J-chx" id="LMJ-Sb-kYp"/>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HG-Vm-Y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1342.5" y="-2571.1267605633802"/>
+            <point key="canvasLocation" x="-1342.5" y="-2571.5"/>
         </scene>
         <!--일기쓰기-->
         <scene sceneID="Zs2-Ni-fzx">

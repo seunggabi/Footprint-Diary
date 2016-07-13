@@ -25,7 +25,6 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -62,13 +61,11 @@
 }
 
 -(IBAction)delete:(id)sender {
-    //Call alert view for notice user delete note
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Noctice"
                                                     message:@"Do you want to delete this file?"
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:@"Cancel",nil];
-    //Set tag for alert
     alert.tag = 1;
     [alert show];
 }
@@ -85,15 +82,14 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 1) {
-        if(buttonIndex != 1) {//Same alert for delete note
+        if(buttonIndex != 1) {
             NSMutableArray *dataMutableArray = [[NSUserDefaults standardUserDefaults]mutableArrayValueForKey:@"diary"];
-            //Remove object contain current note from array
             [dataMutableArray removeObjectAtIndex:indexNumber];
-            //Back to main view
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }
+
 -(IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
