@@ -18,82 +18,63 @@
 @synthesize diary;
 @synthesize sDateText;
 @synthesize eDateText;
-@synthesize datePicker;
 @synthesize tempText;
+@synthesize datePicker;
+@synthesize datePickerScreen;
 @synthesize modelDiary;
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     modelDiary = [[DiaryModel alloc] init];
-    [modelDiary create];
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.date = [NSDate date];
     [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
-    datePicker.hidden = YES;
+    datePickerScreen.hidden = YES;
     
-    sDateText.keyboardType = NO;
     sDateText.delegate = self;
-    eDateText.keyboardType = NO;
     eDateText.delegate = self;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
-}
-
 -(void)changeDatePicker{
-    NSDateFormatter *dateFormatter;
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyy-MM-dd"];
-    tempText.text = [dateFormatter stringFromDate:datePicker.date];
-    NSLog(@"%@", [dateFormatter stringFromDate:datePicker.date]);
+    tempText.text = [[HelperTool getInstance] dateToString:datePicker.date];
     [tempText setNeedsDisplay];
 }
                            
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [table reloadData];
 }
 
-- (IBAction)showDiaryList:(id)sender {
+-(IBAction)showDiaryList:(id)sender {
     [self loadDiaryListData:sDateText.text endDate:eDateText.text];
+    
 }
 
-- (IBAction)touchSDate:(id)sender {
-    datePicker.hidden = NO;
-    tempText = sDateText;
+-(IBAction)touchDate:(id)sender {
+    datePickerScreen.hidden = NO;
+    tempText = sender;
+    tempText.text = [[HelperTool getInstance] dateToString:datePicker.date];
 }
 
-- (IBAction)touchEDate:(id)sender {
-    datePicker.hidden = NO;
-    tempText = eDateText;
-}
-
--(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate{
-    diary = [[Diary alloc] init];
-    NSMutableArray *diaryList = [modelDiary select:nil];
-    return diaryList;
-}
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSMutableArray * searchModel = [self loadDiaryListData:sDateText.text endDate:eDateText.text];
     return searchModel.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *diaryModel = [modelDiary select:nil];
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Diary.h"
 #import "DiaryModel.h"
 #import "DiaryViewController.h"
 #import "DiaryEditViewController.h"
+#import "HelperTool.h"
 
 @interface DiaryListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >{
 }
@@ -27,15 +27,12 @@
 
 @property (retain, nonatomic) IBOutlet UITableView  *table;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
+@property (strong, nonatomic) IBOutlet UIView *datePickerScreen;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 -(IBAction)showDiaryList:(UIButton *)sender;
--(IBAction)touchSDate:(id)sender;
--(IBAction)touchEDate:(id)sender;
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
+-(IBAction)touchDate:(id)sender;
 
 -(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
-
 
 @end

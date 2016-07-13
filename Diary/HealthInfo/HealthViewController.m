@@ -48,7 +48,7 @@
         chartData[((int)[h.h_time timeIntervalSince1970]-startSecond)/60] = h.h_count;
     }
     
-    int min = 0;
+    int min = 0; 
     for(int i=0; i<minute; i++) {
         if(min < [chartData[i] intValue]) {
             min=[chartData[i] intValue];
