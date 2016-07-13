@@ -16,7 +16,6 @@
 		22A1D58F1D324DB600058642 /* PasswordSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5851D324DB600058642 /* PasswordSettingViewController.m */; };
 		22A1D5901D324DB600058642 /* SettingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5871D324DB600058642 /* SettingMenuViewController.m */; };
 		22A1D5911D324DB600058642 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5891D324DB600058642 /* SettingTableViewController.m */; };
-		284D7A7B1D3682E50056CC4B /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A661D3682E50056CC4B /* FootprintViewController.m */; };
 		284D7A7C1D3682E50056CC4B /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A681D3682E50056CC4B /* HealthViewController.m */; };
 		284D7A7D1D3682E50056CC4B /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */; };
 		284D7A7E1D3682E50056CC4B /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6C1D3682E50056CC4B /* PageViewController.m */; };
@@ -27,6 +26,7 @@
 		284D7A831D3682E50056CC4B /* PedometerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A781D3682E50056CC4B /* PedometerTool.m */; };
 		284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A7A1D3682E50056CC4B /* TimerScheduler.m */; };
 		284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A861D368B6C0056CC4B /* DiaryViewController.m */; };
+		284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -330,8 +330,6 @@
 		22A1D5871D324DB600058642 /* SettingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingMenuViewController.m; path = Setting/SettingMenuViewController.m; sourceTree = "<group>"; };
 		22A1D5881D324DB600058642 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = Setting/SettingTableViewController.h; sourceTree = "<group>"; };
 		22A1D5891D324DB600058642 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = Setting/SettingTableViewController.m; sourceTree = "<group>"; };
-		284D7A651D3682E50056CC4B /* FootprintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintViewController.h; sourceTree = "<group>"; };
-		284D7A661D3682E50056CC4B /* FootprintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
 		284D7A671D3682E50056CC4B /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
 		284D7A681D3682E50056CC4B /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		284D7A691D3682E50056CC4B /* PageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
@@ -352,6 +350,8 @@
 		284D7A7A1D3682E50056CC4B /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
 		284D7A851D368B6C0056CC4B /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
 		284D7A861D368B6C0056CC4B /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
+		284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
+		284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -714,8 +714,6 @@
 		284D7A641D3682E50056CC4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				284D7A651D3682E50056CC4B /* FootprintViewController.h */,
-				284D7A661D3682E50056CC4B /* FootprintViewController.m */,
 				284D7A671D3682E50056CC4B /* HealthViewController.h */,
 				284D7A681D3682E50056CC4B /* HealthViewController.m */,
 				284D7A691D3682E50056CC4B /* PageScrollViewController.h */,
@@ -724,6 +722,8 @@
 				284D7A6C1D3682E50056CC4B /* PageViewController.m */,
 				284D7A851D368B6C0056CC4B /* DiaryViewController.h */,
 				284D7A861D368B6C0056CC4B /* DiaryViewController.m */,
+				284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */,
+				284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */,
 			);
 			name = Controller;
 			path = Model/Controller;
@@ -732,9 +732,9 @@
 		284D7A6D1D3682E50056CC4B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				284D7A701D3682E50056CC4B /* FSLineChart */,
 				284D7A6E1D3682E50056CC4B /* FootprintTool.h */,
 				284D7A6F1D3682E50056CC4B /* FootprintTool.m */,
-				284D7A701D3682E50056CC4B /* FSLineChart */,
 				284D7A751D3682E50056CC4B /* HelperTool.h */,
 				284D7A761D3682E50056CC4B /* HelperTool.m */,
 				284D7A771D3682E50056CC4B /* PedometerTool.h */,
@@ -1510,6 +1510,7 @@
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
+				284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */,
 				7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */,
 				22A1D58E1D324DB600058642 /* PasswordFindViewController.m in Sources */,
 				7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */,
@@ -1526,7 +1527,6 @@
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
 				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
-				284D7A7B1D3682E50056CC4B /* FootprintViewController.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,

@@ -109,7 +109,7 @@
     return h;
 }
 
--(Health *) RecentData:(NSString *)date {
+-(Health *) recentData:(NSString *)date {
     Health *h = [[Health alloc] init];
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM Health WHERE h_date='%@' ORDER BY h_id DESC Limit 1,1", date];
     sqlite3_stmt *stmt;

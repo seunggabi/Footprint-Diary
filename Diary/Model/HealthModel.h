@@ -24,6 +24,6 @@
 -(void) delete :(NSString *)where;
 -(void) drop;
 -(Health *) getSampleData;
--(Health *) RecentData :(NSString *)date;
+-(Health *) recentData :(NSString *)date;
 
 @end

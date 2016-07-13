@@ -1,8 +1,8 @@
 //
-//  DiaryViewController.h
+//  DiaryEditViewController.h
 //  Diary
 //
-//  Created by 김승갑 on 2016. 7. 13..
+//  Created by 김승갑 on 2016. 7. 14..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 #import "PhotoModel.h"
 #import "HealthModel.h"
 
-@interface DiaryViewController : ViewController <MTMapViewDelegate>
+@interface DiaryEditViewController : ViewController <MTMapViewDelegate>
 
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) FootprintModel *modelFootprint;
@@ -26,7 +26,7 @@
 @property (strong, nonatomic) PhotoModel *modelPhoto;
 @property (strong, nonatomic) HealthModel *modelHealth;
 
-@property (strong, nonatomic) IBOutlet UILabel *titleView;
+@property (strong, nonatomic) IBOutlet UITextField *titleView;
 @property (strong, nonatomic) IBOutlet UIView *mapScreen;
 @property (strong, nonatomic) MTMapView *mapView;
 

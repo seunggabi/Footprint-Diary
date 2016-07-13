@@ -26,7 +26,7 @@
     char *err;
     
     if(_createQuery == nil) {
-        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Sticker' (s_id INTEGER PRIMARY KEY AUTOINCREMENT, s_date TEXT, s_color INTEGER, s_e_id INTEGER)"];
+        _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Sticker' (s_id INTEGER PRIMARY KEY AUTOINCREMENT, s_date TEXT, s_e_id INTEGER)"];
     }
     if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -48,8 +48,7 @@
             
             s.s_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             s.s_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            s.s_color = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 2)];
-            s.s_e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 3)];
+            s.s_e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 2)];
             [list addObject:s];
         }
         sqlite3_finalize(stmt);
@@ -60,7 +59,7 @@
 -(void) insertData :(Sticker *)s {
     char *err;
         
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Sticker (s_date, s_color, s_e_id) VALUES ('%@', '%@', '%@')", s.s_date, s.s_color, s.s_e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Sticker (s_date, s_e_id) VALUES ('%@', '%@')", s.s_date, s.s_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Sticker Failed!");
@@ -104,7 +103,6 @@
 -(Sticker *) getSampleData {
     Sticker *s = [[Sticker alloc] init];
     s.s_date = @"2016-07-05";
-    s.s_color = @0;
     s.s_e_id = @0;
     return s;
 }

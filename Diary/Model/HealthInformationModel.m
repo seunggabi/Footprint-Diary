@@ -84,7 +84,7 @@
         NSAssert(0,@"DELETE HealthInfo Failed!");
     }
     else {
-        NSLog(@"DELETE Health Success!");
+        NSLog(@"DELETE HealthInfo Success!");
     }
 }
 
@@ -97,7 +97,7 @@
         NSAssert(0,@"DROP HealthInfo Failed!");
     }
     else {
-        NSLog(@"DROP Health Success!");
+        NSLog(@"DROP HealthInfo Success!");
     }
 }
 

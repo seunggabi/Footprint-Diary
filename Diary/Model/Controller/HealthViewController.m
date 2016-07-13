@@ -14,20 +14,33 @@
 
 @implementation HealthViewController
 
+@synthesize selectDate;
 @synthesize modelHealth;
 @synthesize modelHealthInfo;
 @synthesize chart;
+@synthesize healthView;
+@synthesize tip1;
+@synthesize tip2;
+@synthesize yearView;
+@synthesize monthView;
+@synthesize dayView;
 
--(void)viewDidLoad {
+-(void) viewDidLoad {
+    [super viewDidLoad];
     modelHealth = [[HealthModel alloc] init];
     modelHealthInfo = [[HealthInformationModel alloc] init];
-    NSString *today = [[HelperTool getInstance] getToday];
-    [super viewDidLoad];
-    
-    [self loadChartWithDate:today];
+    if(selectDate == nil) {
+        selectDate = [[HelperTool getInstance] getToday];
+    }
+    [self loadChartWithDate:selectDate];
+    [self viewSetting];
 }
 
--(void)loadChartWithDate:(NSString *)date {
+-(void) viewWillAppear:(BOOL)animated {
+    [self loadChartWithDate:selectDate];
+}
+
+-(void) loadChartWithDate:(NSString *)date {
     NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", date]];
     for(int i=0; i<healthList.count; i++) {
         NSLog(@"%@",[((Health *)[healthList objectAtIndex:i]) getObj]);
@@ -77,6 +90,24 @@
     };
     
     [chart setChartData:chartData];
+}
+
+-(void) viewSetting {
+    Health *h = [modelHealth recentData:selectDate];
+    if(h == nil) {
+        h = [[Health alloc] init];
+        h.h_count = @0;
+    }
+    
+    healthView.text = [h.h_count stringValue];
+    NSMutableArray<HealthInformation *> *tips = [modelHealthInfo getInfoTwo];
+    tip1.text = [tips objectAtIndex:0].hi_comment;
+    tip2.text = [tips objectAtIndex:1].hi_comment;
+    
+    NSMutableArray *dateElement = [selectDate componentsSeparatedByString:@"-"];
+    yearView.text = [dateElement objectAtIndex:0];
+    monthView.text = [dateElement objectAtIndex:1];
+    dayView.text = [dateElement objectAtIndex:2];
 }
 
 @end

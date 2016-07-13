@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSDate *indexDate;
 @property (strong, nonatomic) Diary *diary;
+@property (strong, nonatomic) NSMutableArray *diaryList;
 @property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) CalendarView *calendar;

@@ -1,19 +1,19 @@
 //
-//  DiaryViewController.m
+//  DiaryEditViewController.m
 //  Diary
 //
-//  Created by 김승갑 on 2016. 7. 13..
+//  Created by 김승갑 on 2016. 7. 14..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "DiaryViewController.h"
+#import "DiaryEditViewController.h"
 #import "HelperTool.h"
 
-@interface DiaryViewController ()
+@interface DiaryEditViewController ()
 
 @end
 
-@implementation DiaryViewController
+@implementation DiaryEditViewController
 
 @synthesize diary;
 @synthesize modelDiary;

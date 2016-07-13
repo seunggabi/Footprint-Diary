@@ -86,7 +86,7 @@
         NSAssert(0,@"DELETE Weather Failed!");
     }
     else {
-        NSLog(@"DELETE Health Success!");
+        NSLog(@"DELETE Weather Success!");
     }
 }
 
@@ -99,7 +99,7 @@
         NSAssert(0,@"DROP Weather Failed!");
     }
     else {
-        NSLog(@"DROP Health Success!");
+        NSLog(@"DROP Weather Success!");
     }
 }
 

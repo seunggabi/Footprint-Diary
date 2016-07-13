@@ -16,6 +16,7 @@
 @implementation CalendarViewController
 
 @synthesize diary;
+@synthesize diaryList;
 @synthesize emoticon;
 @synthesize indexDate;
 @synthesize modelDiary;
@@ -26,7 +27,7 @@
     modelDiary = [[DiaryModel alloc] init];
     calendar = [[CalendarView alloc] init];
     calendar.delegate = self;
-    calendar.diaryList = [modelDiary select:nil];
+    calendar.diaryList = diaryList = [modelDiary select:nil];
     [self.calendarScreen addSubview:calendar];
 }
 
@@ -37,12 +38,11 @@
 }
 
 -(Diary *) getDiary:(NSDate *)date{
-    diary = [[Diary alloc] init];
-    NSMutableArray *diaryList = [modelDiary select:nil];
     NSString *selectDay = [[HelperTool getInstance] dateToString:date];
     for(int i = 0; i<diaryList.count; i++){
-        if([((Diary *)[diaryList objectAtIndex:i]).d_date isEqualToString:selectDay]){
-                return diary;
+        diary = [diaryList objectAtIndex:i];
+        if([diary.d_date isEqualToString:selectDay]){
+            return diary;
         }
     }
     return nil;
@@ -59,7 +59,25 @@
 }
 
 -(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
+    diary = [self getDiary:date];
+    if(diary == nil) {
+        diary = [[Diary alloc] init];
+        diary.d_date = [[HelperTool getInstance] dateToString:date];
+        [self performSegueWithIdentifier:@"DiaryEditView" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"DiaryView" sender:self];
+    }
+}
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"DiaryView"]) {
+        DiaryViewController *diaryViewController = segue.destinationViewController;
+        diaryViewController.diary = diary;
+    } else if ([segue.identifier isEqualToString:@"DiaryEditView"]) {
+        DiaryViewController *diaryViewController = segue.destinationViewController;
+        diaryViewController.diary = diary;
+    }
 }
 
 - (void)viewDidUnload{
