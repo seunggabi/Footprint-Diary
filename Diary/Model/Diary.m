@@ -18,14 +18,14 @@
 @synthesize d_content;
 @synthesize d_e_id;
 
-+(Diary *) diary:(NSString *)date time:(NSDate *)time w_id:(NSNumber *)w_id title:(NSString *)title content:(NSString *)content e_id:(NSNumber *)e_id {
++(Diary *) diary:(NSString *)date time:(NSDate *)time w_id:(NSNumber *)w_id title:(NSString *)title content:(NSString *)content e_id_d:(NSNumber *)e_d_id {
     Diary *d = [[Diary alloc] init];
     d.d_date = date;
     d.d_time = time;
     d.d_w_id = w_id;
     d.d_title = title;
     d.d_content = content;
-    d.d_e_id = e_id;
+    d.d_e_id = e_d_id;
     return d;
 }
 

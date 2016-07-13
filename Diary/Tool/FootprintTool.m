@@ -45,7 +45,7 @@
     [locationManager startUpdatingLocation];
 }
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+-(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     [locationManager stopUpdatingLocation];
     CLLocation *crnLoc = [locations lastObject];

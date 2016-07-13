@@ -16,7 +16,7 @@
 @property (strong, nonatomic) HealthModel *modelHealth;
 
 +(PedometerTool *) getInstance;
--(void)start;
--(void)getPedometerCount;
+-(void) start;
+-(void) getPedometerCount;
 
 @end

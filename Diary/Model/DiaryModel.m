@@ -64,7 +64,7 @@
 -(void) insertData :(Diary *)d {
     char *err;
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_date, d_time, d_w_id, d_title, d_content, d_e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [d.d_time timeIntervalSince1970], d.d_w_id, d.d_title, d.d_content, d.d_e_id];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Diary (d_date, d_time, d_w_id, d_title, d_content, d_e_id) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", d.d_date, [[[HelperTool getInstance] stringToDate:d.d_date] timeIntervalSince1970], d.d_w_id, d.d_title, d.d_content, d.d_e_id];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT Diary Failed!");

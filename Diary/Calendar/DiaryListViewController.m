@@ -8,25 +8,32 @@
 
 #import "DiaryListViewController.h"
 
-@interface DiaryListViewController () <UITextFieldDelegate>
+@interface DiaryListViewController ()
 
 @end
 
 @implementation DiaryListViewController
 
 @synthesize table;
-@synthesize diary;
 @synthesize sDateText;
 @synthesize eDateText;
-@synthesize tempText;
+@synthesize selectText;
 @synthesize datePicker;
 @synthesize datePickerScreen;
+@synthesize diaryList;
+@synthesize weatherList;
+@synthesize emoticonList;
 @synthesize modelDiary;
 
--(void)viewDidLoad {
+-(void) viewDidLoad {
     [super viewDidLoad];
     
     modelDiary = [[DiaryModel alloc] init];
+    [self loadDiaryListData:@"" endDate:@""];
+    for(int i=0; i<diaryList.count; i++) {
+        NSLog(@"%@", [[diaryList objectAtIndex:i] getObj]);
+    }
+    
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.date = [NSDate date];
     [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
@@ -35,74 +42,69 @@
     sDateText.delegate = self;
     eDateText.delegate = self;
 }
-
--(void)changeDatePicker{
-    tempText.text = [[HelperTool getInstance] dateToString:datePicker.date];
-    [tempText setNeedsDisplay];
-}
                            
--(void)didReceiveMemoryWarning {
+-(void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
--(void)viewWillAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [table reloadData];
 }
 
--(IBAction)showDiaryList:(id)sender {
-    [self loadDiaryListData:sDateText.text endDate:eDateText.text];
-    
+-(void) loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate {
+    if([sDate isEqualToString:@""] && [eDate isEqualToString:@""])
+        diaryList = [modelDiary select:nil];
+    else {
+        if([sDate isEqualToString:@""])
+            sDate = @"1970-01-01";
+        else if([eDate isEqualToString:@""])
+            eDate = [[HelperTool getInstance] getToday];
+        diaryList = [modelDiary getTermList:sDate eDate:eDate];
+    }
 }
 
--(IBAction)touchDate:(id)sender {
+-(void) changeDatePicker{
+    selectText.text = [[HelperTool getInstance] dateToString:datePicker.date];
+}
+
+-(IBAction) showDiaryList:(id)sender {
+    [self loadDiaryListData:sDateText.text endDate:eDateText.text];
+    datePickerScreen.hidden = YES;
+    [selectText endEditing:YES];
+    [table reloadData];
+}
+
+-(IBAction) touchDate:(id)sender {
     datePickerScreen.hidden = NO;
-    tempText = sender;
-    tempText.text = [[HelperTool getInstance] dateToString:datePicker.date];
+    selectText = sender;
+    if(![selectText.text isEqualToString:@""])
+        [datePicker setDate:[[HelperTool getInstance] stringToDate:selectText.text]];
+    selectText.text = [[HelperTool getInstance] dateToString:datePicker.date];
+    [selectText endEditing:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSMutableArray * searchModel = [self loadDiaryListData:sDateText.text endDate:eDateText.text];
-    return searchModel.count;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.diaryList.count;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSMutableArray *diaryModel = [modelDiary select:nil];
-
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-    background.image = [UIImage imageNamed:@"cell_background.png"];
-    [cell addSubview:background];
-    
-    UILabel *lblTitleNote = [[UILabel alloc] initWithFrame:CGRectMake(47, 7, 185, 36)];
-    [lblTitleNote setFont:[UIFont boldSystemFontOfSize:13]];
- //   lblTitleNote.text = ((Diary *)[diaryModel objectAtIndex:indexPath.row]).d_content;
-    [lblTitleNote setBackgroundColor:[UIColor clearColor]];
-    [cell addSubview:lblTitleNote];
-    
-    UILabel *lblDateTime = [[UILabel alloc] initWithFrame:CGRectMake(238, 7, 80, 36)];
-    [lblDateTime setFont:[UIFont systemFontOfSize:13]];
-//    lblDateTime.text = ((Diary *)[diaryModel objectAtIndex:indexPath.row]).d_date;
-    [lblDateTime setBackgroundColor:[UIColor clearColor]];
-    lblDateTime.textAlignment = UITextAlignmentRight;
-    [cell addSubview:lblDateTime];
-
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    Diary *d = [diaryList objectAtIndex:indexPath.row];
+    cell.textLabel.text = d.d_content;
+    NSLog(@"%@", [d getObj]);
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [table deselectRowAtIndexPath:indexPath animated:YES];
-    NSLog(@"didSelectRowAtIndexPath");
-    diary = [[Diary alloc] init];
-    NSMutableArray *diaryList = [modelDiary select:nil];
     DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
     
     [self presentViewController:diaryView animated:YES completion:nil];

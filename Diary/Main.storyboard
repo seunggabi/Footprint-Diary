@@ -61,66 +61,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="97w-Vz-0Aa">
-                                <rect key="frame" x="0.0" y="111" width="375" height="507"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUa-6n-mTS">
-                                <rect key="frame" x="182" y="76" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-9J-chx">
-                                <rect key="frame" x="57" y="72" width="100" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="touchDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="6jD-b4-O1R"/>
-                                </connections>
-                            </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-Al-83I">
-                                <rect key="frame" x="0.0" y="111" width="375" height="126"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-1D-xck">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="489932809.19634598">
-                                            <!--2016-07-11 12:26:49 +0000-->
-                                        </date>
-                                    </datePicker>
-                                </subviews>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-9b-Jx6">
-                                <rect key="frame" x="216" y="72" width="100" height="30"/>
+                                <rect key="frame" x="210" y="72" width="100" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="touchDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="Kv0-30-fQq"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUa-6n-mTS">
+                                <rect key="frame" x="183" y="77" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iK-aE-VWP">
+                                <rect key="frame" x="325" y="72" width="30" height="30"/>
+                                <state key="normal" title="조회"/>
+                                <connections>
+                                    <action selector="showDiaryList:" destination="ipC-EX-pCR" eventType="touchUpInside" id="Hll-cS-t22"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8RQ-gw-42y">
+                                <rect key="frame" x="0.0" y="110" width="374" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xcz-Zv-ewZ">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xcz-Zv-ewZ" id="ysP-Zq-IJ1">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ipC-EX-pCR" id="gSy-HQ-94b"/>
+                                    <outlet property="delegate" destination="ipC-EX-pCR" id="AMy-Iy-2U8"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-Al-83I">
+                                <rect key="frame" x="1" y="106" width="375" height="139"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-1D-xck">
+                                        <rect key="frame" x="0.0" y="7" width="375" height="126"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="489932809.19634598">
+                                            <!--2016-07-11 12:26:49 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="touchOutsideDate:" destination="ipC-EX-pCR" eventType="editingDidEnd" id="DZe-CB-D55"/>
+                                            <action selector="touchOutsideDate:" destination="ipC-EX-pCR" eventType="touchUpOutside" id="wmW-zs-LxG"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-9J-chx">
+                                <rect key="frame" x="64" y="72" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="touchDate:" destination="ipC-EX-pCR" eventType="editingDidBegin" id="6jD-b4-O1R"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="일기 목록" id="qiW-W1-aOd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="N6B-Ix-6V0">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dxR-da-oqS">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="보기"/>
-                                <connections>
-                                    <action selector="goDiaryView:" destination="ipC-EX-pCR" eventType="touchUpInside" id="9gT-qx-McL"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="일기 목록" id="MQ2-pw-OvX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="datePicker" destination="5Fo-1D-xck" id="iyK-vv-sWk"/>
-                        <outlet property="datePickerScreen" destination="CBV-Al-83I" id="LIX-OK-MyK"/>
-                        <outlet property="eDateText" destination="Kdg-9J-chx" id="LMJ-Sb-kYp"/>
-                        <outlet property="sDateText" destination="NFd-9b-Jx6" id="7Yd-2V-rx2"/>
+                        <outlet property="datePicker" destination="5Fo-1D-xck" id="NiU-vh-AW2"/>
+                        <outlet property="datePickerScreen" destination="CBV-Al-83I" id="epB-Sy-TFi"/>
+                        <outlet property="eDateText" destination="NFd-9b-Jx6" id="494-4O-wdk"/>
+                        <outlet property="sDateText" destination="Kdg-9J-chx" id="Cf6-eg-hhE"/>
+                        <outlet property="table" destination="8RQ-gw-42y" id="D4y-N0-Ifq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HG-Vm-Y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>

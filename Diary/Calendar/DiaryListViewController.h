@@ -12,27 +12,26 @@
 #import "DiaryEditViewController.h"
 #import "HelperTool.h"
 
-@interface DiaryListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate >{
+@interface DiaryListViewController : UIViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>{
 }
-
-@property (strong, nonatomic) Diary *diary;
-@property (strong, nonatomic) DiaryModel *modelDiary;
-
-@property (strong, nonatomic) NSMutableArray *diaryList;
-@property (strong, nonatomic) NSMutableArray *stickerList;
-
 @property (strong, nonatomic) IBOutlet UITextField *sDateText;
 @property (strong, nonatomic) IBOutlet UITextField *eDateText;
-@property (strong, nonatomic) IBOutlet UITextField *tempText;
+@property (strong, nonatomic) IBOutlet UITextField *selectText;
 
 @property (retain, nonatomic) IBOutlet UITableView  *table;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
 @property (strong, nonatomic) IBOutlet UIView *datePickerScreen;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
--(IBAction)showDiaryList:(UIButton *)sender;
--(IBAction)touchDate:(id)sender;
+@property (strong, nonatomic) DiaryModel *modelDiary;
+@property (strong, nonatomic) NSMutableArray *diaryList;
+@property (strong, nonatomic) NSMutableArray *weatherList;
+@property (strong, nonatomic) NSMutableArray *emoticonList;
 
--(NSMutableArray *)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
+-(IBAction) showDiaryList:(UIButton *)sender;
+-(IBAction) touchDate:(id)sender;
+-(void) changeDatePicker;
+
+-(void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
 
 @end

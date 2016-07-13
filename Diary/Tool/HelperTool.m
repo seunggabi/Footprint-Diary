@@ -96,6 +96,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDate *d = [dateFormat dateFromString:date];
+    [d initWithTimeInterval:60*60*9 sinceDate:d];
     return d;
 }
 

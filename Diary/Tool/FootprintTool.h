@@ -22,6 +22,6 @@
 +(FootprintTool *) getInstance;
 -(void) start;
 -(void) getGPS;
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+-(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 
 @end
