@@ -176,6 +176,7 @@
 
 -(IBAction)goEmoticon:(id)sender{
     EmoticonViewController *emoticonView = [[EmoticonViewController alloc] initWithNibName:@"EmoticonViewController" bundle:nil];
+    emoticonView.emoticonList = [modelEmoticon select:nil];
     [self presentViewController:emoticonView animated:YES completion:nil];
 }
 

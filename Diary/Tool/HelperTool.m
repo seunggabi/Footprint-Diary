@@ -17,7 +17,7 @@
 #import "HealthModel.h"
 #import "HealthInformationModel.h"
 #import "WeatherModel.h"
-
+  
 @implementation HelperTool
 
 @synthesize apiKey;

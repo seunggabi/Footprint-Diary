@@ -241,8 +241,6 @@
 		28E1EC031D355395006DF06B /* wind5.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EB301D355395006DF06B /* wind5.png */; };
 		28E1EC041D355395006DF06B /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EB311D355395006DF06B /* windy.png */; };
 		28E1EC051D355395006DF06B /* 참잘했어요.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EB321D355395006DF06B /* 참잘했어요.png */; };
-		28E1EC081D355499006DF06B /* radioButtonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EC061D355499006DF06B /* radioButtonOff.png */; };
-		28E1EC091D355499006DF06B /* radioButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EC071D355499006DF06B /* radioButtonOn.png */; };
 		28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E1891D2C491100D8B9E3 /* Photo.m */; };
 		28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18C1D2C4A3500D8B9E3 /* PhotoModel.m */; };
 		28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E18F1D2C58C200D8B9E3 /* Health.m */; };
@@ -300,6 +298,8 @@
 		7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E92D1D3522DD00575DED /* EmoticonViewController.m */; };
 		7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */; };
 		7D11ECAC1D35333D00575DED /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11ECAB1D35333D00575DED /* Cell.xib */; };
+		7D77B5D91D363F230098043E /* radioButtonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D77B5D71D363F230098043E /* radioButtonOff.png */; };
+		7D77B5DA1D363F230098043E /* radioButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D77B5D81D363F230098043E /* radioButtonOn.png */; };
 		7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */; };
 		7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026E1D2FD09900B57D4D /* NSMutableArray+convenience.m */; };
 		7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502701D2FD09900B57D4D /* UIColor+expanded.m */; };
@@ -573,8 +573,6 @@
 		28E1EB301D355395006DF06B /* wind5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind5.png; sourceTree = "<group>"; };
 		28E1EB311D355395006DF06B /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
 		28E1EB321D355395006DF06B /* 참잘했어요.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "참잘했어요.png"; sourceTree = "<group>"; };
-		28E1EC061D355499006DF06B /* radioButtonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOff.png; sourceTree = "<group>"; };
-		28E1EC071D355499006DF06B /* radioButtonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOn.png; sourceTree = "<group>"; };
 		28E5E1881D2C491100D8B9E3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		28E5E1891D2C491100D8B9E3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		28E5E18B1D2C4A3500D8B9E3 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
@@ -653,6 +651,8 @@
 		7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewController.xib; sourceTree = "<group>"; };
 		7D11E9311D3523EF00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		7D11ECAB1D35333D00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		7D77B5D71D363F230098043E /* radioButtonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOff.png; sourceTree = "<group>"; };
+		7D77B5D81D363F230098043E /* radioButtonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOn.png; sourceTree = "<group>"; };
 		7D95026B1D2FD09900B57D4D /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
 		7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
 		7D95026D1D2FD09900B57D4D /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
@@ -791,8 +791,8 @@
 		28E1EA5C1D355395006DF06B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				28E1EC061D355499006DF06B /* radioButtonOff.png */,
-				28E1EC071D355499006DF06B /* radioButtonOn.png */,
+				7D77B5D71D363F230098043E /* radioButtonOff.png */,
+				7D77B5D81D363F230098043E /* radioButtonOn.png */,
 				28E1EA5D1D355395006DF06B /* background */,
 				28E1EA711D355395006DF06B /* Calendar-Month.png */,
 				28E1EA721D355395006DF06B /* checkbox.jpeg */,
@@ -1463,7 +1463,7 @@
 				28E1EBAC1D355395006DF06B /* wine.png in Resources */,
 				28E1EB501D355395006DF06B /* confused.png in Resources */,
 				28E1EB791D355395006DF06B /* menu.png in Resources */,
-				28E1EC081D355499006DF06B /* radioButtonOff.png in Resources */,
+				7D77B5D91D363F230098043E /* radioButtonOff.png in Resources */,
 				28E1EBB41D355395006DF06B /* Marker.png in Resources */,
 				28E1EBC51D355395006DF06B /* star.png in Resources */,
 				28E1EBE51D355395006DF06B /* snowing.png in Resources */,
@@ -1486,7 +1486,7 @@
 				28E1EBD51D355395006DF06B /* moon-5.png in Resources */,
 				7D033B791D34BA910028CE44 /* Main.storyboard in Resources */,
 				28E1EBB21D355395006DF06B /* key.png in Resources */,
-				28E1EC091D355499006DF06B /* radioButtonOn.png in Resources */,
+				7D77B5DA1D363F230098043E /* radioButtonOn.png in Resources */,
 				7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */,
 				28E1EBF01D355395006DF06B /* sunset-1.png in Resources */,
 				28E1EBF31D355395006DF06B /* temperature-1.png in Resources */,

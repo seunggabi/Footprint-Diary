@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "../Model/EmoticonModel.h"
+#import "../Model/Emoticon.h"
+//#import "../Model/Weahter.h"
 
 @interface EmoticonViewController : UIViewController<UICollectionViewDelegate , UICollectionViewDataSource>{
 }
 
+@property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) NSMutableArray *imageList;
+@property (strong, nonatomic) NSMutableArray *emoticonList;
+@property (strong, nonatomic) NSMutableArray *weatherList;
+
+@property (strong, nonatomic) IBOutlet UIButton *wButton;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
