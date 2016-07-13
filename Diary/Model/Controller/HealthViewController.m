@@ -24,6 +24,8 @@
 @synthesize yearView;
 @synthesize monthView;
 @synthesize dayView;
+@synthesize datePicker;
+@synthesize datePickerScreen;
 
 -(void) viewDidLoad {
     [super viewDidLoad];
@@ -34,10 +36,36 @@
     }
     [self loadChartWithDate:selectDate];
     [self viewSetting];
+    [self changeDatePicker];
+    
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.date = [NSDate date];
+    [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
+    datePickerScreen.hidden = YES;
+
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+    selectDate = [[HelperTool getInstance] getToday];
     [self loadChartWithDate:selectDate];
+    [self viewSetting];
+}
+
+-(IBAction)touchDate:(id)sender {
+    [self viewSetting];
+    datePickerScreen.hidden = NO;
+    [yearView endEditing:YES];
+    [monthView endEditing:YES];
+    [dayView endEditing:YES];
+}
+
+-(IBAction)searchHealth:(id)sender {
+    datePickerScreen.hidden = YES;
+    [yearView endEditing:YES];
+    [monthView endEditing:YES];
+    [dayView endEditing:YES];
+    selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
+    [self viewSetting];
 }
 
 -(void) loadChartWithDate:(NSString *)date {
@@ -50,7 +78,7 @@
     int minute = second/60;
     int startSecond = [[[HelperTool getInstance] stringToDate:date] timeIntervalSince1970];
     NSMutableArray *chartData = [NSMutableArray arrayWithCapacity:minute];
-    __block NSMutableArray *xAxis = [NSMutableArray arrayWithCapacity:minute];
+    NSMutableArray *xAxis = [NSMutableArray arrayWithCapacity:minute];
     for(int i=0; i<minute; i++) {
         chartData[i] = @0;
         xAxis[i] = [NSString stringWithFormat:@"%d", i/60];
@@ -98,16 +126,23 @@
         h = [[Health alloc] init];
         h.h_count = @0;
     }
-    
     healthView.text = [h.h_count stringValue];
     NSMutableArray<HealthInformation *> *tips = [modelHealthInfo getInfoTwo];
     tip1.text = [tips objectAtIndex:0].hi_comment;
     tip2.text = [tips objectAtIndex:1].hi_comment;
+}
+
+-(void) updateTips {
     
-    NSMutableArray *dateElement = [selectDate componentsSeparatedByString:@"-"];
+}
+
+-(void) changeDatePicker {
+    selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
+    NSArray *dateElement = [selectDate componentsSeparatedByString:@"-"];
     yearView.text = [dateElement objectAtIndex:0];
     monthView.text = [dateElement objectAtIndex:1];
     dayView.text = [dateElement objectAtIndex:2];
 }
+
 
 @end

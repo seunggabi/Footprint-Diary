@@ -246,7 +246,7 @@
 -(void)drawRect:(CGRect)rect{
     int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMMM yyyy"];
+    [formatter setDateFormat:@"yyyy년 M월"];
     labelCurrentMonth.text = [formatter stringFromDate:self.currentMonth];
     [labelCurrentMonth sizeToFit];
     labelCurrentMonth.frameX = roundf(self.frame.size.width/2 - labelCurrentMonth.frameWidth/2);

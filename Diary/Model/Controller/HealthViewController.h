@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *healthView;
 @property (strong, nonatomic) IBOutlet UITextView *tip1;
 @property (strong, nonatomic) IBOutlet UITextView *tip2;
+@property (strong, nonatomic) IBOutlet UIView *datePickerScreen;
 @property (strong, nonatomic) IBOutlet UITextField *yearView;
 @property (strong, nonatomic) IBOutlet UITextField *monthView;
 @property (strong, nonatomic) IBOutlet UITextField *dayView;
@@ -29,8 +30,12 @@
 @property (strong, nonatomic) IBOutlet FSLineChart *chart;
 @property (strong, nonatomic) HealthModel *modelHealth;
 @property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)touchDate:(id)sender;
+- (IBAction)searchHealth:(id)sender;
 
 -(void) loadChartWithDate:(NSString *)date;
 -(void) viewSetting;
+-(void) changeDatePicker;
 
 @end
