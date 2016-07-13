@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmoticonViewController">
             <connections>
-                <outlet property="collectionView" destination="OwI-1l-pRl" id="B3F-5N-ign"/>
+                <outlet property="collectionView" destination="OwI-1l-pRl" id="bGv-g5-bpb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,8 +25,8 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="nNF-ec-yxJ"/>
-                        <outlet property="delegate" destination="-1" id="bX2-Zm-OdI"/>
+                        <outlet property="dataSource" destination="-1" id="20B-Oj-iDU"/>
+                        <outlet property="delegate" destination="-1" id="P7O-yT-bY1"/>
                     </connections>
                 </collectionView>
             </subviews>
