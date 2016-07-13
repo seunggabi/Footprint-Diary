@@ -19,13 +19,11 @@
 }
 
 @property (strong, nonatomic) NSDate *indexDate;
-
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) Emoticon *emoticon;
-
 @property (strong, nonatomic) DiaryModel *modelDiary;
-
-@property (weak, nonatomic) IBOutlet CalendarView *calendarView;
+@property (strong, nonatomic) CalendarView *calendar;
+@property (weak, nonatomic) IBOutlet UIView *calendarScreen;
 
 -(Diary *)getDiary:(NSDate *)date;
 

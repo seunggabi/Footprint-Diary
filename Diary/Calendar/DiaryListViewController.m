@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     modelDiary = [[DiaryModel alloc] init];
-    [self loadDiaryListData:@"" endDate:@""];
+    [self loadDiaryListData:sDateText.text endDate:sDateText.text];
     for(int i=0; i<diaryList.count; i++) {
         NSLog(@"%@", [[diaryList objectAtIndex:i] getObj]);
     }
@@ -49,6 +49,7 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self loadDiaryListData:sDateText.text endDate:sDateText.text];
     [table reloadData];
 }
 

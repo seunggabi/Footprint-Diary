@@ -18,18 +18,24 @@
 @synthesize emoticon;
 @synthesize indexDate;
 @synthesize modelDiary;
+@synthesize calendar;
 
-- (void)viewDidLoad{
+-(void) viewDidLoad{
     [super viewDidLoad];
     modelDiary = [[DiaryModel alloc] init];
-    self.calendarView.backgroundColor = [UIColor clearColor];
-    CalendarView *calendar = [[CalendarView alloc] init];
+    calendar = [[CalendarView alloc] init];
     calendar.delegate = self;
     calendar.diaryList = [modelDiary select:nil];
-    [self.calendarView addSubview:calendar];
+    [self.calendarScreen addSubview:calendar];
 }
 
--(Diary *)getDiary:(NSDate *)date{
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    calendar.diaryList = [modelDiary select:nil];
+    [self.calendarScreen setNeedsDisplay];
+}
+
+-(Diary *) getDiary:(NSDate *)date{
     diary = [[Diary alloc] init];
     NSMutableArray *diaryList = [modelDiary select:nil];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
