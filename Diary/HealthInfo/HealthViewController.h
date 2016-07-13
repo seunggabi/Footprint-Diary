@@ -20,9 +20,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *tip1;
 @property (strong, nonatomic) IBOutlet UILabel *tip2;
-@property (nonatomic, strong) IBOutlet FSLineChart *chart;
-@property (strong, nonatomic) IBOutlet FSLineChart *chartWithDates;
-@property (strong, nonatomic) CMPedometer *pedometer;
+@property (strong, nonatomic) IBOutlet FSLineChart *chart;
 @property (strong, nonatomic) HealthModel *modelHealth;
 @property (strong, nonatomic) HealthInformationModel *modelHealthInfo;
 

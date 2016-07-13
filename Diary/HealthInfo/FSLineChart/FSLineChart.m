@@ -152,25 +152,13 @@
     }
     
     if(_labelForIndex) {
-        for(int i=0; i<_horizontalGridStep+1; i+=7200){
-            UILabel* label;
-            label = [self createLabelForIndex:i];
+        for(int i=0;i<_horizontalGridStep + 1;i++) {
+            UILabel* label = [self createLabelForIndex:i];
             
             if(label) {
                 [self addSubview:label];
             }
         }
-        /*for(int i=0;i<_horizontalGridStep + 1;i++) {
-            UILabel* label;
-            if(i % (_horizontalGridStep / 12) == 0){
-                label = [self createLabelForIndex:i];
-            }
-            //UILabel* label = nil;//[self createLabelForIndex:i];
-            
-            if(label) {
-                [self addSubview:label];
-            }
-        }*/
     }
     
     [self setNeedsDisplay];
@@ -283,17 +271,17 @@
     CGContextAddLineToPoint(ctx, _margin, _axisHeight + _margin + 3);
     CGContextStrokePath(ctx);
     
-    //CGFloat scale = [self horizontalScale];
+    CGFloat scale = [self horizontalScale];
     CGFloat minBound = [self minVerticalBound];
     CGFloat maxBound = [self maxVerticalBound];
     
     // draw grid
     if(_drawInnerGrid) {
-        /*for(int i=0;i<_horizontalGridStep;i++) {
+        for(int i=0;i<_horizontalGridStep;i++) {
             CGContextSetStrokeColorWithColor(ctx, [_innerGridColor CGColor]);
             CGContextSetLineWidth(ctx, _innerGridLineWidth);
             
-            CGPoint point = CGPointMake((1 + i) * _axisWidth / 12 * scale + _margin, _margin);
+            CGPoint point = CGPointMake((1 + i) * _axisWidth / _horizontalGridStep * scale + _margin, _margin);
             
             CGContextMoveToPoint(ctx, point.x, point.y);
             CGContextAddLineToPoint(ctx, point.x, _axisHeight + _margin);
@@ -304,7 +292,7 @@
             CGContextMoveToPoint(ctx, point.x - 0.5f, _axisHeight + _margin);
             CGContextAddLineToPoint(ctx, point.x - 0.5f, _axisHeight + _margin + 3);
             CGContextStrokePath(ctx);
-        }*/
+        }
         
         for(int i=0;i<_verticalGridStep + 1;i++) {
             // If the value is zero then we display the horizontal axis
@@ -402,6 +390,7 @@
         pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
         [pathLayer addAnimation:pathAnimation forKey:@"path"];
     }
+    
 }
 
 - (void)strokeDataPoints

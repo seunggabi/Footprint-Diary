@@ -16,122 +16,67 @@
 
 @synthesize modelHealth;
 @synthesize modelHealthInfo;
+@synthesize chart;
 
-- (CMPedometer *)pedometer {
-    if (!_pedometer) {
-        _pedometer = [[CMPedometer alloc]init];
-    }
-    return _pedometer;
-}
-
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     modelHealth = [[HealthModel alloc] init];
     modelHealthInfo = [[HealthInformationModel alloc] init];
     NSString *today = [[HelperTool getInstance] getToday];
     [super viewDidLoad];
     
-    [self loadChartWithDates:today];
+    [self loadChartWithDate:today];
 }
 
-#pragma mark - Setting up the charts
-
-- (void)loadChartWithDates:(NSString *)date {
-    
-    Health *health = [[Health alloc] init];
-    __block NSInteger tempData;
-    /*
-     헬스정보팁을 불러오는곳
-     */
-    /*NSMutableArray *healthInfoList = [[NSMutableArray alloc] init];
-     healthInfoList = [modelHealthInfo select:nil];
-     
-     self.tip1.text = ((HealthInformation *)[healthInfoList objectAtIndex:0]).hi_comment;
-     self.tip2.text = @"헬스정보2";*/
-    
-    [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
-        
-    }];
-    
-    //NSString *date = @"2016-07-11";
+-(void)loadChartWithDate:(NSString *)date {
     NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", date]];
     for(int i=0; i<healthList.count; i++) {
         NSLog(@"%@",[((Health *)[healthList objectAtIndex:i]) getObj]);
     }
     
-    //NSLog(@"%ld", (long)tempData);
-    
-    // Generating some dummy data
-    
-    
-    int oneDayToSec = 1440;
-    NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:oneDayToSec+1];
-    for(int i=0;i<oneDayToSec+1;i++) {
-       /* NSLog(@"%@", health.h_count);
-        NSLog(@"--------------------------");*/
-        //int temp = [self getPedomterCount];
-        
-        chartData[i] = [NSNumber numberWithFloat: tempData/*(float)i / 30.0f + (float)(rand() % 100)*/];
+    int second = 60*60*24;
+    int minute = second/60;
+    int startSecond = [[[HelperTool getInstance] stringToDate:date] timeIntervalSince1970];
+    NSMutableArray *chartData = [NSMutableArray arrayWithCapacity:minute];
+    __block NSMutableArray *xAxis = [NSMutableArray arrayWithCapacity:minute];
+    for(int i=0; i<minute; i++) {
+        chartData[i] = @0;
+        xAxis[i] = [NSString stringWithFormat:@"%d", i/60];
     }
-    NSMutableArray* months = [NSMutableArray arrayWithCapacity:oneDayToSec];
     
-    //for(int i=0; i<oneDayToSec)
-    for(int i=0; i<oneDayToSec+1; i++) {
-        NSString *str;
-        if(i % (oneDayToSec / 12) == 0){
-            int temp = i / (oneDayToSec / 24);
-            str = [NSString stringWithFormat:@"%d", temp];
-        }else{
-            str = [NSString stringWithFormat:@"%d", i];
+    for(int i=0;i<healthList.count;i++) {
+        Health *h = ((Health *)[healthList objectAtIndex:i]);
+        chartData[((int)[h.h_time timeIntervalSince1970]-startSecond)/60] = h.h_count;
+    }
+    
+    int min = 0;
+    for(int i=0; i<minute; i++) {
+        if(min < [chartData[i] intValue]) {
+            min=[chartData[i] intValue];
+        } else {
+           chartData[i]=[NSNumber numberWithInt:min];
         }
-        [months addObject: str];
     }
     
-    _chartWithDates.verticalGridStep = 6;
-    _chartWithDates.horizontalGridStep = oneDayToSec;
-    _chartWithDates.fillColor = nil;
-    _chartWithDates.displayDataPoint = YES;
-    _chartWithDates.dataPointColor = [UIColor fsOrange];
-    _chartWithDates.dataPointBackgroundColor = [UIColor fsOrange];
-    _chartWithDates.dataPointRadius = 0;
-    _chartWithDates.color = [_chartWithDates.dataPointColor colorWithAlphaComponent:1.0];
-    _chartWithDates.valueLabelPosition = ValueLabelLeftMirrored;
+    chart.verticalGridStep = 10;
+    chart.horizontalGridStep = 24;
+    chart.fillColor = nil;
+    chart.displayDataPoint = NO;
+    chart.dataPointColor = [UIColor fsOrange];
+    chart.dataPointBackgroundColor = [UIColor fsOrange];
+    chart.dataPointRadius = 0;
+    chart.bezierSmoothing = YES;
+    chart.color = [chart.dataPointColor colorWithAlphaComponent:1.0];
+    chart.valueLabelPosition = ValueLabelRight;
     
-    _chartWithDates.labelForIndex = ^(NSUInteger item) {
-        return months[item];
+    chart.labelForIndex = ^(NSUInteger item) {
+        return xAxis[item];
     };
     
-    _chartWithDates.labelForValue = ^(CGFloat value) {
-        return [NSString stringWithFormat:@"%.0f 회", value];
+    chart.labelForValue = ^(CGFloat value) {
+        return [NSString stringWithFormat:@"%.0f 걸음", value];
     };
     
-    
-    [_chartWithDates setChartData:chartData];
-}
-
--(void)getPedomterCount {
-    Health *health = [[Health alloc] init];
-    health.h_time = [[HelperTool getInstance] getDate];
-    NSString *today = [[HelperTool getInstance] getToday];
-    health.h_date = today;
-    NSDate *now = [NSDate date];
-    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
-    NSDate *start = [gregorian dateFromComponents:components];
-    
-    // take "now" and normalise to 23:59
-    components.hour = 23;
-    components.minute = 59;
-    components.second = 59;
-    NSDate *end = [gregorian dateFromComponents:components];
-    
-    // display results
-    [self.pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
-        health.h_count = pedometerData.numberOfSteps;
-        [modelHealth insertData:health];
-    }];
-    
-    
-    //return (int)health.h_count;
+    [chart setChartData:chartData];
 }
 
 @end

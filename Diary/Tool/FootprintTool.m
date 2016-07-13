@@ -31,7 +31,7 @@
 -(void) start {
     User *u = [modelUser select];
     locationManager = [[CLLocationManager alloc]init];
-    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]>0?[u.u_timer intValue]:1*10
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:[u.u_timer intValue]>0?[u.u_timer intValue]:1*60
                                                                                      target:self
                                                                                    selector:@selector(getGPS)
                                                                                    userInfo:nil
