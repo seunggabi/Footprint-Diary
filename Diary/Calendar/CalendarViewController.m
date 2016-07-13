@@ -42,24 +42,12 @@
     NSString *selectDay = [[HelperTool getInstance] dateToString:date];
     for(int i = 0; i<diaryList.count; i++){
         if([((Diary *)[diaryList objectAtIndex:i]).d_date isEqualToString:selectDay]){
-            return diary;
+                return diary;
         }
     }
     return nil;
 }
 
-- (void)goDiaryView:(Diary *)diary{
-    DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    diaryView.selectedDiary = diary;
-    [self presentViewController:diaryView animated:YES completion:nil];
-}
-    
-- (void)goDiaryEditView:(NSDate *)date{
-    DiaryEditViewController *editView = [[DiaryEditViewController alloc] initWithNibName:@"DiaryEditViewController" bundle:nil];
-    editView.indexDate = date;
-    [self presentViewController:editView animated:YES completion:nil];
-}
-    
 -(void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     NSDate *currentDate = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
@@ -71,12 +59,7 @@
 }
 
 -(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
-    diary = [self getDiary:date];
-    if(diary){
-        [self goDiaryView:diary];
-    }else{
-        [self goDiaryEditView:date];
-    }
+
 }
 
 - (void)viewDidUnload{

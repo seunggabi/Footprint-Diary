@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DiaryModel.h"
 #import "DiaryViewController.h"
-#import "DiaryEditViewController.h"
 #import "HelperTool.h"
 
 @interface DiaryListViewController : UIViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>{

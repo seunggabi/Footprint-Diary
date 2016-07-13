@@ -12,7 +12,6 @@
 #import "Emoticon.h"
 #import "CalendarView.h"
 #import "DiaryViewController.h"
-#import "DiaryEditViewController.h"
 
 @interface CalendarViewController : UIViewController<CalendarViewDelegate>{
     

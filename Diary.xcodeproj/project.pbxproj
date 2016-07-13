@@ -26,6 +26,7 @@
 		284D7A821D3682E50056CC4B /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A761D3682E50056CC4B /* HelperTool.m */; };
 		284D7A831D3682E50056CC4B /* PedometerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A781D3682E50056CC4B /* PedometerTool.m */; };
 		284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A7A1D3682E50056CC4B /* TimerScheduler.m */; };
+		284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A861D368B6C0056CC4B /* DiaryViewController.m */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -288,10 +289,8 @@
 		28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */; };
 		28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E42D1D33C0A900D8B9E3 /* Weather.m */; };
 		28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */; };
-		7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A651D324F2F0028CE44 /* DiaryViewController.m */; };
 		7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* CalendarViewController.m */; };
 		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
-		7D033B0F1D33A8260028CE44 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D033A661D324F2F0028CE44 /* DiaryViewController.xib */; };
 		7D033B791D34BA910028CE44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D033B781D34BA910028CE44 /* Main.storyboard */; };
 		7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E92D1D3522DD00575DED /* EmoticonViewController.m */; };
 		7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */; };
@@ -351,6 +350,8 @@
 		284D7A781D3682E50056CC4B /* PedometerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerTool.m; sourceTree = "<group>"; };
 		284D7A791D3682E50056CC4B /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerScheduler.h; sourceTree = "<group>"; };
 		284D7A7A1D3682E50056CC4B /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
+		284D7A851D368B6C0056CC4B /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
+		284D7A861D368B6C0056CC4B /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -633,9 +634,6 @@
 		28E5E42D1D33C0A900D8B9E3 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		28E5E42F1D33C1DF00D8B9E3 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
-		7D033A641D324F2F0028CE44 /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
-		7D033A651D324F2F0028CE44 /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
-		7D033A661D324F2F0028CE44 /* DiaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryViewController.xib; sourceTree = "<group>"; };
 		7D033A6B1D324F560028CE44 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		7D033A6C1D324F560028CE44 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
@@ -724,6 +722,8 @@
 				284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */,
 				284D7A6B1D3682E50056CC4B /* PageViewController.h */,
 				284D7A6C1D3682E50056CC4B /* PageViewController.m */,
+				284D7A851D368B6C0056CC4B /* DiaryViewController.h */,
+				284D7A861D368B6C0056CC4B /* DiaryViewController.m */,
 			);
 			name = Controller;
 			path = Model/Controller;
@@ -1097,9 +1097,6 @@
 			children = (
 				7D033A801D3252E60028CE44 /* DiaryListViewController.h */,
 				7D033A811D3252E60028CE44 /* DiaryListViewController.m */,
-				7D033A641D324F2F0028CE44 /* DiaryViewController.h */,
-				7D033A651D324F2F0028CE44 /* DiaryViewController.m */,
-				7D033A661D324F2F0028CE44 /* DiaryViewController.xib */,
 				7D11E92C1D3522DD00575DED /* EmoticonViewController.h */,
 				7D11E92D1D3522DD00575DED /* EmoticonViewController.m */,
 				7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */,
@@ -1238,7 +1235,6 @@
 				28E1EB741D355395006DF06B /* kiss.png in Resources */,
 				28E1EB771D355395006DF06B /* lobster.png in Resources */,
 				28E1EB711D355395006DF06B /* icecream.png in Resources */,
-				7D033B0F1D33A8260028CE44 /* DiaryViewController.xib in Resources */,
 				28E1EB3E1D355395006DF06B /* ocean.jpg in Resources */,
 				28E5E2421D302F0800D8B9E3 /* map_pinup@3x.png in Resources */,
 				28E5E2381D302F0800D8B9E3 /* info_box_tail.png in Resources */,
@@ -1504,6 +1500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */,
 				28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */,
 				22A1D58C1D324DB600058642 /* MySettingModifyViewController.m in Sources */,
 				28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */,
@@ -1540,7 +1537,6 @@
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
-				7D033A691D324F2F0028CE44 /* DiaryViewController.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
 				22A1D58D1D324DB600058642 /* PasswordChangeViewController.m in Sources */,
 				22A1D58B1D324DB600058642 /* MyInfoViewController.m in Sources */,
