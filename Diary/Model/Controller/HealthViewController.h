@@ -16,7 +16,7 @@
 
 @import CoreMotion;
 
-@interface HealthViewController : UIViewController
+@interface HealthViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *selectDate;
 @property (strong, nonatomic) IBOutlet UITextField *healthView;

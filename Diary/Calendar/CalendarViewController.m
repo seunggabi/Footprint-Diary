@@ -7,6 +7,8 @@
 //
 
 #import "CalendarViewController.h"
+#import "DiaryViewController.h"
+#import "DiaryEditViewController.h"
 #import "HelperTool.h"
 
 @interface CalendarViewController ()
@@ -25,6 +27,10 @@
 
 -(void) viewDidLoad{
     [super viewDidLoad];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     modelUser = [[UserModel alloc] init];
     modelDiary = [[DiaryModel alloc] init];
     modelEmoticon = [[EmoticonModel alloc] init];
@@ -32,12 +38,6 @@
     calendar.delegate = self;
     calendar.diaryList = diaryList = [modelDiary select:nil];
     [self.calendarScreen addSubview:calendar];
-}
-
--(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    calendar.diaryList = [modelDiary select:nil];
-    [self.calendarScreen setNeedsDisplay];
     self.navigationItem.title = [modelUser select].u_name;
 }
 
@@ -67,20 +67,20 @@
     if(diary == nil) {
         diary = [[Diary alloc] init];
         diary.d_date = [[HelperTool getInstance] dateToString:date];
-        [self performSegueWithIdentifier:@"DiaryEditView" sender:self];
+        [self performSegueWithIdentifier:@"CalendarDiaryEditView" sender:self];
     } else {
-        [self performSegueWithIdentifier:@"DiaryView" sender:self];
+        [self performSegueWithIdentifier:@"CalendarDiaryView" sender:self];
     }
 }
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"DiaryView"]) {
+    if ([segue.identifier isEqualToString:@"CalendarDiaryEditView"]) {
+        DiaryEditViewController *diaryEditViewController = segue.destinationViewController;
+        diaryEditViewController.diary = self.diary;
+    } else if ([segue.identifier isEqualToString:@"CalendarDiaryView"]) {
         DiaryViewController *diaryViewController = segue.destinationViewController;
-        diaryViewController.diary = diary;
-    } else if ([segue.identifier isEqualToString:@"DiaryEditView"]) {
-        DiaryViewController *diaryViewController = segue.destinationViewController;
-        diaryViewController.diary = diary;
+        diaryViewController.diary = self.diary;
     }
 }
 

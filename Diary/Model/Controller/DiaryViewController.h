@@ -39,5 +39,6 @@
 
 -(void) loadMapData:(Diary *)d;
 -(void) viewSetting:(Diary *)d;
+-(IBAction)deleteButton:(id)sender;
 
 @end

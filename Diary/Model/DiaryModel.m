@@ -46,7 +46,6 @@
     if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             Diary *d = [[Diary alloc] init];
-            
             d.d_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             d.d_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
             d.d_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];

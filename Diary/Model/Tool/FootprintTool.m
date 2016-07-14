@@ -34,7 +34,7 @@
     if(u != nil)
         timer = [u.u_timer intValue];
     locationManager = [[CLLocationManager alloc]init];
-    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:timer
+    [[TimerScheduler getInstance] setFootprintTiemr:[NSTimer scheduledTimerWithTimeInterval:timer*60
                                                                                      target:self
                                                                                    selector:@selector(getGPS)
                                                                                    userInfo:nil

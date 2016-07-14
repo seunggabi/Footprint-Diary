@@ -33,8 +33,15 @@
 @synthesize healthView;
 
 -(void)viewDidLoad {
-    
     [super viewDidLoad];
+    modelDiary = [[DiaryModel alloc] init];
+    
+    [self loadMapData:diary];
+    [mapScreen addSubview:mapView];
+    [self viewSetting:diary];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
     [self loadMapData:diary];
     [mapScreen addSubview:mapView];
     [self viewSetting:diary];
@@ -83,6 +90,39 @@
     titleView.text = d.d_title;
     contentView.text = d.d_content;
     healthView.text = [h.h_count stringValue];
+}
+
+-(IBAction)deleteButton:(id)sender {
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"삭제 확인!"
+                                  message:[NSString stringWithFormat:@"%@ 일기를 정말 삭제하시겠어요?",diary.d_date]
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"응"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action) {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             [modelDiary delete:[NSString stringWithFormat:@"d_date='%@'", diary.d_date]];
+                             [self.navigationController popViewControllerAnimated:YES];
+                         }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"아니"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action) {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                             }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"DiaryEditView"]) {
+        DiaryViewController *diaryViewController = segue.destinationViewController;
+        diaryViewController.diary = diary;
+    }
 }
 
 -(void)didReceiveMemoryWarning {

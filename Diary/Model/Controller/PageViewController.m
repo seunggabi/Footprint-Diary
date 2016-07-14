@@ -35,8 +35,10 @@
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
     if([user.u_tutorial isEqualToString:@"Y"]) {
+        tutorial = @"Y";
         checkbox.selected = NO;
     } else {
+        tutorial = @"N";
         checkbox.selected = YES;
     }
 }

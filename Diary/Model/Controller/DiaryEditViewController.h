@@ -3,7 +3,7 @@
 //  Diary
 //
 //  Created by 김승갑 on 2016. 7. 14..
-//  Copyright © 2016년 mju12345. All rights reserved.
+//  Copyright © 2016년 mju12345. All rights resereved.
 //
 
 #import <DaumMap/MTMapView.h>
@@ -39,5 +39,6 @@
 
 -(void) loadMapData:(Diary *)d;
 -(void) viewSetting:(Diary *)d;
+- (IBAction)touchSave:(id)sender;
 
 @end

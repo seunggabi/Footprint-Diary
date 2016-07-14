@@ -7,6 +7,7 @@
 //
 
 #import "DiaryEditViewController.h"
+#import "DiaryViewController.h"
 #import "HelperTool.h"
 
 @interface DiaryEditViewController ()
@@ -32,9 +33,16 @@
 @synthesize contentView;
 @synthesize healthView;
 
--(void)viewDidLoad {
-    
+-(void) viewDidLoad {
     [super viewDidLoad];
+    modelDiary = [[DiaryModel alloc] init];
+    
+    [self loadMapData:diary];
+    [mapScreen addSubview:mapView];
+    [self viewSetting:diary];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
     [self loadMapData:diary];
     [mapScreen addSubview:mapView];
     [self viewSetting:diary];
@@ -71,7 +79,7 @@
     [mapView fitMapViewAreaToShowPolyline:mapPolyLine];
 }
 
--(void)viewSetting:(Diary *)d {
+-(void) viewSetting:(Diary *)d {
     modelHealth = [[HealthModel alloc] init];
     Health* h = [modelHealth recentData:d.d_date];
     if(h == nil) {
@@ -85,7 +93,22 @@
     healthView.text = [h.h_count stringValue];
 }
 
--(void)didReceiveMemoryWarning {
+-(IBAction) touchSave:(id)sender {
+    diary.d_title = titleView.text;
+    diary.d_content = contentView.text;
+
+    NSString *where = [NSString stringWithFormat:@"d_date='%@'",diary.d_date];
+    if([modelDiary select:where].count) {
+        [[DBConnector getInstance] updateTable:@"diary" data:[diary getObj] where:where];
+    } else {
+        [modelDiary insertData:diary];
+    }
+    DiaryViewController *diaryViewController = (DiaryViewController *)[self.navigationController topViewController];
+    diaryViewController.diary = diary;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 

@@ -110,11 +110,12 @@
 }
 
 -(Health *) recentData:(NSString *)date {
-    Health *h = [[Health alloc] init];
+    Health *h = nil;
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM Health WHERE h_date='%@' ORDER BY h_id DESC Limit 1,1", date];
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
+            h = [[Health alloc] init];
             h.h_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             h.h_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
             h.h_time = [NSDate dateWithTimeIntervalSince1970:(const unsigned int)sqlite3_column_int(stmt, 2)];

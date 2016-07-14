@@ -29,6 +29,9 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
     modelHealth = [[HealthModel alloc] init];
     modelHealthInfo = [[HealthInformationModel alloc] init];
     if(selectDate == nil) {
@@ -41,12 +44,9 @@
     datePicker.date = [NSDate date];
     [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
     datePickerScreen.hidden = YES;
-
-}
-
--(void) viewWillAppear:(BOOL)animated {
-    selectDate = [[HelperTool getInstance] getToday];
-    [self viewSetting];
+    yearView.delegate = self;
+    monthView.delegate = self;
+    dayView.delegate = self;
 }
 
 -(IBAction)touchDate:(id)sender {
@@ -62,7 +62,8 @@
     [yearView endEditing:YES];
     [monthView endEditing:YES];
     [dayView endEditing:YES];
-    selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
+    if(datePicker.hidden == NO)
+        selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
     [self viewSetting];
 }
 
@@ -144,5 +145,12 @@
     [self setDateView];
 }
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return YES;
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end
