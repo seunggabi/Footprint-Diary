@@ -7,6 +7,7 @@
 //
 
 #import "DiaryListViewController.h"
+#import "DiaryViewController.h"s
 
 @interface DiaryListViewController ()
 
@@ -24,6 +25,7 @@
 @synthesize weatherList;
 @synthesize emoticonList;
 @synthesize modelDiary;
+@synthesize diary;
 
 -(void) viewDidLoad {
     [super viewDidLoad];
@@ -99,16 +101,29 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     Diary *d = [diaryList objectAtIndex:indexPath.row];
-    cell.textLabel.text = d.d_content;
-    NSLog(@"%@", [d getObj]);
+    cell.textLabel.text = [NSString stringWithFormat:@"[%@]", d.d_date];
+    cell.textLabel.textColor = [UIColor blueColor];
+                                
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(130, 13, 255, 20)];
+    label.font = [UIFont systemFontOfSize:14.0];
+    label.textAlignment = NSTextAlignmentLeft;
+    label.textColor = [UIColor blackColor];
+    label.text = [NSString stringWithFormat:@"%@", d.d_title];
+    [cell.contentView addSubview:label];
     return cell;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [table deselectRowAtIndexPath:indexPath animated:YES];
-    DiaryViewController *diaryView = [[DiaryViewController alloc] initWithNibName:@"DiaryViewController" bundle:nil];
-    
-    [self presentViewController:diaryView animated:YES completion:nil];
+    diary = [diaryList objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"ListDiaryView" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ListDiaryView"]) {
+        DiaryViewController *diaryViewController = segue.destinationViewController;
+        diaryViewController.diary = diary;
+    }
 }
 
 @end

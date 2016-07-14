@@ -21,11 +21,14 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *showDiaryList;
 @property (strong, nonatomic) IBOutlet UIView *datePickerScreen;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (strong, nonatomic) IBOutlet UIView *cell;
+@property (strong, nonatomic) IBOutlet UILabel *titleText;
 
 @property (strong, nonatomic) DiaryModel *modelDiary;
 @property (strong, nonatomic) NSMutableArray *diaryList;
 @property (strong, nonatomic) NSMutableArray *weatherList;
 @property (strong, nonatomic) NSMutableArray *emoticonList;
+@property (strong, nonatomic) Diary *diary;
 
 -(IBAction) showDiaryList:(UIButton *)sender;
 -(IBAction) touchDate:(id)sender;
