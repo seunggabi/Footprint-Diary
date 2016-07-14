@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
 @interface PageViewController : UIViewController
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
 @property (assign, nonatomic) BOOL checkboxSelected;
+@property (strong, nonatomic) UserModel *modelUser;
 
 -(void)initPageViewInfo:(NSInteger)page;
 - (IBAction)checkboxSelected:(id)sender;

@@ -507,38 +507,6 @@
             endingLineNumber = "39"
             landmarkName = "diaryTitle"
             landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DiaryEditViewController btnSave]"
-                  moduleName = "Diary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seunggabi/Desktop/Footprint-Diary/Diary/Calendar/DiaryEditViewController.h"
-                  timestampString = "490109688.408698"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DiaryEditViewController setBtnSave:]"
-                  moduleName = "Diary"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seunggabi/Desktop/Footprint-Diary/Diary/Calendar/DiaryEditViewController.h"
-                  timestampString = "490109688.408982"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

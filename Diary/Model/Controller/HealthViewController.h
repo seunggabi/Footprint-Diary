@@ -34,7 +34,7 @@
 - (IBAction)touchDate:(id)sender;
 - (IBAction)searchHealth:(id)sender;
 
--(void) loadChartWithDate:(NSString *)date;
+-(void) chartDraw;
 -(void) viewSetting;
 -(void) changeDatePicker;
 

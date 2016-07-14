@@ -1654,7 +1654,7 @@
                         <outlet property="btn_Prev" destination="PLL-Ex-iMh" id="j7c-Ob-5hk"/>
                         <outlet property="pageControl" destination="PEU-yw-Njt" id="htI-Bd-fO6"/>
                         <outlet property="scrollView" destination="g9j-Ba-DlM" id="v5E-E2-IqP"/>
-                        <segue destination="ANb-6Y-9LM" kind="presentation" id="bAw-Is-1nh"/>
+                        <segue destination="ANb-6Y-9LM" kind="presentation" identifier="" id="bAw-Is-1nh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uG-cB-q3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1680,7 +1680,7 @@
                                 <rect key="frame" x="161" y="617" width="52" height="30"/>
                                 <state key="normal" title="시작하기"/>
                                 <connections>
-                                    <segue destination="ANb-6Y-9LM" kind="presentation" id="2xm-c6-aNm"/>
+                                    <segue destination="ANb-6Y-9LM" kind="presentation" identifier="skipTutorial" id="2xm-c6-aNm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="튜토리얼을 다시 보지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-I6-zjm">
@@ -1827,7 +1827,7 @@
         <image name="tree.jpg" width="750" height="1335"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bAw-Is-1nh"/>
+        <segue reference="2xm-c6-aNm"/>
         <segue reference="HtY-OA-Btd"/>
     </inferredMetricsTieBreakers>
 </document>

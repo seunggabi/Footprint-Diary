@@ -594,7 +594,7 @@
 		28E5E1951D2C7A3D00D8B9E3 /* HealthInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInformation.m; sourceTree = "<group>"; };
 		28E5E1971D2C7CA900D8B9E3 /* HealthInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthInformationModel.h; sourceTree = "<group>"; };
 		28E5E1981D2C7CA900D8B9E3 /* HealthInformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthInformationModel.m; sourceTree = "<group>"; };
-		28E5E2151D302F0800D8B9E3 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		28E5E2151D302F0800D8B9E3 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = Diary/DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
 		28E5E2171D302F0800D8B9E3 /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
 		28E5E2181D302F0800D8B9E3 /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
 		28E5E2191D302F0800D8B9E3 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
@@ -772,8 +772,8 @@
 				286EC5CA1D2C16F20002A8EB /* FootprintModel.m */,
 				286EC5CB1D2C16F20002A8EB /* User.h */,
 				286EC5CC1D2C16F20002A8EB /* User.m */,
-				286EC5CE1D2C16F20002A8EB /* UserModel.m */,
 				286EC5CD1D2C16F20002A8EB /* UserModel.h */,
+				286EC5CE1D2C16F20002A8EB /* UserModel.m */,
 				285346761D2C2D6E0001F378 /* Sticker.h */,
 				285346771D2C2D6E0001F378 /* Sticker.m */,
 				285346791D2C2EC20001F378 /* StickerModel.h */,
@@ -1051,7 +1051,6 @@
 		28E5E2141D302F0800D8B9E3 /* DaumMap.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				28E5E2151D302F0800D8B9E3 /* DaumMap.framework */,
 				28E5E2161D302F0800D8B9E3 /* Resources */,
 			);
 			name = DaumMap.embeddedframework;
@@ -1120,14 +1119,15 @@
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
-				28E5E2141D302F0800D8B9E3 /* DaumMap.embeddedframework */,
-				28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */,
-				28E5E2521D302FE900D8B9E3 /* libstdc++.6.0.9.tbd */,
+				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
 				28E5E2501D302FD200D8B9E3 /* QuartzCore.framework */,
 				28E5E24E1D302FBF00D8B9E3 /* SystemConfiguration.framework */,
 				BFF1C2E41D2CBEA800E995D9 /* MapKit.framework */,
+				28E5E2151D302F0800D8B9E3 /* DaumMap.framework */,
+				28E5E2141D302F0800D8B9E3 /* DaumMap.embeddedframework */,
+				28E5E2541D302FF500D8B9E3 /* libxml2.2.tbd */,
 				286EC5A91D2A7F0A0002A8EB /* libsqlite3.tbd */,
-				BF80FCAA1D264F6B00ADB9E8 /* CoreLocation.framework */,
+				28E5E2521D302FE900D8B9E3 /* libstdc++.6.0.9.tbd */,
 				BF76DDA91D24181800E5F658 /* Diary */,
 				BF76DDA81D24181800E5F658 /* Products */,
 			);
@@ -1144,12 +1144,12 @@
 		BF76DDA91D24181800E5F658 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
-				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB61D24181800E5F658 /* Assets.xcassets */,
 				BF76DDBB1D24181800E5F658 /* Info.plist */,
 				7D033B781D34BA910028CE44 /* Main.storyboard */,
 				BF76DDB81D24181800E5F658 /* LaunchScreen.storyboard */,
+				BF76DDAD1D24181800E5F658 /* AppDelegate.h */,
+				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
 				BF76DDB11D24181800E5F658 /* ViewController.m */,
 				284D7A641D3682E50056CC4B /* Controller */,

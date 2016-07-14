@@ -11,13 +11,10 @@
 
 @implementation UserModel
 
-@synthesize user;
-
 -(id) init {
     self = [super init];
     if(self) {
         db = [[DBConnector getInstance] getDB];
-        user = [[User alloc] init];
     }
     return self;
 }
@@ -32,31 +29,35 @@
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
+    if(![self exist]) {
+        [self install];
+    }
 }
 
 -(User *) select {
+    User *u = nil;
     NSString *query = @"SELECT * FROM user";
     sqlite3_stmt *stmt;
     if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            user.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            user.u_password = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
-            user.u_question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
-            user.u_answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
-            user.u_th_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 4)];
-            user.u_timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 5)];
+            u = [[User alloc] init];
+            u.u_name = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
+            u.u_password = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+            u.u_question = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
+            u.u_answer = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
+            u.u_th_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 4)];
+            u.u_timer = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 5)];
+            u.u_tutorial = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 6)];
+            u.u_lock = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 7)];
         }
         sqlite3_finalize(stmt);
     }
-    return user;
+    return u;
 }
 
 -(void) insertData:(User *)u {
     char *err;
-    
-    [self delete];
-    
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO user VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_password, u.u_question, u.u_answer, u.u_th_id, u.u_timer, u.u_tutorial, u.u_lock];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO user (u_name, u_password, u_question, u_answer, u_th_id, u_timer, u_tutorial, u_lock) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_password, u.u_question, u.u_answer, u.u_th_id, u.u_timer, u.u_tutorial, u.u_lock];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
         NSAssert(0,@"INSERT User Failed!");
@@ -92,14 +93,22 @@
     }
 }
 
+-(void) install {
+    [self insertData:[self getSampleData]];
+}
+
+-(BOOL) exist {
+    return [self select] != nil;
+}
+
 -(User *) getSampleData {
     User *u = [[User alloc] init];
-    u.u_name = @"김승갑";
-    u.u_password = @"1234";
-    u.u_question = @"이 세상에서 제일 소중한 것은?";
-    u.u_answer = @"나";
+    u.u_name = @"ooo의 일기장";
+    u.u_password = @"";
+    u.u_question = @"";
+    u.u_answer = @"";
     u.u_th_id = @0;
-    u.u_timer = @1;
+    u.u_timer = @10;
     u.u_tutorial = @"Y";
     u.u_lock = @"N";
     return u;

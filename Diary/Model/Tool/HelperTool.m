@@ -62,7 +62,7 @@
     DiaryModel *modelDiary = [[DiaryModel alloc] init];
     StickerModel *modelSticker = [[StickerModel alloc] init];
     EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
-    PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
     WeatherModel *modelWeather = [[WeatherModel alloc] init];

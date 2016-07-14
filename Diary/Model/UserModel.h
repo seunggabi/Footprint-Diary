@@ -15,7 +15,6 @@
     sqlite3 *db;
 }
 
-@property (strong, nonatomic) User *user;
 @property (strong, nonatomic) NSString *createQuery;
 
 -(id) init;
@@ -24,6 +23,8 @@
 -(void) insertData:(User *)u;
 -(void) delete;
 -(void) drop;
+-(void) install;
+-(BOOL) exist;
 -(User *) getSampleData;
 
 @end

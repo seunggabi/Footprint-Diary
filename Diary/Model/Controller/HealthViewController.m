@@ -34,7 +34,6 @@
     if(selectDate == nil) {
         selectDate = [[HelperTool getInstance] getToday];
     }
-    [self loadChartWithDate:selectDate];
     [self viewSetting];
     [self changeDatePicker];
     
@@ -47,7 +46,6 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     selectDate = [[HelperTool getInstance] getToday];
-    [self loadChartWithDate:selectDate];
     [self viewSetting];
 }
 
@@ -68,15 +66,15 @@
     [self viewSetting];
 }
 
--(void) loadChartWithDate:(NSString *)date {
-    NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", date]];
+-(void) chartDraw {
+    NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", selectDate]];
     for(int i=0; i<healthList.count; i++) {
         NSLog(@"%@",[((Health *)[healthList objectAtIndex:i]) getObj]);
     }
     
     int second = 60*60*24;
     int minute = second/60;
-    int startSecond = [[[HelperTool getInstance] stringToDate:date] timeIntervalSince1970];
+    int startSecond = [[[HelperTool getInstance] stringToDate:selectDate] timeIntervalSince1970];
     NSMutableArray *chartData = [NSMutableArray arrayWithCapacity:minute];
     NSMutableArray *xAxis = [NSMutableArray arrayWithCapacity:minute];
     for(int i=0; i<minute; i++) {
@@ -121,6 +119,7 @@
 }
 
 -(void) viewSetting {
+    [self setDateView];
     Health *h = [modelHealth recentData:selectDate];
     if(h == nil) {
         h = [[Health alloc] init];
@@ -130,18 +129,19 @@
     NSMutableArray<HealthInformation *> *tips = [modelHealthInfo getInfoTwo];
     tip1.text = [tips objectAtIndex:0].hi_comment;
     tip2.text = [tips objectAtIndex:1].hi_comment;
+    [self chartDraw];
 }
 
--(void) updateTips {
-    
-}
-
--(void) changeDatePicker {
-    selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
+-(void) setDateView {
     NSArray *dateElement = [selectDate componentsSeparatedByString:@"-"];
     yearView.text = [dateElement objectAtIndex:0];
     monthView.text = [dateElement objectAtIndex:1];
     dayView.text = [dateElement objectAtIndex:2];
+}
+
+-(void) changeDatePicker {
+    selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
+    [self setDateView];
 }
 
 

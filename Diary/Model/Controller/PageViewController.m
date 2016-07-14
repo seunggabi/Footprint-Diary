@@ -19,6 +19,7 @@
 @synthesize startButton;
 @synthesize checkbox;
 @synthesize checkboxSelected;
+@synthesize modelUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +33,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    modelUser = [[UserModel alloc] init];
+    User *user = [modelUser select];
+    NSLog(@"%@",[user getObj]);
+    if([user.u_tutorial isEqualToString:@"Y"]) {
+        [self performSegueWithIdentifier:@"skipTutorial" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
