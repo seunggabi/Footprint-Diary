@@ -38,7 +38,7 @@
     } else if (selectedDateMonth > currentMonthMonth) {
         [self showNextMonth];
     } else {
-        [self setNeedsDisplay];
+        [self setNeedsDisplay]; 
     }
     if ([delegate respondsToSelector:@selector(calendarView:dateSelected:)]) [delegate calendarView:self dateSelected:self.selectedDate];
 }
