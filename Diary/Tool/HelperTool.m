@@ -44,6 +44,7 @@
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
     WeatherModel *modelWeather = [[WeatherModel alloc] init];
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
     
     [modelUser create];
     [modelFootPrint create];
@@ -54,6 +55,7 @@
     [modelHealth create];
     [modelHealthInfo create];
     [modelWeather create];
+    [modelTheme create];
 }
 
 -(void) removeDB {
@@ -62,11 +64,11 @@
     DiaryModel *modelDiary = [[DiaryModel alloc] init];
     StickerModel *modelSticker = [[StickerModel alloc] init];
     EmoticonModel *modelEmoticon = [[EmoticonModel alloc] init];
-    PhotoModel *modelPhoto = [[PhotoModel alloc] init];[modelUser create];
+    PhotoModel *modelPhoto = [[PhotoModel alloc] init];
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
     WeatherModel *modelWeather = [[WeatherModel alloc] init];
-    
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
     
     [modelUser drop];
     [modelFootPrint drop];
@@ -77,6 +79,7 @@
     [modelHealth drop];
     [modelHealthInfo drop];
     [modelWeather drop];
+    [modelTheme drop];
 }
 
 -(NSString *) getToday {
@@ -96,7 +99,7 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDate *d = [dateFormat dateFromString:date];
-    [d initWithTimeInterval:60*60*9 sinceDate:d];
+    d = [d initWithTimeInterval:60*60*9 sinceDate:d];
     return d;
 }
 
@@ -105,6 +108,14 @@
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *d = [dateFormat stringFromDate:date];
     return d;
+}
+
+-(Theme *) getTheme {
+    UserModel *modelUser = [[UserModel alloc] init];
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
+    User *u = [modelUser select];
+    Theme *th = [[modelTheme select:[NSString stringWithFormat:@"th_id='%@'",u.u_th_id]] objectAtIndex:0];
+    return th;
 }
 
 @end

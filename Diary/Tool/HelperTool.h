@@ -15,6 +15,7 @@
 #import "EmoticonModel.h"
 #import "PhotoModel.h"
 #import "HealthModel.h"
+#import "ThemeModel.h"
 #import "HealthInformationModel.h"
 
 #import <Foundation/Foundation.h>
@@ -31,5 +32,6 @@
 -(NSDate *) getDate;
 -(NSDate *) stringToDate:(NSString *)date;
 -(NSString *) dateToString:(NSDate *)date;
+-(Theme *) getTheme;
 
 @end

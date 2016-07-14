@@ -38,7 +38,7 @@
 
 -(void)getPedometerCount {
     Health *health = [[Health alloc] init];
-    health.h_time = [NSDate date];
+    health.h_time = [[HelperTool getInstance] getDate];
     NSString *today = [[HelperTool getInstance] getToday];
     health.h_date = today;
     NSDate *now = [NSDate date];

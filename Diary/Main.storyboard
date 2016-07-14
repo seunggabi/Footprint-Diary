@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-5d-h7j">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-5d-h7j">
                                 <rect key="frame" x="27" y="117" width="320" height="351"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -1784,7 +1784,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="HtY-OA-Btd"/>
         <segue reference="2xm-c6-aNm"/>
-        <segue reference="Ggz-8Z-s4z"/>
-        <segue reference="RJ1-ej-gBR"/>
+        <segue reference="owG-L3-hNh"/>
+        <segue reference="kAk-Sx-XrN"/>
     </inferredMetricsTieBreakers>
 </document>

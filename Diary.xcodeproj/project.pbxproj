@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */; };
-		284D7A7C1D3682E50056CC4B /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A681D3682E50056CC4B /* HealthViewController.m */; };
-		284D7A7D1D3682E50056CC4B /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */; };
-		284D7A7E1D3682E50056CC4B /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6C1D3682E50056CC4B /* PageViewController.m */; };
-		284D7A7F1D3682E50056CC4B /* FootprintTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6F1D3682E50056CC4B /* FootprintTool.m */; };
-		284D7A801D3682E50056CC4B /* FSLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A721D3682E50056CC4B /* FSLineChart.m */; };
-		284D7A811D3682E50056CC4B /* UIColor+FSPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A741D3682E50056CC4B /* UIColor+FSPalette.m */; };
-		284D7A821D3682E50056CC4B /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A761D3682E50056CC4B /* HelperTool.m */; };
-		284D7A831D3682E50056CC4B /* PedometerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A781D3682E50056CC4B /* PedometerTool.m */; };
-		284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A7A1D3682E50056CC4B /* TimerScheduler.m */; };
-		284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A861D368B6C0056CC4B /* DiaryViewController.m */; };
-		284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */; };
-		284D7A971D37C1370056CC4B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A961D37C1370056CC4B /* SettingTableViewController.m */; };
-		284D7A9D1D37D5BA0056CC4B /* SettingUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */; };
+		284D7AFB1D3841520056CC4B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D7ADD1D3841520056CC4B /* Cell.xib */; };
+		284D7AFD1D3841520056CC4B /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AE21D3841520056CC4B /* EmoticonViewController.m */; };
+		284D7AFE1D3841520056CC4B /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D7AE31D3841520056CC4B /* EmoticonViewController.xib */; };
+		284D7AFF1D3841520056CC4B /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AE51D3841520056CC4B /* NSDate+convenience.m */; };
+		284D7B001D3841520056CC4B /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AE71D3841520056CC4B /* NSMutableArray+convenience.m */; };
+		284D7B011D3841520056CC4B /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AE91D3841520056CC4B /* UIColor+expanded.m */; };
+		284D7B021D3841520056CC4B /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AEB1D3841520056CC4B /* UIView+convenience.m */; };
+		284D7B031D3841520056CC4B /* FootprintTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AED1D3841520056CC4B /* FootprintTool.m */; };
+		284D7B041D3841520056CC4B /* FSLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AF01D3841520056CC4B /* FSLineChart.m */; };
+		284D7B051D3841520056CC4B /* UIColor+FSPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AF21D3841520056CC4B /* UIColor+FSPalette.m */; };
+		284D7B061D3841520056CC4B /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AF41D3841520056CC4B /* HelperTool.m */; };
+		284D7B071D3841520056CC4B /* PedometerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AF61D3841520056CC4B /* PedometerTool.m */; };
+		284D7B081D3841520056CC4B /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AF81D3841520056CC4B /* TimerScheduler.m */; };
+		284D7B1E1D3841F20056CC4B /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B0B1D3841F20056CC4B /* CalendarView.m */; };
+		284D7B1F1D3841F20056CC4B /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B0D1D3841F20056CC4B /* CalendarViewController.m */; };
+		284D7B201D3841F20056CC4B /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B0F1D3841F20056CC4B /* DiaryEditViewController.m */; };
+		284D7B211D3841F20056CC4B /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B111D3841F20056CC4B /* DiaryListViewController.m */; };
+		284D7B221D3841F20056CC4B /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B131D3841F20056CC4B /* DiaryViewController.m */; };
+		284D7B231D3841F20056CC4B /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B151D3841F20056CC4B /* HealthViewController.m */; };
+		284D7B241D3841F20056CC4B /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B171D3841F20056CC4B /* PageScrollViewController.m */; };
+		284D7B251D3841F20056CC4B /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B191D3841F20056CC4B /* PageViewController.m */; };
+		284D7B261D3841F20056CC4B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B1B1D3841F20056CC4B /* SettingTableViewController.m */; };
+		284D7B271D3841F20056CC4B /* SettingUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -282,19 +292,9 @@
 		28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E2BB1D313CF500D8B9E3 /* ThemeModel.m */; };
 		28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E42D1D33C0A900D8B9E3 /* Weather.m */; };
 		28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */; };
-		7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A6C1D324F560028CE44 /* CalendarViewController.m */; };
-		7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D033A811D3252E60028CE44 /* DiaryListViewController.m */; };
 		7D033B791D34BA910028CE44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D033B781D34BA910028CE44 /* Main.storyboard */; };
-		7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E92D1D3522DD00575DED /* EmoticonViewController.m */; };
-		7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */; };
-		7D11ECAC1D35333D00575DED /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11ECAB1D35333D00575DED /* Cell.xib */; };
 		7D77B5D91D363F230098043E /* radioButtonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D77B5D71D363F230098043E /* radioButtonOff.png */; };
 		7D77B5DA1D363F230098043E /* radioButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D77B5D81D363F230098043E /* radioButtonOn.png */; };
-		7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */; };
-		7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D95026E1D2FD09900B57D4D /* NSMutableArray+convenience.m */; };
-		7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502701D2FD09900B57D4D /* UIColor+expanded.m */; };
-		7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9502721D2FD09900B57D4D /* UIView+convenience.m */; };
-		7DA28EB11D32336800DDBBC2 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA28EAB1D32336800DDBBC2 /* CalendarView.m */; };
 		BF76DDAC1D24181800E5F658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAB1D24181800E5F658 /* main.m */; };
 		BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDAE1D24181800E5F658 /* AppDelegate.m */; };
 		BF76DDB21D24181800E5F658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76DDB11D24181800E5F658 /* ViewController.m */; };
@@ -307,32 +307,56 @@
 /* Begin PBXFileReference section */
 		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
 		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
-		284D7A671D3682E50056CC4B /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
-		284D7A681D3682E50056CC4B /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
-		284D7A691D3682E50056CC4B /* PageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
-		284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollViewController.m; sourceTree = "<group>"; };
-		284D7A6B1D3682E50056CC4B /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
-		284D7A6C1D3682E50056CC4B /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		284D7A6E1D3682E50056CC4B /* FootprintTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintTool.h; sourceTree = "<group>"; };
-		284D7A6F1D3682E50056CC4B /* FootprintTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintTool.m; sourceTree = "<group>"; };
-		284D7A711D3682E50056CC4B /* FSLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLineChart.h; sourceTree = "<group>"; };
-		284D7A721D3682E50056CC4B /* FSLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLineChart.m; sourceTree = "<group>"; };
-		284D7A731D3682E50056CC4B /* UIColor+FSPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FSPalette.h"; sourceTree = "<group>"; };
-		284D7A741D3682E50056CC4B /* UIColor+FSPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FSPalette.m"; sourceTree = "<group>"; };
-		284D7A751D3682E50056CC4B /* HelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperTool.h; sourceTree = "<group>"; };
-		284D7A761D3682E50056CC4B /* HelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperTool.m; sourceTree = "<group>"; };
-		284D7A771D3682E50056CC4B /* PedometerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerTool.h; sourceTree = "<group>"; };
-		284D7A781D3682E50056CC4B /* PedometerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerTool.m; sourceTree = "<group>"; };
-		284D7A791D3682E50056CC4B /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerScheduler.h; sourceTree = "<group>"; };
-		284D7A7A1D3682E50056CC4B /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
-		284D7A851D368B6C0056CC4B /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
-		284D7A861D368B6C0056CC4B /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
-		284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
-		284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
-		284D7A951D37C1370056CC4B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
-		284D7A961D37C1370056CC4B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		284D7A9B1D37D5BA0056CC4B /* SettingUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingUserViewController.h; sourceTree = "<group>"; };
-		284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingUserViewController.m; sourceTree = "<group>"; };
+		284D7AD91D3841520056CC4B /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		284D7ADA1D3841520056CC4B /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		284D7ADB1D3841520056CC4B /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		284D7ADC1D3841520056CC4B /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		284D7ADD1D3841520056CC4B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		284D7ADF1D3841520056CC4B /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
+		284D7AE01D3841520056CC4B /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
+		284D7AE11D3841520056CC4B /* EmoticonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonViewController.h; sourceTree = "<group>"; };
+		284D7AE21D3841520056CC4B /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
+		284D7AE31D3841520056CC4B /* EmoticonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewController.xib; sourceTree = "<group>"; };
+		284D7AE41D3841520056CC4B /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		284D7AE51D3841520056CC4B /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		284D7AE61D3841520056CC4B /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		284D7AE71D3841520056CC4B /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		284D7AE81D3841520056CC4B /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		284D7AE91D3841520056CC4B /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		284D7AEA1D3841520056CC4B /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		284D7AEB1D3841520056CC4B /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		284D7AEC1D3841520056CC4B /* FootprintTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootprintTool.h; sourceTree = "<group>"; };
+		284D7AED1D3841520056CC4B /* FootprintTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootprintTool.m; sourceTree = "<group>"; };
+		284D7AEF1D3841520056CC4B /* FSLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLineChart.h; sourceTree = "<group>"; };
+		284D7AF01D3841520056CC4B /* FSLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLineChart.m; sourceTree = "<group>"; };
+		284D7AF11D3841520056CC4B /* UIColor+FSPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FSPalette.h"; sourceTree = "<group>"; };
+		284D7AF21D3841520056CC4B /* UIColor+FSPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FSPalette.m"; sourceTree = "<group>"; };
+		284D7AF31D3841520056CC4B /* HelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperTool.h; sourceTree = "<group>"; };
+		284D7AF41D3841520056CC4B /* HelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperTool.m; sourceTree = "<group>"; };
+		284D7AF51D3841520056CC4B /* PedometerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerTool.h; sourceTree = "<group>"; };
+		284D7AF61D3841520056CC4B /* PedometerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerTool.m; sourceTree = "<group>"; };
+		284D7AF71D3841520056CC4B /* TimerScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerScheduler.h; sourceTree = "<group>"; };
+		284D7AF81D3841520056CC4B /* TimerScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerScheduler.m; sourceTree = "<group>"; };
+		284D7B0A1D3841F20056CC4B /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		284D7B0B1D3841F20056CC4B /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		284D7B0C1D3841F20056CC4B /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		284D7B0D1D3841F20056CC4B /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		284D7B0E1D3841F20056CC4B /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
+		284D7B0F1D3841F20056CC4B /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
+		284D7B101D3841F20056CC4B /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
+		284D7B111D3841F20056CC4B /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
+		284D7B121D3841F20056CC4B /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
+		284D7B131D3841F20056CC4B /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
+		284D7B141D3841F20056CC4B /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
+		284D7B151D3841F20056CC4B /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
+		284D7B161D3841F20056CC4B /* PageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
+		284D7B171D3841F20056CC4B /* PageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollViewController.m; sourceTree = "<group>"; };
+		284D7B181D3841F20056CC4B /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		284D7B191D3841F20056CC4B /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		284D7B1A1D3841F20056CC4B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		284D7B1B1D3841F20056CC4B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		284D7B1C1D3841F20056CC4B /* SettingUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingUserViewController.h; sourceTree = "<group>"; };
+		284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingUserViewController.m; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -614,28 +638,10 @@
 		28E5E42D1D33C0A900D8B9E3 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		28E5E42F1D33C1DF00D8B9E3 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		28E5E4301D33C1DF00D8B9E3 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
-		7D033A6B1D324F560028CE44 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		7D033A6C1D324F560028CE44 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		7D033A801D3252E60028CE44 /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
-		7D033A811D3252E60028CE44 /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
 		7D033B781D34BA910028CE44 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7D11E92C1D3522DD00575DED /* EmoticonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonViewController.h; sourceTree = "<group>"; };
-		7D11E92D1D3522DD00575DED /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
-		7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewController.xib; sourceTree = "<group>"; };
 		7D11E9311D3523EF00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
-		7D11ECAB1D35333D00575DED /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		7D77B5D71D363F230098043E /* radioButtonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOff.png; sourceTree = "<group>"; };
 		7D77B5D81D363F230098043E /* radioButtonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButtonOn.png; sourceTree = "<group>"; };
-		7D95026B1D2FD09900B57D4D /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
-		7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
-		7D95026D1D2FD09900B57D4D /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
-		7D95026E1D2FD09900B57D4D /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
-		7D95026F1D2FD09900B57D4D /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
-		7D9502701D2FD09900B57D4D /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
-		7D9502711D2FD09900B57D4D /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
-		7D9502721D2FD09900B57D4D /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
-		7DA28EAA1D32336800DDBBC2 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
-		7DA28EAB1D32336800DDBBC2 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		BF76DDA71D24181800E5F658 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF76DDAB1D24181800E5F658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF76DDAD1D24181800E5F658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -668,54 +674,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		284D7A641D3682E50056CC4B /* Controller */ = {
+		284D7AD71D3841520056CC4B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				284D7A671D3682E50056CC4B /* HealthViewController.h */,
-				284D7A681D3682E50056CC4B /* HealthViewController.m */,
-				284D7A691D3682E50056CC4B /* PageScrollViewController.h */,
-				284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */,
-				284D7A6B1D3682E50056CC4B /* PageViewController.h */,
-				284D7A6C1D3682E50056CC4B /* PageViewController.m */,
-				284D7A851D368B6C0056CC4B /* DiaryViewController.h */,
-				284D7A861D368B6C0056CC4B /* DiaryViewController.m */,
-				284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */,
-				284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */,
-				284D7A951D37C1370056CC4B /* SettingTableViewController.h */,
-				284D7A961D37C1370056CC4B /* SettingTableViewController.m */,
-				284D7A9B1D37D5BA0056CC4B /* SettingUserViewController.h */,
-				284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */,
+				284D7AD81D3841520056CC4B /* Calendar */,
+				284D7AEC1D3841520056CC4B /* FootprintTool.h */,
+				284D7AED1D3841520056CC4B /* FootprintTool.m */,
+				284D7AEE1D3841520056CC4B /* FSLineChart */,
+				284D7AF31D3841520056CC4B /* HelperTool.h */,
+				284D7AF41D3841520056CC4B /* HelperTool.m */,
+				284D7AF51D3841520056CC4B /* PedometerTool.h */,
+				284D7AF61D3841520056CC4B /* PedometerTool.m */,
+				284D7AF71D3841520056CC4B /* TimerScheduler.h */,
+				284D7AF81D3841520056CC4B /* TimerScheduler.m */,
 			);
-			name = Controller;
-			path = Model/Controller;
+			path = Tool;
 			sourceTree = "<group>";
 		};
-		284D7A6D1D3682E50056CC4B /* Tool */ = {
+		284D7AD81D3841520056CC4B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				284D7A701D3682E50056CC4B /* FSLineChart */,
-				284D7A6E1D3682E50056CC4B /* FootprintTool.h */,
-				284D7A6F1D3682E50056CC4B /* FootprintTool.m */,
-				284D7A751D3682E50056CC4B /* HelperTool.h */,
-				284D7A761D3682E50056CC4B /* HelperTool.m */,
-				284D7A771D3682E50056CC4B /* PedometerTool.h */,
-				284D7A781D3682E50056CC4B /* PedometerTool.m */,
-				284D7A791D3682E50056CC4B /* TimerScheduler.h */,
-				284D7A7A1D3682E50056CC4B /* TimerScheduler.m */,
+				284D7AD91D3841520056CC4B /* CalendarView.h */,
+				284D7ADA1D3841520056CC4B /* CalendarView.m */,
+				284D7ADB1D3841520056CC4B /* CalendarViewController.h */,
+				284D7ADC1D3841520056CC4B /* CalendarViewController.m */,
+				284D7ADD1D3841520056CC4B /* Cell.xib */,
+				284D7ADF1D3841520056CC4B /* DiaryListViewController.h */,
+				284D7AE01D3841520056CC4B /* DiaryListViewController.m */,
+				284D7AE11D3841520056CC4B /* EmoticonViewController.h */,
+				284D7AE21D3841520056CC4B /* EmoticonViewController.m */,
+				284D7AE31D3841520056CC4B /* EmoticonViewController.xib */,
+				284D7AE41D3841520056CC4B /* NSDate+convenience.h */,
+				284D7AE51D3841520056CC4B /* NSDate+convenience.m */,
+				284D7AE61D3841520056CC4B /* NSMutableArray+convenience.h */,
+				284D7AE71D3841520056CC4B /* NSMutableArray+convenience.m */,
+				284D7AE81D3841520056CC4B /* UIColor+expanded.h */,
+				284D7AE91D3841520056CC4B /* UIColor+expanded.m */,
+				284D7AEA1D3841520056CC4B /* UIView+convenience.h */,
+				284D7AEB1D3841520056CC4B /* UIView+convenience.m */,
 			);
-			name = Tool;
-			path = Model/Tool;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
-		284D7A701D3682E50056CC4B /* FSLineChart */ = {
+		284D7AEE1D3841520056CC4B /* FSLineChart */ = {
 			isa = PBXGroup;
 			children = (
-				284D7A711D3682E50056CC4B /* FSLineChart.h */,
-				284D7A721D3682E50056CC4B /* FSLineChart.m */,
-				284D7A731D3682E50056CC4B /* UIColor+FSPalette.h */,
-				284D7A741D3682E50056CC4B /* UIColor+FSPalette.m */,
+				284D7AEF1D3841520056CC4B /* FSLineChart.h */,
+				284D7AF01D3841520056CC4B /* FSLineChart.m */,
+				284D7AF11D3841520056CC4B /* UIColor+FSPalette.h */,
+				284D7AF21D3841520056CC4B /* UIColor+FSPalette.m */,
 			);
 			path = FSLineChart;
+			sourceTree = "<group>";
+		};
+		284D7B091D3841F20056CC4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				284D7B0A1D3841F20056CC4B /* CalendarView.h */,
+				284D7B0B1D3841F20056CC4B /* CalendarView.m */,
+				284D7B0C1D3841F20056CC4B /* CalendarViewController.h */,
+				284D7B0D1D3841F20056CC4B /* CalendarViewController.m */,
+				284D7B0E1D3841F20056CC4B /* DiaryEditViewController.h */,
+				284D7B0F1D3841F20056CC4B /* DiaryEditViewController.m */,
+				284D7B101D3841F20056CC4B /* DiaryListViewController.h */,
+				284D7B111D3841F20056CC4B /* DiaryListViewController.m */,
+				284D7B121D3841F20056CC4B /* DiaryViewController.h */,
+				284D7B131D3841F20056CC4B /* DiaryViewController.m */,
+				284D7B141D3841F20056CC4B /* HealthViewController.h */,
+				284D7B151D3841F20056CC4B /* HealthViewController.m */,
+				284D7B161D3841F20056CC4B /* PageScrollViewController.h */,
+				284D7B171D3841F20056CC4B /* PageScrollViewController.m */,
+				284D7B181D3841F20056CC4B /* PageViewController.h */,
+				284D7B191D3841F20056CC4B /* PageViewController.m */,
+				284D7B1A1D3841F20056CC4B /* SettingTableViewController.h */,
+				284D7B1B1D3841F20056CC4B /* SettingTableViewController.m */,
+				284D7B1C1D3841F20056CC4B /* SettingUserViewController.h */,
+				284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		286EC5C01D2C16F20002A8EB /* Model */ = {
@@ -1051,31 +1087,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7D95026A1D2FD09900B57D4D /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				7D033A801D3252E60028CE44 /* DiaryListViewController.h */,
-				7D033A811D3252E60028CE44 /* DiaryListViewController.m */,
-				7D11E92C1D3522DD00575DED /* EmoticonViewController.h */,
-				7D11E92D1D3522DD00575DED /* EmoticonViewController.m */,
-				7D11E92E1D3522DD00575DED /* EmoticonViewController.xib */,
-				7D11ECAB1D35333D00575DED /* Cell.xib */,
-				7DA28EAA1D32336800DDBBC2 /* CalendarView.h */,
-				7DA28EAB1D32336800DDBBC2 /* CalendarView.m */,
-				7D033A6B1D324F560028CE44 /* CalendarViewController.h */,
-				7D033A6C1D324F560028CE44 /* CalendarViewController.m */,
-				7D95026C1D2FD09900B57D4D /* NSDate+convenience.m */,
-				7D95026B1D2FD09900B57D4D /* NSDate+convenience.h */,
-				7D95026D1D2FD09900B57D4D /* NSMutableArray+convenience.h */,
-				7D95026E1D2FD09900B57D4D /* NSMutableArray+convenience.m */,
-				7D95026F1D2FD09900B57D4D /* UIColor+expanded.h */,
-				7D9502701D2FD09900B57D4D /* UIColor+expanded.m */,
-				7D9502711D2FD09900B57D4D /* UIView+convenience.h */,
-				7D9502721D2FD09900B57D4D /* UIView+convenience.m */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
 		BF76DD9E1D24181800E5F658 = {
 			isa = PBXGroup;
 			children = (
@@ -1112,11 +1123,10 @@
 				BF76DDAE1D24181800E5F658 /* AppDelegate.m */,
 				BF76DDB01D24181800E5F658 /* ViewController.h */,
 				BF76DDB11D24181800E5F658 /* ViewController.m */,
-				284D7A641D3682E50056CC4B /* Controller */,
-				284D7A6D1D3682E50056CC4B /* Tool */,
-				28E1EA5C1D355395006DF06B /* Resource */,
+				284D7B091D3841F20056CC4B /* Controller */,
 				286EC5C01D2C16F20002A8EB /* Model */,
-				7D95026A1D2FD09900B57D4D /* Calendar */,
+				284D7AD71D3841520056CC4B /* Tool */,
+				28E1EA5C1D355395006DF06B /* Resource */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
 			);
 			path = Diary;
@@ -1142,6 +1152,7 @@
 				BF76DDA41D24181800E5F658 /* Frameworks */,
 				BF76DDA51D24181800E5F658 /* Resources */,
 				28E5E2951D31209000D8B9E3 /* ShellScript */,
+				284D7B281D38428D0056CC4B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1236,6 +1247,7 @@
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
 				28E5E2371D302F0800D8B9E3 /* info_box.png in Resources */,
 				28E1EBD91D355395006DF06B /* morning-snow.png in Resources */,
+				284D7AFB1D3841520056CC4B /* Cell.xib in Resources */,
 				28E1EBA71D355395006DF06B /* tongue-1.png in Resources */,
 				28E1EBEC1D355395006DF06B /* storm.png in Resources */,
 				28E1EBC21D355395006DF06B /* save.png in Resources */,
@@ -1418,7 +1430,6 @@
 				28E1EB971D355395006DF06B /* shouting.png in Resources */,
 				28E1EB851D355395006DF06B /* plate.png in Resources */,
 				28E1EBD71D355395006DF06B /* moon7.png in Resources */,
-				7D11ECAC1D35333D00575DED /* Cell.xib in Resources */,
 				28E1EBCE1D355395006DF06B /* farenheit.png in Resources */,
 				28E1EB641D355395006DF06B /* happy-12.png in Resources */,
 				28E5E24A1D302F0800D8B9E3 /* noimage256.png in Resources */,
@@ -1426,9 +1437,9 @@
 				7D033B791D34BA910028CE44 /* Main.storyboard in Resources */,
 				28E1EBB21D355395006DF06B /* key.png in Resources */,
 				7D77B5DA1D363F230098043E /* radioButtonOn.png in Resources */,
-				7D11E9301D3522DD00575DED /* EmoticonViewController.xib in Resources */,
 				28E1EBF01D355395006DF06B /* sunset-1.png in Resources */,
 				28E1EBF31D355395006DF06B /* temperature-1.png in Resources */,
+				284D7AFE1D3841520056CC4B /* EmoticonViewController.xib in Resources */,
 				28E1EBAB1D355395006DF06B /* wine-1.png in Resources */,
 				28E1EBDC1D355395006DF06B /* rainbow-1.png in Resources */,
 				28E1EB8D1D355395006DF06B /* sad-2.png in Resources */,
@@ -1438,6 +1449,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		284D7B281D38428D0056CC4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		28E5E2951D31209000D8B9E3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1458,51 +1482,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */,
+				284D7B1E1D3841F20056CC4B /* CalendarView.m in Sources */,
+				284D7B071D3841520056CC4B /* PedometerTool.m in Sources */,
+				284D7B251D3841F20056CC4B /* PageViewController.m in Sources */,
 				28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */,
 				28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */,
-				284D7A821D3682E50056CC4B /* HelperTool.m in Sources */,
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
+				284D7B081D3841520056CC4B /* TimerScheduler.m in Sources */,
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
-				284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */,
-				7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */,
-				7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */,
+				284D7AFD1D3841520056CC4B /* EmoticonViewController.m in Sources */,
+				284D7B061D3841520056CC4B /* HelperTool.m in Sources */,
+				284D7B211D3841F20056CC4B /* DiaryListViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
-				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
-				284D7A9D1D37D5BA0056CC4B /* SettingUserViewController.m in Sources */,
+				284D7B241D3841F20056CC4B /* PageScrollViewController.m in Sources */,
+				284D7B031D3841520056CC4B /* FootprintTool.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
-				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
-				284D7A971D37C1370056CC4B /* SettingTableViewController.m in Sources */,
-				284D7A801D3682E50056CC4B /* FSLineChart.m in Sources */,
+				284D7B001D3841520056CC4B /* NSMutableArray+convenience.m in Sources */,
+				284D7B201D3841F20056CC4B /* DiaryEditViewController.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
-				284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */,
-				7DA28EB11D32336800DDBBC2 /* CalendarView.m in Sources */,
+				284D7B261D3841F20056CC4B /* SettingTableViewController.m in Sources */,
 				286EC5D01D2C16F20002A8EB /* Diary.m in Sources */,
 				28E5E18D1D2C4A3500D8B9E3 /* PhotoModel.m in Sources */,
+				284D7B221D3841F20056CC4B /* DiaryViewController.m in Sources */,
 				286EC5D41D2C16F20002A8EB /* User.m in Sources */,
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
-				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,
-				284D7A7C1D3682E50056CC4B /* HealthViewController.m in Sources */,
-				284D7A7D1D3682E50056CC4B /* PageScrollViewController.m in Sources */,
-				284D7A7F1D3682E50056CC4B /* FootprintTool.m in Sources */,
 				BF76DDB21D24181800E5F658 /* ViewController.m in Sources */,
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
+				284D7B271D3841F20056CC4B /* SettingUserViewController.m in Sources */,
+				284D7B1F1D3841F20056CC4B /* CalendarViewController.m in Sources */,
+				284D7B011D3841520056CC4B /* UIColor+expanded.m in Sources */,
 				28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */,
+				284D7B231D3841F20056CC4B /* HealthViewController.m in Sources */,
+				284D7AFF1D3841520056CC4B /* NSDate+convenience.m in Sources */,
+				284D7B041D3841520056CC4B /* FSLineChart.m in Sources */,
 				28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */,
-				284D7A7E1D3682E50056CC4B /* PageViewController.m in Sources */,
 				BF76DDAC1D24181800E5F658 /* main.m in Sources */,
-				7D033A831D3252E60028CE44 /* DiaryListViewController.m in Sources */,
-				7D9502791D2FD09900B57D4D /* NSDate+convenience.m in Sources */,
+				284D7B021D3841520056CC4B /* UIView+convenience.m in Sources */,
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
-				284D7A811D3682E50056CC4B /* UIColor+FSPalette.m in Sources */,
-				284D7A831D3682E50056CC4B /* PedometerTool.m in Sources */,
+				284D7B051D3841520056CC4B /* UIColor+FSPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

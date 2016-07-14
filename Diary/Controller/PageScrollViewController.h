@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
 @interface PageScrollViewController : UIViewController<UIScrollViewDelegate>
 
@@ -15,6 +16,8 @@
 @property (weak, nonatomic)IBOutlet UIButton *btn_Prev;
 @property (weak, nonatomic)IBOutlet UIButton *btn_Next;
 @property (strong, nonatomic)NSMutableArray *controllers;
+@property (strong, nonatomic) UserModel *modelUser;
+@property (strong, nonatomic) User *user;
 
 -(IBAction)btn_ScrollMove:(id)sender;
 
