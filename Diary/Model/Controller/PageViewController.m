@@ -19,25 +19,23 @@
 @synthesize startButton;
 @synthesize checkbox;
 @synthesize checkboxSelected;
+@synthesize modelUser;
+@synthesize tutorial;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    modelUser = [[UserModel alloc] init];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Init
@@ -72,14 +70,22 @@
     [checkbox setBackgroundImage:[UIImage imageNamed:@"checkboxSelected.jpeg"]
                         forState:UIControlStateSelected];
     checkbox.backgroundColor=nil;
-    // 현재 페이지의 이미지와 텍스트 적용
     [imageView setImage:[UIImage imageNamed:imgName]];    
 }
 
-- (IBAction)checkboxSelected:(id)sender {
-    checkboxSelected = !checkboxSelected; /* Toggle */
+-(IBAction)checkboxSelected:(id)sender {
+    checkboxSelected = !checkboxSelected;
+    if(checkboxSelected) {
+        tutorial = @"N";
+    }
     [checkbox setSelected:checkboxSelected];
     [checkbox setHighlighted:NO];
+}
+
+-(IBAction)touchStart:(id)sender {
+    User *u = [modelUser select];
+    u.u_tutorial = tutorial;
+    [modelUser insertData:u];
 }
 
 @end

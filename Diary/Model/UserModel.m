@@ -57,6 +57,8 @@
 
 -(void) insertData:(User *)u {
     char *err;
+    
+    [self delete];
     NSString *query = [NSString stringWithFormat:@"INSERT INTO user (u_name, u_password, u_question, u_answer, u_th_id, u_timer, u_tutorial, u_lock) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", u.u_name, u.u_password, u.u_question, u.u_answer, u.u_th_id, u.u_timer, u.u_tutorial, u.u_lock];
     if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);

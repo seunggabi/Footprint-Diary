@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */; };
-		22A1D58A1D324DB600058642 /* GoToTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D57B1D324DB600058642 /* GoToTutorialViewController.m */; };
-		22A1D58B1D324DB600058642 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D57D1D324DB600058642 /* MyInfoViewController.m */; };
-		22A1D58C1D324DB600058642 /* MySettingModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D57F1D324DB600058642 /* MySettingModifyViewController.m */; };
-		22A1D58D1D324DB600058642 /* PasswordChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5811D324DB600058642 /* PasswordChangeViewController.m */; };
-		22A1D58E1D324DB600058642 /* PasswordFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5831D324DB600058642 /* PasswordFindViewController.m */; };
-		22A1D58F1D324DB600058642 /* PasswordSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5851D324DB600058642 /* PasswordSettingViewController.m */; };
-		22A1D5901D324DB600058642 /* SettingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5871D324DB600058642 /* SettingMenuViewController.m */; };
-		22A1D5911D324DB600058642 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1D5891D324DB600058642 /* SettingTableViewController.m */; };
 		284D7A7C1D3682E50056CC4B /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A681D3682E50056CC4B /* HealthViewController.m */; };
 		284D7A7D1D3682E50056CC4B /* PageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6A1D3682E50056CC4B /* PageScrollViewController.m */; };
 		284D7A7E1D3682E50056CC4B /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A6C1D3682E50056CC4B /* PageViewController.m */; };
@@ -314,22 +306,6 @@
 /* Begin PBXFileReference section */
 		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
 		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
-		22A1D57A1D324DB600058642 /* GoToTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoToTutorialViewController.h; path = Setting/GoToTutorialViewController.h; sourceTree = "<group>"; };
-		22A1D57B1D324DB600058642 /* GoToTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoToTutorialViewController.m; path = Setting/GoToTutorialViewController.m; sourceTree = "<group>"; };
-		22A1D57C1D324DB600058642 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInfoViewController.h; path = Setting/MyInfoViewController.h; sourceTree = "<group>"; };
-		22A1D57D1D324DB600058642 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInfoViewController.m; path = Setting/MyInfoViewController.m; sourceTree = "<group>"; };
-		22A1D57E1D324DB600058642 /* MySettingModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySettingModifyViewController.h; path = Setting/MySettingModifyViewController.h; sourceTree = "<group>"; };
-		22A1D57F1D324DB600058642 /* MySettingModifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySettingModifyViewController.m; path = Setting/MySettingModifyViewController.m; sourceTree = "<group>"; };
-		22A1D5801D324DB600058642 /* PasswordChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordChangeViewController.h; path = Setting/PasswordChangeViewController.h; sourceTree = "<group>"; };
-		22A1D5811D324DB600058642 /* PasswordChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordChangeViewController.m; path = Setting/PasswordChangeViewController.m; sourceTree = "<group>"; };
-		22A1D5821D324DB600058642 /* PasswordFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordFindViewController.h; path = Setting/PasswordFindViewController.h; sourceTree = "<group>"; };
-		22A1D5831D324DB600058642 /* PasswordFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordFindViewController.m; path = Setting/PasswordFindViewController.m; sourceTree = "<group>"; };
-		22A1D5841D324DB600058642 /* PasswordSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordSettingViewController.h; path = Setting/PasswordSettingViewController.h; sourceTree = "<group>"; };
-		22A1D5851D324DB600058642 /* PasswordSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordSettingViewController.m; path = Setting/PasswordSettingViewController.m; sourceTree = "<group>"; };
-		22A1D5861D324DB600058642 /* SettingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingMenuViewController.h; path = Setting/SettingMenuViewController.h; sourceTree = "<group>"; };
-		22A1D5871D324DB600058642 /* SettingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingMenuViewController.m; path = Setting/SettingMenuViewController.m; sourceTree = "<group>"; };
-		22A1D5881D324DB600058642 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = Setting/SettingTableViewController.h; sourceTree = "<group>"; };
-		22A1D5891D324DB600058642 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = Setting/SettingTableViewController.m; sourceTree = "<group>"; };
 		284D7A671D3682E50056CC4B /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
 		284D7A681D3682E50056CC4B /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		284D7A691D3682E50056CC4B /* PageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewController.h; sourceTree = "<group>"; };
@@ -688,29 +664,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22682B361D303DE50015854E /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				22A1D57A1D324DB600058642 /* GoToTutorialViewController.h */,
-				22A1D57B1D324DB600058642 /* GoToTutorialViewController.m */,
-				22A1D57C1D324DB600058642 /* MyInfoViewController.h */,
-				22A1D57D1D324DB600058642 /* MyInfoViewController.m */,
-				22A1D57E1D324DB600058642 /* MySettingModifyViewController.h */,
-				22A1D57F1D324DB600058642 /* MySettingModifyViewController.m */,
-				22A1D5801D324DB600058642 /* PasswordChangeViewController.h */,
-				22A1D5811D324DB600058642 /* PasswordChangeViewController.m */,
-				22A1D5821D324DB600058642 /* PasswordFindViewController.h */,
-				22A1D5831D324DB600058642 /* PasswordFindViewController.m */,
-				22A1D5841D324DB600058642 /* PasswordSettingViewController.h */,
-				22A1D5851D324DB600058642 /* PasswordSettingViewController.m */,
-				22A1D5861D324DB600058642 /* SettingMenuViewController.h */,
-				22A1D5871D324DB600058642 /* SettingMenuViewController.m */,
-				22A1D5881D324DB600058642 /* SettingTableViewController.h */,
-				22A1D5891D324DB600058642 /* SettingTableViewController.m */,
-			);
-			name = Setting;
-			sourceTree = "<group>";
-		};
 		284D7A641D3682E50056CC4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1156,7 +1109,6 @@
 				284D7A6D1D3682E50056CC4B /* Tool */,
 				28E1EA5C1D355395006DF06B /* Resource */,
 				286EC5C01D2C16F20002A8EB /* Model */,
-				22682B361D303DE50015854E /* Setting */,
 				7D95026A1D2FD09900B57D4D /* Calendar */,
 				BF76DDAA1D24181800E5F658 /* Supporting Files */,
 			);
@@ -1502,9 +1454,7 @@
 			files = (
 				284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */,
 				28E5E4311D33C1DF00D8B9E3 /* WeatherModel.m in Sources */,
-				22A1D58C1D324DB600058642 /* MySettingModifyViewController.m in Sources */,
 				28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */,
-				22A1D58F1D324DB600058642 /* PasswordSettingViewController.m in Sources */,
 				284D7A821D3682E50056CC4B /* HelperTool.m in Sources */,
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
@@ -1512,14 +1462,12 @@
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */,
 				7D033A6D1D324F560028CE44 /* CalendarViewController.m in Sources */,
-				22A1D58E1D324DB600058642 /* PasswordFindViewController.m in Sources */,
 				7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
-				22A1D58A1D324DB600058642 /* GoToTutorialViewController.m in Sources */,
 				284D7A801D3682E50056CC4B /* FSLineChart.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */,
@@ -1530,7 +1478,6 @@
 				28E5E18A1D2C491100D8B9E3 /* Photo.m in Sources */,
 				28CBDB451D2C3C980053D0DE /* EmoticonModel.m in Sources */,
 				7D95027B1D2FD09900B57D4D /* UIColor+expanded.m in Sources */,
-				22A1D5901D324DB600058642 /* SettingMenuViewController.m in Sources */,
 				284D7A7C1D3682E50056CC4B /* HealthViewController.m in Sources */,
 				284D7A7D1D3682E50056CC4B /* PageScrollViewController.m in Sources */,
 				284D7A7F1D3682E50056CC4B /* FootprintTool.m in Sources */,
@@ -1538,8 +1485,6 @@
 				BF76DDAF1D24181800E5F658 /* AppDelegate.m in Sources */,
 				28E5E1961D2C7A3D00D8B9E3 /* HealthInformation.m in Sources */,
 				285346781D2C2D6E0001F378 /* Sticker.m in Sources */,
-				22A1D58D1D324DB600058642 /* PasswordChangeViewController.m in Sources */,
-				22A1D58B1D324DB600058642 /* MyInfoViewController.m in Sources */,
 				28E5E2BD1D313CF500D8B9E3 /* ThemeModel.m in Sources */,
 				28E5E42E1D33C0A900D8B9E3 /* Weather.m in Sources */,
 				284D7A7E1D3682E50056CC4B /* PageViewController.m in Sources */,
@@ -1549,7 +1494,6 @@
 				28E5E1901D2C58C200D8B9E3 /* Health.m in Sources */,
 				286EC5CF1D2C16F20002A8EB /* DBConnector.m in Sources */,
 				284D7A811D3682E50056CC4B /* UIColor+FSPalette.m in Sources */,
-				22A1D5911D324DB600058642 /* SettingTableViewController.m in Sources */,
 				284D7A831D3682E50056CC4B /* PedometerTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

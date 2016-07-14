@@ -800,7 +800,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="m9t-WS-lI3" kind="show" id="JIv-jE-3gQ"/>
+                                            <segue destination="m9t-WS-lI3" kind="push" id="3kb-fU-hMC"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -963,7 +963,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ci-sZ-ye0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2337.1875" y="-655.45774647887322"/>
+            <point key="canvasLocation" x="-2379.5" y="-749.5"/>
         </scene>
         <!--테마-->
         <scene sceneID="cDr-ZN-dhc">
@@ -1333,7 +1333,7 @@
             </objects>
             <point key="canvasLocation" x="424.6875" y="-970.2464788732392"/>
         </scene>
-        <!--내 설정-->
+        <!--개인 설정-->
         <scene sceneID="CBy-aT-1l5">
             <objects>
                 <viewController id="m9t-WS-lI3" sceneMemberID="viewController">
@@ -1462,7 +1462,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="내 설정" id="A54-J5-3QC">
+                    <navigationItem key="navigationItem" title="개인 설정" id="A54-J5-3QC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="MdW-V5-QK6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e4Q-fY-Mqo">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -1475,7 +1475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boc-2n-LX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-377.8125" y="-1299.8239436619717"/>
+            <point key="canvasLocation" x="-1860.5" y="-1138.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="IPn-WR-7Zh">
@@ -1680,6 +1680,7 @@
                                 <rect key="frame" x="161" y="617" width="52" height="30"/>
                                 <state key="normal" title="시작하기"/>
                                 <connections>
+                                    <action selector="touchStart:" destination="uhb-fe-sTq" eventType="touchDown" id="OC1-hs-YMo"/>
                                     <segue destination="ANb-6Y-9LM" kind="presentation" identifier="" id="2xm-c6-aNm"/>
                                 </connections>
                             </button>
@@ -1706,7 +1707,7 @@
                     <connections>
                         <outlet property="checkbox" destination="A9b-be-LFL" id="3hs-TN-5Ia"/>
                         <outlet property="imageView" destination="m8K-mj-U8s" id="le3-0r-tFJ"/>
-                        <outlet property="startButton" destination="ahE-af-G9W" id="WMb-w5-1uC"/>
+                        <outlet property="startButton" destination="ahE-af-G9W" id="mRV-3a-I9R"/>
                         <outlet property="titleLabel" destination="hEm-I6-zjm" id="B0E-wE-X55"/>
                     </connections>
                 </viewController>
