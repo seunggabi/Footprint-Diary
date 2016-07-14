@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Diary.h"
+#import "UserModel.h"
 #import "DiaryModel.h"
-#import "Emoticon.h"
+#import "EmoticonModel.h"
 #import "CalendarView.h"
 #import "DiaryViewController.h"
 
@@ -20,8 +20,9 @@
 @property (strong, nonatomic) NSDate *indexDate;
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSMutableArray *diaryList;
-@property (strong, nonatomic) Emoticon *emoticon;
+@property (strong, nonatomic) UserModel *modelUser;
 @property (strong, nonatomic) DiaryModel *modelDiary;
+@property (strong, nonatomic) EmoticonModel *modelEmoticon;
 @property (strong, nonatomic) CalendarView *calendar;
 @property (weak, nonatomic) IBOutlet UIView *calendarScreen;
 

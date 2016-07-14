@@ -17,14 +17,17 @@
 
 @synthesize diary;
 @synthesize diaryList;
-@synthesize emoticon;
 @synthesize indexDate;
+@synthesize modelUser;
 @synthesize modelDiary;
+@synthesize modelEmoticon;
 @synthesize calendar;
 
 -(void) viewDidLoad{
     [super viewDidLoad];
+    modelUser = [[UserModel alloc] init];
     modelDiary = [[DiaryModel alloc] init];
+    modelEmoticon = [[EmoticonModel alloc] init];
     calendar = [[CalendarView alloc] init];
     calendar.delegate = self;
     calendar.diaryList = diaryList = [modelDiary select:nil];
@@ -35,6 +38,7 @@
     [super viewWillAppear:animated];
     calendar.diaryList = [modelDiary select:nil];
     [self.calendarScreen setNeedsDisplay];
+    self.navigationItem.title = [modelUser select].u_name;
 }
 
 -(Diary *) getDiary:(NSDate *)date{

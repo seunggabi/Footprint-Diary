@@ -19,6 +19,8 @@
 		284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A7A1D3682E50056CC4B /* TimerScheduler.m */; };
 		284D7A871D368B6C0056CC4B /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A861D368B6C0056CC4B /* DiaryViewController.m */; };
 		284D7A8A1D36B71F0056CC4B /* DiaryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */; };
+		284D7A971D37C1370056CC4B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A961D37C1370056CC4B /* SettingTableViewController.m */; };
+		284D7A9D1D37D5BA0056CC4B /* SettingUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -328,6 +330,10 @@
 		284D7A861D368B6C0056CC4B /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
 		284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEditViewController.h; sourceTree = "<group>"; };
 		284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEditViewController.m; sourceTree = "<group>"; };
+		284D7A951D37C1370056CC4B /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		284D7A961D37C1370056CC4B /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		284D7A9B1D37D5BA0056CC4B /* SettingUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingUserViewController.h; sourceTree = "<group>"; };
+		284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingUserViewController.m; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -677,6 +683,10 @@
 				284D7A861D368B6C0056CC4B /* DiaryViewController.m */,
 				284D7A881D36B71F0056CC4B /* DiaryEditViewController.h */,
 				284D7A891D36B71F0056CC4B /* DiaryEditViewController.m */,
+				284D7A951D37C1370056CC4B /* SettingTableViewController.h */,
+				284D7A961D37C1370056CC4B /* SettingTableViewController.m */,
+				284D7A9B1D37D5BA0056CC4B /* SettingUserViewController.h */,
+				284D7A9C1D37D5BA0056CC4B /* SettingUserViewController.m */,
 			);
 			name = Controller;
 			path = Model/Controller;
@@ -1465,9 +1475,11 @@
 				7D11E92F1D3522DD00575DED /* EmoticonViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				7D95027A1D2FD09900B57D4D /* NSMutableArray+convenience.m in Sources */,
+				284D7A9D1D37D5BA0056CC4B /* SettingUserViewController.m in Sources */,
 				286EC5D21D2C16F20002A8EB /* Footprint.m in Sources */,
 				2853467E1D2C34160001F378 /* Emoticon.m in Sources */,
 				7D95027C1D2FD09900B57D4D /* UIView+convenience.m in Sources */,
+				284D7A971D37C1370056CC4B /* SettingTableViewController.m in Sources */,
 				284D7A801D3682E50056CC4B /* FSLineChart.m in Sources */,
 				286EC5D11D2C16F20002A8EB /* DiaryModel.m in Sources */,
 				284D7A841D3682E50056CC4B /* TimerScheduler.m in Sources */,

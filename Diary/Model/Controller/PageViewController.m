@@ -20,6 +20,7 @@
 @synthesize checkbox;
 @synthesize checkboxSelected;
 @synthesize modelUser;
+@synthesize user;
 @synthesize tutorial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -32,6 +33,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     modelUser = [[UserModel alloc] init];
+    user = [modelUser select];
+    if([user.u_tutorial isEqualToString:@"Y"]) {
+        checkbox.selected = NO;
+    } else {
+        checkbox.selected = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,9 +90,8 @@
 }
 
 -(IBAction)touchStart:(id)sender {
-    User *u = [modelUser select];
-    u.u_tutorial = tutorial;
-    [modelUser insertData:u];
+    user.u_tutorial = tutorial;
+    [modelUser insertData:user];
 }
 
 @end

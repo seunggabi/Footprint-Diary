@@ -105,7 +105,7 @@
 
 -(User *) getSampleData {
     User *u = [[User alloc] init];
-    u.u_name = @"ooo의 일기장";
+    u.u_name = @"발자국 일기장";
     u.u_password = @"";
     u.u_question = @"";
     u.u_answer = @"";
