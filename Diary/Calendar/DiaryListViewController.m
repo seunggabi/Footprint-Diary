@@ -7,7 +7,8 @@
 //
 
 #import "DiaryListViewController.h"
-#import "DiaryViewController.h"s
+#import "DiaryViewController.h"
+#import "HelperTool.h"
 
 @interface DiaryListViewController ()
 
@@ -32,9 +33,6 @@
     
     modelDiary = [[DiaryModel alloc] init];
     [self loadDiaryListData:sDateText.text endDate:sDateText.text];
-    for(int i=0; i<diaryList.count; i++) {
-        NSLog(@"%@", [[diaryList objectAtIndex:i] getObj]);
-    }
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.date = [NSDate date];

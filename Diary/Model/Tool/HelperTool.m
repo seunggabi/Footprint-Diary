@@ -44,6 +44,7 @@
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
     WeatherModel *modelWeather = [[WeatherModel alloc] init];
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
     
     [modelUser create];
     [modelFootPrint create];
@@ -54,6 +55,7 @@
     [modelHealth create];
     [modelHealthInfo create];
     [modelWeather create];
+    [modelTheme create];
 }
 
 -(void) removeDB {
@@ -66,7 +68,7 @@
     HealthModel *modelHealth = [[HealthModel alloc] init];
     HealthInformationModel *modelHealthInfo = [[HealthInformationModel alloc] init];
     WeatherModel *modelWeather = [[WeatherModel alloc] init];
-    
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
     
     [modelUser drop];
     [modelFootPrint drop];
@@ -77,6 +79,7 @@
     [modelHealth drop];
     [modelHealthInfo drop];
     [modelWeather drop];
+    [modelTheme drop];
 }
 
 -(NSString *) getToday {
@@ -105,6 +108,14 @@
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *d = [dateFormat stringFromDate:date];
     return d;
+}
+
+-(Theme *) getTheme {
+    UserModel *modelUser = [[UserModel alloc] init];
+    ThemeModel *modelTheme = [[ThemeModel alloc] init];
+    User *u = [modelUser select];
+    Theme *th = [[modelTheme select:[NSString stringWithFormat:@"th_id='%@'",u.u_th_id]] objectAtIndex:0];
+    return th;
 }
 
 @end

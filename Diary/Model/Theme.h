@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSString *th_bottom;
 @property (strong, nonatomic) NSString *th_font;
 
-+(Theme *) theme:(NSString*)name top:(NSString *)top main:(NSString *)main bottom:(NSString *)bottom font:(NSString *)font;
++(Theme *)theme:(NSString *)main name:(NSString *)name top:(NSString *)top bottom:(NSString *)bottom font:(NSString *)font;
 -(NSDictionary *) getObj;
 
 @end

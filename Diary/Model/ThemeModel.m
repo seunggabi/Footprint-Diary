@@ -107,7 +107,27 @@
 
 -(void) install {
     NSMutableArray *themeList = [[NSMutableArray alloc] init];
-    [themeList addObject:[Theme theme:@"테마이름" top:@"상단" main:@"메인" bottom:@"하단" font:@"폰트"]];
+    
+    [themeList addObject:[Theme theme:@"tree.jpg" name:@"Tree" top:@"#aaaaaa" bottom:@"#aaaaaa" font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"balloon.jpg" name:@"Balloon" top:@"#ecdfbd" bottom:@"#ecdfbd"font:@"#444444"]];
+    [themeList addObject:[Theme theme:@"bottle.jpg" name:@"Bottle" top:@"#98a590" bottom:@"#98a590"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"cactus.jpg" name:@"Cactus" top:@"#85c4b9" bottom:@"#85c4b9"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"city.jpg" name:@"City" top:@"#aaaaaa" bottom:@"#aaaaaa"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"cloud.jpg" name:@"Cloud" top:@"#aaaaaa" bottom:@"#aaaaaa"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"FerrisWheel.jpg" name:@"FerrisWheel" top:@"#69d2e7" bottom:@"#69d2e7"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"firework.jpg" name:@"Firework" top:@"#aaaaaa" bottom:@"#aaaaaa"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"flower.jpg" name:@"Flower" top:@"#e8928d" bottom:@"#e8928d"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"greek.jpg" name:@"Greek" top:@"#ffe6e6" bottom:@"#ffe6e6"font:@"#ff8080"]];
+    [themeList addObject:[Theme theme:@"icecream.jpg" name:@"Icecream" top:@"#ffffff" bottom:@"#ffffff"font:@"#000000"]];
+    [themeList addObject:[Theme theme:@"ocean.jpg" name:@"Ocean" top:@"#ffffff" bottom:@"#ffffff"font:@"#000000"]];
+    [themeList addObject:[Theme theme:@"rainywindow.jpg" name:@"Rainywindow" top:@"#000000" bottom:@"#000000"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"sea.jpg" name:@"Sea" top:@"#28abe3" bottom:@"#28abe3"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"sea2.jpg" name:@"Sea2" top:@"#69d2e7" bottom:@"#69d2e7"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"skyline.jpg" name:@"Skyline" top:@"#000000" bottom:@"#000000"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"skyflower.jpg" name:@"Skyflower" top:@"#f0b09b" bottom:@"#f0b09b"font:@"#ffffff"]];
+    [themeList addObject:[Theme theme:@"tower.jpg" name:@"Tower" top:@"#aaaaaa" bottom:@"#aaaaaa"font:@"#ffffff"]];
+    
+
     
     for(int i=0; i<themeList.count; i++) {
         [self insertData:[themeList objectAtIndex:i]];

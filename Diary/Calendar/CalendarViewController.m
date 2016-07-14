@@ -27,6 +27,9 @@
 
 -(void) viewDidLoad{
     [super viewDidLoad];
+    
+    Theme *themeInfo = [[HelperTool getInstance] getTheme];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:themeInfo.th_main]];
 }
 
 -(void) viewWillAppear:(BOOL)animated {

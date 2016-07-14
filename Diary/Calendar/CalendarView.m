@@ -400,7 +400,7 @@
             if(targetDate < 10)
                 date = [date stringByAppendingString:@"0"];
             date = [date stringByAppendingString:[NSString stringWithFormat:@"%d",targetDate]];
-            if([((Diary *)[diaryList objectAtIndex:j]).d_date isEqualToString:date] && i<(firstWeekDay+currentMonthNumDays)) {
+            if(i>=firstWeekDay && [((Diary *)[diaryList objectAtIndex:j]).d_date isEqualToString:date] && i<(firstWeekDay+currentMonthNumDays)) {
                 NSString *hex = @"0xFF0000";
                 CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:hex].CGColor);
             }

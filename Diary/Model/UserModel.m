@@ -109,7 +109,7 @@
     u.u_password = @"";
     u.u_question = @"";
     u.u_answer = @"";
-    u.u_th_id = @0;
+    u.u_th_id = @1;
     u.u_timer = @10;
     u.u_tutorial = @"Y";
     u.u_lock = @"N";
