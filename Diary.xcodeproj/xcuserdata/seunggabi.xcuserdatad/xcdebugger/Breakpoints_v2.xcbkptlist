@@ -216,11 +216,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Diary/Controller/PageScrollViewController.m"
-            timestampString = "490010191.872105"
+            timestampString = "490230458.614432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-initScrollViewAndPageControl"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Diary/Controller/PageScrollViewController.m"
+            timestampString = "490230458.614432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-loadScrollViewDataSourceWithPage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -232,28 +248,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Diary/Controller/PageScrollViewController.m"
-            timestampString = "490010204.600675"
+            timestampString = "490230458.614432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-loadScrollViewDataSourceWithPage:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Diary/Controller/PageScrollViewController.m"
-            timestampString = "490010313.76552"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "-alertViewShowsWithMessage:"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-btn_ScrollMove:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

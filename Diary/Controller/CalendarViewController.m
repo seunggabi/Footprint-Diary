@@ -27,13 +27,13 @@
 
 -(void) viewDidLoad{
     [super viewDidLoad];
-    
-    Theme *themeInfo = [[HelperTool getInstance] getTheme];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:themeInfo.th_main]];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    Theme *themeInfo = [[HelperTool getInstance] getTheme];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:themeInfo.th_main]];
+    
     modelUser = [[UserModel alloc] init];
     modelDiary = [[DiaryModel alloc] init];
     modelEmoticon = [[EmoticonModel alloc] init];

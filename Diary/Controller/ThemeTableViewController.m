@@ -1,53 +1,64 @@
 //
-//  SettingTableViewController.m
+//  ThemeTableViewController.m
 //  Diary
 //
-//  Created by 김승갑 on 2016. 7. 14..
+//  Created by 김승갑 on 2016. 7. 15..
 //  Copyright © 2016년 mju12345. All rights reserved.
 //
 
-#import "SettingTableViewController.h"
-#import "PageScrollViewController.h"
+#import "ThemeTableViewController.h"
 
-@interface SettingTableViewController ()
+@interface ThemeTableViewController ()
 
 @end
 
-@implementation SettingTableViewController
+@implementation ThemeTableViewController
 
-- (void)viewDidLoad {
+@synthesize modelTheme;
+@synthesize modelUser;
+@synthesize themeList;
+@synthesize user;
+
+-(void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    modelTheme = [[ThemeModel alloc] init];
+    modelUser = [[UserModel alloc] init];
+    themeList = [modelTheme select:nil];
+    user = [modelUser select];
 }
 
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"TutorialView"]) {
-        PageScrollViewController *controller = segue.destinationViewController;
-        controller.tutorial = @"Y";
-    }
-}
-
 #pragma mark - Table view data source
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return themeList.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Theme *th = [themeList objectAtIndex:indexPath.row];
+    if(th.th_id == user.u_th_id) {
+        NSLog(@"TEST");
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    }
+    cell.textLabel.text = th.th_name;
+    cell.imageView.image = [UIImage imageNamed:th.th_main];
     return cell;
 }
-*/
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    user.u_th_id = [NSNumber numberWithInteger:selectedIndexPath.row];
+    [modelUser insertData:user];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -69,11 +80,11 @@
 }
 */
 
-
+/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
-
+*/
 
 /*
 // Override to support conditional rearranging of the table view.

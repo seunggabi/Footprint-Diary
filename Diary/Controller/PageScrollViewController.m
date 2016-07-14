@@ -22,6 +22,7 @@
 @synthesize btn_Prev;
 @synthesize modelUser;
 @synthesize user;
+@synthesize tutorial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,7 +36,7 @@
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
     
-    if([user.u_tutorial isEqualToString:@"Y"]) {
+    if([user.u_tutorial isEqualToString:@"Y"] || [tutorial isEqualToString:@"Y"]) {
         [btn_Prev setTag:1];
         [btn_Next setTag:0];
         [self initScrollViewAndPageControl];
@@ -46,7 +47,7 @@
 - (void) viewDidAppear:(BOOL)animated {
     NSLog(@"%@", [user getObj]);
     
-    if([user.u_tutorial isEqualToString:@"N"]) {
+    if([user.u_tutorial isEqualToString:@"N"] && ![tutorial isEqualToString:@"Y"]) {
         [self performSegueWithIdentifier:@"skipTutorial" sender:self];
     }
 }
