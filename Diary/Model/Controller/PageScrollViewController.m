@@ -20,6 +20,8 @@
 @synthesize controllers;
 @synthesize btn_Next;
 @synthesize btn_Prev;
+@synthesize modelUser;
+@synthesize user;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,12 +32,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    modelUser = [[UserModel alloc] init];
+    user = [modelUser select];
     
-    [btn_Prev setTag:1];
-    [btn_Next setTag:0];
+    if([user.u_tutorial isEqualToString:@"Y"]) {
+        [btn_Prev setTag:1];
+        [btn_Next setTag:0];
+        [self initScrollViewAndPageControl];
+        [self gotoPage:FALSE AtPage:0];
+    }
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"%@", [user getObj]);
     
-    [self initScrollViewAndPageControl];
-    [self gotoPage:FALSE AtPage:0];
+    if([user.u_tutorial isEqualToString:@"N"]) {
+        [self performSegueWithIdentifier:@"skipTutorial" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
