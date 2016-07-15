@@ -46,7 +46,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Theme *th = [themeList objectAtIndex:indexPath.row];
     if(th.th_id == user.u_th_id) {
-        NSLog(@"TEST");
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
     }
     cell.textLabel.text = th.th_name;
@@ -56,7 +55,7 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-    user.u_th_id = [NSNumber numberWithInteger:selectedIndexPath.row];
+    user.u_th_id = [NSNumber numberWithInteger:selectedIndexPath.row+1];
     [modelUser insertData:user];
 }
 

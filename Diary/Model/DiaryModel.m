@@ -121,7 +121,7 @@
     NSDate *e = [[HelperTool getInstance] stringToDate:eDate];
     e = [e dateByAddingTimeInterval:60*60*24];
     
-    NSString *where = [NSString stringWithFormat:@"d_time>='%f' AND d_time<'%f'", [s timeIntervalSince1970], [e timeIntervalSince1970]];
+    NSString *where = [NSString stringWithFormat:@"d_time>='%f' AND d_time<'%f' ORDER BY d_date DESC", [s timeIntervalSince1970], [e timeIntervalSince1970]];
     NSMutableArray *list = [self select:where];
     return list;
 }

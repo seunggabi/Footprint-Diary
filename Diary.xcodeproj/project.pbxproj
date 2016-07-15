@@ -308,13 +308,7 @@
 /* Begin PBXFileReference section */
 		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
 		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
-		284D7AD91D3841520056CC4B /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
-		284D7ADA1D3841520056CC4B /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
-		284D7ADB1D3841520056CC4B /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		284D7ADC1D3841520056CC4B /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		284D7ADD1D3841520056CC4B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
-		284D7ADF1D3841520056CC4B /* DiaryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryListViewController.h; sourceTree = "<group>"; };
-		284D7AE01D3841520056CC4B /* DiaryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryListViewController.m; sourceTree = "<group>"; };
 		284D7AE11D3841520056CC4B /* EmoticonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonViewController.h; sourceTree = "<group>"; };
 		284D7AE21D3841520056CC4B /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
 		284D7AE31D3841520056CC4B /* EmoticonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewController.xib; sourceTree = "<group>"; };
@@ -680,10 +674,10 @@
 		284D7AD71D3841520056CC4B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				284D7AEE1D3841520056CC4B /* FSLineChart */,
 				284D7AD81D3841520056CC4B /* Calendar */,
 				284D7AEC1D3841520056CC4B /* FootprintTool.h */,
 				284D7AED1D3841520056CC4B /* FootprintTool.m */,
-				284D7AEE1D3841520056CC4B /* FSLineChart */,
 				284D7AF31D3841520056CC4B /* HelperTool.h */,
 				284D7AF41D3841520056CC4B /* HelperTool.m */,
 				284D7AF51D3841520056CC4B /* PedometerTool.h */,
@@ -697,13 +691,7 @@
 		284D7AD81D3841520056CC4B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				284D7AD91D3841520056CC4B /* CalendarView.h */,
-				284D7ADA1D3841520056CC4B /* CalendarView.m */,
-				284D7ADB1D3841520056CC4B /* CalendarViewController.h */,
-				284D7ADC1D3841520056CC4B /* CalendarViewController.m */,
 				284D7ADD1D3841520056CC4B /* Cell.xib */,
-				284D7ADF1D3841520056CC4B /* DiaryListViewController.h */,
-				284D7AE01D3841520056CC4B /* DiaryListViewController.m */,
 				284D7AE11D3841520056CC4B /* EmoticonViewController.h */,
 				284D7AE21D3841520056CC4B /* EmoticonViewController.m */,
 				284D7AE31D3841520056CC4B /* EmoticonViewController.xib */,

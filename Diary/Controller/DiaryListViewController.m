@@ -55,7 +55,7 @@
 
 -(void) loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate {
     if([sDate isEqualToString:@""] && [eDate isEqualToString:@""])
-        diaryList = [modelDiary select:nil];
+        diaryList = [modelDiary select:@"1=1 ORDER BY d_date DESC"];
     else {
         if([sDate isEqualToString:@""])
             sDate = @"1970-01-01";
@@ -96,18 +96,14 @@
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
     }
     Diary *d = [diaryList objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"[%@]", d.d_date];
-    cell.textLabel.textColor = [UIColor blueColor];
-                                
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(130, 13, 255, 20)];
-    label.font = [UIFont systemFontOfSize:14.0];
-    label.textAlignment = NSTextAlignmentLeft;
-    label.textColor = [UIColor blackColor];
-    label.text = [NSString stringWithFormat:@"%@", d.d_title];
-    [cell.contentView addSubview:label];
+    cell.textLabel.textColor = [UIColor blackColor];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", d.d_title];
+    cell.detailTextLabel.textColor = [UIColor blueColor];
+    cell.detailTextLabel.textAlignment = NSTextAlignmentLeft;
     return cell;
 }
 
