@@ -20,5 +20,6 @@
 -(void) deleteTable :(NSString *)tableName;
 -(void) dropTable :(NSString *)tableName;
 -(void) updateTable :(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where;
+-(void) queryExecute :(NSString *)query;
 
 @end

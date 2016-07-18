@@ -32,6 +32,10 @@
 		284D7B261D3841F20056CC4B /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B1B1D3841F20056CC4B /* SettingTableViewController.m */; };
 		284D7B271D3841F20056CC4B /* SettingUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */; };
 		284D7B2B1D384AC20056CC4B /* ThemeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B2A1D384AC20056CC4B /* ThemeTableViewController.m */; };
+		284D7B301D3A5D290056CC4B /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2C1D3A5D290056CC4B /* page1.png */; };
+		284D7B311D3A5D290056CC4B /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2D1D3A5D290056CC4B /* page2.png */; };
+		284D7B321D3A5D290056CC4B /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2E1D3A5D290056CC4B /* page3.png */; };
+		284D7B331D3A5D290056CC4B /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2F1D3A5D290056CC4B /* page4.png */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -176,10 +180,6 @@
 		28E1EBB41D355395006DF06B /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE01D355395006DF06B /* Marker.png */; };
 		28E1EBB51D355395006DF06B /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE11D355395006DF06B /* note.png */; };
 		28E1EBB61D355395006DF06B /* outbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE21D355395006DF06B /* outbox.png */; };
-		28E1EBB71D355395006DF06B /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE31D355395006DF06B /* page1.png */; };
-		28E1EBB81D355395006DF06B /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE41D355395006DF06B /* page2.png */; };
-		28E1EBB91D355395006DF06B /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE51D355395006DF06B /* page3.png */; };
-		28E1EBBA1D355395006DF06B /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE61D355395006DF06B /* page4.png */; };
 		28E1EBBB1D355395006DF06B /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE71D355395006DF06B /* pencil.png */; };
 		28E1EBBC1D355395006DF06B /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE81D355395006DF06B /* photo.png */; };
 		28E1EBBD1D355395006DF06B /* photo_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E1EAE91D355395006DF06B /* photo_24.png */; };
@@ -354,6 +354,10 @@
 		284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingUserViewController.m; sourceTree = "<group>"; };
 		284D7B291D384AC20056CC4B /* ThemeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeTableViewController.h; sourceTree = "<group>"; };
 		284D7B2A1D384AC20056CC4B /* ThemeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeTableViewController.m; sourceTree = "<group>"; };
+		284D7B2C1D3A5D290056CC4B /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		284D7B2D1D3A5D290056CC4B /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		284D7B2E1D3A5D290056CC4B /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		284D7B2F1D3A5D290056CC4B /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -509,10 +513,6 @@
 		28E1EAE01D355395006DF06B /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
 		28E1EAE11D355395006DF06B /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
 		28E1EAE21D355395006DF06B /* outbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outbox.png; sourceTree = "<group>"; };
-		28E1EAE31D355395006DF06B /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
-		28E1EAE41D355395006DF06B /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
-		28E1EAE51D355395006DF06B /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
-		28E1EAE61D355395006DF06B /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		28E1EAE71D355395006DF06B /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		28E1EAE81D355395006DF06B /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		28E1EAE91D355395006DF06B /* photo_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_24.png; sourceTree = "<group>"; };
@@ -804,6 +804,10 @@
 				28E1EA5D1D355395006DF06B /* background */,
 				7D77B5D71D363F230098043E /* radioButtonOff.png */,
 				7D77B5D81D363F230098043E /* radioButtonOn.png */,
+				284D7B2C1D3A5D290056CC4B /* page1.png */,
+				284D7B2D1D3A5D290056CC4B /* page2.png */,
+				284D7B2E1D3A5D290056CC4B /* page3.png */,
+				284D7B2F1D3A5D290056CC4B /* page4.png */,
 				28E1EA711D355395006DF06B /* Calendar-Month.png */,
 				28E1EA721D355395006DF06B /* checkbox.jpeg */,
 				28E1EA731D355395006DF06B /* checkboxSelected.jpeg */,
@@ -817,10 +821,6 @@
 				28E1EAE01D355395006DF06B /* Marker.png */,
 				28E1EAE11D355395006DF06B /* note.png */,
 				28E1EAE21D355395006DF06B /* outbox.png */,
-				28E1EAE31D355395006DF06B /* page1.png */,
-				28E1EAE41D355395006DF06B /* page2.png */,
-				28E1EAE51D355395006DF06B /* page3.png */,
-				28E1EAE61D355395006DF06B /* page4.png */,
 				28E1EAE71D355395006DF06B /* pencil.png */,
 				28E1EAE81D355395006DF06B /* photo.png */,
 				28E1EAE91D355395006DF06B /* photo_24.png */,
@@ -1205,6 +1205,7 @@
 				28E1EBED1D355395006DF06B /* summer-rain.png in Resources */,
 				28E1EB9E1D355395006DF06B /* steak.png in Resources */,
 				28E1EB731D355395006DF06B /* kiss-1.png in Resources */,
+				284D7B331D3A5D290056CC4B /* page4.png in Resources */,
 				28E1EB3C1D355395006DF06B /* greek.jpg in Resources */,
 				28E1EB801D355395006DF06B /* napkins.png in Resources */,
 				28E1EBA91D355395006DF06B /* tongue.png in Resources */,
@@ -1221,20 +1222,17 @@
 				28E1EBFA1D355395006DF06B /* umbrella.png in Resources */,
 				28E1EBA61D355395006DF06B /* taco.png in Resources */,
 				28E1EB901D355395006DF06B /* sad-5.png in Resources */,
-				28E1EBB91D355395006DF06B /* page3.png in Resources */,
 				28E1EBD81D355395006DF06B /* morning-rain.png in Resources */,
 				28E1EB4E1D355395006DF06B /* chair.png in Resources */,
 				28E1EBC71D355395006DF06B /* calm.png in Resources */,
 				28E1EB3F1D355395006DF06B /* rainywindow.jpg in Resources */,
 				28E1EB991D355395006DF06B /* skewer.png in Resources */,
 				28E5E24B1D302F0800D8B9E3 /* point_sprite.png in Resources */,
-				28E1EBB71D355395006DF06B /* page1.png in Resources */,
 				28E1EB781D355395006DF06B /* meatballs.png in Resources */,
 				28E1EB8F1D355395006DF06B /* sad-4.png in Resources */,
 				28E1EB491D355395006DF06B /* checkmark.png in Resources */,
 				28E1EBDE1D355395006DF06B /* rainbow.png in Resources */,
 				28E1EB891D355395006DF06B /* restaurant.png in Resources */,
-				28E1EBBA1D355395006DF06B /* page4.png in Resources */,
 				28E1EBEF1D355395006DF06B /* sunrise.png in Resources */,
 				28E5E2441D302F0800D8B9E3 /* map_pinup_custom@3x.png in Resources */,
 				BF76DDBA1D24181800E5F658 /* LaunchScreen.storyboard in Resources */,
@@ -1249,12 +1247,14 @@
 				28E5E2481D302F0800D8B9E3 /* map_present_tracking.png in Resources */,
 				28E1EBEE1D355395006DF06B /* sunny.png in Resources */,
 				28E1EBC11D355395006DF06B /* resize.png in Resources */,
+				284D7B301D3A5D290056CC4B /* page1.png in Resources */,
 				28E1EB721D355395006DF06B /* ketchup.png in Resources */,
 				28E1EBAF1D355395006DF06B /* help.png in Resources */,
 				28E1EB9F1D355395006DF06B /* surprised-1.png in Resources */,
 				28E1EBDF1D355395006DF06B /* raindrops.png in Resources */,
 				28E1EB7F1D355395006DF06B /* muted.png in Resources */,
 				28E1EBA11D355395006DF06B /* surprised-3.png in Resources */,
+				284D7B311D3A5D290056CC4B /* page2.png in Resources */,
 				28E1EBE31D355395006DF06B /* snowflake.png in Resources */,
 				28E1EB5E1D355395006DF06B /* fries.png in Resources */,
 				28E1EB5A1D355395006DF06B /* egg.png in Resources */,
@@ -1353,6 +1353,7 @@
 				28E1EB341D355395006DF06B /* balloon.jpg in Resources */,
 				28E1EB921D355395006DF06B /* sad-7.png in Resources */,
 				28E1EB7D1D355395006DF06B /* muted-1.png in Resources */,
+				284D7B321D3A5D290056CC4B /* page3.png in Resources */,
 				28E1EBFF1D355395006DF06B /* wind-1.png in Resources */,
 				28E1EB6F1D355395006DF06B /* hotcake.png in Resources */,
 				28E1EB6E1D355395006DF06B /* highchair.png in Resources */,
@@ -1369,7 +1370,6 @@
 				28E1EB431D355395006DF06B /* skyline.jpg in Resources */,
 				28E1EBAD1D355395006DF06B /* wink.png in Resources */,
 				28E1EBC41D355395006DF06B /* smile.png in Resources */,
-				28E1EBB81D355395006DF06B /* page2.png in Resources */,
 				28E1EB7B1D355395006DF06B /* moustache.png in Resources */,
 				28E1EB411D355395006DF06B /* sea2.jpg in Resources */,
 				28E5E2411D302F0800D8B9E3 /* map_pinup.png in Resources */,

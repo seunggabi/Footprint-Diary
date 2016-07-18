@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--발자국 일기장-->
@@ -630,10 +631,10 @@
             </objects>
             <point key="canvasLocation" x="-2830.3125" y="482.21830985915483"/>
         </scene>
-        <!--View Controller-->
+        <!--비밀번호 설정-->
         <scene sceneID="eSH-BX-aGH">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="oQt-dM-IGS" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="oQt-dM-IGS" userLabel="비밀번호 설정" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rbb-EQ-9NK"/>
                         <viewControllerLayoutGuide type="bottom" id="BqR-5O-Tu3"/>
@@ -740,13 +741,6 @@
                                     <action selector="digitPressed:" destination="Pnh-re-VFu" eventType="touchUpInside" id="K90-Cb-VHq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-2G-QlW">
-                                <rect key="frame" x="20" y="222" width="314" height="57"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNj-dj-nE7">
                                 <rect key="frame" x="20" y="127" width="314" height="57"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1068,10 +1062,10 @@
             </objects>
             <point key="canvasLocation" x="-1860.5" y="-1138.5"/>
         </scene>
-        <!--Item-->
+        <!--네비게이션-->
         <scene sceneID="IPn-WR-7Zh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ANb-6Y-9LM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ANb-6Y-9LM" userLabel="네비게이션" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ou4-tF-obU"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="avr-Ww-fhT"/>
@@ -1089,10 +1083,10 @@
             </objects>
             <point key="canvasLocation" x="-3420.5" y="-3516.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--탭바-->
         <scene sceneID="BdT-T7-yPh">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4p1-P8-dCD" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4p1-P8-dCD" userLabel="탭바" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cCF-sN-6Fp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1111,10 +1105,10 @@
             </objects>
             <point key="canvasLocation" x="-2901.5" y="-3516.5"/>
         </scene>
-        <!--Setting-->
+        <!--설정탭-->
         <scene sceneID="hkR-GE-pup">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jso-de-jAw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jso-de-jAw" userLabel="설정탭" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="setting.png" id="o4b-wN-4uJ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1131,10 +1125,10 @@
             </objects>
             <point key="canvasLocation" x="-3249.5" y="-1001.5"/>
         </scene>
-        <!--health-->
+        <!--헬스탭-->
         <scene sceneID="bo5-0z-Bc5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4gH-it-6Jq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4gH-it-6Jq" userLabel="헬스탭" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="health" image="heart.png" id="RCT-xM-FOa"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1151,10 +1145,10 @@
             </objects>
             <point key="canvasLocation" x="-2254.6875" y="-1738.2042253521126"/>
         </scene>
-        <!--Calender-->
+        <!--달력탭-->
         <scene sceneID="t8o-pG-CJy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6U6-4P-8qn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6U6-4P-8qn" userLabel="달력탭" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calender" image="Calendar-Month.png" id="L2p-17-pkM"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1171,10 +1165,10 @@
             </objects>
             <point key="canvasLocation" x="-2388.75" y="-3532.394366197183"/>
         </scene>
-        <!--List-->
+        <!--목록탭-->
         <scene sceneID="Np5-J1-qIa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QMO-lz-JZI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QMO-lz-JZI" userLabel="목록탭" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="note.png" id="afT-od-6z2"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1191,10 +1185,10 @@
             </objects>
             <point key="canvasLocation" x="-2254.6875" y="-2570.5985915492956"/>
         </scene>
-        <!--Page Scroll View Controller-->
+        <!--튜토리얼 스크롤뷰-->
         <scene sceneID="doJ-db-p6h">
             <objects>
-                <viewController storyboardIdentifier="PageScrollView" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="zVY-Mg-dRu" customClass="PageScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageScrollView" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="zVY-Mg-dRu" userLabel="튜토리얼 스크롤뷰" customClass="PageScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2I-h5-UfW"/>
                         <viewControllerLayoutGuide type="bottom" id="U0l-RP-3c9"/>
@@ -1203,7 +1197,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-Ex-iMh">
+                            <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-Ex-iMh">
                                 <rect key="frame" x="0.0" y="0.0" width="46" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -1213,7 +1207,7 @@
                                     <action selector="btn_ScrollMove:" destination="zVY-Mg-dRu" eventType="touchUpInside" id="oTi-FX-FYH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apv-9Z-9eP">
+                            <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apv-9Z-9eP">
                                 <rect key="frame" x="329" y="0.0" width="46" height="665"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -1223,21 +1217,45 @@
                                     <action selector="btn_ScrollMove:" destination="zVY-Mg-dRu" eventType="touchUpInside" id="igQ-o6-OKV"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-Ba-DlM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-Ba-DlM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-yw-Njt">
-                                        <rect key="frame" x="168" y="586" width="39" height="37"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="btn_ScrollMove:" destination="zVY-Mg-dRu" eventType="valueChanged" id="z2l-TW-u3N"/>
-                                        </connections>
-                                    </pageControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2o-k6-Cij">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-yw-Njt">
+                                                <rect key="frame" x="168" y="484" width="39" height="37"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="btn_ScrollMove:" destination="zVY-Mg-dRu" eventType="valueChanged" id="z2l-TW-u3N"/>
+                                                </connections>
+                                            </pageControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="centerY" secondItem="g9j-Ba-DlM" secondAttribute="centerY" id="AxC-IU-im8"/>
+                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="top" secondItem="g9j-Ba-DlM" secondAttribute="top" id="L4v-oJ-YVM"/>
+                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="centerX" secondItem="g9j-Ba-DlM" secondAttribute="centerX" id="cC1-5l-jeI"/>
+                                    <constraint firstAttribute="bottom" secondItem="M2o-k6-Cij" secondAttribute="bottom" id="dML-1G-zsL"/>
+                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="leading" secondItem="g9j-Ba-DlM" secondAttribute="leading" id="nkI-pI-Rcd"/>
+                                    <constraint firstAttribute="trailing" secondItem="M2o-k6-Cij" secondAttribute="trailing" id="wLp-Iv-wsJ"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="t2I-h5-UfW" secondAttribute="bottom" id="6Bq-CP-iit"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="PLL-Ex-iMh" secondAttribute="leading" id="986-dm-FPA"/>
+                            <constraint firstAttribute="trailing" secondItem="g9j-Ba-DlM" secondAttribute="trailing" id="ArF-jR-H32"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="trailing" secondItem="apv-9Z-9eP" secondAttribute="trailing" id="Bny-8Q-J8g"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="apv-9Z-9eP" secondAttribute="top" id="a1i-pC-sim"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="PLL-Ex-iMh" secondAttribute="top" id="m0z-XF-Ztg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="g9j-Ba-DlM" secondAttribute="bottom" constant="-50" id="vIA-Nh-314"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="ZIV-um-Fh2" secondAttribute="leading" id="yC7-TN-xtu"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1253,10 +1271,10 @@
             </objects>
             <point key="canvasLocation" x="-2982.5" y="-4366.5"/>
         </scene>
-        <!--Page View Controller-->
+        <!--튜토리얼 페이지-->
         <scene sceneID="mEY-ee-EXV">
             <objects>
-                <viewController storyboardIdentifier="SinglePageView" hidesBottomBarWhenPushed="YES" id="uhb-fe-sTq" customClass="PageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SinglePageView" hidesBottomBarWhenPushed="YES" id="uhb-fe-sTq" userLabel="튜토리얼 페이지" customClass="PageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yph-jv-muf"/>
                         <viewControllerLayoutGuide type="bottom" id="rFm-iS-40R"/>
@@ -1268,30 +1286,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8K-mj-U8s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-af-G9W">
-                                <rect key="frame" x="153" y="564" width="52" height="30"/>
-                                <state key="normal" title="시작하기"/>
-                                <connections>
-                                    <action selector="touchStart:" destination="uhb-fe-sTq" eventType="touchDown" id="OC1-hs-YMo"/>
-                                    <segue destination="ANb-6Y-9LM" kind="presentation" identifier="" id="2xm-c6-aNm"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="튜토리얼을 다시 보지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-I6-zjm">
-                                <rect key="frame" x="119" y="526" width="180" height="37"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9b-be-LFL">
-                                <rect key="frame" x="86" y="530" width="30" height="30"/>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq7-TF-Ks2">
+                                <rect key="frame" x="61" y="536" width="253" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="튜토리얼을 다시 보지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-I6-zjm">
+                                        <rect key="frame" x="53" y="0.0" width="180" height="37"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9b-be-LFL">
+                                        <rect key="frame" x="20" y="4" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkboxSelected:" destination="uhb-fe-sTq" eventType="touchUpInside" id="4Xo-Yw-Mmj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-af-G9W">
+                                        <rect key="frame" x="100" y="38" width="52" height="30"/>
+                                        <state key="normal" title="시작하기"/>
+                                        <connections>
+                                            <action selector="touchStart:" destination="uhb-fe-sTq" eventType="touchDown" id="OC1-hs-YMo"/>
+                                            <segue destination="ANb-6Y-9LM" kind="presentation" identifier="" id="2xm-c6-aNm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="checkboxSelected:" destination="uhb-fe-sTq" eventType="touchUpInside" id="4Xo-Yw-Mmj"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1300,6 +1324,7 @@
                     <connections>
                         <outlet property="checkbox" destination="A9b-be-LFL" id="3hs-TN-5Ia"/>
                         <outlet property="imageView" destination="m8K-mj-U8s" id="le3-0r-tFJ"/>
+                        <outlet property="setTutorialBox" destination="nq7-TF-Ks2" id="vqb-OJ-bi1"/>
                         <outlet property="startButton" destination="ahE-af-G9W" id="mRV-3a-I9R"/>
                         <outlet property="titleLabel" destination="hEm-I6-zjm" id="B0E-wE-X55"/>
                     </connections>
@@ -1411,7 +1436,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2xm-c6-aNm"/>
-        <segue reference="HtY-OA-Btd"/>
+        <segue reference="tLb-UM-bbg"/>
         <segue reference="Ggz-8Z-s4z"/>
         <segue reference="RJ1-ej-gBR"/>
     </inferredMetricsTieBreakers>

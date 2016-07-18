@@ -92,4 +92,17 @@
     }
 }
 
+-(void) queryExecute:(NSString *)query {
+    char *err;
+    
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+        sqlite3_close(db);
+        NSAssert(0,@"Query Failed!");
+    }
+    else {
+        NSLog(@"Query Success!!");
+    }
+
+}
+
 @end

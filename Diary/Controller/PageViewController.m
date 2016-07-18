@@ -17,6 +17,7 @@
 @synthesize imageView;
 @synthesize titleLabel;
 @synthesize startButton;
+@synthesize setTutorialBox;
 @synthesize checkbox;
 @synthesize checkboxSelected;
 @synthesize modelUser;
@@ -40,6 +41,7 @@
     } else {
         tutorial = @"N";
         checkbox.selected = YES;
+        checkboxSelected = YES;
     }
 }
 
@@ -72,6 +74,7 @@
         startButton.hidden = YES;
         titleLabel.hidden = YES;
         checkbox.hidden = YES;
+        setTutorialBox.hidden = YES;
     }
     
     [checkbox setBackgroundImage:[UIImage imageNamed:@"checkbox.jpeg"]
@@ -86,14 +89,16 @@
     checkboxSelected = !checkboxSelected;
     if(checkboxSelected) {
         tutorial = @"N";
+    } else {
+        tutorial = @"Y";
     }
     [checkbox setSelected:checkboxSelected];
-    [checkbox setHighlighted:NO];
 }
 
 -(IBAction)touchStart:(id)sender {
     user.u_tutorial = tutorial;
     [modelUser insertData:user];
+    NSLog(@"%@", [user getObj]);
 }
 
 @end

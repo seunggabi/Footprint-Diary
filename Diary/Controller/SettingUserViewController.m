@@ -7,6 +7,7 @@
 //
 
 #import "SettingUserViewController.h"
+#import "PedometerTool.h"
 
 @interface SettingUserViewController ()
 
@@ -48,6 +49,7 @@
     user.u_timer = @([timerText.text intValue]);
     [modelUser insertData:user];
     [self.navigationController popViewControllerAnimated:YES];
+    [[PedometerTool getInstance] start];
     
 }
 @end

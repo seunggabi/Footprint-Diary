@@ -15,6 +15,7 @@
 @property (strong,nonatomic)IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *checkbox;
+@property (strong, nonatomic) IBOutlet UIView *setTutorialBox;
 @property (assign, nonatomic) BOOL checkboxSelected;
 @property (strong, nonatomic) UserModel *modelUser;
 @property (strong, nonatomic) User *user;

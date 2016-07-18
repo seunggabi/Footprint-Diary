@@ -136,28 +136,4 @@
     
     [scrollView scrollRectToVisible:bounds animated:animated];
 }
-
--(IBAction)btn_ScrollMove:(id)sender {
-    if([sender tag] == 0) {
-        if(pageControl.currentPage < 3) {
-            [self gotoPage:YES AtPage:pageControl.currentPage + 1];
-        } else {
-            [self alertViewShowsWithMessage:@"마지막 페이지입니다"];
-        }
-    } else if([sender tag] == 1){
-        if(pageControl.currentPage > 0) {
-            [self gotoPage:YES AtPage:pageControl.currentPage - 1];
-        } else {
-            [self alertViewShowsWithMessage:@"첫 페이지입니다"];
-        }
-    } else {
-        [self gotoPage:YES AtPage:pageControl.currentPage];
-    }
-}
-
--(void)alertViewShowsWithMessage:(NSString *)message{
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"ScrollViewExample" message:message delegate:self cancelButtonTitle:@"확인" otherButtonTitles: nil];
-    [alertView show];
-}
-
 @end
