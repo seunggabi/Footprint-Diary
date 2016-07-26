@@ -46,13 +46,11 @@
     NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
     NSDate *start = [gregorian dateFromComponents:components];
     
-    // take "now" and normalise to 23:59
     components.hour = 23;
     components.minute = 59;
     components.second = 59;
     NSDate *end = [gregorian dateFromComponents:components];
     
-    // display results
     [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
         health.h_count = pedometerData.numberOfSteps;
         [modelHealth insertData:health];

@@ -631,10 +631,10 @@
             </objects>
             <point key="canvasLocation" x="-2830.3125" y="482.21830985915483"/>
         </scene>
-        <!--비밀번호 설정-->
+        <!--View Controller-->
         <scene sceneID="eSH-BX-aGH">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="oQt-dM-IGS" userLabel="비밀번호 설정" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="oQt-dM-IGS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rbb-EQ-9NK"/>
                         <viewControllerLayoutGuide type="bottom" id="BqR-5O-Tu3"/>
@@ -1185,10 +1185,10 @@
             </objects>
             <point key="canvasLocation" x="-2254.6875" y="-2570.5985915492956"/>
         </scene>
-        <!--튜토리얼 스크롤뷰-->
+        <!--Page Scroll View Controller-->
         <scene sceneID="doJ-db-p6h">
             <objects>
-                <viewController storyboardIdentifier="PageScrollView" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="zVY-Mg-dRu" userLabel="튜토리얼 스크롤뷰" customClass="PageScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageScrollView" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="zVY-Mg-dRu" customClass="PageScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2I-h5-UfW"/>
                         <viewControllerLayoutGuide type="bottom" id="U0l-RP-3c9"/>
@@ -1219,42 +1219,18 @@
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-Ba-DlM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2o-k6-Cij">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
-                                        <subviews>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-yw-Njt">
-                                                <rect key="frame" x="168" y="484" width="39" height="37"/>
-                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="btn_ScrollMove:" destination="zVY-Mg-dRu" eventType="valueChanged" id="z2l-TW-u3N"/>
-                                                </connections>
-                                            </pageControl>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="centerY" secondItem="g9j-Ba-DlM" secondAttribute="centerY" id="AxC-IU-im8"/>
-                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="top" secondItem="g9j-Ba-DlM" secondAttribute="top" id="L4v-oJ-YVM"/>
-                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="centerX" secondItem="g9j-Ba-DlM" secondAttribute="centerX" id="cC1-5l-jeI"/>
-                                    <constraint firstAttribute="bottom" secondItem="M2o-k6-Cij" secondAttribute="bottom" id="dML-1G-zsL"/>
-                                    <constraint firstItem="M2o-k6-Cij" firstAttribute="leading" secondItem="g9j-Ba-DlM" secondAttribute="leading" id="nkI-pI-Rcd"/>
-                                    <constraint firstAttribute="trailing" secondItem="M2o-k6-Cij" secondAttribute="trailing" id="wLp-Iv-wsJ"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="t2I-h5-UfW" secondAttribute="bottom" id="6Bq-CP-iit"/>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="PLL-Ex-iMh" secondAttribute="leading" id="986-dm-FPA"/>
-                            <constraint firstAttribute="trailing" secondItem="g9j-Ba-DlM" secondAttribute="trailing" id="ArF-jR-H32"/>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="trailing" secondItem="apv-9Z-9eP" secondAttribute="trailing" id="Bny-8Q-J8g"/>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="apv-9Z-9eP" secondAttribute="top" id="a1i-pC-sim"/>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="PLL-Ex-iMh" secondAttribute="top" id="m0z-XF-Ztg"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="g9j-Ba-DlM" secondAttribute="bottom" constant="-50" id="vIA-Nh-314"/>
-                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="ZIV-um-Fh2" secondAttribute="leading" id="yC7-TN-xtu"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="ZIV-um-Fh2" secondAttribute="leading" id="42M-qQ-0m6"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="apv-9Z-9eP" secondAttribute="top" id="4yG-Ti-czg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="g9j-Ba-DlM" secondAttribute="bottom" constant="-50" id="PkZ-68-q4a"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="t2I-h5-UfW" secondAttribute="bottom" id="SfJ-Jp-bwl"/>
+                            <constraint firstAttribute="trailing" secondItem="g9j-Ba-DlM" secondAttribute="trailing" id="ZJJ-fn-PnO"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="leading" secondItem="PLL-Ex-iMh" secondAttribute="leading" id="bre-Dx-ejo"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="trailing" secondItem="apv-9Z-9eP" secondAttribute="trailing" id="dHf-Op-rVi"/>
+                            <constraint firstItem="g9j-Ba-DlM" firstAttribute="top" secondItem="PLL-Ex-iMh" secondAttribute="top" id="lr8-dR-LmF"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -1262,7 +1238,6 @@
                     <connections>
                         <outlet property="btn_Next" destination="apv-9Z-9eP" id="RGG-p4-k16"/>
                         <outlet property="btn_Prev" destination="PLL-Ex-iMh" id="j7c-Ob-5hk"/>
-                        <outlet property="pageControl" destination="PEU-yw-Njt" id="htI-Bd-fO6"/>
                         <outlet property="scrollView" destination="g9j-Ba-DlM" id="v5E-E2-IqP"/>
                         <segue destination="ANb-6Y-9LM" kind="presentation" identifier="skipTutorial" id="bAw-Is-1nh"/>
                     </connections>
@@ -1271,10 +1246,10 @@
             </objects>
             <point key="canvasLocation" x="-2982.5" y="-4366.5"/>
         </scene>
-        <!--튜토리얼 페이지-->
+        <!--Page View Controller-->
         <scene sceneID="mEY-ee-EXV">
             <objects>
-                <viewController storyboardIdentifier="SinglePageView" hidesBottomBarWhenPushed="YES" id="uhb-fe-sTq" userLabel="튜토리얼 페이지" customClass="PageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SinglePageView" hidesBottomBarWhenPushed="YES" id="uhb-fe-sTq" customClass="PageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yph-jv-muf"/>
                         <viewControllerLayoutGuide type="bottom" id="rFm-iS-40R"/>
@@ -1435,7 +1410,7 @@
         <image name="star.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2xm-c6-aNm"/>
+        <segue reference="bAw-Is-1nh"/>
         <segue reference="tLb-UM-bbg"/>
         <segue reference="Ggz-8Z-s4z"/>
         <segue reference="RJ1-ej-gBR"/>

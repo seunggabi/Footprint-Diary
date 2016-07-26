@@ -69,9 +69,6 @@
 
 -(void) chartDraw {
     NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", selectDate]];
-    for(int i=0; i<healthList.count; i++) {
-        NSLog(@"%@",[((Health *)[healthList objectAtIndex:i]) getObj]);
-    }
     
     int second = 60*60*24;
     int minute = second/60;
