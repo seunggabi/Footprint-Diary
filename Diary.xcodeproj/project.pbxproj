@@ -36,6 +36,8 @@
 		284D7B311D3A5D290056CC4B /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2D1D3A5D290056CC4B /* page2.png */; };
 		284D7B321D3A5D290056CC4B /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2E1D3A5D290056CC4B /* page3.png */; };
 		284D7B331D3A5D290056CC4B /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 284D7B2F1D3A5D290056CC4B /* page4.png */; };
+		284D7B361D4A32990056CC4B /* PasswordSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B351D4A32990056CC4B /* PasswordSettingViewController.m */; };
+		284D7B3C1D4C77890056CC4B /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7B3B1D4C77890056CC4B /* LockViewController.m */; };
 		285346781D2C2D6E0001F378 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 285346771D2C2D6E0001F378 /* Sticker.m */; };
 		2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467A1D2C2EC20001F378 /* StickerModel.m */; };
 		2853467E1D2C34160001F378 /* Emoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853467D1D2C34160001F378 /* Emoticon.m */; };
@@ -358,6 +360,10 @@
 		284D7B2D1D3A5D290056CC4B /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
 		284D7B2E1D3A5D290056CC4B /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		284D7B2F1D3A5D290056CC4B /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		284D7B341D4A32990056CC4B /* PasswordSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordSettingViewController.h; sourceTree = "<group>"; };
+		284D7B351D4A32990056CC4B /* PasswordSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordSettingViewController.m; sourceTree = "<group>"; };
+		284D7B3A1D4C77890056CC4B /* LockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockViewController.h; sourceTree = "<group>"; };
+		284D7B3B1D4C77890056CC4B /* LockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
 		285346761D2C2D6E0001F378 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		285346771D2C2D6E0001F378 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		285346791D2C2EC20001F378 /* StickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerModel.h; sourceTree = "<group>"; };
@@ -743,6 +749,10 @@
 				284D7B1B1D3841F20056CC4B /* SettingTableViewController.m */,
 				284D7B1C1D3841F20056CC4B /* SettingUserViewController.h */,
 				284D7B1D1D3841F20056CC4B /* SettingUserViewController.m */,
+				284D7B341D4A32990056CC4B /* PasswordSettingViewController.h */,
+				284D7B351D4A32990056CC4B /* PasswordSettingViewController.m */,
+				284D7B3A1D4C77890056CC4B /* LockViewController.h */,
+				284D7B3B1D4C77890056CC4B /* LockViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1482,12 +1492,14 @@
 				28E5E2BC1D313CF500D8B9E3 /* Theme.m in Sources */,
 				2853467B1D2C2EC20001F378 /* StickerModel.m in Sources */,
 				284D7B081D3841520056CC4B /* TimerScheduler.m in Sources */,
+				284D7B3C1D4C77890056CC4B /* LockViewController.m in Sources */,
 				226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */,
 				286EC5D31D2C16F20002A8EB /* FootprintModel.m in Sources */,
 				286EC5D51D2C16F20002A8EB /* UserModel.m in Sources */,
 				284D7AFD1D3841520056CC4B /* EmoticonViewController.m in Sources */,
 				284D7B061D3841520056CC4B /* HelperTool.m in Sources */,
 				284D7B211D3841F20056CC4B /* DiaryListViewController.m in Sources */,
+				284D7B361D4A32990056CC4B /* PasswordSettingViewController.m in Sources */,
 				28E5E1991D2C7CA900D8B9E3 /* HealthInformationModel.m in Sources */,
 				284D7B241D3841F20056CC4B /* PageScrollViewController.m in Sources */,
 				284D7B031D3841520056CC4B /* FootprintTool.m in Sources */,

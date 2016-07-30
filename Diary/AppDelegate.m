@@ -10,6 +10,7 @@
 #import "HelperTool.h"
 #import "FootprintTool.h"
 #import "PedometerTool.h"
+#import "UserModel.h"
 
 
 @interface AppDelegate ()
@@ -41,7 +42,20 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UserModel *modelUser = [[UserModel alloc] init];
+    User *user = [modelUser select];
+    
+    if(![user.u_lock isEqualToString:@"Y"]) {
+        NSLog(@"Lock!");
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"Lock"];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = viewController;
+        [self.window makeKeyAndVisible];
+    } else {
+        NSLog(@"Unlock");
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
