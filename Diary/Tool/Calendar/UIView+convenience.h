@@ -2,7 +2,7 @@
 //  UIView+convenience.h
 //
 //  Created by Tjeerd in 't Veen on 12/1/11.
-//  Copyright (c) 2011 Vurig Media. All rights reserved.
+//  Copyright (c)2011 Vurig Media. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,7 +21,7 @@
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;
 
--(BOOL) containsSubView:(UIView *)subView;
--(BOOL) containsSubViewOfClassType:(Class)class;
+- (BOOL)containsSubView:(UIView *)subView;
+- (BOOL)containsSubViewOfClassType:(Class)class;
 
 @end

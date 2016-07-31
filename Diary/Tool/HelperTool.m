@@ -23,9 +23,9 @@
 @synthesize apiKey;
 @synthesize getAddressURL;
 
-+(HelperTool *) getInstance {
++ (HelperTool *)getInstance {
     static HelperTool *instance;
-    if(instance == nil) {
+    if(instance == nil){
         instance = [[HelperTool alloc] init];
         instance.apiKey = @"c55252cb847d401d333ca2bd5ed78ba5";
         instance.getAddressURL = @"https://apis.daum.net/local/geo/coord2detailaddr?inputCoordSystem=WGS84&output=json&apikey=";
@@ -34,7 +34,7 @@
     return instance;
 }
 
--(void) installDB {
+- (void)installDB {
     UserModel *modelUser = [[UserModel alloc] init];
     FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
     DiaryModel *modelDiary = [[DiaryModel alloc] init];
@@ -58,7 +58,7 @@
     [modelTheme create];
 }
 
--(void) removeDB {
+- (void)removeDB {
     UserModel *modelUser = [[UserModel alloc] init];
     FootprintModel *modelFootPrint = [[FootprintModel alloc] init];
     DiaryModel *modelDiary = [[DiaryModel alloc] init];
@@ -82,7 +82,7 @@
     [modelTheme drop];
 }
 
--(NSString *) getToday {
+- (NSString *)getToday {
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
@@ -90,12 +90,12 @@
     return today;
 }
 
--(NSDate *) getDate {
+- (NSDate *)getDate {
     NSDate *date = [[NSDate date ] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
     return date;
 }
 
--(NSDate *) stringToDate:(NSString *)date {
+- (NSDate *)stringToDate:(NSString *)date {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDate *d = [dateFormat dateFromString:date];
@@ -103,14 +103,14 @@
     return d;
 }
 
--(NSString *) dateToString:(NSDate *)date {
+- (NSString *)dateToString:(NSDate *)date {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSString *d = [dateFormat stringFromDate:date];
     return d;
 }
 
--(Theme *) getTheme {
+- (Theme *)getTheme {
     UserModel *modelUser = [[UserModel alloc] init];
     ThemeModel *modelTheme = [[ThemeModel alloc] init];
     User *u = [modelUser select];

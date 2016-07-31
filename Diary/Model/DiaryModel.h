@@ -17,13 +17,13 @@
 @property (strong, nonatomic) Diary *diary;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData :(Diary *)d;
--(void) delete :(NSString *)where;
--(void) drop;
--(Diary *) getSampleData;
--(NSMutableArray *) getTermList:(NSString *)sDate eDate:(NSString *)eDate;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData :(Diary *)d;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (Diary *)getSampleData;
+- (NSMutableArray *)getTermList:(NSString *)sDate eDate:(NSString *)eDate;
 
 @end

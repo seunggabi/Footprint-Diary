@@ -3,7 +3,7 @@
 //  FSLineChart
 //
 //  Created by Arthur GUIBERT on 30/09/2014.
-//  Copyright (c) 2014 Arthur GUIBERT. All rights reserved.
+//  Copyright (c)2014 Arthur GUIBERT. All rights reserved.
 //
 
 #import "HealthViewController.h"
@@ -27,14 +27,14 @@
 @synthesize datePicker;
 @synthesize datePickerScreen;
 
--(void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     modelHealth = [[HealthModel alloc] init];
     modelHealthInfo = [[HealthInformationModel alloc] init];
-    if(selectDate == nil) {
+    if(selectDate == nil){
         selectDate = [[HelperTool getInstance] getToday];
     }
     [self viewSetting];
@@ -42,14 +42,14 @@
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.date = [NSDate date];
-    [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
+    [datePicker addTarget:self action:@selector(changeDatePicker)forControlEvents:UIControlEventValueChanged];
     datePickerScreen.hidden = YES;
     yearView.delegate = self;
     monthView.delegate = self;
     dayView.delegate = self;
 }
 
--(IBAction)touchDate:(id)sender {
+- (IBAction)touchDate:(id)sender {
     [self viewSetting];
     datePickerScreen.hidden = NO;
     [yearView endEditing:YES];
@@ -57,7 +57,7 @@
     [dayView endEditing:YES];
 }
 
--(IBAction)searchHealth:(id)sender {
+- (IBAction)searchHealth:(id)sender {
     datePickerScreen.hidden = YES;
     [yearView endEditing:YES];
     [monthView endEditing:YES];
@@ -67,7 +67,7 @@
     [self viewSetting];
 }
 
--(void) chartDraw {
+- (void)chartDraw {
     NSMutableArray *healthList = [modelHealth select:[NSString stringWithFormat:@"h_date = '%@'", selectDate]];
     
     int second = 60*60*24;
@@ -75,19 +75,19 @@
     int startSecond = [[[HelperTool getInstance] stringToDate:selectDate] timeIntervalSince1970];
     NSMutableArray *chartData = [NSMutableArray arrayWithCapacity:minute];
     NSMutableArray *xAxis = [NSMutableArray arrayWithCapacity:minute];
-    for(int i=0; i<minute; i++) {
+    for(int i=0; i<minute; i++){
         chartData[i] = @0;
         xAxis[i] = [NSString stringWithFormat:@"%d", i/60];
     }
     
-    for(int i=0;i<healthList.count;i++) {
+    for(int i=0;i<healthList.count;i++){
         Health *h = ((Health *)[healthList objectAtIndex:i]);
         chartData[((int)[h.h_time timeIntervalSince1970]-startSecond)/60] = h.h_count;
     }
     
     int min = 0; 
-    for(int i=0; i<minute; i++) {
-        if(min < [chartData[i] intValue]) {
+    for(int i=0; i<minute; i++){
+        if(min < [chartData[i] intValue]){
             min=[chartData[i] intValue];
         } else {
            chartData[i]=[NSNumber numberWithInt:min];
@@ -105,21 +105,21 @@
     chart.color = [chart.dataPointColor colorWithAlphaComponent:1.0];
     chart.valueLabelPosition = ValueLabelRight;
     
-    chart.labelForIndex = ^(NSUInteger item) {
+    chart.labelForIndex = ^(NSUInteger item){
         return xAxis[item];
     };
     
-    chart.labelForValue = ^(CGFloat value) {
+    chart.labelForValue = ^(CGFloat value){
         return [NSString stringWithFormat:@"%.0f 걸음", value];
     };
     
     [chart setChartData:chartData];
 }
 
--(void) viewSetting {
+- (void)viewSetting {
     [self setDateView];
     Health *h = [modelHealth recentData:selectDate];
-    if(h == nil) {
+    if(h == nil){
         h = [[Health alloc] init];
         h.h_count = @0;
     }
@@ -130,22 +130,22 @@
     [self chartDraw];
 }
 
--(void) setDateView {
+- (void)setDateView {
     NSArray *dateElement = [selectDate componentsSeparatedByString:@"-"];
     yearView.text = [dateElement objectAtIndex:0];
     monthView.text = [dateElement objectAtIndex:1];
     dayView.text = [dateElement objectAtIndex:2];
 }
 
--(void) changeDatePicker {
+- (void)changeDatePicker {
     selectDate = [[HelperTool getInstance] dateToString:datePicker.date];
     [self setDateView];
 }
 
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return YES;
 }
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }

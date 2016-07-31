@@ -37,8 +37,8 @@
 @property (strong, nonatomic) MTMapPolyline *mapPolyLine;
 @property (strong, nonatomic) Diary *diary;
 
--(void) loadMapData:(Diary *)d;
--(void) viewSetting:(Diary *)d;
--(IBAction)deleteButton:(id)sender;
+- (void)loadMapData:(Diary *)d;
+- (void)viewSetting:(Diary *)d;
+- (IBAction)deleteButton:(id)sender;
 
 @end

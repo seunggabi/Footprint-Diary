@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSDate *h_time;
 @property (strong, nonatomic) NSNumber *h_count;
 
-+(Health *) health:(NSString *)date time:(NSDate *)time count:(NSNumber *)count;
--(NSDictionary *) getObj;
++ (Health *)health:(NSString *)date time:(NSDate *)time count:(NSNumber *)count;
+- (NSDictionary *)getObj;
 
 @end

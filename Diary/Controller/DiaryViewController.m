@@ -32,7 +32,7 @@
 @synthesize contentView;
 @synthesize healthView;
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     modelDiary = [[DiaryModel alloc] init];
     
@@ -41,13 +41,13 @@
     [self viewSetting:diary];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [self loadMapData:diary];
     [mapScreen addSubview:mapView];
     [self viewSetting:diary];
 }
 
--(void) loadMapData:(Diary *)d {
+- (void)loadMapData:(Diary *)d {
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
     modelFootprint = [[FootprintModel alloc] init];
     NSMutableArray *footprintList = [modelFootprint select:[NSString stringWithFormat:@"fp_date ='%@'", diary.d_date]];
@@ -58,7 +58,7 @@
     
     mapPolyLine = [MTMapPolyline polyLine];
     mapPointList = [[NSMutableArray alloc] init];
-    for(int i=0; i<footprintList.count; i++) {
+    for(int i=0; i<footprintList.count; i++){
         Footprint *fp = [footprintList objectAtIndex:i];
         MTMapPOIItem *poiItem = [MTMapPOIItem poiItem];
         poiItem.itemName = fp.fp_address;
@@ -78,10 +78,10 @@
     [mapView fitMapViewAreaToShowPolyline:mapPolyLine];
 }
 
--(void)viewSetting:(Diary *)d {
+- (void)viewSetting:(Diary *)d {
     modelHealth = [[HealthModel alloc] init];
     Health* h = [modelHealth recentData:d.d_date];
-    if(h == nil) {
+    if(h == nil){
         h = [[Health alloc] init];
         h.h_count = @0;
     }
@@ -92,7 +92,7 @@
     healthView.text = [h.h_count stringValue];
 }
 
--(IBAction)deleteButton:(id)sender {
+- (IBAction)deleteButton:(id)sender {
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"삭제 확인!"
                                   message:[NSString stringWithFormat:@"%@ 일기를 정말 삭제하시겠어요?",diary.d_date]
@@ -101,7 +101,7 @@
     UIAlertAction* ok = [UIAlertAction
                          actionWithTitle:@"응"
                          style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action) {
+                         handler:^(UIAlertAction * action){
                              [alert dismissViewControllerAnimated:YES completion:nil];
                              [modelDiary delete:[NSString stringWithFormat:@"d_date='%@'", diary.d_date]];
                              [self.navigationController popViewControllerAnimated:YES];
@@ -109,7 +109,7 @@
     UIAlertAction* cancel = [UIAlertAction
                              actionWithTitle:@"아니"
                              style:UIAlertActionStyleDefault
-                             handler:^(UIAlertAction * action) {
+                             handler:^(UIAlertAction * action){
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                              }];
     
@@ -118,14 +118,14 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"DiaryEditView"]) {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"DiaryEditView"]){
         DiaryViewController *diaryViewController = segue.destinationViewController;
         diaryViewController.diary = diary;
     }
 }
 
--(void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 

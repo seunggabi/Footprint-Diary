@@ -30,10 +30,10 @@
 @property (strong, nonatomic) NSMutableArray *emoticonList;
 @property (strong, nonatomic) Diary *diary;
 
--(IBAction) showDiaryList:(UIButton *)sender;
--(IBAction) touchDate:(id)sender;
--(void) changeDatePicker;
+- (IBAction)showDiaryList:(UIButton *)sender;
+- (IBAction)touchDate:(id)sender;
+- (void)changeDatePicker;
 
--(void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
+- (void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate;
 
 @end

@@ -37,8 +37,8 @@
 @property (strong, nonatomic) MTMapPolyline *mapPolyLine;
 @property (strong, nonatomic) Diary *diary;
 
--(void) loadMapData:(Diary *)d;
--(void) viewSetting:(Diary *)d;
+- (void)loadMapData:(Diary *)d;
+- (void)viewSetting:(Diary *)d;
 - (IBAction)touchSave:(id)sender;
 
 @end

@@ -3,7 +3,7 @@
 //  PageWithScrollView
 //
 //  Created by 김승갑 on 2016. 7. 12..
-//  Copyright (c) 2016년 김승갑. All rights reserved.
+//  Copyright (c)2016년 김승갑. All rights reserved.
 //
 
 #import "PageViewController.h"
@@ -26,7 +26,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self){
     }
     return self;
 }
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
-    if([user.u_tutorial isEqualToString:@"Y"]) {
+    if([user.u_tutorial isEqualToString:@"Y"]){
         tutorial = @"Y";
         checkbox.selected = NO;
     } else {
@@ -51,10 +51,10 @@
 
 #pragma mark - Init
 
--(void)initPageViewInfo:(NSInteger)page{
+- (void)initPageViewInfo:(NSInteger)page{
     NSString *imgName;
 
-    switch (page) {
+    switch (page){
         case 0:
             imgName = @"page1.png";
             break;
@@ -70,7 +70,7 @@
         default:
             break;
     }
-    if(page != 3) {
+    if(page != 3){
         startButton.hidden = YES;
         titleLabel.hidden = YES;
         checkbox.hidden = YES;
@@ -85,9 +85,9 @@
     [imageView setImage:[UIImage imageNamed:imgName]];    
 }
 
--(IBAction)checkboxSelected:(id)sender {
+- (IBAction)checkboxSelected:(id)sender {
     checkboxSelected = !checkboxSelected;
-    if(checkboxSelected) {
+    if(checkboxSelected){
         tutorial = @"N";
     } else {
         tutorial = @"Y";
@@ -95,7 +95,7 @@
     [checkbox setSelected:checkboxSelected];
 }
 
--(IBAction)touchStart:(id)sender {
+- (IBAction)touchStart:(id)sender {
     user.u_tutorial = tutorial;
     [modelUser insertData:user];
     NSLog(@"%@", [user getObj]);

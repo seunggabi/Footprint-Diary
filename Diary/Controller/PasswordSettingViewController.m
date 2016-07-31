@@ -55,7 +55,7 @@
 
 - (IBAction)touchBtn:(id)sender {
     int targetLength = 0;
-    if(pw.length < 4) {
+    if(pw.length < 4){
         pwCheckMessage.text = @"비밀번호를 입력해주세요.";
         pwCheckMessage.textColor = [UIColor blackColor];
         if(sender == buttonErase)
@@ -63,11 +63,11 @@
         else
             pw = [pw stringByAppendingString:((UIButton *)sender).titleLabel.text];
         targetLength = (int)pw.length;
-        if(targetLength == 4) {
+        if(targetLength == 4){
             targetLength = 0;
             pwCheckMessage.text = @"비밀번호를 다시 입력해주세요.";
         }
-    } else if(pwCheck.length < 4) {
+    } else if(pwCheck.length < 4){
         if(sender == buttonErase)
             pwCheck = [pwCheck substringToIndex:pwCheck.length-1];
         else
@@ -75,7 +75,7 @@
         targetLength = (int)pwCheck.length;
     }
     if(pw.length == 4 && pwCheck.length == 4){
-        if([pw isEqualToString:pwCheck]) {
+        if([pw isEqualToString:pwCheck]){
             User *u = [modelUser select];
             u.u_password = pw;
             [modelUser insertData:u];
@@ -90,7 +90,7 @@
             NSLog(@"Fail");
         }
     }
-    for(int i=0; i<4; i++) {
+    for(int i=0; i<4; i++){
         NSString *str = @"";
         if(i<targetLength)
             str = @"*";

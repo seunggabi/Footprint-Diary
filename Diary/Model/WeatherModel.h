@@ -17,14 +17,14 @@
 @property (strong, nonatomic) Weather *weather;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Weather *)w;
--(void) delete :(NSString *)where;
--(void) drop;
--(void) install;
--(BOOL) exist;
--(Weather *) getSampleData;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData:(Weather *)w;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (void)install;
+- (BOOL)exist;
+- (Weather *)getSampleData;
 
 @end

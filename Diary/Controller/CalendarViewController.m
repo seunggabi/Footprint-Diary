@@ -25,11 +25,11 @@
 @synthesize modelEmoticon;
 @synthesize calendar;
 
--(void) viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     Theme *themeInfo = [[HelperTool getInstance] getTheme];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:themeInfo.th_main]];
@@ -44,7 +44,7 @@
     self.navigationItem.title = [modelUser select].u_name;
 }
 
--(Diary *) getDiary:(NSDate *)date{
+- (Diary *)getDiary:(NSDate *)date{
     NSString *selectDay = [[HelperTool getInstance] dateToString:date];
     for(int i = 0; i<diaryList.count; i++){
         diary = [diaryList objectAtIndex:i];
@@ -55,19 +55,19 @@
     return nil;
 }
 
--(void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
+- (void)calendarView:(CalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     NSDate *currentDate = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:currentDate];
-    if (month==[components month]) {
+    if (month==[components month]){
         NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
         [calendarView markDates:dates];
     }
 }
 
--(void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
+- (void)calendarView:(CalendarView *)calendarView dateSelected:(NSDate *)date {
     diary = [self getDiary:date];
-    if(diary == nil) {
+    if(diary == nil){
         diary = [[Diary alloc] init];
         diary.d_date = [[HelperTool getInstance] dateToString:date];
         [self performSegueWithIdentifier:@"CalendarDiaryEditView" sender:self];
@@ -77,11 +77,11 @@
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"CalendarDiaryEditView"]) {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"CalendarDiaryEditView"]){
         DiaryEditViewController *diaryEditViewController = segue.destinationViewController;
         diaryEditViewController.diary = self.diary;
-    } else if ([segue.identifier isEqualToString:@"CalendarDiaryView"]) {
+    } else if ([segue.identifier isEqualToString:@"CalendarDiaryView"]){
         DiaryViewController *diaryViewController = segue.destinationViewController;
         diaryViewController.diary = self.diary;
     }

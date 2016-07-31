@@ -13,13 +13,13 @@
 @synthesize hi_id;
 @synthesize hi_comment;
 
-+(HealthInformation *) healthInformation:(NSString *)comment {
++ (HealthInformation *)healthInformation:(NSString *)comment {
     HealthInformation *hi = [[HealthInformation alloc] init];
     hi.hi_comment = comment;
     return hi;
 }
 
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     return @{@"hi_id":hi_id, @"hi_comment":hi_comment};
 }
 

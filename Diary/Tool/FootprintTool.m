@@ -17,9 +17,9 @@
 @synthesize modelHealth;
 @synthesize locationManager;
 
-+(FootprintTool *) getInstance {
++ (FootprintTool *)getInstance {
     static FootprintTool *instance = nil;
-    if(instance == nil) {
+    if(instance == nil){
         instance = [[FootprintTool alloc] init];
         instance.modelFootprint = [[FootprintModel alloc] init];
         instance.modelUser = [[UserModel alloc] init];
@@ -28,7 +28,7 @@
     return instance;
 }
 
--(void) start {
+- (void)start {
     User *u = [modelUser select];
     int timer = 1;
     if(u != nil)
@@ -48,7 +48,7 @@
     [locationManager startUpdatingLocation];
 }
 
--(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     [locationManager stopUpdatingLocation];
     CLLocation *crnLoc = [locations lastObject];
@@ -62,7 +62,7 @@
     [fp setAddress];
     
     NSMutableArray *arr = [modelHealth select:@"1=1 ORDER BY h_id DESC LIMIT 1,1"];
-    if(arr.count) {
+    if(arr.count){
         Health *h = (Health *)[arr objectAtIndex:0];
         fp.fp_h_count = h.h_count;
     } else {

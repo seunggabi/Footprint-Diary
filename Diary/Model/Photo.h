@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *p_date;
 @property (strong, nonatomic) NSString *p_src;
 
-+(Photo *) photo:(NSString *)date src:(NSString *)src;
--(NSDictionary *) getObj;
++ (Photo *)photo:(NSString *)date src:(NSString *)src;
+- (NSDictionary *)getObj;
 
 @end

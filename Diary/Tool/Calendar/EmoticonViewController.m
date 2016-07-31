@@ -20,7 +20,7 @@
 @synthesize emoticonList;
 @synthesize weatherList;
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [collectionView setDelegate:self];
@@ -31,25 +31,25 @@
     [self.collectionView reloadData];
 }
 
--(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
     UIImageView* imgView = (UIImageView*)[cell.contentView viewWithTag:100];
-    if (imgView) imgView.image = [UIImage imageNamed:((Emoticon *)[emoticonList objectAtIndex:indexPath.item]).e_src];
+    if (imgView)imgView.image = [UIImage imageNamed:((Emoticon *)[emoticonList objectAtIndex:indexPath.item]).e_src];
     NSLog(@"image %@", imgView.image);
     cell.layer.backgroundColor = [UIColor clearColor].CGColor;
     cell.contentView.layer.backgroundColor  = [UIColor whiteColor].CGColor;
     return cell;
 }
 
--(void)didReceiveMemoryWarning{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return emoticonList.count;
 }
 

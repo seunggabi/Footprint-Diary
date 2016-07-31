@@ -3,7 +3,7 @@
 //  FSLineChart
 //
 //  Created by Arthur GUIBERT on 30/09/2014.
-//  Copyright (c) 2014 Arthur GUIBERT. All rights reserved.
+//  Copyright (c)2014 Arthur GUIBERT. All rights reserved.
 //
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,21 +29,21 @@ typedef NSString *(^FSLabelForIndexGetter)(NSUInteger index);
 // Same as above, but for the value (for adding a currency, or a unit symbol for example)
 typedef NSString *(^FSLabelForValueGetter)(CGFloat value);
 
-typedef NS_ENUM(NSInteger, ValueLabelPositionType) {
+typedef NS_ENUM(NSInteger, ValueLabelPositionType){
     ValueLabelLeft,
     ValueLabelRight,
     ValueLabelLeftMirrored
 };
 
 // Index label properties
-@property (copy) FSLabelForIndexGetter labelForIndex;
-@property (nonatomic, strong) UIFont* indexLabelFont;
+@property (copy)FSLabelForIndexGetter labelForIndex;
+@property (nonatomic, strong)UIFont* indexLabelFont;
 @property (nonatomic) UIColor* indexLabelTextColor;
 @property (nonatomic) UIColor* indexLabelBackgroundColor;
 
 // Value label properties
-@property (copy) FSLabelForValueGetter labelForValue;
-@property (nonatomic, strong) UIFont* valueLabelFont;
+@property (copy)FSLabelForValueGetter labelForValue;
+@property (nonatomic, strong)UIFont* valueLabelFont;
 @property (nonatomic) UIColor* valueLabelTextColor;
 @property (nonatomic) UIColor* valueLabelBackgroundColor;
 @property (nonatomic) ValueLabelPositionType valueLabelPosition;
@@ -60,23 +60,23 @@ typedef NS_ENUM(NSInteger, ValueLabelPositionType) {
 @property (nonatomic) CGFloat axisHeight;
 
 // Decoration parameters, let you pick the color of the line as well as the color of the axis
-@property (nonatomic, strong) UIColor* axisColor;
+@property (nonatomic, strong)UIColor* axisColor;
 @property (nonatomic) CGFloat axisLineWidth;
 
 // Chart parameters
-@property (nonatomic, strong) UIColor* color;
-@property (nonatomic, strong) UIColor* fillColor;
+@property (nonatomic, strong)UIColor* color;
+@property (nonatomic, strong)UIColor* fillColor;
 @property (nonatomic) CGFloat lineWidth;
 
 // Data points
 @property (nonatomic) BOOL displayDataPoint;
-@property (nonatomic, strong) UIColor* dataPointColor;
-@property (nonatomic, strong) UIColor* dataPointBackgroundColor;
+@property (nonatomic, strong)UIColor* dataPointColor;
+@property (nonatomic, strong)UIColor* dataPointBackgroundColor;
 @property (nonatomic) CGFloat dataPointRadius;
 
 // Grid parameters
 @property (nonatomic) BOOL drawInnerGrid;
-@property (nonatomic, strong) UIColor* innerGridColor;
+@property (nonatomic, strong)UIColor* innerGridColor;
 @property (nonatomic) CGFloat innerGridLineWidth;
 
 // Smoothing

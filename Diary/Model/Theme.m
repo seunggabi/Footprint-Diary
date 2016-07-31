@@ -17,7 +17,7 @@
 @synthesize th_bottom;
 @synthesize th_font;
 
-+(Theme *)theme:(NSString *)main name:(NSString *)name top:(NSString *)top bottom:(NSString *)bottom font:(NSString *)font {
++ (Theme *)theme:(NSString *)main name:(NSString *)name top:(NSString *)top bottom:(NSString *)bottom font:(NSString *)font {
     Theme *t = [[Theme alloc] init];
     t.th_name = name;
     t.th_top = top;
@@ -26,7 +26,7 @@
     t.th_font = font;
     return t;
 }
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     return @{@"th_id":th_id, @"th_name":th_name, @"#th_top":th_top, @"#th_bottom":th_bottom, @"#th_font":th_font, @"#th_main":th_main};
 }
 

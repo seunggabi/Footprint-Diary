@@ -25,6 +25,6 @@
 @property (strong, nonatomic) CalendarView *calendar;
 @property (weak, nonatomic) IBOutlet UIView *calendarScreen;
 
--(Diary *)getDiary:(NSDate *)date;
+- (Diary *)getDiary:(NSDate *)date;
 
 @end

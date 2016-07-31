@@ -13,37 +13,37 @@
 
 @synthesize sticker;
 
--(id) init {
+- (id)init {
     self = [super init];
-    if(self) {
+    if(self){
         db = [[DBConnector getInstance] getDB];
         sticker = [[Sticker alloc] init];
     }
     return self;
 }
 
--(void) create {
+- (void)create {
     char *err;
     
-    if(_createQuery == nil) {
+    if(_createQuery == nil){
         _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Sticker' (s_id INTEGER PRIMARY KEY AUTOINCREMENT, s_date TEXT, s_e_id INTEGER)"];
     }
-    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
 }
 
--(NSMutableArray *) select:(NSString *)where {
+- (NSMutableArray *)select:(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *query = @"SELECT * FROM Sticker";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
-        while (sqlite3_step(stmt) == SQLITE_ROW) {
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil)== SQLITE_OK){
+        while (sqlite3_step(stmt)== SQLITE_ROW){
             Sticker *s = [[Sticker alloc] init];
             
             s.s_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
@@ -56,11 +56,11 @@
     return list;
 }
 
--(void) insertData :(Sticker *)s {
+- (void)insertData :(Sticker *)s {
     char *err;
         
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Sticker (s_date, s_e_id) VALUES ('%@', '%@')", s.s_date, s.s_e_id];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Sticker (s_date, s_e_id)VALUES ('%@', '%@')", s.s_date, s.s_e_id];
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"INSERT Sticker Failed!");
     }
@@ -69,16 +69,16 @@
     }
 }
 
--(void) delete :(NSString *)where {
+- (void)delete :(NSString *)where {
     char *err;
     
     NSString *query = @"DELETE FROM Sticker";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
 
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DELETE Sticker Failed!");
     }
@@ -87,11 +87,11 @@
     }
 }
 
--(void) drop {
+- (void)drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Sticker'";
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DROP Sticker Failed!");
     }
@@ -100,7 +100,7 @@
     }
 }
 
--(Sticker *) getSampleData {
+- (Sticker *)getSampleData {
     Sticker *s = [[Sticker alloc] init];
     s.s_date = @"2016-07-05";
     s.s_e_id = @0;

@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *w_name;
 @property (strong, nonatomic) NSString *w_src;
 
-+(Weather *) weather:(NSString *)name src:(NSString *)src;
--(NSDictionary *) getObj;
++ (Weather *)weather:(NSString *)name src:(NSString *)src;
+- (NSDictionary *)getObj;
 
 @end

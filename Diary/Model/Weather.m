@@ -14,13 +14,13 @@
 @synthesize w_name;
 @synthesize w_src;
 
-+(Weather *) weather:(NSString *)name src:(NSString *)src {
++ (Weather *)weather:(NSString *)name src:(NSString *)src {
     Weather *w = [[Weather alloc] init];
     w.w_name = name;
     w.w_src = src;
     return w;
 }
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     return @{@"w_id":w_id, @"해와바람":w_name, @"windy.png":w_src};
     return @{@"w_id":w_id, @"서풍":w_name, @"wind5.png":w_src};
     return @{@"w_id":w_id, @"세게흔들리는병":w_name, @"wind-4.png":w_src};

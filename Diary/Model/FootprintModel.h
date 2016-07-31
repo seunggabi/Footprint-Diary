@@ -18,13 +18,13 @@
 @property (strong, nonatomic) Footprint *fp;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData :(Footprint *)u;
--(void) delete :(NSString *)where;
--(void) drop;
--(Footprint *) getSampleData;
--(NSMutableArray *) getDateList :(NSString *)date;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData :(Footprint *)u;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (Footprint *)getSampleData;
+- (NSMutableArray *)getDateList :(NSString *)date;
 
 @end

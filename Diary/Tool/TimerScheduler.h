@@ -13,9 +13,9 @@
 @property (strong, nonatomic) NSTimer *footprintTiemr;
 @property (strong, nonatomic) NSTimer *pedometerTimer;
 
-+(TimerScheduler *) getInstance;
--(void) setFootprintTiemr:(NSTimer *)footprintTiemr;
--(void) setPedometerTimer:(NSTimer *)pedometerTimer;
++ (TimerScheduler *)getInstance;
+- (void)setFootprintTiemr:(NSTimer *)footprintTiemr;
+- (void)setPedometerTimer:(NSTimer *)pedometerTimer;
 
 @end
  

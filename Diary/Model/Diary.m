@@ -18,7 +18,7 @@
 @synthesize d_content;
 @synthesize d_e_id;
 
-+(Diary *) diary:(NSString *)date time:(NSDate *)time w_id:(NSNumber *)w_id title:(NSString *)title content:(NSString *)content e_id_d:(NSNumber *)e_d_id {
++ (Diary *)diary:(NSString *)date time:(NSDate *)time w_id:(NSNumber *)w_id title:(NSString *)title content:(NSString *)content e_id_d:(NSNumber *)e_d_id {
     Diary *d = [[Diary alloc] init];
     d.d_date = date;
     d.d_time = time;
@@ -29,7 +29,7 @@
     return d;
 }
 
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     NSDictionary *obj = @{@"d_id":d_id, @"d_date":d_date, @"d_time":[NSNumber numberWithDouble:[d_time timeIntervalSince1970]], @"d_w_id":d_w_id, @"d_title":d_title, @"d_content":d_content, @"d_e_id":d_e_id};
     return obj;
 }

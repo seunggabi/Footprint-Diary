@@ -10,24 +10,24 @@
 
 @implementation DBConnector
 
-+(DBConnector *) getInstance {
++ (DBConnector *)getInstance {
     static DBConnector *instance = nil;
     
-    if(instance == nil) {
+    if(instance == nil){
         instance = [[DBConnector alloc] init];
         [instance openDB];
     }
     return instance;
 }
 
--(NSString *) filePath {
+- (NSString *)filePath {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
     return [documentsDir stringByAppendingPathComponent:@"database.sql"];
 }
 
--(void) openDB {
-    if(sqlite3_open([[self filePath] UTF8String], &db) != SQLITE_OK) {
+- (void)openDB {
+    if(sqlite3_open([[self filePath] UTF8String], &db)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0, @"Database failed to open.");
         NSLog(@"Database Error");
@@ -37,15 +37,15 @@
     }
 }
 
--(sqlite3 *) getDB {
+- (sqlite3 *)getDB {
     return db;
 }
 
--(void) deleteTable :(NSString *)tableName {
+- (void)deleteTable :(NSString *)tableName {
     char *err;
     
     NSString *query = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DELETE %@ Failed!", tableName);
     }
@@ -54,11 +54,11 @@
     }
 }
 
--(void) dropTable :(NSString *)tableName {
+- (void)dropTable :(NSString *)tableName {
     char *err;
     
     NSString *query = [NSString stringWithFormat:@"DROP TABLE %@", tableName];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DROP %@ Failed!", tableName);
     }
@@ -67,7 +67,7 @@
     }
 }
 
--(void) updateTable :(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where {
+- (void)updateTable :(NSString *)tableName data:(NSDictionary *)data where:(NSString *)where {
     char *err;
     NSString *query = [NSString stringWithFormat:@"UPDATE %@ SET ", tableName];
     BOOL firstCheck = TRUE;
@@ -79,11 +79,11 @@
         query = [query stringByAppendingString:[NSString stringWithFormat:@"='%@'", data[key]]];
         firstCheck = FALSE;
     }
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"UPDATE %@ Failed!",tableName);
     }
@@ -92,10 +92,10 @@
     }
 }
 
--(void) queryExecute:(NSString *)query {
+- (void)queryExecute:(NSString *)query {
     char *err;
     
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"Query Failed!");
     }

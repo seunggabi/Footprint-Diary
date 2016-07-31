@@ -17,14 +17,14 @@
 @property (strong, nonatomic) Theme *theme;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Theme *)h;
--(void) delete :(NSString *)where;
--(void) drop;
--(void) install;
--(BOOL) exist;
--(Theme *) getSampleData;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData:(Theme *)h;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (void)install;
+- (BOOL)exist;
+- (Theme *)getSampleData;
 
 @end

@@ -17,14 +17,14 @@
 @property (strong, nonatomic) Emoticon *emoticon;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData :(Emoticon *)e;
--(void) delete :(NSString *)where;
--(void) drop;
--(void) install;
--(BOOL) exist;
--(Emoticon *) getSampleData;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData :(Emoticon *)e;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (void)install;
+- (BOOL)exist;
+- (Emoticon *)getSampleData;
 
 @end

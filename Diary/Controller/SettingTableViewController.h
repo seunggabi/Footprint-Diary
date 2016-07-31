@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserModel.h"
 
 @interface SettingTableViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UISwitch *lockButton;
-
+@property (strong, nonatomic) UserModel *modelUser;
 
 @end

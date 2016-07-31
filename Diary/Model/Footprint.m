@@ -19,7 +19,7 @@
 @synthesize fp_address;
 @synthesize fp_h_count;
 
-+(Footprint *) footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address fp_h_count:(NSNumber *)fp_h_count {
++ (Footprint *)footprint:(NSString *)date time:(NSDate *)time gps_x:(NSNumber *)gps_x gps_y:(NSNumber *)gps_y address:(NSString *)address fp_h_count:(NSNumber *)fp_h_count {
     Footprint *fp = [[Footprint alloc] init];
     fp.fp_date = date;
     fp.fp_time = time;
@@ -30,12 +30,12 @@
     return fp;
 }
 
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     NSDictionary *obj = @{@"fp_id":fp_id, @"fp_date":fp_date, @"fp_time":fp_time, @"fp_GPS_X":fp_GPS_X, @"fp_GPS_Y":fp_GPS_Y, @"fp_address":fp_address, @"fp_h_count":fp_h_count};
     return obj;
 }
 
--(void) setAddress {
+- (void)setAddress {
     NSString *urlText = [HelperTool getInstance].getAddressURL;
     urlText = [urlText stringByAppendingString:@"&x="];
     urlText = [urlText stringByAppendingString:[fp_GPS_X stringValue]];

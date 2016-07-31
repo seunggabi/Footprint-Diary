@@ -17,15 +17,15 @@
 @property (strong, nonatomic) HealthInformation *healthInfo;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(HealthInformation *)h;
--(void) delete :(NSString *)where;
--(void) drop;
--(void) install;
--(BOOL) exist;
--(HealthInformation *) getSampleData;
--(NSMutableArray *) getInfoTwo;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData:(HealthInformation *)h;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (void)install;
+- (BOOL)exist;
+- (HealthInformation *)getSampleData;
+- (NSMutableArray *)getInfoTwo;
 
 @end

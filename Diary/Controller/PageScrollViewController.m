@@ -3,7 +3,7 @@
 //  PageWithScrollView
 //
 //  Created by 김승갑 on 2016. 7. 12..
-//  Copyright (c) 2016년 김승갑. All rights reserved.
+//  Copyright (c)2016년 김승갑. All rights reserved.
 //
 
 #import "PageScrollViewController.h"
@@ -26,7 +26,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self){
     }
     return self;
 }
@@ -36,7 +36,7 @@
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
     
-    if([user.u_tutorial isEqualToString:@"Y"] || [tutorial isEqualToString:@"Y"]) {
+    if([user.u_tutorial isEqualToString:@"Y"] || [tutorial isEqualToString:@"Y"]){
         [btn_Prev setTag:1];
         [btn_Next setTag:0];
         [self initScrollViewAndPageControl];
@@ -44,10 +44,10 @@
     }
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     NSLog(@"%@", [user getObj]);
     
-    if([user.u_tutorial isEqualToString:@"N"] && ![tutorial isEqualToString:@"Y"]) {
+    if([user.u_tutorial isEqualToString:@"N"] && ![tutorial isEqualToString:@"Y"]){
         [self performSegueWithIdentifier:@"skipTutorial" sender:self];
     }
 }
@@ -58,9 +58,9 @@
 
 #pragma mark - Scroll View Delegate Function
 
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat pageWidth = CGRectGetWidth(scrollView.frame);
-    NSUInteger page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSUInteger page = floor((scrollView.contentOffset.x - pageWidth / 2)/ pageWidth)+ 1;
     pageControl.currentPage = page;
 
     [self loadScrollViewDataSourceWithPage:page - 1];
@@ -68,13 +68,13 @@
     [self loadScrollViewDataSourceWithPage:page + 1];
 }
 
--(void)initScrollViewAndPageControl {
+- (void)initScrollViewAndPageControl {
     int numbersOfPage = 4;
     controllers = [[NSMutableArray alloc]init];
     CGSize contentSize = scrollView.frame.size;
     contentSize.width = scrollView.frame.size.width * numbersOfPage;
     
-    for(int idx = 0 ; idx < numbersOfPage ; idx++) {
+    for(int idx = 0 ; idx < numbersOfPage ; idx++){
         [controllers addObject:[NSNull null]];
     }
     
@@ -113,7 +113,7 @@
         NSLog(@"Page %ld Controller Add On ScrollView..",(long)page);
         
         CGRect curFrame = scrollView.frame;
-        curFrame.origin.x = CGRectGetWidth(curFrame) * page;
+        curFrame.origin.x = CGRectGetWidth(curFrame)* page;
         curFrame.origin.y = 0;
         controller.view.frame = curFrame;
         
@@ -131,7 +131,7 @@
     [self loadScrollViewDataSourceWithPage:page + 1];
     
     CGRect bounds = scrollView.bounds;
-    bounds.origin.x = CGRectGetWidth(bounds) * page;
+    bounds.origin.x = CGRectGetWidth(bounds)* page;
     bounds.origin.y = 0;
     
     [scrollView scrollRectToVisible:bounds animated:animated];

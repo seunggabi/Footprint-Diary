@@ -19,9 +19,9 @@
 @property (strong, nonatomic) HealthModel *modelHealth;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
-+(FootprintTool *) getInstance;
--(void) start;
--(void) getGPS;
--(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
++ (FootprintTool *)getInstance;
+- (void)start;
+- (void)getGPS;
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 
 @end

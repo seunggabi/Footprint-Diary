@@ -12,37 +12,37 @@
 
 @synthesize fp;
 
--(id) init {
+- (id)init {
     self = [super init];
-    if(self) {
+    if(self){
         db = [[DBConnector getInstance] getDB];
         fp = [[Footprint alloc] init];
     }
     return self;
 }
 
--(void) create {
+- (void)create {
     char *err;
     
-    if(_createQuery == nil) {
+    if(_createQuery == nil){
         _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Footprint' (fp_id INTEGER PRIMARY KEY AUTOINCREMENT, fp_date TEXT, fp_time INTEGER, fp_GPS_X DOUBLE, fp_GPS_Y DOUBLE, fp_address TEXT, fp_h_count INTEGER)"];
     }
-    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
 }
 
--(NSMutableArray *) select :(NSString *)where {
+- (NSMutableArray *)select :(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *query = @"SELECT * FROM Footprint";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
-        while (sqlite3_step(stmt) == SQLITE_ROW) {
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil)== SQLITE_OK){
+        while (sqlite3_step(stmt)== SQLITE_ROW){
             Footprint *f = [[Footprint alloc] init];
             f.fp_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
             f.fp_date = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
@@ -59,11 +59,11 @@
     return list;
 }
 
--(void) insertData:(Footprint *)f {
+- (void)insertData:(Footprint *)f {
     char *err;
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address, fp_h_count) VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address, f.fp_h_count];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Footprint (fp_date, fp_time, fp_GPS_X, fp_GPS_Y, fp_address, fp_h_count)VALUES ('%@', '%f', '%@', '%@', '%@', '%@')", f.fp_date, [f.fp_time timeIntervalSince1970], f.fp_GPS_X, f.fp_GPS_Y, f.fp_address, f.fp_h_count];
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"INSERT Footprint Failed!");
     }
@@ -72,16 +72,16 @@
     }
 }
 
--(void) delete :(NSString *)where {
+- (void)delete :(NSString *)where {
     char *err;
     
     NSString *query = @"DELETE FROM Footprint";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
 
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DELETE Footprint Failed!");
     }
@@ -90,11 +90,11 @@
     }
 }
 
--(void) drop {
+- (void)drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Footprint'";
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DROP Footprint Failed!");
     }
@@ -103,7 +103,7 @@
     }
 }
 
--(Footprint *) getSampleData {
+- (Footprint *)getSampleData {
     Footprint *f = [[Footprint alloc] init];
     f.fp_date = @"2016-07-05";
     f.fp_time = [[NSDate alloc] initWithTimeInterval:60*60*9 sinceDate:[NSDate date]];
@@ -114,7 +114,7 @@
     return f;
 }
 
--(NSMutableArray *) getDateList:(NSString *)date {
+- (NSMutableArray *)getDateList:(NSString *)date {
     NSMutableArray *list = [self select:[NSString stringWithFormat:@"fp_date='%@'", date]];
     return list;
 }

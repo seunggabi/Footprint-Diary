@@ -12,40 +12,40 @@
 @implementation HealthInformationModel
 @synthesize healthInfo;
 
--(id) init {
+- (id)init {
     self = [super init];
-    if(self) {
+    if(self){
         db = [[DBConnector getInstance] getDB];
         healthInfo = [[HealthInformation alloc] init];
     }
     return self;
 }
 
--(void) create {
+- (void)create {
     char *err;
     
-    if(_createQuery == nil) {
+    if(_createQuery == nil){
         _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Health_Information' (hi_id INTEGER PRIMARY KEY AUTOINCREMENT, hi_comment TEXT)"];
     }
-    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
-    if(![self exist]) {
+    if(![self exist]){
         [self install];
     }
 }
 
--(NSMutableArray *) select :(NSString *)where {
+- (NSMutableArray *)select :(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *query = @"SELECT * FROM Health_Information";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
-        while (sqlite3_step(stmt) == SQLITE_ROW) {
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil)== SQLITE_OK){
+        while (sqlite3_step(stmt)== SQLITE_ROW){
             HealthInformation *hi = [[HealthInformation alloc] init];
             
             hi.hi_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
@@ -58,11 +58,11 @@
     return list;
 }
 
--(void) insertData :(HealthInformation *)hi {
+- (void)insertData :(HealthInformation *)hi {
     char *err;
     
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health_Information (hi_comment) VALUES ('%@')", hi.hi_comment];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Health_Information (hi_comment)VALUES ('%@')", hi.hi_comment];
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"INSERT HealthInfo Failed!");
     }
@@ -71,15 +71,15 @@
     }
 }
 
--(void) delete :(NSString *)where {
+- (void)delete :(NSString *)where {
     char *err;
     
     NSString *query = @"DELETE FROM Health_Information";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DELETE HealthInfo Failed!");
     }
@@ -88,11 +88,11 @@
     }
 }
 
--(void) drop {
+- (void)drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Health_Information'";
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DROP HealthInfo Failed!");
     }
@@ -101,7 +101,7 @@
     }
 }
 
--(void) install {
+- (void)install {
     NSMutableArray *healthInfoList = [[NSMutableArray alloc] init];
     [healthInfoList addObject:[HealthInformation healthInformation:@"걷기는 심박수 증가, 스트레스 해소, 혈압조절 등 다양한 효과를 얻을 수 있다."]];
     [healthInfoList addObject:[HealthInformation healthInformation:@"사람이 한걸음을 걸었을 때 소모되는 열량은 약 3.3cal 이다."]];
@@ -120,28 +120,28 @@
     [healthInfoList addObject:[HealthInformation healthInformation:@"엎드려 자는 습관은 녹내장, 목 디스크를 유발할 수 있다."]];
     [healthInfoList addObject:[HealthInformation healthInformation:@"하루 나트륨 권장량은 2000mg이며 한국 라면의 평균 나트륨은 1800mg이다."]];
     
-    for(int i=0; i<healthInfoList.count; i++) {
+    for(int i=0; i<healthInfoList.count; i++){
         [self insertData:[healthInfoList objectAtIndex:i]];
     }
 }
 
--(BOOL) exist {
+- (BOOL)exist {
     return [self select:nil].count > 0;
 }
 
--(HealthInformation *) getSampleData {
+- (HealthInformation *)getSampleData {
     HealthInformation *hi = [[HealthInformation alloc] init];
     hi.hi_comment = @"그냥 좋음";
     return hi;
 }
 
--(NSMutableArray *) getInfoTwo {
+- (NSMutableArray *)getInfoTwo {
     NSMutableArray *infoList = [self select:nil];
     NSMutableArray *infoTwo = [[NSMutableArray alloc] init];
     int one = rand()%infoList.count;
     int two = rand()%infoList.count;
     
-    while(one == two) {
+    while(one == two){
         two = rand()%infoList.count;
     }
     [infoTwo addObject:[infoList objectAtIndex:one]];

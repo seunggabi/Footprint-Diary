@@ -13,40 +13,40 @@
 
 @synthesize emoticon;
 
--(id) init {
+- (id)init {
     self = [super init];
-    if(self) {
+    if(self){
         db = [[DBConnector getInstance] getDB];
         emoticon = [[Emoticon alloc] init];
     }
     return self;
 }
 
--(void) create {
+- (void)create {
     char *err;
     
-    if(_createQuery == nil) {
+    if(_createQuery == nil){
         _createQuery = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS 'Emoticon' (e_id INTEGER PRIMARY KEY AUTOINCREMENT, e_name TEXT, e_src TEXT)"];
     }
-    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [_createQuery UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"Tabled Failed to Create.");
     }
-    if(![self exist]) {
+    if(![self exist]){
         [self install];
     }
 }
 
--(NSMutableArray *) select :(NSString *)where {
+- (NSMutableArray *)select :(NSString *)where {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     NSString *query = @"SELECT * FROM Emoticon";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
     sqlite3_stmt *stmt;
-    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil) == SQLITE_OK){
-        while (sqlite3_step(stmt) == SQLITE_ROW) {
+    if(sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, nil)== SQLITE_OK){
+        while (sqlite3_step(stmt)== SQLITE_ROW){
             Emoticon *e = [[Emoticon alloc] init];
             
             e.e_id = [NSNumber numberWithUnsignedInteger:(const unsigned int)sqlite3_column_int(stmt, 0)];
@@ -59,11 +59,11 @@
     return list;
 }
 
--(void) insertData :(Emoticon *)e {
+- (void)insertData :(Emoticon *)e {
     char *err;
 
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO Emoticon (e_name, e_src) VALUES ('%@', '%@')", e.e_name, e.e_src];
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO Emoticon (e_name, e_src)VALUES ('%@', '%@')", e.e_name, e.e_src];
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"INSERT Emoticon Failed!");
     }
@@ -72,15 +72,15 @@
     }
 }
 
--(void) delete :(NSString *)where {
+- (void)delete :(NSString *)where {
     char *err;
     
     NSString *query = @"DELETE FROM Emoticon";
-    if(where != nil) {
+    if(where != nil){
         query = [query stringByAppendingString:@" WHERE "];
         query = [query stringByAppendingString:where];
     }
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DELETE Emoticon Failed!");
     }
@@ -89,11 +89,11 @@
     }
 }
 
--(void) drop {
+- (void)drop {
     char *err;
     
     NSString *query = @"DROP TABLE IF EXISTS 'Emoticon'";
-    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    if(sqlite3_exec(db, [query UTF8String], NULL, NULL, &err)!= SQLITE_OK){
         sqlite3_close(db);
         NSAssert(0,@"DROP Emoticon Failed!");
     }
@@ -102,7 +102,7 @@
     }
 }
 
--(void) install {
+- (void)install {
     NSMutableArray *emoticonList = [[NSMutableArray alloc] init];
     [emoticonList addObject:[Emoticon emoticon:@"맥주" src:@"beer.png"]];
     [emoticonList addObject:[Emoticon emoticon:@"영수중" src:@"bill.png"]];
@@ -187,16 +187,16 @@
     [emoticonList addObject:[Emoticon emoticon:@"와인잔" src:@"wine.png"]];
     [emoticonList addObject:[Emoticon emoticon:@"윙크" src:@"wink.png"]];
 
-    for(int i=0; i<emoticonList.count; i++) {
+    for(int i=0; i<emoticonList.count; i++){
         [self insertData:[emoticonList objectAtIndex:i]];
     }
 }
 
--(BOOL) exist {
+- (BOOL)exist {
     return [self select:nil].count > 0;
 }
 
--(Emoticon *) getSampleData {
+- (Emoticon *)getSampleData {
     Emoticon *e = [[Emoticon alloc] init];
     e.e_name = @"sad";
     e.e_src = @"test.png";

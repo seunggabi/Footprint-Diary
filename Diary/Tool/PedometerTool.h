@@ -15,8 +15,8 @@
 @property (strong, nonatomic) CMPedometer *pedometer;
 @property (strong, nonatomic) HealthModel *modelHealth;
 
-+(PedometerTool *) getInstance;
--(void) start;
--(void) getPedometerCount;
++ (PedometerTool *)getInstance;
+- (void)start;
+- (void)getPedometerCount;
 
 @end

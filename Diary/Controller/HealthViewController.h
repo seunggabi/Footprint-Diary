@@ -3,7 +3,7 @@
 //  FSLineChart
 //
 //  Created by Arthur GUIBERT on 30/09/2014.
-//  Copyright (c) 2014 Arthur GUIBERT. All rights reserved.
+//  Copyright (c)2014 Arthur GUIBERT. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -34,8 +34,8 @@
 - (IBAction)touchDate:(id)sender;
 - (IBAction)searchHealth:(id)sender;
 
--(void) chartDraw;
--(void) viewSetting;
--(void) changeDatePicker;
+- (void)chartDraw;
+- (void)viewSetting;
+- (void)changeDatePicker;
 
 @end

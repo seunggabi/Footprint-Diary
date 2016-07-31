@@ -17,14 +17,14 @@
 
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(User *) select;
--(void) insertData:(User *)u;
--(void) delete;
--(void) drop;
--(void) install;
--(BOOL) exist;
--(User *) getSampleData;
+- (id)init;
+- (void)create;
+- (User *)select;
+- (void)insertData:(User *)u;
+- (void)delete;
+- (void)drop;
+- (void)install;
+- (BOOL)exist;
+- (User *)getSampleData;
 
 @end

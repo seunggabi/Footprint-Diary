@@ -33,7 +33,7 @@
 @synthesize contentView;
 @synthesize healthView;
 
--(void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     modelDiary = [[DiaryModel alloc] init];
     
@@ -42,13 +42,13 @@
     [self viewSetting:diary];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [self loadMapData:diary];
     [mapScreen addSubview:mapView];
     [self viewSetting:diary];
 }
 
--(void) loadMapData:(Diary *)d {
+- (void)loadMapData:(Diary *)d {
     mapView = [[MTMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 186)];
     modelFootprint = [[FootprintModel alloc] init];
     NSMutableArray *footprintList = [modelFootprint select:[NSString stringWithFormat:@"fp_date ='%@'", diary.d_date]];
@@ -59,7 +59,7 @@
     
     mapPolyLine = [MTMapPolyline polyLine];
     mapPointList = [[NSMutableArray alloc] init];
-    for(int i=0; i<footprintList.count; i++) {
+    for(int i=0; i<footprintList.count; i++){
         Footprint *fp = [footprintList objectAtIndex:i];
         MTMapPOIItem *poiItem = [MTMapPOIItem poiItem];
         poiItem.itemName = fp.fp_address;
@@ -79,10 +79,10 @@
     [mapView fitMapViewAreaToShowPolyline:mapPolyLine];
 }
 
--(void) viewSetting:(Diary *)d {
+- (void)viewSetting:(Diary *)d {
     modelHealth = [[HealthModel alloc] init];
     Health* h = [modelHealth recentData:d.d_date];
-    if(h == nil) {
+    if(h == nil){
         h = [[Health alloc] init];
         h.h_count = @0;
     }
@@ -93,12 +93,12 @@
     healthView.text = [h.h_count stringValue];
 }
 
--(IBAction) touchSave:(id)sender {
+- (IBAction)touchSave:(id)sender {
     diary.d_title = titleView.text;
     diary.d_content = contentView.text;
 
     NSString *where = [NSString stringWithFormat:@"d_date='%@'",diary.d_date];
-    if([modelDiary select:where].count) {
+    if([modelDiary select:where].count){
         [[DBConnector getInstance] updateTable:@"diary" data:[diary getObj] where:where];
     } else {
         [modelDiary insertData:diary];
@@ -108,7 +108,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void) didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 

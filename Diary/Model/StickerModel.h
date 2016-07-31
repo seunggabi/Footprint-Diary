@@ -17,12 +17,12 @@
 @property (strong, nonatomic) Sticker *sticker;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData :(Sticker *)s;
--(void) delete :(NSString *)where;
--(void) drop;
--(Sticker *) getSampleData;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData :(Sticker *)s;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (Sticker *)getSampleData;
 
 @end

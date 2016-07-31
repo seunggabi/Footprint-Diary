@@ -19,7 +19,7 @@
 @synthesize u_tutorial;
 @synthesize u_lock;
 
-+(User *) user:(NSString *)name password:(NSString *)password question:(NSString *)question answer:(NSString *)answer th_id:(NSNumber *)th_id timer:(NSNumber *)timer tutorial:(NSString *)tutorial lock:(NSString *)lock {
++ (User *)user:(NSString *)name password:(NSString *)password question:(NSString *)question answer:(NSString *)answer th_id:(NSNumber *)th_id timer:(NSNumber *)timer tutorial:(NSString *)tutorial lock:(NSString *)lock {
     User *u = [[User alloc] init];
     u.u_name = name;
     u.u_password = password;
@@ -32,7 +32,7 @@
     return u;
 }
 
--(NSDictionary *) getObj {
+- (NSDictionary *)getObj {
     NSDictionary *obj = @{@"u_name":u_name, @"u_password":u_password, @"u_question":u_question, @"u_answer":u_answer, @"u_th_id":u_th_id, @"u_timer":u_timer, @"u_tutorial":u_tutorial, @"u_lock":u_lock};
     return obj;
 }

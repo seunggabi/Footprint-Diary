@@ -16,9 +16,9 @@
 @synthesize pedometer;
 @synthesize modelHealth;
 
-+(PedometerTool *) getInstance {
++ (PedometerTool *)getInstance {
     static PedometerTool *instance = nil;
-    if(instance == nil) {
+    if(instance == nil){
         instance = [[PedometerTool alloc] init];
         instance.pedometer = [[CMPedometer alloc]init];
         instance.modelHealth = [[HealthModel alloc] init];
@@ -26,8 +26,8 @@
     return instance;
 }
 
--(void)start {
-    [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+- (void)start {
+    [self.pedometer startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error){
     }];
     [[TimerScheduler getInstance] setPedometerTimer:[NSTimer scheduledTimerWithTimeInterval:60
                                                                                      target:self
@@ -36,14 +36,14 @@
                                                                                     repeats:YES]];
 }
 
--(void)getPedometerCount {
+- (void)getPedometerCount {
     Health *health = [[Health alloc] init];
     health.h_time = [[HelperTool getInstance] getDate];
     NSString *today = [[HelperTool getInstance] getToday];
     health.h_date = today;
     NSDate *now = [NSDate date];
     NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
+    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)fromDate:now];
     NSDate *start = [gregorian dateFromComponents:components];
     
     components.hour = 23;
@@ -51,7 +51,7 @@
     components.second = 59;
     NSDate *end = [gregorian dateFromComponents:components];
     
-    [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+    [pedometer queryPedometerDataFromDate:start toDate:end withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error){
         health.h_count = pedometerData.numberOfSteps;
         [modelHealth insertData:health];
     }];

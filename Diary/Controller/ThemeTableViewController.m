@@ -19,7 +19,7 @@
 @synthesize themeList;
 @synthesize user;
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     modelTheme = [[ThemeModel alloc] init];
     modelUser = [[UserModel alloc] init];
@@ -27,25 +27,25 @@
     user = [modelUser select];
 }
 
--(void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return themeList.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Theme *th = [themeList objectAtIndex:indexPath.row];
-    if(th.th_id == user.u_th_id) {
+    if(th.th_id == user.u_th_id){
         [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
     }
     cell.textLabel.text = th.th_name;
@@ -53,7 +53,7 @@
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     user.u_th_id = [NSNumber numberWithInteger:selectedIndexPath.row+1];
     [modelUser insertData:user];
@@ -70,10 +70,10 @@
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete){
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    } else if (editingStyle == UITableViewCellEditingStyleInsert){
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }

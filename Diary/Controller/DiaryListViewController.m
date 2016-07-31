@@ -28,7 +28,7 @@
 @synthesize modelDiary;
 @synthesize diary;
 
--(void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     modelDiary = [[DiaryModel alloc] init];
@@ -36,24 +36,24 @@
     
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.date = [NSDate date];
-    [datePicker addTarget:self action:@selector(changeDatePicker) forControlEvents:UIControlEventValueChanged];
+    [datePicker addTarget:self action:@selector(changeDatePicker)forControlEvents:UIControlEventValueChanged];
     datePickerScreen.hidden = YES;
     
     sDateText.delegate = self;
     eDateText.delegate = self;
 }
                            
--(void) didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadDiaryListData:sDateText.text endDate:sDateText.text];
     [table reloadData];
 }
 
--(void) loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate {
+- (void)loadDiaryListData:(NSString *)sDate endDate:(NSString *)eDate {
     if([sDate isEqualToString:@""] && [eDate isEqualToString:@""])
         diaryList = [modelDiary select:@"1=1 ORDER BY d_date DESC"];
     else {
@@ -65,18 +65,18 @@
     }
 }
 
--(void) changeDatePicker{
+- (void)changeDatePicker{
     selectText.text = [[HelperTool getInstance] dateToString:datePicker.date];
 }
 
--(IBAction) showDiaryList:(id)sender {
+- (IBAction)showDiaryList:(id)sender {
     [self loadDiaryListData:sDateText.text endDate:eDateText.text];
     datePickerScreen.hidden = YES;
     [selectText endEditing:YES];
     [table reloadData];
 }
 
--(IBAction) touchDate:(id)sender {
+- (IBAction)touchDate:(id)sender {
     datePickerScreen.hidden = NO;
     selectText = sender;
     if(![selectText.text isEqualToString:@""])
@@ -85,17 +85,17 @@
     [selectText endEditing:YES];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.diaryList.count;
 }
 
--(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
+    if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
     }
     Diary *d = [diaryList objectAtIndex:indexPath.row];
@@ -107,14 +107,14 @@
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [table deselectRowAtIndexPath:indexPath animated:YES];
     diary = [diaryList objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"ListDiaryView" sender:self];
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"ListDiaryView"]) {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ListDiaryView"]){
         DiaryViewController *diaryViewController = segue.destinationViewController;
         diaryViewController.diary = diary;
     }

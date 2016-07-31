@@ -3,7 +3,7 @@
 //  FlurrySummary
 //
 //  Created by Arthur GUIBERT on 16/07/2014.
-//  Copyright (c) 2014 Arthur GUIBERT. All rights reserved.
+//  Copyright (c)2014 Arthur GUIBERT. All rights reserved.
 //
 
 #import "UIColor+FSPalette.h"

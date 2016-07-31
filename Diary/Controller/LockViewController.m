@@ -53,7 +53,7 @@
 }
 
 - (IBAction)touchBtn:(id)sender {
-    if(pw.length < 4) {
+    if(pw.length < 4){
         pwCheckMessage.text = @"비밀번호를 입력해주세요.";
         pwCheckMessage.textColor = [UIColor blackColor];
         if(sender == buttonErase)
@@ -65,7 +65,7 @@
         User *u = [modelUser select];
         NSLog(@"%@", [u getObj]);
         NSLog(@"%@", pw);
-        if([pw isEqualToString:u.u_password]) {
+        if([pw isEqualToString:u.u_password]){
             NSLog(@"Success");
             [self performSegueWithIdentifier:@"Unlock" sender:nil];
         } else {
@@ -75,7 +75,7 @@
             NSLog(@"Fail");
         }
     }
-    for(int i=0; i<4; i++) {
+    for(int i=0; i<4; i++){
         NSString *str = @"";
         if(i<pw.length)
             str = @"*";

@@ -17,12 +17,12 @@
 @property (strong, nonatomic) Photo *photo;
 @property (strong, nonatomic) NSString *createQuery;
 
--(id) init;
--(void) create;
--(NSMutableArray *) select :(NSString *)where;
--(void) insertData:(Photo *)p;
--(void) delete :(NSString *)where;
--(void) drop;
--(Photo *) getSampleData;
+- (id)init;
+- (void)create;
+- (NSMutableArray *)select :(NSString *)where;
+- (void)insertData:(Photo *)p;
+- (void)delete :(NSString *)where;
+- (void)drop;
+- (Photo *)getSampleData;
 
 @end

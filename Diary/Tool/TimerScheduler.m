@@ -13,24 +13,24 @@
 @synthesize footprintTiemr;
 @synthesize pedometerTimer;
 
-+(TimerScheduler *) getInstance {
++ (TimerScheduler *)getInstance {
     static TimerScheduler *instance = nil;
     
-    if(instance == nil) {
+    if(instance == nil){
         instance = [[TimerScheduler alloc] init];
     }
     return instance;
 }
 
--(void) setFootprintTiemr:(NSTimer *)t; {
-    if(footprintTiemr != nil) {
+- (void)setFootprintTiemr:(NSTimer *)t; {
+    if(footprintTiemr != nil){
         [footprintTiemr invalidate];
     }
     footprintTiemr = t;
 }
 
--(void) setPedometerTimer:(NSTimer *)t {
-    if(pedometerTimer != nil) {
+- (void)setPedometerTimer:(NSTimer *)t {
+    if(pedometerTimer != nil){
         [pedometerTimer invalidate];
     }
     pedometerTimer = t;

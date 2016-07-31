@@ -15,14 +15,13 @@
 
 @implementation SettingTableViewController
 
+@synthesize modelUser;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    modelUser = [[UserModel alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,8 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"TutorialView"]) {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"TutorialView"]){
         PageScrollViewController *controller = segue.destinationViewController;
         controller.tutorial = @"Y";
     }
@@ -60,10 +59,10 @@
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete){
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    } else if (editingStyle == UITableViewCellEditingStyleInsert){
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
