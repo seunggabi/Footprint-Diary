@@ -47,7 +47,7 @@
     UserModel *modelUser = [[UserModel alloc] init];
     User *user = [modelUser select];
     
-    if(![user.u_lock isEqualToString:@"Y"]){
+    if([user.u_lock isEqualToString:@"Y"]){
         NSLog(@"Lock!");
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"Lock"];
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

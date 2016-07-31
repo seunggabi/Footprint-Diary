@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UISwitch *lockButton;
 @property (strong, nonatomic) UserModel *modelUser;
 
+- (IBAction)touchLockBtn:(id)sender;
+
 @end

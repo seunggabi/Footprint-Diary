@@ -16,12 +16,18 @@
 @implementation SettingTableViewController
 
 @synthesize modelUser;
+@synthesize lockButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     modelUser = [[UserModel alloc] init];
+    User *u = [modelUser select];
+    if([u.u_lock isEqualToString:@"Y"])
+        [lockButton setOn:YES];
+    else
+        [lockButton setOn:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,4 +98,12 @@
 }
 */
 
+- (IBAction)touchLockBtn:(id)sender {
+    User *u = [modelUser select];
+    if([lockButton isOn])
+        u.u_lock = @"Y";
+    else
+        u.u_lock = @"N";
+    [modelUser insertData:u];
+}
 @end
