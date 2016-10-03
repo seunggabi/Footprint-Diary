@@ -1,6 +1,6 @@
 # Footprint-Diary
 
-[발자국 일기장](https://github.com/seunggabi/Footprint-Diary/blob/second/Footprint-Diary.PNG "Footprint-Diary")
+[발자국 일기장](https://raw.githubusercontent.com/seunggabi/Footprint-Diary/second/Footprint-Diary.PNG "Footprint-Diary")
 
 ###사용기술
 * Objective-C
