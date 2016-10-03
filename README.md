@@ -1,5 +1,7 @@
 # Footprint-Diary
 
+[발자국 일기장](https://github.com/seunggabi/Footprint-Diary/blob/second/Footprint-Diary.PNG?raw=true "Footprint-Diary")
+
 ###사용기술
 * Objective-C
 * Daum Map
