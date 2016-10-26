@@ -82,7 +82,14 @@
     [checkbox setBackgroundImage:[UIImage imageNamed:@"checkboxSelected.jpeg"]
                         forState:UIControlStateSelected];
     checkbox.backgroundColor=nil;
-    [imageView setImage:[UIImage imageNamed:imgName]];    
+    
+    UIImage *image = [UIImage imageNamed:imgName];
+    CGSize newSize = [UIScreen mainScreen].bounds.size;
+    newSize.width = 320;
+    newSize.height = 568;
+    NSLog(@"123123 %f %f", newSize.width, newSize.height);
+    image = [[HelperTool getInstance] changeImageSize:image newSize:newSize];
+    [imageView setImage:image];
 }
 
 - (IBAction)checkboxSelected:(id)sender {

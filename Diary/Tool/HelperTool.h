@@ -19,6 +19,7 @@
 #import "HealthInformationModel.h"
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HelperTool : NSObject
 
@@ -33,5 +34,6 @@
 - (NSDate *)stringToDate:(NSString *)date;
 - (NSString *)dateToString:(NSDate *)date;
 - (Theme *)getTheme;
+- (UIImage *)changeImageSize:(UIImage *)UIImage newSize:(CGSize)newSize;
 
 @end

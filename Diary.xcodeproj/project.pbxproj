@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		226A3A2F1D2EB8F000FC0FF8 /* HealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */; };
+		281C070C1DC09FCF001D93CB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 281C070B1DC09FCF001D93CB /* icon.png */; };
 		284D7AFB1D3841520056CC4B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D7ADD1D3841520056CC4B /* Cell.xib */; };
 		284D7AFD1D3841520056CC4B /* EmoticonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D7AE21D3841520056CC4B /* EmoticonViewController.m */; };
 		284D7AFE1D3841520056CC4B /* EmoticonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D7AE31D3841520056CC4B /* EmoticonViewController.xib */; };
@@ -310,6 +311,7 @@
 /* Begin PBXFileReference section */
 		226A3A2D1D2EB8F000FC0FF8 /* HealthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthModel.h; sourceTree = "<group>"; };
 		226A3A2E1D2EB8F000FC0FF8 /* HealthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthModel.m; sourceTree = "<group>"; };
+		281C070B1DC09FCF001D93CB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		284D7ADD1D3841520056CC4B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		284D7AE11D3841520056CC4B /* EmoticonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmoticonViewController.h; sourceTree = "<group>"; };
 		284D7AE21D3841520056CC4B /* EmoticonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmoticonViewController.m; sourceTree = "<group>"; };
@@ -847,6 +849,7 @@
 		28E1EA5D1D355395006DF06B /* background */ = {
 			isa = PBXGroup;
 			children = (
+				281C070B1DC09FCF001D93CB /* icon.png */,
 				28E1EA5E1D355395006DF06B /* apple.jpg */,
 				28E1EA5F1D355395006DF06B /* balloon.jpg */,
 				28E1EA601D355395006DF06B /* bottle.jpg */,
@@ -1206,6 +1209,7 @@
 			files = (
 				28E1EBFE1D355395006DF06B /* weather.png in Resources */,
 				28E1EB741D355395006DF06B /* kiss.png in Resources */,
+				281C070C1DC09FCF001D93CB /* icon.png in Resources */,
 				28E1EB771D355395006DF06B /* lobster.png in Resources */,
 				28E1EB711D355395006DF06B /* icecream.png in Resources */,
 				28E1EB3E1D355395006DF06B /* ocean.jpg in Resources */,

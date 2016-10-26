@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserModel.h"
+#import "HelperTool.h"
 
 @interface PageViewController : UIViewController
 

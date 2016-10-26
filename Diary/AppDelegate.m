@@ -21,7 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //[[HelperTool getInstance] removeDB];
+    [[HelperTool getInstance] removeDB];
     [[HelperTool getInstance] installDB];
     [[FootprintTool getInstance] start];
     [[PedometerTool getInstance] start];

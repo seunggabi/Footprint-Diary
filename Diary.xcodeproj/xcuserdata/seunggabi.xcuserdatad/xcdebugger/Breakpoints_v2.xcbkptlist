@@ -222,7 +222,7 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "-initScrollViewAndPageControl"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,7 +238,7 @@
             startingLineNumber = "100"
             endingLineNumber = "100"
             landmarkName = "-loadScrollViewDataSourceWithPage:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -634,7 +634,7 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "pwTextArray"
-            landmarkType = "19">
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
