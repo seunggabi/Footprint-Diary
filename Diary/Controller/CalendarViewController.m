@@ -32,7 +32,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     Theme *themeInfo = [[HelperTool getInstance] getTheme];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:themeInfo.th_main]];
+    
+    UIImage *backgroundImage = [UIImage imageNamed:themeInfo.th_main];
+    CGSize newSize = [UIScreen mainScreen].bounds.size;
+    UIGraphicsBeginImageContextWithOptions([UIScreen mainScreen].bounds.size, NO, 0.0);
+    [backgroundImage drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newbackgroundImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:newbackgroundImage];
     
     modelUser = [[UserModel alloc] init];
     modelDiary = [[DiaryModel alloc] init];
