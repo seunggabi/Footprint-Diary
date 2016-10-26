@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key></key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -31,8 +29,12 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>I need Location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>I need Location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>I need Location</string>
+	<key>NSMotionUsageDescription</key>
+	<string>I need Motion</string>
 	<key>UIApplicationExitsOnSuspend</key>
 	<false/>
 	<key>UIBackgroundModes</key>
