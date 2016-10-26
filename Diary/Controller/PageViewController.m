@@ -85,10 +85,8 @@
     
     UIImage *image = [UIImage imageNamed:imgName];
     CGSize newSize = [UIScreen mainScreen].bounds.size;
-    newSize.width = 320;
-    newSize.height = 568;
-    NSLog(@"123123 %f %f", newSize.width, newSize.height);
     image = [[HelperTool getInstance] changeImageSize:image newSize:newSize];
+    imageView.frame = [UIScreen mainScreen].bounds;
     [imageView setImage:image];
 }
 

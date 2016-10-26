@@ -36,6 +36,10 @@
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
     
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    scrollView.frame = CGRectMake(0, 0, size.width, size.height);
+    scrollView.bounds = CGRectMake(0, 0, size.width, size.height);
+    
     if([user.u_tutorial isEqualToString:@"Y"] || [tutorial isEqualToString:@"Y"]){
         [btn_Prev setTag:1];
         [btn_Next setTag:0];
@@ -92,7 +96,6 @@
     [pageControl setCurrentPage:0];
     
     [self loadScrollViewDataSourceWithPage:0];
-    [self loadScrollViewDataSourceWithPage:1];
 }
 
 - (void)loadScrollViewDataSourceWithPage:(NSInteger)page{
@@ -113,7 +116,7 @@
         NSLog(@"Page %ld Controller Add On ScrollView..",(long)page);
         
         CGRect curFrame = scrollView.frame;
-        curFrame.origin.x = CGRectGetWidth(curFrame)* page;
+        curFrame.origin.x = CGRectGetWidth(curFrame) * page;
         curFrame.origin.y = 0;
         controller.view.frame = curFrame;
         
