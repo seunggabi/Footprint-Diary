@@ -125,4 +125,13 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
+- (UIView *)changeScreenDevice:(UIView *)view {
+    CGRect frame = [UIScreen mainScreen].bounds;
+    view.bounds = frame;
+    view.frame = frame;
+    
+    return view;
+}
+
 @end

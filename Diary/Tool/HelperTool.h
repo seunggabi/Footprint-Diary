@@ -35,5 +35,6 @@
 - (NSString *)dateToString:(NSDate *)date;
 - (Theme *)getTheme;
 - (UIImage *)changeImageSize:(UIImage *)UIImage newSize:(CGSize)newSize;
+- (UIView *)changeScreenDevice:(UIView *)view;
 
 @end

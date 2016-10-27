@@ -1366,7 +1366,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq7-TF-Ks2">
-                                <frame key="frameInset" minX="61" minY="448" width="253" height="68"/>
+                                <frame key="frameInset" minX="59.925000000000182" minY="449" width="252.99999999999977" height="67.999999999999091"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="튜토리얼을 다시 보지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-I6-zjm">
@@ -1761,9 +1761,9 @@
         <image name="star.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bAw-Is-1nh"/>
-        <segue reference="hPJ-2Q-zcA"/>
+        <segue reference="2xm-c6-aNm"/>
         <segue reference="Ggz-8Z-s4z"/>
         <segue reference="kAk-Sx-XrN"/>
+        <segue reference="hPJ-2Q-zcA"/>
     </inferredMetricsTieBreakers>
 </document>

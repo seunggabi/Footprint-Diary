@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     modelUser = [[UserModel alloc] init];
     user = [modelUser select];
     if([user.u_tutorial isEqualToString:@"Y"]){
