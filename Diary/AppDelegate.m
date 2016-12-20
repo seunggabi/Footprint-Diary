@@ -21,8 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[HelperTool getInstance] removeDB];
-    [[HelperTool getInstance] installDB];
+    //[[HelperTool getInstance] removeDB]; //디비 초기화
+    [[HelperTool getInstance] installDB]; //디비 재설치
     [[FootprintTool getInstance] start];
     [[PedometerTool getInstance] start];
     [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
